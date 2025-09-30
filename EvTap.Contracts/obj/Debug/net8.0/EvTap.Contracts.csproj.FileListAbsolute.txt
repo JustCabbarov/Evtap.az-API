@@ -1,0 +1,32 @@
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Contracts\bin\Debug\net8.0\EvTap.Contracts.deps.json
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Contracts\bin\Debug\net8.0\EvTap.Contracts.dll
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Contracts\bin\Debug\net8.0\EvTap.Contracts.pdb
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Contracts\bin\Debug\net8.0\EvTap.Domain.dll
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Contracts\bin\Debug\net8.0\EvTap.Domain.pdb
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Contracts\obj\Debug\net8.0\EvTap.Contracts.csproj.AssemblyReference.cache
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Contracts\obj\Debug\net8.0\EvTap.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Contracts\obj\Debug\net8.0\EvTap.Contracts.AssemblyInfoInputs.cache
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Contracts\obj\Debug\net8.0\EvTap.Contracts.AssemblyInfo.cs
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Contracts\obj\Debug\net8.0\EvTap.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Contracts\obj\Debug\net8.0\EvTap.Co.D1871A4C.Up2Date
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Contracts\obj\Debug\net8.0\EvTap.Contracts.dll
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Contracts\obj\Debug\net8.0\refint\EvTap.Contracts.dll
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Contracts\obj\Debug\net8.0\EvTap.Contracts.pdb
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Contracts\obj\Debug\net8.0\ref\EvTap.Contracts.dll
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Contracts\obj\Debug\net8.0\EvTap.Contracts.sourcelink.json
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Contracts\bin\Debug\net8.0\EvTap.Contracts.deps.json
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Contracts\bin\Debug\net8.0\EvTap.Contracts.dll
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Contracts\bin\Debug\net8.0\EvTap.Contracts.pdb
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Contracts\bin\Debug\net8.0\EvTap.Domain.dll
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Contracts\bin\Debug\net8.0\EvTap.Domain.pdb
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Contracts\obj\Debug\net8.0\EvTap.Contracts.csproj.AssemblyReference.cache
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Contracts\obj\Debug\net8.0\EvTap.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Contracts\obj\Debug\net8.0\EvTap.Contracts.AssemblyInfoInputs.cache
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Contracts\obj\Debug\net8.0\EvTap.Contracts.AssemblyInfo.cs
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Contracts\obj\Debug\net8.0\EvTap.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Contracts\obj\Debug\net8.0\EvTap.Contracts.sourcelink.json
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Contracts\obj\Debug\net8.0\EvTap.Co.D1871A4C.Up2Date
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Contracts\obj\Debug\net8.0\EvTap.Contracts.dll
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Contracts\obj\Debug\net8.0\refint\EvTap.Contracts.dll
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Contracts\obj\Debug\net8.0\EvTap.Contracts.pdb
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Contracts\obj\Debug\net8.0\ref\EvTap.Contracts.dll

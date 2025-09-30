@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yeni elan wizard</title>
+  <link rel="stylesheet" href="./assets/css/create.css" />
+</head>
+<body>
+  <div class="wizard-container">
+    <h1>Yeni elan</h1>
+
+ 
+
+    <form id="wizardForm" enctype="multipart/form-data">
+      <!-- Addım 1: Reklam növü -->
+      <div class="step-content" data-step="1">
+        <h2>Elan növü</h2>
+        <div class="card-options">
+          <label class="card-option">
+            <input type="radio" name="advertType" value="Satiram" required />
+            <div class="card-content">
+              <div class="icon">🏷️</div>
+              <div class="text">Satıram</div>
+            </div>
+          </label>
+          <label class="card-option">
+            <input type="radio" name="advertType" value="KirayeVerirem" />
+            <div class="card-content">
+              <div class="icon">📅</div>
+              <div class="text">Kirayə verirəm</div>
+            </div>
+          </label>
+        </div>
+        <div class="buttons">
+          <button type="button" class="next-btn">Sonraki</button>
+        </div>
+      </div>
+
+      <!-- Addım 2: Kategoriya seçimi -->
+      <div class="step-content" data-step="2" style="display: none;">
+        <h2>Kategoriya seçin</h2>
+        <div class="card-options">
+          <label class="card-option">
+            <input type="radio" name="categoryId" value="1" required />
+            <div class="card-content">
+              <div class="icon">🏢</div>
+              <div class="text">Yeni tikili</div>
+            </div>
+          </label>
+          <label class="card-option">
+            <input type="radio" name="categoryId" value="2" />
+            <div class="card-content">
+              <div class="icon">🏠</div>
+              <div class="text">Köhnə tikili</div>
+            </div>
+          </label>
+          <label class="card-option">
+            <input type="radio" name="categoryId" value="3" />
+            <div class="card-content">
+              <div class="icon">🌳</div>
+              <div class="text">Həyət evi / Bağ evi</div>
+            </div>
+          </label>
+          <label class="card-option">
+            <input type="radio" name="categoryId" value="4" />
+            <div class="card-content">
+              <div class="icon">🏬</div>
+              <div class="text">Ofis</div>
+            </div>
+          </label>
+          <label class="card-option">
+            <input type="radio" name="categoryId" value="5" />
+            <div class="card-content">
+              <div class="icon">🚗</div>
+              <div class="text">Qaraj</div>
+            </div>
+          </label>
+          <label class="card-option">
+            <input type="radio" name="categoryId" value="6" />
+            <div class="card-content">
+              <div class="icon">🌱</div>
+              <div class="text">Torpaq</div>
+            </div>
+          </label>
+          <label class="card-option">
+            <input type="radio" name="categoryId" value="7" />
+            <div class="card-content">
+              <div class="icon">🏪</div>
+              <div class="text">Obyekt</div>
+            </div>
+          </label>
+        </div>
+        <div class="buttons">
+          <button type="button" class="prev-btn">Geri</button>
+          <button type="button" class="next-btn">Sonraki</button>
+        </div>
+      </div>
+
+      <!-- Addım 3: Əsas məlumatlar -->
+      <div class="step-content" data-step="3" style="display: none;">
+        <h2>Əsas məlumatlar</h2>
+          <div class="form-group">
+          <label for="districtId">Rayon</label>
+          <select name="districtId" id="districtId">
+            <option value="">Seçin</option>
+            <option value="1">Nəsimi</option>
+            <option value="2">Binəqədi</option>
+            <option value="3">Xətai</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="title">Başlıq *</label>
+          <input type="text" name="title" id="title" required />
+        </div>
+        <div class="form-group">
+          <label for="description">Təsvir</label>
+          <textarea name="description" id="description" rows="4"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="price">Qiymət *</label>
+          <input type="number" name="price" id="price" step="0.01" required />
+        </div>
+       
+      
+
+    
+      
+        <h2>Əlavə məlumatlar və şəkillər</h2>
+        <div class="form-group">
+          <label for="rooms">Otaq sayı</label>
+          <input type="number" name="rooms" id="rooms" min="0" />
+        </div>
+        <div class="form-group">
+          <label for="floor">Mərtəbə</label>
+          <input type="number" name="floor" id="floor" min="0" />
+        </div>
+        <div class="form-group">
+          <label for="totalFloors">Ümumi mərtəbə</label>
+          <input type="number" name="totalFloors" id="totalFloors" min="0" />
+        </div>
+        <div class="form-group">
+          <label for="area">Sahə (m²)</label>
+          <input type="number" name="area" id="area" step="0.1" />
+        </div>
+        <div class="form-group">
+          <label for="images">Şəkillər</label>
+          <input type="file" name="images" id="images" accept="image/*" multiple />
+        </div>
+        <div class="form-group">
+          <label for="address">Ünvan</label>
+          <input type="text" name="address" id="address" />
+        </div>
+        <div class="form-group">
+          <label for="latitude">Latitude</label>
+          <input type="number" name="latitude" id="latitude" step="0.000001" />
+        </div>
+        <div class="form-group">
+          <label for="longitude">Longitude</label>
+          <input type="number" name="longitude" id="longitude" step="0.000001" />
+        </div>
+      
+        <div class="buttons">
+          <button type="button" class="prev-btn">Geri</button>
+          <button type="submit">Elanı göndər</button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+
+  <script src="./assets/js/create.js"></script>
+</body>
+</html>

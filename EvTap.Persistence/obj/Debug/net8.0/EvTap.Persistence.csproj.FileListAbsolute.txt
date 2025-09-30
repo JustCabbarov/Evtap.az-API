@@ -1,0 +1,36 @@
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Persistence\obj\Debug\net8.0\EvTap.Persistence.csproj.AssemblyReference.cache
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Persistence\obj\Debug\net8.0\EvTap.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Persistence\obj\Debug\net8.0\EvTap.Persistence.AssemblyInfoInputs.cache
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Persistence\obj\Debug\net8.0\EvTap.Persistence.AssemblyInfo.cs
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Persistence\obj\Debug\net8.0\EvTap.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Persistence\bin\Debug\net8.0\EvTap.Persistence.deps.json
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Persistence\bin\Debug\net8.0\EvTap.Persistence.runtimeconfig.json
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Persistence\bin\Debug\net8.0\EvTap.Persistence.dll
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Persistence\bin\Debug\net8.0\EvTap.Persistence.pdb
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Persistence\bin\Debug\net8.0\EvTap.Domain.dll
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Persistence\bin\Debug\net8.0\EvTap.Domain.pdb
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Persistence\obj\Debug\net8.0\EvTap.Pe.EE8D7FD4.Up2Date
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Persistence\obj\Debug\net8.0\EvTap.Persistence.dll
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Persistence\obj\Debug\net8.0\refint\EvTap.Persistence.dll
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Persistence\obj\Debug\net8.0\EvTap.Persistence.pdb
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Persistence\obj\Debug\net8.0\EvTap.Persistence.genruntimeconfig.cache
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Persistence\obj\Debug\net8.0\ref\EvTap.Persistence.dll
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Persistence\obj\Debug\net8.0\EvTap.Persistence.sourcelink.json
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Persistence\bin\Debug\net8.0\EvTap.Persistence.deps.json
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Persistence\bin\Debug\net8.0\EvTap.Persistence.runtimeconfig.json
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Persistence\bin\Debug\net8.0\EvTap.Persistence.dll
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Persistence\bin\Debug\net8.0\EvTap.Persistence.pdb
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Persistence\bin\Debug\net8.0\EvTap.Domain.dll
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Persistence\bin\Debug\net8.0\EvTap.Domain.pdb
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Persistence\obj\Debug\net8.0\EvTap.Persistence.csproj.AssemblyReference.cache
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Persistence\obj\Debug\net8.0\EvTap.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Persistence\obj\Debug\net8.0\EvTap.Persistence.AssemblyInfoInputs.cache
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Persistence\obj\Debug\net8.0\EvTap.Persistence.AssemblyInfo.cs
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Persistence\obj\Debug\net8.0\EvTap.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Persistence\obj\Debug\net8.0\EvTap.Persistence.sourcelink.json
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Persistence\obj\Debug\net8.0\EvTap.Pe.EE8D7FD4.Up2Date
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Persistence\obj\Debug\net8.0\EvTap.Persistence.dll
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Persistence\obj\Debug\net8.0\refint\EvTap.Persistence.dll
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Persistence\obj\Debug\net8.0\EvTap.Persistence.pdb
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Persistence\obj\Debug\net8.0\EvTap.Persistence.genruntimeconfig.cache
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Persistence\obj\Debug\net8.0\ref\EvTap.Persistence.dll

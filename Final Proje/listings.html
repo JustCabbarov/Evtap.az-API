@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlueEstate — Listings</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-Sl1vJHk7kUp5m4pW0pMeSxUu1JYvQSBvM2nl9Yl3v0eU0k8Qh3gq2P7q1t8m0UeLzYq3tI6sZ5l1yV6VQj1QWg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body data-page="listings">
+    <div id="header"></div>
+    <main class="container grid grid-2-cols">
+        <aside class="sidebar card">
+            <h3><i class="fa-solid fa-filter"></i> Filters</h3>
+            <form id="filtersForm" class="filters-form">
+                <div class="field">
+                    <label>City</label>
+                    <select id="fCity">
+                        <option value="">Any</option>
+                        <option>Baku</option>
+                        <option>Ganja</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label>District</label>
+                    <select id="fDistrict">
+                        <option value="">Any</option>
+                        <option>Yasamal</option>
+                        <option>Nizami</option>
+                        <option>Narimanov</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label>Metro</label>
+                    <select id="fMetro">
+                        <option value="">Any</option>
+                        <option>28 May</option>
+                        <option>Nizami</option>
+                        <option>Ganjlik</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label>Rooms</label>
+                    <select id="fRooms">
+                        <option value="">Any</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4+</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label>Renovation</label>
+                    <select id="fRenovation">
+                        <option value="">Any</option>
+                        <option>New</option>
+                        <option>Euro</option>
+                        <option>Old</option>
+                        <option>No renovation</option>
+                    </select>
+                </div>
+                <div class="field range">
+                    <label>Price</label>
+                    <div class="range-inputs">
+                        <input type="number" id="fPriceMin" placeholder="Min" />
+                        <span>—</span>
+                        <input type="number" id="fPriceMax" placeholder="Max" />
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Apply</button>
+            </form>
+        </aside>
+        <section>
+            <div class="section-heading">
+                <h2>All Properties</h2>
+            </div>
+            <div id="listingGrid" class="grid"></div>
+            <div class="pagination">
+                <button class="btn btn-light" data-page="prev"><i class="fa-solid fa-chevron-left"></i></button>
+                <span id="paginationInfo">Page 1 of 1</span>
+                <button class="btn btn-light" data-page="next"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </section>
+    </main>
+    <div id="footer"></div>
+    <div id="ask-ai-fab"></div>
+
+    <script src="assets/js/components.js" defer></script>
+    <script src="assets/js/app.js" defer></script>
+</body>
+
+</html>

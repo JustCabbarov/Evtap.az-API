@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yasamal Koordinat Tapıcı</title>
+</head>
+<body>
+
+  <h1>Yer Koordinat Tapıcı</h1>
+  <input type="text" id="locationInput" placeholder="Məsələn: Yasamal">
+  <button onclick="getCoordinates()">Tap</button>
+
+  <p id="output"></p>
+
+  <script>
+    async function getCoordinates() {
+      const address = document.getElementById('locationInput').value;
+      const output = document.getElementById('output');
+
+      if (!address) {
+        output.textContent = "Zəhmət olmasa bir yer adı daxil edin.";
+        return;
+      }
+
+      // Google Maps Geocoding API URL
+      const apiKey = "AIzaSyBZTHDv7uLxgWbc-gkIGQUlGZOHMDn9eNM"; // Sənin API açarın
+      const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(address)}&key=${apiKey}`;
+
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+
+        if (data.status === "OK") {
+          const location = data.results[0].geometry.location;
+          output.textContent = `Koordinatlar: Lat = ${location.lat}, Lng = ${location.lng}`;
+        } else {
+          output.textContent = `Xəta: ${data.status}`;
+        }
+      } catch (err) {
+        output.textContent = `Xəta baş verdi: ${err}`;
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,242 @@
+/* Filter Modal Styles */
+.overlay-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+#filterModalWindow {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    max-height: 70vh;
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    overflow-y: auto;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+#locationModalWindow {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    max-height: 70vh;
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    overflow-y: auto;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.flex-row-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.flex-row-group label {
+    min-width: 120px;
+    font-weight: 500;
+    color: #333;
+}
+
+.flex-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn-option {
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    color: #666;
+}
+
+.btn-option:hover {
+    border-color: #007bff;
+    background: #f8f9ff;
+}
+
+.btn-option.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.btn-action {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-right: 10px;
+}
+
+.reset-btn {
+    background: #6c757d;
+    color: white;
+}
+
+.reset-btn:hover {
+    background: #545b62;
+}
+
+.apply-btn {
+    background: #007bff;
+    color: white;
+}
+
+.apply-btn:hover {
+    background: #0056b3;
+}
+
+.input-location {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+    text-align: left;
+    color: #666;
+}
+
+.input-location:hover {
+    border-color: #007bff;
+}
+
+.tab-btn {
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px 8px 0 0;
+    background: white;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 14px;
+    color: #666;
+}
+
+.active-tab {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.inactive-tab {
+    background: #f8f9fa;
+    color: #666;
+}
+
+.inactive-tab:hover {
+    background: #e9ecef;
+}
+
+.input-search {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.input-search:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.location-item {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.location-item:hover {
+    background: #f8f9ff;
+}
+
+.location-item.selected {
+    background: #e3f2fd;
+    color: #007bff;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #filterModalWindow {
+        width: 90%;
+        max-width: 500px;
+        padding: 20px;
+    }
+
+    #locationModalWindow {
+        width: 90%;
+        max-width: 350px;
+        padding: 20px;
+    }
+
+    .flex-row-group {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .flex-row-group label {
+        min-width: auto;
+    }
+
+    .flex-row {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .btn-option {
+        flex: 1;
+        min-width: 80px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    #filterModalWindow {
+        width: 95%;
+        padding: 15px;
+    }
+
+    #locationModalWindow {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .btn-option {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .btn-action {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}

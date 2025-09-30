@@ -1,0 +1,30 @@
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Domain\bin\Debug\net8.0\EvTap.Domain.deps.json
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Domain\bin\Debug\net8.0\EvTap.Domain.runtimeconfig.json
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Domain\bin\Debug\net8.0\EvTap.Domain.dll
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Domain\bin\Debug\net8.0\EvTap.Domain.pdb
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Domain\obj\Debug\net8.0\EvTap.Domain.csproj.AssemblyReference.cache
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Domain\obj\Debug\net8.0\EvTap.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Domain\obj\Debug\net8.0\EvTap.Domain.AssemblyInfoInputs.cache
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Domain\obj\Debug\net8.0\EvTap.Domain.AssemblyInfo.cs
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Domain\obj\Debug\net8.0\EvTap.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Domain\obj\Debug\net8.0\EvTap.Domain.dll
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Domain\obj\Debug\net8.0\refint\EvTap.Domain.dll
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Domain\obj\Debug\net8.0\EvTap.Domain.pdb
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Domain\obj\Debug\net8.0\EvTap.Domain.genruntimeconfig.cache
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Domain\obj\Debug\net8.0\ref\EvTap.Domain.dll
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Domain\obj\Debug\net8.0\EvTap.Domain.sourcelink.json
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Domain\bin\Debug\net8.0\EvTap.Domain.deps.json
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Domain\bin\Debug\net8.0\EvTap.Domain.runtimeconfig.json
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Domain\bin\Debug\net8.0\EvTap.Domain.dll
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Domain\bin\Debug\net8.0\EvTap.Domain.pdb
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Domain\obj\Debug\net8.0\EvTap.Domain.csproj.AssemblyReference.cache
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Domain\obj\Debug\net8.0\EvTap.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Domain\obj\Debug\net8.0\EvTap.Domain.AssemblyInfoInputs.cache
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Domain\obj\Debug\net8.0\EvTap.Domain.AssemblyInfo.cs
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Domain\obj\Debug\net8.0\EvTap.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Domain\obj\Debug\net8.0\EvTap.Domain.sourcelink.json
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Domain\obj\Debug\net8.0\EvTap.Domain.dll
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Domain\obj\Debug\net8.0\refint\EvTap.Domain.dll
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Domain\obj\Debug\net8.0\EvTap.Domain.pdb
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Domain\obj\Debug\net8.0\EvTap.Domain.genruntimeconfig.cache
+C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Domain\obj\Debug\net8.0\ref\EvTap.Domain.dll

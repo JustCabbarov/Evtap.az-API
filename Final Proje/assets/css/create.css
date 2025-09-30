@@ -1,0 +1,146 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+
+.wizard-container {
+  max-width: 600px;
+  margin: 40px auto;
+  background-color: white;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.steps-indicator {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.steps-indicator .step {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 50%;
+  background-color: #ddd;
+  color: #666;
+  margin: 0 8px;
+}
+
+.steps-indicator .step.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.step-content {
+  /* sahə üçün */
+}
+
+.card-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.card-option {
+  flex: 1 1 120px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.card-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.card-option .card-content {
+  padding: 24px;
+  text-align: center;
+}
+
+.card-option .card-content .icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.card-option .card-content .text {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.card-option:hover {
+  border-color: #007bff;
+  background-color: #f0f8ff;
+}
+
+.card-option input[type="radio"]:checked + .card-content {
+  border-color: #007bff;
+  background-color: #e6f0ff;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group select,
+.form-group textarea,
+.form-group input[type="file"] {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.buttons {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.buttons .prev-btn,
+.buttons .next-btn,
+.buttons button[type="submit"] {
+  padding: 10px 16px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.buttons .prev-btn {
+  background-color: #6c757d;
+}
+
+.buttons .prev-btn:hover {
+  background-color: #5a6268;
+}
+
+.buttons .next-btn:hover,
+.buttons button[type="submit"]:hover {
+  background-color: #0056b3;
+}

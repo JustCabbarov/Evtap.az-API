@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Sorgu Mərkəzi - EvTap.az</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="./assets/css/Ai.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+</head>
+
+<body class="bg-gray-50 text-gray-900 font-inter" data-page="ai-query">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white border-b shadow-sm">
+        <div class="container mx-auto flex justify-between items-center py-3 px-4 lg:px-8">
+            <!-- Logo -->
+            <a href="./index.html" class="flex items-center gap-2 text-blue-600 font-bold text-xl">
+                <i class="fa-solid fa-house"></i> EvTap.az
+            </a>
+
+            <!-- Navigation -->
+            <nav class="hidden md:flex items-center gap-6 text-gray-700 font-medium">
+                <a href="./Sales.html" class="hover:text-blue-600">Alış-satış</a>
+                <a href="./Rent.html" class="hover:text-blue-600">Kirayə</a>
+                <a href="./Rent-Daily.html" class="hover:text-blue-600">Günlük</a>
+                <a href="./Agency.html" class="hover:text-blue-600">Agentliklər</a>
+                <a href="./AI-Query-Page.html" class="hover:text-blue-600 text-blue-600 font-semibold">AI Sorgu</a>
+            </nav>
+
+            <!-- Sağ tərəf -->
+            <div class="flex items-center gap-4">
+                <a href="./Create.html" id="newListing"
+                    class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg">Yeni elan</a>
+                <a href="./Login.html" class="border px-4 py-2 rounded-lg hover:bg-gray-100">Giriş</a>
+                <button class="md:hidden text-gray-600 text-2xl" id="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobil menyu -->
+        <div id="mobileMenu" class="hidden md:hidden flex-col gap-3 px-6 py-4 bg-gray-100 text-gray-700">
+            <a href="./index.html" class="hover:text-blue-600">Ana səhifə</a>
+            <a href="./Sales.html" class="hover:text-blue-600">Alış-satış</a>
+            <a href="./Rent.html" class="hover:text-blue-600">Kirayə</a>
+            <a href="./Rent-Daily.html" class="hover:text-blue-600">Günlük</a>
+            <a href="./Agency.html" class="hover:text-blue-600">Agentliklər</a>
+            <a href="./AI-Query-Page.html" class="hover:text-blue-600 text-blue-600 font-semibold">AI Sorgu</a>
+        </div>
+    </header>
+
+    <div class="container">
+
+
+        <div style="display: grid; grid-template-columns: auto 1fr; gap: 32px; align-items: start; margin-top: 50px;">
+            <div style="display: flex; flex-direction: column; gap: 16px;">
+                <button class="function-btn" onclick="selectFunction('ai-analysis')" data-function="ai-analysis">
+                    <div class="function-icon icon-1">🤖</div>
+                    <div>
+                        <h3>AI Analiz</h3>
+                        <p>AI-dan mətn analizi və tövsiyələr alın</p>
+                    </div>
+                </button>
+
+                <button class="function-btn" onclick="selectFunction('evtap-statistics')"
+                    data-function="evtap-statistics">
+                    <div class="function-icon icon-2">📊</div>
+                    <div>
+                        <h3>EvTap Statistika</h3>
+                        <p>Ev qiymətləri və bazar statistikalarını analiz edin</p>
+                    </div>
+                </button>
+
+                <button class="function-btn" onclick="selectFunction('location-finder')"
+                    data-function="location-finder">
+                    <div class="function-icon icon-3">📍</div>
+                    <div>
+                        <h3>Yer Tapıcı</h3>
+                        <p>Koordinatları tapın və yaxınlıqdakı yerləri kəşf edin</p>
+                    </div>
+                </button>
+            </div>
+
+            <div id="contentArea" style="min-height: 400px;">
+                <!-- Content will be displayed here when function is selected -->
+            </div>
+        </div>
+
+
+        <div class="response-area" id="responseArea" style="display: none;">
+            <h3>AI Cavabı:</h3>
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>AI cavabını hazırlayır...</p>
+            </div>
+            <div class="response-content" id="responseContent"></div>
+        </div>
+
+
+    </div>
+
+    <!-- Footer -->
+    <footer style="margin-top: 100px;" class="bg-gray-900 text-gray-300 py-10">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
+            <div>
+                <h3 class="font-bold mb-2">EvTap.az</h3>
+                <p>Azərbaycanın ən böyük əmlak platforması</p>
+            </div>
+            <div>
+                <h3 class="font-bold mb-2">Linklər</h3>
+                <ul class="space-y-1">
+                    <li><a href="./index.html" class="hover:text-white">Ana səhifə</a></li>
+                    <li><a href="./Sales.html" class="hover:text-white">Alış-satış</a></li>
+                    <li><a href="./Rent.html" class="hover:text-white">Kirayə</a></li>
+                    <li><a href="./AI-Query-Page.html" class="hover:text-white">AI Sorgu</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold mb-2">Əlaqə</h3>
+                <p>Email: info@evtap.az</p>
+                <p>Telefon: +994 12 345 6789</p>
+            </div>
+        </div>
+        <p class="text-center text-sm text-gray-500 mt-6">&copy; 2024 EvTap.az. Bütün hüquqlar qorunur.</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+   <script src="./assets/js/Ai.js"></script>
+</body>
+
+</html>

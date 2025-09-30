@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./assets/css/Login.css">
+    <title>Daxil ol</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Daxil ol</h1>
+
+        <div id="tokenBox" class="token-box"></div>
+
+        <hr class="separator">
+
+        <!-- Switch Email / Phone -->
+        <div class="switch" role="tablist">
+            <button id="optEmail" class="active" role="tab" aria-selected="true">📧 E-poçt ilə</button>
+            <button id="optPhone" role="tab" aria-selected="false">📱 Telefon ilə</button>
+        </div>
+
+        <!-- Email login form -->
+        <form id="emailLoginForm" novalidate>
+            <div class="form-group">
+                <label for="email">E-poçt</label>
+                <input id="email" name="email" type="email" placeholder="email@example.com" required>
+                <div id="emailError" class="error"></div>
+            </div>
+            <div class="form-group">
+                <label for="password">Şifrə</label>
+                <input id="password" name="password" type="password" placeholder="Şifrənizi daxil edin" minlength="6"
+                    required>
+                <div id="passwordError" class="error"></div>
+            </div>
+            <div class="actions">
+                <button type="submit" class="btn">Daxil ol</button>
+            </div>
+        </form>
+
+        <!-- Telefon login form -->
+        <form id="phoneLoginForm" style="display:none" novalidate>
+            <div class="form-group">
+                <label for="phone">Telefon nömrəsi</label>
+                <input id="phone" name="phone" type="tel" placeholder="+994501234567" pattern="^\\+?\\d{7,15}$"
+                    required>
+                <div id="phoneError" class="error"></div>
+            </div>
+            <div class="form-group">
+                <label for="otp">SMS kod</label>
+                <input id="otp" name="otp" type="text" placeholder="SMS ilə gələn kodu daxil edin" minlength="4"
+                    maxlength="6" required>
+                <div id="otpError" class="error"></div>
+            </div>
+            <div class="actions">
+                <button type="submit" class="btn">Daxil ol</button>
+            </div>
+        </form>
+       
+
+
+        <!-- Google login -->
+        <button class="google-btn" id="googleLoginBtn">
+            <img src="https://www.svgrepo.com/show/355037/google.svg" alt="Google" />
+            Google ilə davam et
+        </button>
+
+         <div style="text-align:center; margin-top: 10px; text-decoration: none;">
+            <a href="Register.html">Register</a>
+        </div>
+    </div>
+
+
+    <script src="./assets/js/Login.js"></script>
+</body>
+
+</html>
