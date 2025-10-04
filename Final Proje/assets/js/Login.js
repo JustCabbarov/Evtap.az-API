@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const data = await response.json();
             if (!response.ok) throw new Error(data.message || "Login uğursuz oldu.");
 
-            localStorage.setItem("token", data.token);
+            localStorage.setItem("jwt", data.token);
             alert("Email ilə uğurla daxil oldunuz ✅");
             window.location.href = "/index.html";
         } catch (err) {
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!valid) return;
 
         try {
-            const response = await fetch("https://localhost:7027/api/Authorization/phone-login", {
+            const response = await fetch("https://localhost:7027/api/Authorization/login-google", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ phone, otp })
@@ -93,9 +93,9 @@ document.addEventListener("DOMContentLoaded", () => {
             const data = await response.json();
             if (!response.ok) throw new Error(data.message || "Login uğursuz oldu.");
 
-            localStorage.setItem("token", data.token);
+            localStorage.setItem("jwt", data.token);
             alert("Telefon ilə uğurla daxil oldunuz ✅");
-            window.location.href = "/index.html";
+            window.location.href = "index.html";
         } catch (err) {
             alert(err.message);
         }
@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const top = (window.innerHeight - height) / 2;
 
         const popup = window.open(
-            "https://localhost:7027/api/auth/login-google",
+            "https://localhost:7027/api/Authorization/login-google",
             "Google Login",
             `width=${width},height=${height},top=${top},left=${left}`
         );
@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const { token } = event.data;
             if (token) {
-                localStorage.setItem("token", token);
+                localStorage.setItem("jwt", token);
                 alert("Google ilə uğurla daxil oldunuz ✅");
                 window.location.href = "/index.html";
             }

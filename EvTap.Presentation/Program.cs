@@ -1,5 +1,6 @@
 ﻿using System.Reflection;
 using System.Text;
+using System.Text.Json.Serialization;
 using EvTap.Application.Exceptions;
 using EvTap.Application.Profiles;
 using EvTap.Application.Services;
@@ -12,7 +13,7 @@ using EvTap.Infrastructure.Services;
 using EvTap.Persistence.Data;
 using EvTap.Persistence.Repositories;
 using EvTap.Presentation.ExceptionHandler;
-using EvTap.Presentation.Hubs;
+
 using EvTap.Presentation.Notifier;
 using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -24,8 +25,6 @@ using Serilog;
 using Serilog.Events;
 
 var builder = WebApplication.CreateBuilder(args);
-
-
 
 
 builder.Host.UseSerilog((context, services, configuration) => configuration
@@ -79,8 +78,9 @@ builder.Services.AddScoped<IGoogleAuthService, GoogleAuthService>();
 builder.Services.AddScoped<IFilterRepository, FilterRepository>();
 builder.Services.AddScoped<IPlacesService, PlacesService>();
 builder.Services.AddScoped<IFilterService, FilterService>();
+builder.Services.AddScoped<IListingRepository, ListingRepository>();
 builder.Services.AddHttpContextAccessor();
-builder.Services.AddSignalR();
+builder.Services.AddSignalR(); // Bu tekrar değil, SignalR servis kaydıdır.
 
 builder.Services.AddAutoMapper(m =>
 {
@@ -127,6 +127,7 @@ builder.Services
                Encoding.UTF8.GetBytes(builder.Configuration["JwtOption:Key"]))
        };
 
+       // SignalR için gerekli olan JWT'yi Query String'den alma ayarı
        options.Events = new JwtBearerEvents
        {
            OnMessageReceived = context =>
@@ -160,7 +161,6 @@ builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "EvTap API", Version = "v1" });
 
-    // JWT Auth əlavə et
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         Name = "Authorization",
@@ -194,13 +194,14 @@ builder.Services.AddCors(options =>
         policy =>
         {
             {
+                
                 policy.WithOrigins("http://127.0.0.1:5500", "http://localhost:5500",
-                                  "http://127.0.0.1:5505", "http://localhost:5505",
-                                  "http://127.0.0.1:5501", "http://localhost:5501",
-                                  "https://localhost:7109", "http://localhost:3000")
-                      .AllowAnyHeader()
-                      .AllowAnyMethod()
-                      .AllowCredentials();
+                                    "http://127.0.0.1:5505", "http://localhost:5505",
+                                    "http://127.0.0.1:5501", "http://localhost:5501",
+                                    "https://localhost:7109", "http://localhost:3000")
+                     .AllowAnyHeader()
+                     .AllowAnyMethod()
+                     .AllowCredentials(); 
             }
         });
 });
@@ -211,6 +212,11 @@ builder.Services.AddSignalR(options =>
     options.ClientTimeoutInterval = TimeSpan.FromSeconds(30);
     options.KeepAliveInterval = TimeSpan.FromSeconds(15);
 });
+
+builder.Services.AddControllers()
+    .AddJsonOptions(x =>
+        x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+
 
 var app = builder.Build();
 
@@ -232,6 +238,7 @@ app.UseRouting();
 
 app.UseAuthentication();
 app.UseAuthorization();
+
 
 app.UseEndpoints(endpoints =>
 {

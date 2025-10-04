@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace EvTap.Contracts.DTOs
 {
-    public record SendMessageRequest
+    public class SendMessageRequst
     {
-        public int ListingId { get; set; }
+        public string? ReceiverId { get; set; }
+
+        public int? ListingId { get; set; }
+
         public string Content { get; set; } = string.Empty;
+
+        public bool IsAdminMessage { get; set; } = false;
     }
 }

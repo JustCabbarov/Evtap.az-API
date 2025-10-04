@@ -1235,6 +1235,41 @@
         }
       }
     },
+    "/api/Listing/GetListingDetailById/{id}": {
+      "get": {
+        "tags": [
+          "Listing"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Listing/GetListingsDetail": {
+      "get": {
+        "tags": [
+          "Listing"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Message/send": {
       "post": {
         "tags": [
@@ -1244,48 +1279,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/SendMessageRequest"
+                "$ref": "#/components/schemas/SendMessageRequst"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/SendMessageRequest"
+                "$ref": "#/components/schemas/SendMessageRequst"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/SendMessageRequest"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Message/send-to-admin": {
-      "post": {
-        "tags": [
-          "Message"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AdminMessageRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AdminMessageRequest"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/AdminMessageRequest"
+                "$ref": "#/components/schemas/SendMessageRequst"
               }
             }
           }
@@ -1606,16 +1610,6 @@
   },
   "components": {
     "schemas": {
-      "AdminMessageRequest": {
-        "type": "object",
-        "properties": {
-          "content": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "AdvertType": {
         "enum": [
           1,
@@ -1715,6 +1709,14 @@
         "type": "object",
         "properties": {
           "districtIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          },
+          "metroStationIds": {
             "type": "array",
             "items": {
               "type": "integer",
@@ -1853,16 +1855,24 @@
         "type": "integer",
         "format": "int32"
       },
-      "SendMessageRequest": {
+      "SendMessageRequst": {
         "type": "object",
         "properties": {
+          "receiverId": {
+            "type": "string",
+            "nullable": true
+          },
           "listingId": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "nullable": true
           },
           "content": {
             "type": "string",
             "nullable": true
+          },
+          "isAdminMessage": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false

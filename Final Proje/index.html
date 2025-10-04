@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EvTap.az - Ana Səhifə</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link rel="stylesheet" href="./assets/css/index-unified.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body class="bg-gray-50 text-gray-900 font-inter">
@@ -16,7 +15,7 @@
     <header class="sticky top-0 z-50 bg-white border-b shadow-sm">
         <div class="container mx-auto flex justify-between items-center py-3 px-4 lg:px-8">
             <!-- Logo -->
-            <a href="#" class="flex items-center gap-2 text-blue-600 font-bold text-xl">
+            <a href="./index.html" class="flex items-center gap-2 text-blue-600 font-bold text-xl">
                 <i class="fa-solid fa-house"></i> EvTap.az
             </a>
 
@@ -26,19 +25,22 @@
                 <a href="./Rent.html" class="hover:text-blue-600">Kirayə</a>
                 <a href="./Rent-Daily.html" class="hover:text-blue-600">Günlük</a>
                 <a href="./Agency.html" class="hover:text-blue-600">Agentliklər</a>
-                <a href="./ask-ai.html" class="hover:text-blue-600">AI Sorgu</a>
+                <a href="./ask-ai.html  " class="hover:text-blue-600">AI Sorgu</a>
             </nav>
 
             <!-- Sağ tərəf -->
-            <div class="flex items-center gap-4">
-                <a href="./Create.html" id="newListing"
-                    class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg">Yeni elan</a>
-                <a href="./Login.html" class="border px-4 py-2 rounded-lg hover:bg-gray-100">Giriş</a>
-                <a href="./Chat-Page.html" class="border px-4 py-2 rounded-lg hover:bg-gray-100">Mesajlar</a>
-                <button class="md:hidden text-gray-600 text-2xl" id="hamburger">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-            </div>
+           <div class="flex items-center gap-4">
+    <a href="./Create.html" id="newListing"
+        class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg">Yeni elan</a>
+    
+    <a href="./Login.html" id="loginLink" class="border px-4 py-2 rounded-lg hover:bg-gray-100">Giriş</a>
+    
+    <a href="./Chat.html" id="messagesLink" class="border px-4 py-2 rounded-lg hover:bg-gray-100">Mesajlar</a>
+    
+    <button class="md:hidden text-gray-600 text-2xl" id="hamburger">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+</div>
         </div>
 
         <!-- Mobil menyu -->
@@ -47,7 +49,7 @@
             <a href="./Rent.html" class="hover:text-blue-600">Kirayə</a>
             <a href="./Rent-Daily.html" class="hover:text-blue-600">Günlük</a>
             <a href="./Agency.html" class="hover:text-blue-600">Agentliklər</a>
-            <a href="./AI-Query-Page.html" class="hover:text-blue-600">AI Sorgu</a>
+            <a href="./ask-ai.html" class="hover:text-blue-600">AI Sorgu</a>
         </div>
     </header>
 
@@ -133,52 +135,66 @@
             </form>
 
             <!-- Category Items -->
-            <div class="flex flex-wrap gap-4 justify-center p-0">
-                <!-- Hamısı -->
-                <div class="flex items-center gap-2 p-3 rounded-lg cursor-pointer w-30 border hover:shadow-md hover:scale-105 transition category-item active"
+            <div class="flex flex-wrap gap-4 justify-center px-4 py-4">
+
+                   <div class="flex items-center gap-2 p-3 rounded-lg cursor-pointer w-30 border hover:shadow-md hover:scale-105 transition category-item active"
                     data-id="">
                     <i class="fa-solid fa-list text-gray-700 text-lg"></i>
                     <span class="text-sm">Hamısı</span>
                 </div>
 
                 <!-- Mənzil -->
-                <div class="flex items-center gap-2 p-3 rounded-lg cursor-pointer w-30 border hover:shadow-md hover:scale-105 transition category-item"
-                    data-id="1">
+                <div class="flex items-center gap-2 p-3 rounded-lg cursor-pointer w-30 border hover:shadow-md hover:scale-105 transition category-item "
+                    data-id="2">
                     <i class="fa-solid fa-house text-gray-700 text-lg"></i>
-                    <span class="text-sm">Mənzil</span>
+                    <span class="text-sm">Yeni Tikili</span>
                 </div>
 
                 <!-- Villa -->
                 <div class="flex items-center gap-2 p-3 rounded-lg cursor-pointer w-30 border hover:shadow-md hover:scale-105 transition category-item"
-                    data-id="2">
+                    data-id="10">
                     <i class="fa-solid fa-building text-gray-700 text-lg"></i>
                     <span class="text-sm">Villa</span>
                 </div>
 
-                <!-- Torpaq -->
+                <!-- Köhnə tikili -->
                 <div class="flex items-center gap-2 p-3 rounded-lg cursor-pointer w-30 border hover:shadow-md hover:scale-105 transition category-item"
                     data-id="3">
+                    <i class="fa-solid fa-home text-gray-700 text-lg"></i>
+                    <span class="text-sm">Köhnə tikili</span>
+                </div>
+
+                <!-- Heyət evi -->
+                <div class="flex items-center gap-2 p-3 rounded-lg cursor-pointer w-30 border hover:shadow-md hover:scale-105 transition category-item"
+                    data-id="4">
+                    <i class="fa-solid fa-building-columns text-gray-700 text-lg"></i>
+                    <span class="text-sm">Heyət evi</span>
+                </div>
+
+                <!-- Torpaq -->
+                <div class="flex items-center gap-2 p-3 rounded-lg cursor-pointer w-30 border hover:shadow-md hover:scale-105 transition category-item"
+                    data-id="7">
                     <i class="fa-solid fa-mountain text-gray-700 text-lg"></i>
                     <span class="text-sm">Torpaq</span>
                 </div>
 
                 <!-- Ofis -->
                 <div class="flex items-center gap-2 p-3 rounded-lg cursor-pointer w-30 border hover:shadow-md hover:scale-105 transition category-item"
-                    data-id="4">
+                    data-id="5">
                     <i class="fa-solid fa-briefcase text-gray-700 text-lg"></i>
                     <span class="text-sm">Ofis</span>
                 </div>
 
                 <!-- Qaraj -->
                 <div class="flex items-center gap-2 p-3 rounded-lg cursor-pointer w-30 border hover:shadow-md hover:scale-105 transition category-item"
-                    data-id="5">
+                    data-id="6">
                     <i class="fa-solid fa-car text-gray-700 text-lg"></i>
                     <span class="text-sm">Qaraj</span>
                 </div>
 
                 <!-- Obyekt -->
                 <div class="flex items-center gap-2 p-3 rounded-lg cursor-pointer w-30 border hover:shadow-md hover:scale-105 transition category-item"
-                    data-id="6">
+                    data-id="8">
                     <i class="fa-solid fa-store text-gray-700 text-lg"></i>
                     <span class="text-sm">Obyekt</span>
                 </div>
@@ -214,10 +230,12 @@
                     <div class="flex flex-wrap gap-2">
                         <button type="button" class="btn-option" data-category="1">Mənzil</button>
                         <button type="button" class="btn-option" data-category="2">Villa</button>
-                        <button type="button" class="btn-option" data-category="3">Torpaq</button>
-                        <button type="button" class="btn-option" data-category="4">Ofis</button>
-                        <button type="button" class="btn-option" data-category="5">Qaraj</button>
-                        <button type="button" class="btn-option" data-category="6">Obyekt</button>
+                        <button type="button" class="btn-option" data-category="3">Köhnə tikili</button>
+                        <button type="button" class="btn-option" data-category="4">Heyət evi</button>
+                        <button type="button" class="btn-option" data-category="5">Torpaq</button>
+                        <button type="button" class="btn-option" data-category="6">Ofis</button>
+                        <button type="button" class="btn-option" data-category="7">Qaraj</button>
+                        <button type="button" class="btn-option" data-category="8">Obyekt</button>
                     </div>
                 </div>
 
@@ -413,7 +431,7 @@
         </section>
     </main>
 
-  
+
 
     <script src="./assets/js/app.js"></script>
 </body>

@@ -18,13 +18,13 @@ namespace EvTap.Presentation.Controllers
     {
         private readonly Contracts.Services.IAuthorizationService _authorizationService;
         private readonly IGoogleAuthService _googleAuthService;
-        
+
 
         public AuthorizationController(Contracts.Services.IAuthorizationService authorizationService, IGoogleAuthService googleAuthService)
         {
             _authorizationService = authorizationService;
             _googleAuthService = googleAuthService;
-            
+
         }
 
         [HttpPost("register")]
@@ -71,7 +71,7 @@ namespace EvTap.Presentation.Controllers
             if (result.Succeeded)
             {
 
-                return Redirect("http://127.0.0.1:5501/Login.htm");
+                return Redirect("http://127.0.0.1:5501/Login.html");
             }
 
 
@@ -95,12 +95,13 @@ namespace EvTap.Presentation.Controllers
         {
             var jwt = await _googleAuthService.HandleGoogleLoginAsync();
 
-            
+            // GoogleResponse metodunda bu hissəni dəyişin:
             var script = $@"
-                <script>
-                    window.opener.postMessage({{ token: '{jwt}' }}, 'https://localhost:7027');
-                    window.close();
-                </script>";
+    <script>
+       
+        window.opener.postMessage({{ token: '{jwt}' }}, '*');
+        window.close();
+    </script>";
             return Content(script, "text/html");
         }
     }

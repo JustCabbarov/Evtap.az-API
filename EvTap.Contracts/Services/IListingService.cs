@@ -14,5 +14,8 @@ namespace EvTap.Contracts.Services
         Task<Listing> CreateListingAsync(ListingDTO listing);
         Task UpdateListingAsync(ListingDTO listing);
         Task DeleteListingAsync(int listingId);
+
+        Task<Listing> GetListingDetailByIdAsync(int listingId);
+        Task<List<Listing>> GetListingsDetailAsync();
     }
 }

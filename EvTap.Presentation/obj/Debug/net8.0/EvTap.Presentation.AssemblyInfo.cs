@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EvTap.Presentation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ddcf1c9c2a96a71b413e85ed488e9f2fdf445d16")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+570c5f5c2d699d0a877cc1ad6de496448fad03f1")]
 [assembly: System.Reflection.AssemblyProductAttribute("EvTap.Presentation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EvTap.Presentation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

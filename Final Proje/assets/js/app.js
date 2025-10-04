@@ -1,15 +1,16 @@
 // API Configuration
-const API_URL = 'https://localhost:7027/api/Listing/GetAllListings';
+const API_URL = 'https://localhost:7027/api/Filter/GetListingsByAdvertType?type=1';
 const FILTER_API = 'https://localhost:7027/api/Filter/GetListingsByFilter';
 const CATEGORY_API = 'https://localhost:7027/api/Filter/GetListingsByCategory';
+const GET_ALL_API = 'https://localhost:7027/api/Filter/GetListingsByAdvertType?type='; // Unused, replaced by more robust fetchAllListings logic
 const PROPERTY_API = 'https://localhost:7027/api/Category/GetAll';
 const DISTRICT_API = 'https://localhost:7027/api/Dictrict/GetAll';
 const METRO_API = 'https://localhost:7027/api/MetroStation/GetAll';
 
-let selectedCategories = [];
-let selectedRooms = [];
-let selectedRenovations = []; // Changed to array for multiple selections
-let selectedCreatorTypes = [];
+let selectedCategories = []; // Unused in current filter logic, kept for reference
+let selectedRooms = []; // Unused in current filter logic, kept for reference
+let selectedRenovations = []; // Unused in current filter logic, kept for reference
+let selectedCreatorTypes = []; // Unused in current filter logic, kept for reference
 let selectedLocations = [];
 
 // DOM Elementləri
@@ -38,9 +39,8 @@ const formatPrice = (amount) => {
 };
 
 const createPropertyCard = (property, isVip = false) => {
-    console.log('Creating property card for:', property); // Debug log
     const card = document.createElement('a');
-    card.href = `./Property-Detail.html?id=${property.id}`;
+    card.href = `property.html?id=${property.id}`;
     card.className = 'property-card block bg-white rounded-xl shadow-md overflow-hidden cursor-pointer no-underline relative';
 
     const imageUrl = property.images?.[0]?.url || 'https://via.placeholder.com/400x250?text=Emlak';
@@ -149,68 +149,13 @@ const renderGrid = (properties) => {
         return;
     }
 
-    // Apply client-side location filtering if needed
+    // Use properties directly from API (no client-side filtering)
     let filteredProperties = properties;
-    if (selectedLocations.length > 0) {
-        filteredProperties = properties.filter(property => {
-            // Check if property matches any selected location
-            return selectedLocations.some(location => {
-                if (location.type === 'district') {
-                    return property.districtId === location.id ||
-                        property.location?.district?.toLowerCase().includes(location.name.toLowerCase());
-                } else if (location.type === 'metro') {
-                    return property.metroStationId === location.id ||
-                        property.location?.metro?.toLowerCase().includes(location.name.toLowerCase());
-                }
-                return false;
-            });
-        });
-        console.log(`Client-side location filtering: ${properties.length} -> ${filteredProperties.length} properties`);
-    }
 
     // Separate VIP and regular properties
     const vipProperties = filteredProperties.filter(property => property.isPremium === true);
     const regularProperties = filteredProperties.filter(property => property.isPremium !== true);
 
-    console.log(`Total properties: ${properties.length}, VIP: ${vipProperties.length}, Regular: ${regularProperties.length}`);
-
-    // Debug: Show all properties with location info
-    console.log('All properties with location info:', properties.map(p => ({
-        id: p.id,
-        title: p.title,
-        isPremium: p.isPremium,
-        district: p.location?.district,
-        city: p.location?.city,
-        districtId: p.districtId,
-        metroStationId: p.metroStationId
-    })));
-
-    // Debug: Show filtered properties
-    if (filteredProperties.length !== properties.length) {
-        console.log('Filtered properties with location info:', filteredProperties.map(p => ({
-            id: p.id,
-            title: p.title,
-            isPremium: p.isPremium,
-            district: p.location?.district,
-            city: p.location?.city,
-            districtId: p.districtId,
-            metroStationId: p.metroStationId
-        })));
-    }
-
-    if (vipProperties.length > 0) {
-        console.log('VIP properties found:', vipProperties.map(p => ({
-            id: p.id,
-            category: p.categoryId,
-            title: p.title,
-            isPremium: p.isPremium,
-            district: p.location?.district,
-            districtId: p.districtId,
-            metroStationId: p.metroStationId
-        })));
-    } else {
-        console.log('No VIP properties found in current filter results');
-    }
 
     // Render VIP properties
     if (vipProperties.length === 0) {
@@ -271,21 +216,14 @@ const fetchListings = async (filters = {}) => {
 
         let response;
         if (Object.keys(filters).length > 0) {
-            console.log('Using FILTER_API with filters:', filters);
-            console.log('API URL:', FILTER_API);
             response = await fetch(FILTER_API, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(filters)
             });
         } else {
-            console.log('Using API_URL (no filters)');
-            console.log('API URL:', API_URL);
             response = await fetch(API_URL);
         }
-
-        console.log('API Response status:', response.status);
-        console.log('API Response ok:', response.ok);
 
         if (!response.ok) {
             throw new Error(`HTTP error! ${response.status}`);
@@ -293,12 +231,67 @@ const fetchListings = async (filters = {}) => {
 
         const data = await response.json();
         const properties = Array.isArray(data) ? data : [];
-        console.log('API Response data:', properties);
         renderGrid(properties);
 
     } catch (error) {
-        console.error('Failed to fetch properties:', error);
         showError('Elanları yükləməkdə xəta baş verdi. Lütfən yenidən cəhd edin.');
+    }
+};
+
+// Fetch all listings (no filters)
+const fetchAllListings = async () => {
+    try {
+        showLoading('both');
+
+        // Try multiple endpoints to get all listings
+        const endpoints = [
+            'https://localhost:7027/api/Property/GetAllListings',
+            'https://localhost:7027/api/Listing/GetAllListings',
+            'https://localhost:7027/api/Filter/GetListingsByAdvertType?type=1',
+            'https://localhost:7027/api/Filter/GetListingsByAdvertType?type=2'
+        ];
+
+        let allProperties = [];
+
+        for (const endpoint of endpoints) {
+            try {
+                const response = await fetch(endpoint, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    if (Array.isArray(data)) {
+                        allProperties = [...allProperties, ...data];
+                    }
+                }
+            } catch (e) {
+                // Continue with next endpoint
+            }
+        }
+
+        if (allProperties.length > 0) {
+            // Remove duplicates based on ID
+            const uniqueProperties = allProperties.filter((property, index, self) =>
+                index === self.findIndex(p => p.id === property.id)
+            );
+            renderGrid(uniqueProperties);
+        } else {
+            // Fallback to original API
+            await fetchListings();
+        }
+
+    } catch (error) {
+        // Final fallback
+        try {
+            await fetchListings();
+        } catch (fallbackError) {
+            showError('Elanları yükləməkdə xəta baş verdi.');
+        }
     }
 };
 
@@ -306,7 +299,6 @@ const fetchListings = async (filters = {}) => {
 const fetchListingsByCategory = async (categoryId) => {
     try {
         showLoading('both');
-
         const response = await fetch(`${CATEGORY_API}?categoryId=${categoryId}`);
 
         if (!response.ok) {
@@ -315,13 +307,10 @@ const fetchListingsByCategory = async (categoryId) => {
 
         const data = await response.json();
         const properties = Array.isArray(data) ? data : [];
-
-        console.log(`Category ${categoryId} listings:`, properties);
         renderGrid(properties);
 
     } catch (error) {
-        console.error('Failed to fetch category listings:', error);
-        showError('Kateqoriya elanları yükləməkdə xəta baş verdi. Lütfən yenidən cəhd edin.');
+        showError('Kateqoriya elanları yükləməkdə xəta baş verdi.');
     }
 };
 
@@ -332,7 +321,6 @@ const initializeDOMElements = () => {
     vipCount = document.getElementById('vipCount');
     regularCount = document.getElementById('regularCount');
 
-    // Initialize VIP slider elements
     vipSlider.container = document.getElementById('vipContainer');
     vipSlider.controls = document.getElementById('vipSliderControls');
     vipSlider.prevBtn = document.getElementById('vipPrevBtn');
@@ -340,9 +328,9 @@ const initializeDOMElements = () => {
     vipSlider.info = document.getElementById('vipSliderInfo');
 
     if (!vipGrid || !regularGrid || !vipCount || !regularCount) {
-        console.error('Required DOM elements not found');
         return false;
     }
+
     return true;
 };
 
@@ -358,10 +346,8 @@ const loadPropertyTypes = async () => {
         const propertyTypeSelect = document.getElementById('propertyTypeSelect');
 
         if (propertyTypeSelect && Array.isArray(data)) {
-            // Clear existing options except the first one
             propertyTypeSelect.innerHTML = '<option value="">Hamısı</option>';
 
-            // Add property types from API
             data.forEach(propertyType => {
                 const option = document.createElement('option');
                 option.value = propertyType.id;
@@ -370,7 +356,7 @@ const loadPropertyTypes = async () => {
             });
         }
     } catch (error) {
-        console.error('Failed to load property types:', error);
+        // Silently handle error
     }
 };
 
@@ -378,33 +364,19 @@ const loadPropertyTypes = async () => {
 const initializeApp = async () => {
     try {
         if (!initializeDOMElements()) {
-            console.error('Failed to initialize DOM elements');
+            showError('Tətbiq başlatılmadı.');
             return;
         }
 
-        // Load property types and listings in parallel
         await Promise.all([
             loadPropertyTypes(),
-            fetchListings()
+            fetchAllListings()
         ]);
     } catch (error) {
-        console.error('Application initialization failed:', error);
-        showError('Tətbiq başlatılmadı. Zəhmət olmamasa səhifəni yeniləyin.');
+        showError('Tətbiq başlatılmadı.');
     }
 };
 
-// Test card click functionality
-const testCardClick = () => {
-    console.log('Testing card click functionality...');
-    const testCard = document.createElement('a');
-    testCard.href = './Property-Detail.html?id=1';
-    testCard.className = 'property-card block bg-white rounded-xl shadow-md overflow-hidden cursor-pointer no-underline';
-    testCard.style.margin = '10px';
-    testCard.innerHTML = '<div class="p-4"><h3>Test Card</h3><p>Click me to go to Property Detail</p></div>';
-
-    // Add to page for testing
-    document.body.appendChild(testCard);
-};
 
 // Filter and Modal related functionality
 const initializeModalEvents = () => {
@@ -462,34 +434,26 @@ const initializeModalEvents = () => {
         });
     }
 
-    // Category buttons
-    document.querySelectorAll('.category-item').forEach(item => {
+    // Category functionality 
+    const categoryItems = document.querySelectorAll('.category-item');
+    categoryItems.forEach(item => {
         item.addEventListener('click', () => {
-            // Remove active class from all categories
-            document.querySelectorAll('.category-item').forEach(cat => cat.classList.remove('active'));
-            // Add active class to clicked category
+            // Remove active class from all category items
+            categoryItems.forEach(cat => cat.classList.remove('active'));
+            // Add active class to clicked item
             item.classList.add('active');
 
             const categoryId = item.getAttribute('data-id');
-            const categoryName = item.textContent.trim();
-            console.log('Category clicked:', categoryId, 'Name:', categoryName);
 
-            if (categorySelect) {
-                categorySelect.value = categoryId;
-            }
-
-            // If "Hamısı" (All) is selected, fetch all listings without filters
             if (categoryId === '' || categoryId === null) {
-                console.log('Showing all properties (no category filter)');
-                fetchListings();
+                // Show all listings using GetAllListings API
+                fetchAllListings();
             } else {
-                // Use the category-specific API endpoint
-                console.log(`Fetching listings for category: ${categoryName} (ID: ${categoryId})`);
+                // Fetch listings by category
                 fetchListingsByCategory(categoryId);
             }
         });
     });
-
 
     // Filter option buttons
     document.querySelectorAll('.btn-option').forEach(btn => {
@@ -545,7 +509,6 @@ const initializeModalEvents = () => {
             tab.classList.add('active-tab');
 
             const tabType = tab.getAttribute('data-tab');
-            console.log('Tab clicked:', tabType);
             loadLocationData(tabType === 'rayon' ? 'District' : 'Metro');
 
             // Scroll to top when switching tabs
@@ -562,7 +525,6 @@ const initializeModalEvents = () => {
             const activeTab = document.querySelector('.location-tab-btn.active-tab');
             const tabType = activeTab?.getAttribute('data-tab');
             const searchTerm = locationSearchInput.value.toLowerCase();
-            console.log('Searching in tab:', tabType, 'Term:', searchTerm);
             filterLocationList(tabType === 'rayon' ? 'District' : 'Metro', searchTerm);
         }, 300));
     }
@@ -584,7 +546,6 @@ const initializeModalEvents = () => {
             const activeTab = document.querySelector('.location-tab-btn.active-tab');
             const tabType = activeTab?.getAttribute('data-tab');
             if (tabType) {
-                console.log('Clearing locations for tab:', tabType);
                 loadLocationData(tabType === 'rayon' ? 'District' : 'Metro');
             }
         });
@@ -665,7 +626,7 @@ const resetFilters = () => {
     fetchListings();
 };
 
-// Apply filters and search
+// Apply filters and search (from modal)
 const applyFilters = () => {
     const filters = {};
 
@@ -792,24 +753,11 @@ const searchListings = () => {
         filters.MetroStationIds = selectedMetroIds;
     }
 
-    console.log('Search filters applied:', filters);
-    console.log('Selected locations:', selectedLocations);
-
-    // Debug location filtering
-    if (selectedLocations.length > 0) {
-        console.log('Location filter details:');
-        selectedLocations.forEach(loc => {
-            console.log(`- ${loc.type}: ${loc.name} (ID: ${loc.id})`);
-        });
-    } else {
-        console.log('No location filters applied');
-    }
 
     // Always use filter API if any filters are applied, including location filters
     if (Object.keys(filters).length > 0) {
         fetchListings(filters);
     } else {
-        // If no filters at all, fetch all listings
         fetchListings();
     }
 };
@@ -853,7 +801,6 @@ const loadLocationData = async (type) => {
 
         renderLocationList(data, type);
     } catch (error) {
-        console.error(`Failed to load ${type} data:`, error);
         if (loadingEl) loadingEl.style.display = 'none';
         container.innerHTML = `<div class="text-red-500 text-center py-4">${type} məlumatları yüklənmədi</div>`;
     }
@@ -973,7 +920,6 @@ const filterLocationList = async (type, searchTerm) => {
 
         renderLocationList(filtered, type);
     } catch (error) {
-        console.error(`Error filtering ${type} data:`, error);
     }
 };
 
@@ -992,8 +938,6 @@ const applyLocationSelection = () => {
     const searchInput = document.getElementById('locationSearchInput');
     if (searchInput) searchInput.value = '';
 
-    console.log('Location selections applied:', selectedLocations);
-    console.log('Modal closed. User needs to click search button to apply filters.');
 };
 
 // VIP Slider Functions
@@ -1076,12 +1020,95 @@ const updateVipSliderButtons = () => {
     }
 };
 
+
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM loaded, initializing app...');
     initializeApp();
     initializeModalEvents();
-    console.log('App initialized successfully');
-    // Uncomment next line for testing
-    // testCardClick();
+});
+// API Configuration (Mövqeyə görə)
+const LOGOUT_API = 'https://localhost:7027/api/Authorization/LogOut'; 
+
+// =================================================================
+// AUTHENTICATION & UI MANAGEMENT (Giriş/Çıxış İdarəetməsi)
+// =================================================================
+
+const handleLogout = async () => {
+    try {
+        const token = localStorage.getItem('jwt');
+        
+        const response = await fetch(LOGOUT_API, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                ...(token && { 'Authorization': `Bearer ${token}` }) 
+            }
+        });
+
+        // Cavabın statusundan asılı olmayaraq, Local Storage-i təmizlə
+        localStorage.removeItem('jwt');
+        
+        // UI-ı yeniləyir və əsas səhifəyə yönləndirir
+        updateAuthUI();
+        window.location.href = '/'; 
+
+    } catch (error) {
+        localStorage.removeItem('jwt');
+        updateAuthUI();
+        console.error('Çıxış zamanı xəta:', error);
+    }
+};
+
+const updateAuthUI = () => {
+   
+    
+    const newListingLink = document.getElementById('newListing');
+    const loginLink = document.getElementById('loginLink');
+    const messagesLink = document.getElementById('messagesLink');
+    
+    const token = localStorage.getItem('jwt');
+
+    if (!loginLink) return;
+
+    if (token) {
+        
+        loginLink.outerHTML = `
+            <button id="logoutBtn" class="border px-4 py-2 rounded-lg hover:bg-red-50 text-red-600 border-red-600 transition">
+                Çıxış
+            </button>
+        `;
+       
+        const logoutBtn = document.getElementById('logoutBtn');
+        if (logoutBtn) {
+            logoutBtn.addEventListener('click', handleLogout);
+        }
+
+        if (newListingLink) {
+            newListingLink.classList.remove('opacity-50', 'pointer-events-none');
+            newListingLink.href = './Create.html'; 
+        }
+        if (messagesLink) {
+            messagesLink.classList.remove('opacity-50', 'pointer-events-none');
+            messagesLink.href = './Chat.html'; 
+        }
+        
+    } else {
+      
+        if (newListingLink) {
+            newListingLink.classList.add('opacity-50', 'pointer-events-none');
+          
+            newListingLink.href = './Login.html';
+        }
+        if (messagesLink) {
+            messagesLink.classList.add('opacity-50', 'pointer-events-none');
+            messagesLink.href = './Login.html';
+        }
+    }
+};
+
+
+document.addEventListener('DOMContentLoaded', () => {
+     
+    
+    updateAuthUI(); 
 });

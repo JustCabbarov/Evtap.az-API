@@ -665,6 +665,32 @@
   },
   {
     "ContainingType": "EvTap.Presentation.Controllers.ListingController",
+    "Method": "GetListingDetailById",
+    "RelativePath": "api/Listing/GetListingDetailById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EvTap.Presentation.Controllers.ListingController",
+    "Method": "GetListingsDetail",
+    "RelativePath": "api/Listing/GetListingsDetail",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EvTap.Presentation.Controllers.ListingController",
     "Method": "UpdateListing",
     "RelativePath": "api/Listing/UpdateListing",
     "HttpMethod": "PUT",
@@ -867,23 +893,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "EvTap.Contracts.DTOs.SendMessageRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "EvTap.Presentation.Controllers.MessageController",
-    "Method": "SendMessageToAdmin",
-    "RelativePath": "api/Message/send-to-admin",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "EvTap.Contracts.DTOs.AdminMessageRequest",
+        "Type": "EvTap.Contracts.DTOs.SendMessageRequst",
         "IsRequired": true
       }
     ],

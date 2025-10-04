@@ -1,123 +1,147 @@
 <!DOCTYPE html>
 <html lang="az">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salamm - Mülk Detalları</title>
-    <link rel="stylesheet" href="./assets/css/detail.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Salamm - Mülk Detalları - EvTap.az</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/property.css">
 </head>
-<body>
-    <div class="container">
-        <header>
-            <div class="logo">Emlak Portalı</div>
-            <nav>
-                <ul>
-                    <li><a href="#"><i class="fas fa-home"></i> Əsas Səhifə</a></li>
-                    <li><a href="#"><i class="fas fa-search"></i> Axtarış</a></li>
-                    <li><a href="#"><i class="fas fa-heart"></i> Seçilmişlər</a></li>
-                    <li><a href="#"><i class="fas fa-user"></i> Hesab</a></li>
-                </ul>
+
+<body class="bg-light">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white border-b shadow-sm">
+        <div class="container mx-auto flex justify-between items-center py-3 px-4 lg:px-8">
+            <!-- Logo -->
+            <a href="./index.html" class="flex items-center gap-2 text-blue-600 font-bold text-xl">
+                <i class="fa-solid fa-house"></i> EvTap.az
+            </a>
+
+            <nav class="hidden md:flex items-center gap-6 text-gray-700 font-medium">
+                <a href="./Sales.html" class="hover:text-blue-600">Alış-satış</a>
+                <a href="./Rent.html" class="hover:text-blue-600">Kirayə</a>
+                <a href="./Rent-Daily.html" class="hover:text-blue-600">Günlük</a>
+                <a href="./Agency.html" class="hover:text-blue-600">Agentliklər</a>
+                <a href="./ask-ai.html  " class="hover:text-blue-600">AI Sorgu</a>
             </nav>
-        </header>
-        
+
+            <!-- Sağ tərəf -->
+            <div class="flex items-center gap-4">
+                <a href="./Create.html" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg">Yeni
+                    elan</a>
+                <a href="./Login.html" class="border px-4 py-2 rounded-lg hover:bg-gray-100">Giriş</a>
+                <a href="./Chat.html" class="border px-4 py-2 rounded-lg hover:bg-gray-100">Mesajlar</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
         <div class="property-details">
             <div class="main-info">
-                <h1>Salamm</h1>
-                <div class="price">299,990 AZN</div>
-                
-                <div class="premium-badge">
-                    <i class="fas fa-crown"></i> Premium Elan (20.09.2025-ə qədər)
+                <h1 id="propertyTitle">Salamm</h1>
+                <div class="price" id="propertyPrice">299,990 AZN</div>
+
+                <div class="advert-type" id="advertType">Alış</div>
+
+                <div class="premium-badge" id="premiumBadge" style="display: none;">
+                    <i class="fas fa-crown"></i> Premium Elan (<span id="premiumExpireDate"></span>-ə qədər)
                 </div>
-                
+
                 <div class="image-placeholder">
                     <i class="fas fa-home fa-3x"></i>
+                    <p>Şəkil yüklənməyib</p>
                 </div>
-                
+
                 <div class="details-grid">
                     <div class="detail-item">
                         <i class="fas fa-door-open"></i>
-                        <span>Otaq sayı: 30</span>
+                        <span>Otaq sayı: <span id="rooms">30</span></span>
                     </div>
                     <div class="detail-item">
                         <i class="fas fa-layer-group"></i>
-                        <span>Mərtəbə: 1/1</span>
+                        <span>Mərtəbə: <span id="floor">1</span>/<span id="totalFloors">1</span></span>
                     </div>
                     <div class="detail-item">
                         <i class="fas fa-vector-square"></i>
-                        <span>Sahə: 2000 m²</span>
+                        <span>Sahə: <span id="area">2000</span> m²</span>
                     </div>
                     <div class="detail-item">
                         <i class="fas fa-paint-roller"></i>
-                        <span>Təmir: Yeni</span>
+                        <span>Təmir: <span id="renovation" class="renovation-badge">Yeni</span></span>
                     </div>
                     <div class="detail-item">
                         <i class="fas fa-calendar-alt"></i>
-                        <span>Yaranma tarixi: 20.09.2025</span>
+                        <span>Yaranma tarixi: <span id="createdAt">20.09.2025</span></span>
                     </div>
                     <div class="detail-item">
                         <i class="fas fa-user-tie"></i>
-                        <span>Müəllif: Şəxsi</span>
+                        <span>Müəllif: <span id="creatorType">Şəxsi</span></span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-tag"></i>
+                        <span>Kateqoriya: <span id="category">Mənzil</span></span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Yerləşmə: <span id="location">Bakı</span></span>
                     </div>
                 </div>
-                
+
                 <div class="description">
-                    <p>"Salamm" adlı bu mülk 2000 m² sahəyə malikdir və 30 otaqdan ibarətdir. Mülk bir mərtəbədən ibarət olub, yeni təmirlidir. Premium statusa malik olan bu elan 20 sentyabr 2025-ci ilə qədər etibarlıdır.</p>
+                    <p id="propertyDescription">Salamm</p>
                 </div>
-                
+
                 <div class="metro-info">
                     <h3><i class="fas fa-subway"></i> Yaxınlıqda olan metro stansiyaları</h3>
-                    <div class="metro-stations">
-                        <div class="metro-station">
-                            <i class="fas fa-train"></i> 28 May
-                        </div>
-                        <div class="metro-station">
-                            <i class="fas fa-train"></i> Nərimov
-                        </div>
-                        <div class="metro-station">
-                            <i class="fas fa-train"></i> Memar Əcəmi
-                        </div>
+                    <div class="metro-stations" id="metroStations">
+
                     </div>
                 </div>
             </div>
-            
+
             <div class="sidebar">
                 <div class="contact-form">
-                    <h3><i class="fas fa-envelope"></i> Əlaqə saxlayın</h3>
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Adınız</label>
-                            <input type="text" id="name" placeholder="Adınızı daxil edin">
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Telefon</label>
-                            <input type="tel" id="phone" placeholder="Telefon nömrəniz">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">E-poçt</label>
-                            <input type="email" id="email" placeholder="E-poçt ünvanınız">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Mesaj</label>
-                            <textarea id="message" rows="4" placeholder="Mesajınızı yazın"></textarea>
-                        </div>
-                        <button type="submit">Mesaj göndər</button>
-                    </form>
+                    <h3><i class="fas fa-envelope"></i> Əlaqə</h3>
+
+                    <div class="contact-buttons-container">
+
+                        <button type="button" id="messageBtn" onclick="handleMessageClick()" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Elan sahibinə mesaj yaz</span>
+                        </button>
+
+                        <button type="button" id="phoneBtn" onclick="togglePhoneNumber()" class="btn btn-secondary">
+                            <i class="fas fa-phone"></i>
+                            <span id="phoneBtnText">Nömrəni göstər</span>
+                            <span id="phoneNumber" style="display: none;"></span>
+                        </button>
+
+                    </div>
+                    <div style="margin-top: 15px; font-size: 14px; color: var(--light-text); text-align: center;">
+                        <p>Telefonu vuraraq və ya mesaj göndərərək əlaqə saxlaya bilərsiniz</p>
+                    </div>
                 </div>
-                
+
                 <div class="location-info">
                     <h3><i class="fas fa-map-marker-alt"></i> Yerləşdiyi yer</h3>
-                    <p>Mülk Bakı şəhəri, Salamm qəsəbəsində yerləşir.</p>
-                    <div class="map-placeholder" style="height: 200px; background-color: #e0e0e0; margin-top: 15px; display: flex; align-items: center; justify-content: center; border-radius: 8px;">
-                        <i class="fas fa-map fa-2x"></i>
-                    </div>
+                    <p id="locationDescription">Mülk Bakı şəhəri, Salamm qəsəbəsində yerləşir.</p>
+                    <div id="miniMap" style="height: 250px; width: 100%; margin-top: 30px; "></div>
                 </div>
             </div>
         </div>
-        
-        <footer>
-            <p>© 2025 Emlak Portalı. Bütün hüquqlar qorunur.</p>
+
+        <footer class="text-center py-10 border-t border-gray-200 text-gray-500">
+            <p>© 2024 EvTap.az. Bütün hüquqlar qorunur.</p>
         </footer>
     </div>
+
+    <script src="./assets/js/property.js"></script>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </body>
+
 </html>

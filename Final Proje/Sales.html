@@ -1,359 +1,439 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="az">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EvTap.az</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="./assets/css/filter.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EvTap.az - Ana Səhifə</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body class="bg-gray-50 text-gray-900 font-inter" data-page="home">
-  <!-- Header -->
-  <header class="sticky top-0 z-50 bg-white border-b shadow-sm">
-    <div class="container mx-auto flex justify-between items-center py-3 px-4 lg:px-8">
+<body class="bg-gray-50 text-gray-900 font-inter">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white border-b shadow-sm">
+        <div class="container mx-auto flex justify-between items-center py-3 px-4 lg:px-8">
+            <!-- Logo -->
+            <a href="./index.html" class="flex items-center gap-2 text-blue-600 font-bold text-xl">
+                <i class="fa-solid fa-house"></i> EvTap.az
+            </a>
 
-      <!-- Logo -->
-      <a href="./index.html" class="flex items-center gap-2 text-blue-600 font-bold text-xl">
-        <i class="fa-solid fa-house"></i> EvTap.az
-      </a>
+            <!-- Navigation -->
+            <nav class="hidden md:flex items-center gap-6 text-gray-700 font-medium">
+                <a href="./Sales.html" class="hover:text-blue-600">Alış-satış</a>
+                <a href="./Rent.html" class="hover:text-blue-600">Kirayə</a>
+                <a href="./Rent-Daily.html" class="hover:text-blue-600">Günlük</a>
+                <a href="./Agency.html" class="hover:text-blue-600">Agentliklər</a>
+                <a href="./ask-ai.html  " class="hover:text-blue-600">AI Sorgu</a>
+            </nav>
 
-      <!-- Navigation -->
-      <nav class="hidden md:flex items-center gap-6 text-gray-700 font-medium">
-        <a href="./Sales.html" class="hover:text-blue-600">Alış-satış</a>
-        <a href="./Rent.html" class="hover:text-blue-600">Kirayə</a>
-        <a href="./Rent-Daily.html" class="hover:text-blue-600">Günlük</a>
-        <a href="./Agency.html" class="hover:text-blue-600">Agentliklər</a>
-
-      </nav>
-
-      <!-- Sağ tərəf -->
-      <div class="flex items-center gap-4">
-        <a href="./Create.html" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg">Yeni elan</a>
-        <a href="./Login.htm" class="border px-4 py-2 rounded-lg hover:bg-gray-100">Giriş</a>
-        <button class="md:hidden text-gray-600 text-2xl" id="hamburger">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-      </div>
-    </div>
-
-    <!-- Mobil menyu -->
-    <div id="mobileMenu" class="hidden md:hidden flex-col gap-3 px-6 py-4 bg-gray-100 text-gray-700">
-      <a href="./index.html" class="hover:text-blue-600">Home</a>
-      <a href="./listings.html" class="hover:text-blue-600">Listings</a>
-      <a href="./contact.html" class="hover:text-blue-600">Contact</a>
-    </div>
-  </header>
-
-  <!-- Filter tam ekran -->
-  <section class="bg-white  py-4 px-4 lg:px-8">
-
-
-    <form id="home-search-form" class="max-w-7xl mx-auto flex flex-wrap items-end gap-4 mb-4 ">
-      <!-- Tip -->
-      <div class="flex flex-col w-[125px]">
-        <label for="advertType" class="text-gray-500 mb-1">Tip</label>
-        <select id="advertType" name="advertType" class="p-2 border rounded-lg focus:ring-2 focus:ring-blue-200">
-          <option value="">Alış</option>
-          <option value="rent">Kirayə</option>
-        </select>
-      </div>
-
-      <!-- Əmlak tipi -->
-      <div class="flex flex-col w-[150px]">
-        <label for="propertyTypeSelect" class="text-gray-500 mb-1">Əmlak tipi</label>
-        <select id="propertyTypeSelect" name="propertyType"
-          class="p-2 border rounded-lg focus:ring-2 focus:ring-blue-200">
-          <!-- JS ilə doldurulacaq -->
-        </select>
-      </div>
-
-      <!-- Otaq sayı -->
-      <div class="flex flex-col w-[150px]">
-        <label for="roomCount" class="text-gray-500 mb-1">Otaq sayı</label>
-        <select id="roomCount" name="rooms" class="p-2 border rounded-lg focus:ring-2 focus:ring-blue-200">
-          <option value="">Hamısı</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5+</option>
-        </select>
-      </div>
-
-      <!-- Qiymət -->
-      <div class="flex flex-col relative w-[150px]">
-        <label class="text-gray-500 mb-1">Qiymət</label>
-        <button type="button" id="priceBtn"
-          class="border rounded-lg px-3 py-2 w-full flex justify-between items-center">
-          Qiymət <i class="fa-solid fa-chevron-down ml-2"></i>
-        </button>
-        <div id="priceDropdown"
-          class="hidden absolute top-16 left-0 bg-white border shadow-lg rounded-lg p-4 w-60 z-50">
-          <div class="flex gap-2">
-            <input type="number" id="priceMin" placeholder="Min" class="w-1/2 border p-2 rounded-lg">
-            <input type="number" id="priceMax" placeholder="Max" class="w-1/2 border p-2 rounded-lg">
-          </div>
-          <button type="button" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">Tətbiq
-            et</button>
-        </div>
-      </div>
-
-      <!-- Rayon / Metro -->
-      <div class="flex flex-col w-[350px]">
-        <label class="text-gray-500 mb-1">Rayon / Metro</label>
-        <button style="width: 340px;" type="button"  id="mainLocationInput"
-          class="input-location p-2 border rounded-lg focus:ring-2 focus:ring-blue-200 text-left ">
-          Rayon / Metro
-        </button>
-      </div>
-
-      <!-- Axtar və Filter -->
-      <div class="flex flex-row gap-2 flex-nowrap">
-        <button type="submit" class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 whitespace-nowrap">
-          Axtar
-        </div>
-      </button><button id="filterOpenBtn" 
-        class="btn-action bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md transition duration-300 ease-in-out">
-    Filter
-</button>
-
-      </form>
-<div class="flex flex-wrap gap-4 justify-center p-0">
-  <!-- Mənzil -->
-  <div class="flex items-center gap-2 p-3 rounded-lg cursor-pointer w-30 border hover:shadow-md hover:scale-105 transition category-item" data-id="1">
-    <i class="fa-solid fa-house text-gray-700 text-lg"></i>
-    <span class="text-sm">Mənzil</span>
-  </div>
-
-  <!-- Villa -->
-  <div class="flex items-center gap-2 p-3 rounded-lg cursor-pointer w-30 border hover:shadow-md hover:scale-105 transition category-item" data-id="2">
-    <i class="fa-solid fa-building text-gray-700 text-lg"></i>
-    <span class="text-sm">Villa</span>
-  </div>
-
-  <!-- Torpaq -->
-  <div class="flex items-center gap-2 p-3 rounded-lg cursor-pointer w-30 border hover:shadow-md hover:scale-105 transition category-item" data-id="3">
-    <i class="fa-solid fa-mountain text-gray-700 text-lg"></i>
-    <span class="text-sm">Torpaq</span>
-  </div>
-
-  <!-- Ofis -->
-  <div class="flex items-center gap-2 p-3 rounded-lg cursor-pointer w-30 border hover:shadow-md hover:scale-105 transition category-item" data-id="4">
-    <i class="fa-solid fa-briefcase text-gray-700 text-lg"></i>
-    <span class="text-sm">Ofis</span>
-  </div>
-
-  <!-- Qaraj -->
-  <div class="flex items-center gap-2 p-3 rounded-lg cursor-pointer w-30 border hover:shadow-md hover:scale-105 transition category-item" data-id="5">
-    <i class="fa-solid fa-car text-gray-700 text-lg"></i>
-    <span class="text-sm">Qaraj</span>
-  </div>
-
-  <!-- Obyekt -->
-  <div class="flex items-center gap-2 p-3 rounded-lg cursor-pointer w-30 border hover:shadow-md hover:scale-105 transition category-item" data-id="6">
-    <i class="fa-solid fa-store text-gray-700 text-lg"></i>
-    <span class="text-sm">Obyekt</span>
-  </div>
+            <!-- Sağ tərəf -->
+           <div class="flex items-center gap-4">
+    <a href="./Create.html" id="newListing"
+        class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg">Yeni elan</a>
+    
+    <a href="./Login.html" id="loginLink" class="border px-4 py-2 rounded-lg hover:bg-gray-100">Giriş</a>
+    
+    <a href="./Chat.html" id="messagesLink" class="border px-4 py-2 rounded-lg hover:bg-gray-100">Mesajlar</a>
+    
+    <button class="md:hidden text-gray-600 text-2xl" id="hamburger">
+        <i class="fa-solid fa-bars"></i>
+    </button>
 </div>
-
-
-
-
-
-<!-- Filter Modal Overlay -->
-<div id="filterModalOverlay" class="overlay-modal"></div>
-
-<!-- Filter Modal -->
-<div id="filterModalWindow">
-    <!-- Yerleşmə -->
-    <div class="flex-row-group">
-        <label for="locationInput">Yerleşmə:</label>
-       <button type="button"  id="locationInput"
-          class="input-location p-2 border rounded-lg focus:ring-2 focus:ring-blue-200 text-left ">
-          Rayon / Metro
-        </button>
-    </div>
-
-    <!-- Alqı-satqı -->
-    <div class="flex-row-group">
-        <label>Alqı-satqı:</label>
-        <div class="flex-row">
-            <button type="button" class="btn-option" data-val="Alis">Alış</button>
-            <button type="button" class="btn-option" data-val="Kiraye">Kirayə</button>
         </div>
-    </div>
 
-    <!-- Əmlak növü -->
-    <div class="flex-row-group">
-        <label>Əmlak növü:</label>
-        <div class="flex-row">
-            <button type="button" class="btn-option" data-val="Menzil">Mənzil</button>
-            <button type="button" class="btn-option" data-val="Heyet">Həyət evi/Bağ evi</button>
-            <button type="button" class="btn-option" data-val="Ofis">Ofis</button>
-            <button type="button" class="btn-option" data-val="Qaraj">Qaraj</button>
-            <button type="button" class="btn-option" data-val="Torpaq">Torpaq</button>
-            <button type="button" class="btn-option" data-val="Obyekt">Obyekt</button>
+        <!-- Mobil menyu -->
+        <div id="mobileMenu" class="hidden md:hidden flex-col gap-3 px-6 py-4 bg-gray-100 text-gray-700">
+            <a href="./Sales.html" class="hover:text-blue-600">Alış-satış</a>
+            <a href="./Rent.html" class="hover:text-blue-600">Kirayə</a>
+            <a href="./Rent-Daily.html" class="hover:text-blue-600">Günlük</a>
+            <a href="./Agency.html" class="hover:text-blue-600">Agentliklər</a>
+            <a href="./ask-ai.html" class="hover:text-blue-600">AI Sorgu</a>
         </div>
-    </div>
+    </header>
 
-    <!-- Tikilinin növü -->
-    <div class="flex-row-group">
-        <label>Tikili növü:</label>
-        <div class="flex-row">
-            <button type="button" class="btn-option" data-val="Yeni">Yeni tikili</button>
-            <button type="button" class="btn-option" data-val="Kohne">Köhnə tikili</button>
-        </div>
-    </div>
+    <!-- Search Section -->
+    <section class="bg-white py-6 px-4 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <form id="home-search-form" class="flex flex-wrap items-end gap-4 mb-6">
+                <!-- Tip -->
+                <div class="flex flex-col w-[125px]">
+                    <label for="advertType" class="text-gray-500 mb-1">Tip</label>
+                    <select id="advertType" name="advertType"
+                        class="p-2 border rounded-lg focus:ring-2 focus:ring-blue-200">
+                        <option value="">Hamısı</option>
+                        <option value="1">Alış</option>
+                        <option value="2">Kirayə</option>
+                        <option value="3">Günlük Kirayə</option>
+                    </select>
+                </div>
 
-    <!-- Qiymət -->
-    <div class="flex-row-group">
-        <label>Qiymət, ₼:</label>
-        <input style="width: 200px;" type="number" id="priceMinInput" placeholder="min">
-        <input style="width: 200px;"type="number" id="priceMaxInput" placeholder="maks">
-      
-    </div>
+                <!-- Əmlak tipi -->
+                <div class="flex flex-col w-[150px]">
+                    <label for="propertyTypeSelect" class="text-gray-500 mb-1">Əmlak tipi</label>
+                    <select id="propertyTypeSelect" name="propertyType"
+                        class="p-2 border rounded-lg focus:ring-2 focus:ring-blue-200">
+                        <option value="">Hamısı</option>
+                    </select>
+                </div>
 
-    <!-- Sahə -->
-    <div class="flex-row-group">
-        <label>Sahə (m²):</label>
-        <input style="width: 200px;" type="number" id="areaMinInput" placeholder="min">
-        <input  style="width: 200px;" type="number" id="areaMaxInput" placeholder="maks">
-    </div>
+                <!-- Otaq sayı -->
+                <div class="flex flex-col w-[150px]">
+                    <label for="roomCount" class="text-gray-500 mb-1">Otaq sayı</label>
+                    <select id="roomCount" name="rooms" class="p-2 border rounded-lg focus:ring-2 focus:ring-blue-200">
+                        <option value="">Hamısı</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5+</option>
+                    </select>
+                </div>
 
-    <!-- Otaq sayı -->
-    <div class="flex-row-group">
-        <label>Otaq sayı:</label>
-        <div class="flex-row">
-            <button type="button" class="btn-option" data-val="1">1</button>
-            <button type="button" class="btn-option" data-val="2">2</button>
-            <button type="button" class="btn-option" data-val="3">3</button>
-            <button type="button" class="btn-option" data-val="4">4</button>
-            <button type="button" class="btn-option" data-val="5plus">5+</button>
-        </div>
-    </div>
+                <!-- Qiymət -->
+                <div class="flex flex-col relative w-[150px]">
+                    <label class="text-gray-500 mb-1">Qiymət</label>
+                    <button type="button" id="priceBtn"
+                        class="border rounded-lg px-3 py-2 w-full flex justify-between items-center">
+                        Qiymət <i class="fa-solid fa-chevron-down ml-2"></i>
+                    </button>
+                    <div id="priceDropdown" class="dropdown-content">
+                        <div class="flex gap-2">
+                            <input type="number" id="priceMin" name="priceMin" placeholder="Min"
+                                class="w-1/2 border p-2 rounded-lg">
+                            <input type="number" id="priceMax" name="priceMax" placeholder="Max"
+                                class="w-1/2 border p-2 rounded-lg">
+                        </div>
+                        <button type="button" id="applyPriceBtn"
+                            class="mt-3 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">Tətbiq
+                            et</button>
+                    </div>
+                </div>
 
-    <!-- Təmir -->
-    <div class="flex-row-group">
-        <label>Təmir:</label>
-        <div class="flex-row">
-            <button type="button" class="btn-option" data-val="FarkYok">Fərqi yoxdur</button>
-            <button type="button" class="btn-option" data-val="Temirli">Təmirli</button>
-            <button type="button" class="btn-option" data-val="Temirsiz">Təmirsiz</button>
-        </div>
-    </div>
+                <!-- Rayon / Metro -->
+                <div class="flex flex-col w-[350px]">
+                    <label class="text-gray-500 mb-1">Rayon / Metro</label>
+                    <button style="width: 340px;" type="button" id="mainLocationInput"
+                        class="input-location p-2 border rounded-lg focus:ring-2 focus:ring-blue-200 text-left">
+                        Rayon / Metro
+                    </button>
+                </div>
 
-    <!-- Ev sahibi / Vasitəçi -->
-    <div class="flex-row-group">
-        <label>Tip:</label>
-        <div class="flex-row">
-            <button type="button" class="btn-option" data-val="EvSahibi">Ev sahibi</button>
-            <button type="button" class="btn-option" data-val="Vasiteci">Vasitəçi</button>
-        </div>
-    </div>
+                <!-- Axtar düyməsi -->
+                <div class="flex flex-row gap-2 flex-nowrap">
+                    <button type="submit"
+                        class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 whitespace-nowrap">
+                        Axtar
+                    </button>
 
-    <div style="margin-top:20px;">
-        <button class="btn-action reset-btn" id="resetFilterBtn">Sıfırla</button>
-        <button class="btn-action apply-btn" id="searchFilterBtn">Axtar</button>
-    </div>
-</div>
+                    <button id="filterOpenBtn"
+                        class="btn-action bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md transition duration-300 ease-in-out">
+                        Filter
+                    </button>
+                </div>
+            </form>
 
-<!-- Location Modal Overlay -->
-<div id="locationModalOverlay" class="overlay-modal"></div>
+            <!-- Category Items -->
+            <div class="flex flex-wrap gap-4 justify-center px-4 py-4">
 
-<!-- Location Modal -->
-<div id="locationModalWindow">
-    <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #ccc; padding-bottom:10px;">
-        <h3>Rayon / Metro Seçimi</h3>
-        <button id="closeLocationModalBtn" class="btn-action">X</button>
-    </div>
+                   <div class="flex items-center gap-2 p-3 rounded-lg cursor-pointer w-30 border hover:shadow-md hover:scale-105 transition category-item active"
+                    data-id="">
+                    <i class="fa-solid fa-list text-gray-700 text-lg"></i>
+                    <span class="text-sm">Hamısı</span>
+                </div>
 
-    <!-- Tabs -->
-    <div style="margin-top:20px; margin-bottom: 25px;">
-        <button class="tab-btn active-tab" data-tab="rayon">Rayon</button>
-        <button class="tab-btn inactive-tab" data-tab="metro">Metro</button>
-    </div>
+                <!-- Mənzil -->
+                <div class="flex items-center gap-2 p-3 rounded-lg cursor-pointer w-30 border hover:shadow-md hover:scale-105 transition category-item "
+                    data-id="2">
+                    <i class="fa-solid fa-house text-gray-700 text-lg"></i>
+                    <span class="text-sm">Yeni Tikili</span>
+                </div>
 
-    <!-- Search -->
-    <div style="margin-top:7px;">
-        <input style="width: 200px;" type="text" id="locationSearchInput" placeholder="Axtar..." class="input-search">
-    </div>
+                <!-- Villa -->
+                <div class="flex items-center gap-2 p-3 rounded-lg cursor-pointer w-30 border hover:shadow-md hover:scale-105 transition category-item"
+                    data-id="10">
+                    <i class="fa-solid fa-building text-gray-700 text-lg"></i>
+                    <span class="text-sm">Villa</span>
+                </div>
 
-    <!-- List -->
-    <div id="locationListContainer"></div>
+                <!-- Köhnə tikili -->
+                <div class="flex items-center gap-2 p-3 rounded-lg cursor-pointer w-30 border hover:shadow-md hover:scale-105 transition category-item"
+                    data-id="3">
+                    <i class="fa-solid fa-home text-gray-700 text-lg"></i>
+                    <span class="text-sm">Köhnə tikili</span>
+                </div>
 
-    <!-- Apply -->
-    <div class="flex-row justify-end mt-4">
-        <button id="applyLocationBtn" class="btn-action apply-btn">Tətbiq et</button>
-    </div>
-</div>
+                <!-- Heyət evi -->
+                <div class="flex items-center gap-2 p-3 rounded-lg cursor-pointer w-30 border hover:shadow-md hover:scale-105 transition category-item"
+                    data-id="4">
+                    <i class="fa-solid fa-building-columns text-gray-700 text-lg"></i>
+                    <span class="text-sm">Heyət evi</span>
+                </div>
 
-    <!-- Main -->
-    <main class="container mx-auto px-4 py-8">
-      <section class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                <!-- Torpaq -->
+                <div class="flex items-center gap-2 p-3 rounded-lg cursor-pointer w-30 border hover:shadow-md hover:scale-105 transition category-item"
+                    data-id="7">
+                    <i class="fa-solid fa-mountain text-gray-700 text-lg"></i>
+                    <span class="text-sm">Torpaq</span>
+                </div>
 
-        <!-- Sol reklam -->
-        <aside class="hidden lg:block lg:col-span-2 sticky top-24">
-          <div class="bg-gray-200 h-[600px] rounded-xl flex items-center justify-center shadow text-gray-500">
-            Qarabağda iş imkanları
-          </div>
-        </aside>
+                <!-- Ofis -->
+                <div class="flex items-center gap-2 p-3 rounded-lg cursor-pointer w-30 border hover:shadow-md hover:scale-105 transition category-item"
+                    data-id="5">
+                    <i class="fa-solid fa-briefcase text-gray-700 text-lg"></i>
+                    <span class="text-sm">Ofis</span>
+                </div>
 
-        <!-- Kartlar -->
-        <div class="lg:col-span-8">
-          <!-- Featured Listings -->
-          <section class="mb-6">
-            <h2 class="text-xl font-semibold mb-4">VIP Elanlar</h2>
-            <div id="featuredGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Qaraj -->
+                <div class="flex items-center gap-2 p-3 rounded-lg cursor-pointer w-30 border hover:shadow-md hover:scale-105 transition category-item"
+                    data-id="6">
+                    <i class="fa-solid fa-car text-gray-700 text-lg"></i>
+                    <span class="text-sm">Qaraj</span>
+                </div>
 
-
+                <!-- Obyekt -->
+                <div class="flex items-center gap-2 p-3 rounded-lg cursor-pointer w-30 border hover:shadow-md hover:scale-105 transition category-item"
+                    data-id="8">
+                    <i class="fa-solid fa-store text-gray-700 text-lg"></i>
+                    <span class="text-sm">Obyekt</span>
+                </div>
             </div>
-          </section>
+        </div>
+    </section>
+
+    <!-- Filter Modal -->
+    <div id="filterModalOverlay" class="modal-overlay"></div>
+    <div id="filterModalWindow" class="modal-window">
+        <div class="flex justify-between items-center mb-6">
+            <h3 class="text-xl font-semibold">Gəlirəşdirmə Filterləri</h3>
+            <button id="closeFilterModalBtn" class="text-gray-500 hover:text-gray-700">
+                <i class="fa-solid fa-times text-xl"></i>
+            </button>
         </div>
 
-        <!-- Sağ reklam -->
-        <aside class="hidden lg:block lg:col-span-2 sticky top-24">
-          <div class="bg-gray-200 h-[600px] rounded-xl flex items-center justify-center shadow text-gray-500">
-            Qarabağda iş imkanları
-          </div>
-        </aside>
+        <div class="filter-grid">
+            <!-- Left Column -->
+            <div class="filter-section">
+                <!-- Alqı-satqı -->
+                <div class="mb-5">
+                    <label class="block text-gray-700 font-medium mb-3">Alqı-satqı:</label>
+                    <div class="flex flex-wrap gap-2">
+                        <button type="button" class="btn-option" data-val="1">Alış</button>
+                        <button type="button" class="btn-option" data-val="2">Kirayə</button>
+                    </div>
+                </div>
 
-      </section>
+                <!-- Əmlak növü -->
+                <div class="mb-5">
+                    <label class="block text-gray-700 font-medium mb-3">Əmlak növü:</label>
+                    <div class="flex flex-wrap gap-2">
+                        <button type="button" class="btn-option" data-category="1">Mənzil</button>
+                        <button type="button" class="btn-option" data-category="2">Villa</button>
+                        <button type="button" class="btn-option" data-category="3">Köhnə tikili</button>
+                        <button type="button" class="btn-option" data-category="4">Heyət evi</button>
+                        <button type="button" class="btn-option" data-category="5">Torpaq</button>
+                        <button type="button" class="btn-option" data-category="6">Ofis</button>
+                        <button type="button" class="btn-option" data-category="7">Qaraj</button>
+                        <button type="button" class="btn-option" data-category="8">Obyekt</button>
+                    </div>
+                </div>
+
+                <!-- Otaq sayı -->
+                <div class="mb-5">
+                    <label class="block text-gray-700 font-medium mb-3">Otaq sayı:</label>
+                    <div class="flex flex-wrap gap-2">
+                        <button type="button" class="btn-option" data-room="1">1</button>
+                        <button type="button" class="btn-option" data-room="2">2</button>
+                        <button type="button" class="btn-option" data-room="3">3</button>
+                        <button type="button" class="btn-option" data-room="4">4</button>
+                        <button type="button" class="btn-option" data-room="5">5+</button>
+                    </div>
+                </div>
+
+                <!-- Ev sahibi -->
+                <div class="mb-5">
+                    <label class="block text-gray-700 font-medium mb-3">Ev sahibi:</label>
+                    <div class="flex flex-wrap gap-2">
+                        <button type="button" class="btn-option" data-creator-type="0">Şəxsi</button>
+                        <button type="button" class="btn-option" data-creator-type="1">Agentlik</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="filter-section">
+                <!-- Qiymət -->
+                <div class="mb-5">
+                    <label class="block text-gray-700 font-medium mb-3">Qiymət, ₼:</label>
+                    <div class="flex gap-2">
+                        <input type="number" id="priceMinInput" placeholder="Min qiymət"
+                            class="flex-1 border p-3 rounded-lg focus:ring-2 focus:ring-blue-200 text-sm">
+                        <input type="number" id="priceMaxInput" placeholder="Max qiymət"
+                            class="flex-1 border p-3 rounded-lg focus:ring-2 focus:ring-blue-200 text-sm">
+                    </div>
+                </div>
+
+                <!-- Sahə -->
+                <div class="mb-5">
+                    <label class="block text-gray-700 font-medium mb-3">Sahə (m²):</label>
+                    <div class="flex gap-2">
+                        <input type="number" id="areaMinInput" placeholder="Min sahə"
+                            class="flex-1 border p-3 rounded-lg focus:ring-2 focus:ring-blue-200 text-sm">
+                        <input type="number" id="areaMaxInput" placeholder="Max sahə"
+                            class="flex-1 border p-3 rounded-lg focus:ring-2 focus:ring-blue-200 text-sm">
+                    </div>
+                </div>
+
+                <!-- Mərtəbə aralığı -->
+                <div class="mb-5">
+                    <label class="block text-gray-700 font-medium mb-3">Mərtəbə aralığı:</label>
+                    <div class="flex gap-2 mb-3">
+                        <input type="number" id="floorMinInput" placeholder="Min mərtəbə"
+                            class="flex-1 border p-3 rounded-lg focus:ring-2 focus:ring-blue-200 text-sm">
+                        <input type="number" id="floorMaxInput" placeholder="Max mərtəbə"
+                            class="flex-1 border p-3 rounded-lg focus:ring-2 focus:ring-blue-200 text-sm">
+                    </div>
+                </div>
+
+                <!-- Mərtəbə filtrləri -->
+                <div class="mb-5">
+                    <label class="block text-gray-700 font-medium mb-3">Mərtəbə filtrləri:</label>
+                    <div class="flex flex-wrap gap-2">
+                        <button type="button" class="btn-option" data-floor-filter="1">1-ci mərtəbəni çıxar</button>
+                        <button type="button" class="btn-option" data-floor-filter="2">Ən yuxarı mərtəbəni
+                            çıxar</button>
+                        <button type="button" class="btn-option" data-floor-filter="3">Yalnız ən yuxarı mərtəbə</button>
+                    </div>
+                </div>
+
+                <!-- Təmir -->
+                <div class="mb-5">
+                    <label class="block text-gray-700 font-medium mb-3">Təmir:</label>
+                    <div class="flex flex-wrap gap-2">
+                        <button type="button" class="btn-option" data-renovation="1">Yeni</button>
+                        <button type="button" class="btn-option" data-renovation="2">Orta</button>
+                        <button type="button" class="btn-option" data-renovation="3">Köhnə</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Düymələr -->
+        <div class="flex gap-3 justify-end mt-6 pt-6 border-t">
+            <button class="btn-action reset-btn" id="resetFilterBtn">Sıfırla</button>
+            <button class="btn-action apply-btn" id="searchFilterBtn">Axtar</button>
+        </div>
+    </div>
+
+    <!-- Location Modal -->
+    <div id="locationModalOverlay" class="modal-overlay"></div>
+    <div id="locationModalWindow" class="location-modal-window">
+        <!-- Header -->
+        <div class="location-modal-header">
+            <h3 class="location-modal-title">Rayon / Metro Seçimi</h3>
+            <button id="closeLocationModalBtn" class="location-modal-close">
+                <i class="fa-solid fa-times"></i>
+            </button>
+        </div>
+
+        <!-- Tabs -->
+        <div class="location-modal-tabs">
+            <button class="location-tab-btn active-tab" data-tab="rayon">
+                <i class="fa-solid fa-map-marker-alt"></i>
+                Rayon
+            </button>
+            <button class="location-tab-btn" data-tab="metro">
+                <i class="fa-solid fa-train"></i>
+                Metro
+            </button>
+        </div>
+
+        <!-- Search and Controls -->
+        <div class="location-modal-controls">
+            <div class="location-search-container">
+                <i class="fa-solid fa-search location-search-icon"></i>
+                <input type="text" id="locationSearchInput" placeholder="Rayon və ya metro axtarın..."
+                    class="location-search-input">
+            </div>
+            <div class="location-selection-info">
+                <span id="selectedCount" class="selection-count">Seçim: 0</span>
+                <button type="button" id="clearLocationsBtn" class="clear-btn">
+                    <i class="fa-solid fa-trash"></i>
+                    Təmizlə
+                </button>
+            </div>
+        </div>
+
+        <!-- List Container -->
+        <div class="location-list-wrapper">
+            <div id="locationLoading" class="location-loading">
+                <div class="loading-spinner"></div>
+                <span>Yüklənir...</span>
+            </div>
+            <div id="locationListContainer" class="location-list-container"></div>
+        </div>
+
+        <!-- Footer -->
+        <div class="location-modal-footer">
+            <button id="applyLocationBtn" class="location-apply-btn">
+                <i class="fa-solid fa-check"></i>
+                Tətbiq et
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            <!-- Sol reklam -->
+            <aside class="hidden lg:block lg:col-span-2 sticky top-24">
+                <div class="bg-gray-200 h-[600px] rounded-xl flex items-center justify-center shadow text-gray-500">
+                    <div class="text-center">
+                        <p>Premium Reklam</p>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Kartlar -->
+            <div class="lg:col-span-8">
+                <!-- VIP Elanlar -->
+                <section class="mb-8">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-2xl font-semibold">VIP Elanlar</h2>
+                        <p id="vipCount" class="text-gray-500">VIP elanlar yüklənir...</p>
+                    </div>
+                    <div id="vipGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 min-h-[200px]">
+                        <!-- VIP Properties will be loaded here -->
+                    </div>
+                </section>
+
+                <!-- Adi Elanlar -->
+                <section>
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-2xl font-semibold">Digər Elanlar</h2>
+                        <p id="regularCount" class="text-gray-500">Elanlar yüklənir...</p>
+                    </div>
+                    <div id="regularGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 min-h-[400px]">
+                        <!-- Regular Properties will be loaded here -->
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sağ reklam -->
+            <aside class="hidden lg:block lg:col-span-2 sticky top-24">
+                <div class="bg-gray-200 h-[600px] rounded-xl flex items-center justify-center shadow text-gray-500">
+                    <div class="text-center">
+                        <p>Premium Reklam</p>
+                    </div>
+                </div>
+            </aside>
+        </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-300 py-10">
-      <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
-        <div>
-          <h3 class="font-bold mb-2">BlueEstate</h3>
-          <p>Modern real estate platform for Azerbaijan</p>
-        </div>
-        <div>
-          <h3 class="font-bold mb-2">Links</h3>
-          <ul class="space-y-1">
-            <li><a href="#" class="hover:text-white">Home</a></li>
-            <li><a href="./listings.html" class="hover:text-white">Listings</a></li>
-            <li><a href="#" class="hover:text-white">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="font-bold mb-2">Contact</h3>
-          <p>Email: info@blueestate.com</p>
-          <p>Phone: +994 12 345 6789</p>
-        </div>
-      </div>
-      <p class="text-center text-sm text-gray-500 mt-6">&copy; 2025 BlueEstate. All rights reserved.</p>
-    </footer>
 
-    <script src="./assets/js/Sales.js"></script>
-    <script src="./assets/js/filter.js"></script>
-    <script src="https://kit.fontawesome.com/a2e0ad1234.js" crossorigin="anonymous"></script>
+<script src="./assets/js/Sales.js"></script>
+  
 </body>
 
 </html>

@@ -17,13 +17,14 @@ namespace EvTap.Application.Services
     public class ListingService : IListingService
     {
         private readonly IGenericRepository<Listing> _listingRepository;
+        private readonly IListingRepository _customListingRepository;
         private readonly IGenericRepository<Location> _locationRepository;
         private readonly IUnityOfWork _unityOfWork;
         private readonly IMapper _mapper;
         private readonly IWebHostEnvironment _env;
         private readonly ILogger<ListingService> _logger;
 
-        public ListingService(IGenericRepository<Listing> listingRepository, IMapper mapper, IWebHostEnvironment env, ILogger<ListingService> logger, IGenericRepository<Location> locationRepository, IUnityOfWork unityOfWork)
+        public ListingService(IGenericRepository<Listing> listingRepository, IMapper mapper, IWebHostEnvironment env, ILogger<ListingService> logger, IGenericRepository<Location> locationRepository, IUnityOfWork unityOfWork, IListingRepository customListingRepository)
         {
             _listingRepository = listingRepository;
             _mapper = mapper;
@@ -31,6 +32,7 @@ namespace EvTap.Application.Services
             _logger = logger;
             _locationRepository = locationRepository;
             _unityOfWork = unityOfWork;
+            _customListingRepository = customListingRepository;
         }
 
         public async Task<Listing> CreateListingAsync(ListingDTO listingDto)
@@ -46,7 +48,7 @@ namespace EvTap.Application.Services
             {
                 var location = _mapper.Map<Location>(listingDto.Location);
                 await _locationRepository.AddAsync(location);
-                await _unityOfWork.SaveChangesAsync(); // Location.Id-ni əldə etmək üçün
+                await _unityOfWork.SaveChangesAsync();
 
                 listing.LocationId = location.Id;
             }
@@ -144,6 +146,23 @@ namespace EvTap.Application.Services
           _logger.LogInformation($"Listing with ID: {listingId} retrieved.");
 
             return listing;
+        }
+
+        public async Task<Listing> GetListingDetailByIdAsync(int listingId)
+        {
+            var listing = await _customListingRepository.GetListingtDetailByIdAsync(listingId);
+            if (listing == null)
+                throw new Exception("Listing not found.");
+            _logger.LogInformation($"Listing with ID: {listingId} retrieved.");
+            var result = _mapper.Map<Listing>(listing);
+            return result;
+        }
+
+        public async Task<List<Listing>> GetListingsDetailAsync()
+        {
+            var listings = await _customListingRepository.GetListingtDetailAsync();
+            var result = _mapper.Map<List<Listing>>(listings);  
+            return result;
         }
 
         public async Task UpdateListingAsync(ListingDTO listingDto)

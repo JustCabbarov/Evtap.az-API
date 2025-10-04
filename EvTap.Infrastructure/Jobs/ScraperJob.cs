@@ -87,7 +87,7 @@ namespace EvTap.Infrastructure.Jobs
                 var data = JObject.Parse(responseContent);
 
                 var items = data["data"]?["itemsConnection"]?["edges"];
-                Console.WriteLine(items);
+           
 
                 if (items == null)
                 {

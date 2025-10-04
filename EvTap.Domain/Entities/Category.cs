@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace EvTap.Domain.Entities
@@ -9,7 +10,7 @@ namespace EvTap.Domain.Entities
     public class Category : BaseEntity
     {
         public string Name { get; set; }
-       
+
         public ICollection<Listing> Listings { get; set; }
     }
 }

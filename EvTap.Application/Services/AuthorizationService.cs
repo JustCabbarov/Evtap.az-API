@@ -134,7 +134,8 @@ namespace EvTap.Application.Services
             else
             {
                 _logger.LogWarning($"Invalid login attempt for user: {loginDTO.Email}");
-                return $"Invalid login attempt for user";
+                throw new  Exception("Invalid login attempt ");
+
             }
         }
 

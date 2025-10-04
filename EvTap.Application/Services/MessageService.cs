@@ -2,6 +2,7 @@
 using EvTap.Contracts.Services;
 using EvTap.Domain.Entities;
 using EvTap.Domain.Repositories;
+using System.Linq; // Added for Linq methods
 
 namespace EvTap.Application.Services
 {
@@ -12,9 +13,9 @@ namespace EvTap.Application.Services
         private readonly IMessageNotifier _notifier;
 
         public MessageService(
-            IMessageRepository messageRepository,
-            IGenericRepository<Listing> listingRepository,
-            IMessageNotifier notifier)
+          IMessageRepository messageRepository,
+          IGenericRepository<Listing> listingRepository,
+          IMessageNotifier notifier)
         {
             _messageRepository = messageRepository;
             _listingRepository = listingRepository;
@@ -26,28 +27,28 @@ namespace EvTap.Application.Services
             return await _messageRepository.GetConversationAsync(userId, otherUserId, listingId);
         }
 
-        // YENİ: İstifadəçinin mesajlarını gətir
-        public async Task<List<Message>> GetUserMessagesAsync(string userId)
+        // YENİ: İstifadəçinin mesajlarını gətir
+        public async Task<List<Message>> GetUserMessagesAsync(string userId)
         {
             var sentMessages = await _messageRepository.GetSentMessagesAsync(userId);
             var receivedMessages = await _messageRepository.GetReceivedMessagesAsync(userId);
 
-            // Bütün mesajları birləşdir və tarixə görə sırala
-            var allMessages = sentMessages.Concat(receivedMessages)
-                .OrderByDescending(m => m.SentAt)
-                .ToList();
+            // Bütün mesajları birləşdir və tarixə görə sırala
+            var allMessages = sentMessages.Concat(receivedMessages)
+        .OrderByDescending(m => m.SentAt)
+        .ToList();
 
             return allMessages;
         }
 
-        // YENİ: Oxunmamış mesajlar
-        public async Task<List<Message>> GetUnreadMessagesAsync(string userId)
+        // YENİ: Oxunmamış mesajlar
+        public async Task<List<Message>> GetUnreadMessagesAsync(string userId)
         {
             return await _messageRepository.GetUnreadMessagesAsync(userId);
         }
 
-        // YENİ: Admin mesajlarını gətir
-        public async Task<List<Message>> GetAdminMessagesAsync()
+        // YENİ: Admin mesajlarını gətir
+        public async Task<List<Message>> GetAdminMessagesAsync()
         {
             return await _messageRepository.GetMessagesToAdminAsync();
         }
@@ -73,7 +74,34 @@ namespace EvTap.Application.Services
 
             var savedMessage = await _messageRepository.AddAsync(message);
 
-           
+
+            await _notifier.NotifyMessageReceivedAsync(savedMessage);
+
+            return savedMessage;
+        }
+
+        // YENİ: İki istifadəçi arasında birbaşa mesaj göndərmək
+        public async Task<Message> SendDirectMessageAsync(string senderId, string receiverId, string content)
+        {
+            if (string.IsNullOrEmpty(receiverId))
+                throw new ArgumentNullException(nameof(receiverId), "Alıcı ID boş ola bilməz.");
+
+            if (senderId == receiverId)
+                throw new Exception("Özünə mesaj göndərə bilməzsən.");
+
+            var message = new Message
+            {
+                SenderId = senderId,
+                ReceiverId = receiverId,
+                Content = content,
+                ListingId = null, // Direct messages have no listing ID
+                SentAt = DateTime.UtcNow,
+                IsRead = false
+            };
+
+            var savedMessage = await _messageRepository.AddAsync(message);
+
+            // Real-time bildirim
             await _notifier.NotifyMessageReceivedAsync(savedMessage);
 
             return savedMessage;
@@ -85,15 +113,15 @@ namespace EvTap.Application.Services
             {
                 SenderId = userId,
                 ReceiverId = null, // Admin mesajlarında receiver null olur
-                Content = content,
+                Content = content,
                 SentAt = DateTime.UtcNow,
                 IsRead = false
             };
 
             var savedMessage = await _messageRepository.AddAsync(message);
 
-            // Bütün adminlərə real-time bildirim göndər
-            await _notifier.NotifyMessageReceivedToGroupAsync("Admins", savedMessage);
+            // Bütün adminlərə real-time bildirim göndər
+            await _notifier.NotifyMessageReceivedToGroupAsync("Admins", savedMessage);
 
             return savedMessage;
         }
@@ -106,15 +134,37 @@ namespace EvTap.Application.Services
                 message.IsRead = true;
                 message.ReadAt = DateTime.UtcNow;
 
-                // Oxundu bildirimi göndər
-                await _notifier.NotifyMessageReadAsync(message.Id, message.SenderId);
+                // Oxundu bildirimi göndər
+                await _notifier.NotifyMessageReadAsync(message.Id, message.SenderId);
             }
         }
 
-        // YENİ: Bütün konversasiyanı oxundu kimi işarələ
-        public async Task MarkConversationAsReadAsync(string userId, string otherUserId)
+        // YENİ: Bütün konversasiyanı oxundu kimi işarələ
+        public async Task MarkConversationAsReadAsync(string userId, string otherUserId)
         {
             await _messageRepository.MarkMessagesAsReadAsync(userId, otherUserId);
+        }
+
+        public async Task<Message> SendReplyAsync(string senderId, string receiverId, int? listingId, string content)
+        {
+            if (string.IsNullOrEmpty(receiverId))
+                throw new ArgumentNullException(nameof(receiverId), "Cavab üçün alıcı ID boş ola bilməz.");
+
+            if (senderId == receiverId)
+                throw new Exception("Özünüzə mesaj göndərə bilməzsiniz.");
+
+            var message = new Message
+            {
+                SenderId = senderId,
+                ReceiverId = receiverId,
+                Content = content,
+                ListingId = listingId, // listingId null ola da bilər, olmaya da
+                SentAt = DateTime.UtcNow,
+                IsRead = false
+            };
+            var savedMessage = await _messageRepository.AddAsync(message);
+            await _notifier.NotifyMessageReceivedAsync(savedMessage);
+            return savedMessage;
         }
     }
 }

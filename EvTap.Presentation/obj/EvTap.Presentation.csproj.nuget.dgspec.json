@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Presentation\\EvTap.Presentation.csproj": {}
+    "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\EvTap.Presentation.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Application\\EvTap.Application.csproj": {
+    "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Application\\EvTap.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Application\\EvTap.Application.csproj",
+        "projectUniqueName": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Application\\EvTap.Application.csproj",
         "projectName": "EvTap.Application",
-        "projectPath": "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Application\\EvTap.Application.csproj",
+        "projectPath": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Application\\EvTap.Application.csproj",
         "packagesPath": "C:\\Users\\Huawei\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Application\\obj\\",
+        "outputPath": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,8 +33,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Contracts\\EvTap.Contracts.csproj": {
-                "projectPath": "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Contracts\\EvTap.Contracts.csproj"
+              "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\EvTap.Contracts.csproj": {
+                "projectPath": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\EvTap.Contracts.csproj"
               }
             }
           }
@@ -96,14 +96,14 @@
         }
       }
     },
-    "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Contracts\\EvTap.Contracts.csproj": {
+    "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\EvTap.Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Contracts\\EvTap.Contracts.csproj",
+        "projectUniqueName": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\EvTap.Contracts.csproj",
         "projectName": "EvTap.Contracts",
-        "projectPath": "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Contracts\\EvTap.Contracts.csproj",
+        "projectPath": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\EvTap.Contracts.csproj",
         "packagesPath": "C:\\Users\\Huawei\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Contracts\\obj\\",
+        "outputPath": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -125,8 +125,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Domain\\EvTap.Domain.csproj": {
-                "projectPath": "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Domain\\EvTap.Domain.csproj"
+              "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Domain\\EvTap.Domain.csproj": {
+                "projectPath": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Domain\\EvTap.Domain.csproj"
               }
             }
           }
@@ -172,14 +172,14 @@
         }
       }
     },
-    "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Domain\\EvTap.Domain.csproj": {
+    "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Domain\\EvTap.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Domain\\EvTap.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Domain\\EvTap.Domain.csproj",
         "projectName": "EvTap.Domain",
-        "projectPath": "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Domain\\EvTap.Domain.csproj",
+        "projectPath": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Domain\\EvTap.Domain.csproj",
         "packagesPath": "C:\\Users\\Huawei\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Domain\\obj\\",
+        "outputPath": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -262,14 +262,14 @@
         }
       }
     },
-    "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Infrastructure\\EvTap.Infrastructure.csproj": {
+    "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Infrastructure\\EvTap.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Infrastructure\\EvTap.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Infrastructure\\EvTap.Infrastructure.csproj",
         "projectName": "EvTap.Infrastructure",
-        "projectPath": "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Infrastructure\\EvTap.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Infrastructure\\EvTap.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Huawei\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -291,11 +291,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Contracts\\EvTap.Contracts.csproj": {
-                "projectPath": "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Contracts\\EvTap.Contracts.csproj"
+              "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\EvTap.Contracts.csproj": {
+                "projectPath": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\EvTap.Contracts.csproj"
               },
-              "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Persistence\\EvTap.Persistence.csproj": {
-                "projectPath": "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Persistence\\EvTap.Persistence.csproj"
+              "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Persistence\\EvTap.Persistence.csproj": {
+                "projectPath": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Persistence\\EvTap.Persistence.csproj"
               }
             }
           }
@@ -353,14 +353,14 @@
         }
       }
     },
-    "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Persistence\\EvTap.Persistence.csproj": {
+    "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Persistence\\EvTap.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Persistence\\EvTap.Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Persistence\\EvTap.Persistence.csproj",
         "projectName": "EvTap.Persistence",
-        "projectPath": "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Persistence\\EvTap.Persistence.csproj",
+        "projectPath": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Persistence\\EvTap.Persistence.csproj",
         "packagesPath": "C:\\Users\\Huawei\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Persistence\\obj\\",
+        "outputPath": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -382,8 +382,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Domain\\EvTap.Domain.csproj": {
-                "projectPath": "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Domain\\EvTap.Domain.csproj"
+              "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Domain\\EvTap.Domain.csproj": {
+                "projectPath": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Domain\\EvTap.Domain.csproj"
               }
             }
           }
@@ -457,14 +457,14 @@
         }
       }
     },
-    "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Presentation\\EvTap.Presentation.csproj": {
+    "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\EvTap.Presentation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Presentation\\EvTap.Presentation.csproj",
+        "projectUniqueName": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\EvTap.Presentation.csproj",
         "projectName": "EvTap.Presentation",
-        "projectPath": "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Presentation\\EvTap.Presentation.csproj",
+        "projectPath": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\EvTap.Presentation.csproj",
         "packagesPath": "C:\\Users\\Huawei\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Presentation\\obj\\",
+        "outputPath": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -486,17 +486,17 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Application\\EvTap.Application.csproj": {
-                "projectPath": "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Application\\EvTap.Application.csproj"
+              "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Application\\EvTap.Application.csproj": {
+                "projectPath": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Application\\EvTap.Application.csproj"
               },
-              "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Contracts\\EvTap.Contracts.csproj": {
-                "projectPath": "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Contracts\\EvTap.Contracts.csproj"
+              "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\EvTap.Contracts.csproj": {
+                "projectPath": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\EvTap.Contracts.csproj"
               },
-              "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Infrastructure\\EvTap.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Infrastructure\\EvTap.Infrastructure.csproj"
+              "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Infrastructure\\EvTap.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Infrastructure\\EvTap.Infrastructure.csproj"
               },
-              "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Persistence\\EvTap.Persistence.csproj": {
-                "projectPath": "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Persistence\\EvTap.Persistence.csproj"
+              "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Persistence\\EvTap.Persistence.csproj": {
+                "projectPath": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Persistence\\EvTap.Persistence.csproj"
               }
             }
           }

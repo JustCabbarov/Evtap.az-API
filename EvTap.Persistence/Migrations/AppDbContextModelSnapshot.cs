@@ -296,6 +296,9 @@ namespace EvTap.Persistence.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
+                    b.Property<string>("MetroStationIds")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<decimal?>("PriceMax")
                         .HasColumnType("decimal(18,2)");
 
@@ -646,19 +649,19 @@ namespace EvTap.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "1bb7dc6d-34eb-494b-b462-81d7312f0f64",
+                            Id = "051c99c7-f6cc-482f-be92-326035f1db28",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "93bbf00e-8e9b-4c1a-ac10-39cd2bd24e6c",
+                            Id = "b96cd81a-a0a8-4cac-8ab8-ab85a1afd92e",
                             Name = "User",
                             NormalizedName = "USER"
                         },
                         new
                         {
-                            Id = "8176ea82-f82e-4077-bf94-a5b10a5825b4",
+                            Id = "16800571-dafb-4c1f-8160-b6b3f56a8b9b",
                             Name = "Agency",
                             NormalizedName = "AGENCY"
                         });

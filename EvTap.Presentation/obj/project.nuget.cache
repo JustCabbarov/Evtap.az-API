@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wwcv77OJCYE=",
+  "dgSpecHash": "Hta9I5Tss/k=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Presentation\\EvTap.Presentation.csproj",
+  "projectFilePath": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\EvTap.Presentation.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Huawei\\.nuget\\packages\\automapper\\15.0.1\\automapper.15.0.1.nupkg.sha512",
     "C:\\Users\\Huawei\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",

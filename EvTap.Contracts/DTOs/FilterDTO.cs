@@ -9,6 +9,7 @@ namespace EvTap.Contracts.DTOs
     public class FilterDTO
     {
         public List<int>? DistrictIds { get; set; }
+        public List<int>? MetroStationIds { get; set; }
         public int? AdvertType { get; set; }
         public List<int>? CategoryIds { get; set; }
         public decimal? PriceMin { get; set; }

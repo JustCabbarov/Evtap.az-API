@@ -77,14 +77,22 @@ namespace EvTap.Persistence.Repositories
             IQueryable<Listing> query = _context.Listings
                 .Include(l => l.Location)
                 .Include(l => l.Category)
-                .Include(l => l.Images);
+                .Include(l => l.Images)
+                // YENİ ƏLAVƏ: Metro filteri üçün əlaqəli cədvəli yüklə
+                .Include(l => l.ListingMetros);
 
             // Rayon (district) filteri
             if (filter.DistrictIds != null && filter.DistrictIds.Any())
             {
                 query = query.Where(l => l.Location != null
-                                         && l.Location.DistrictId.HasValue
-                                         && filter.DistrictIds.Contains(l.Location.DistrictId.Value));
+                                        && l.Location.DistrictId.HasValue
+                                        && filter.DistrictIds.Contains(l.Location.DistrictId.Value));
+            }
+
+            // DÜZƏLİŞ: Metro stansiyası filteri (ListingMetro cədvəri istifadəsi)
+            if (filter.MetroStationIds != null && filter.MetroStationIds.Any())
+            {
+                query = query.Where(l => l.ListingMetros.Any(lm => filter.MetroStationIds.Contains(lm.MetroStationId)));
             }
 
             // Alqı-satqı növü filteri
@@ -101,10 +109,9 @@ namespace EvTap.Persistence.Repositories
             if (filter.PriceMax.HasValue)
                 query = query.Where(l => l.Price <= filter.PriceMax.Value);
 
-           
+
             if (filter.Rooms != null && filter.Rooms.Any())
             {
-                // Əgər filterdə 5 otaq varsa
                 if (filter.Rooms.Contains(5))
                 {
                     query = query.Where(l =>
@@ -142,15 +149,15 @@ namespace EvTap.Persistence.Repositories
             {
                 switch (filter.FloorFilterType.Value)
                 {
-                    case 1: // 1-ci mərtəbəni çıxar
+                    case 1:
                         query = query.Where(l => l.Floor.HasValue && l.Floor.Value > 1);
                         break;
-                    case 2: // ən yuxarı mərtəbəni çıxar
+                    case 2:
                         query = query.Where(l => l.Floor.HasValue
                                                  && l.TotalFloors.HasValue
                                                  && l.Floor.Value < l.TotalFloors.Value);
                         break;
-                    case 3: // yalnız ən yuxarı mərtəbə
+                    case 3:
                         query = query.Where(l => l.Floor.HasValue
                                                  && l.TotalFloors.HasValue
                                                  && l.Floor.Value == l.TotalFloors.Value);
@@ -163,15 +170,8 @@ namespace EvTap.Persistence.Repositories
                 query = query.Where(l => (int)l.CreatorType == (int)filter.CreatorType.Value);
             }
 
-        
-
-
-
-           
             return await query.ToListAsync();
         }
-
-
     }
 }
 

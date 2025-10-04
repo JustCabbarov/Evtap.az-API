@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "B58cY5ikdZ4=",
+  "dgSpecHash": "zjAIVNqGhoQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Domain\\EvTap.Domain.csproj",
+  "projectFilePath": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Domain\\EvTap.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Huawei\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Huawei\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\8.0.19\\microsoft.aspnetcore.cryptography.internal.8.0.19.nupkg.sha512",

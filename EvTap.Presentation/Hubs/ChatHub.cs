@@ -1,46 +1,67 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using EvTap.Contracts.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.SignalR;
-using System.Security.Claims;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace EvTap.Presentation.Hubs
+// Assuming IMessageService is available via DI
+
+[Authorize]
+public class ChatHub : Hub
 {
-    
-    [AllowAnonymous]
-    public class ChatHub : Hub
+    private readonly IMessageService _messageService;
+
+  
+    public ChatHub(IMessageService messageService)
     {
-        public async Task SendMessageToUser(string receiverId, string message)
-        {
-            var senderId = Context.ConnectionId; // test üçün ConnectionId
+        _messageService = messageService;
+    }
 
-            if (!string.IsNullOrEmpty(receiverId))
-            {
-                await Clients.Client(receiverId).SendAsync("ReceiveMessage", new
-                {
-                    SenderId = senderId,
-                    ReceiverId = receiverId,
-                    Content = message,
-                    SentAt = DateTime.UtcNow
-                });
-            }
-            else
-            {
-                await Clients.Group("Admins").SendAsync("ReceiveGroupMessage", new
-                {
-                    SenderId = senderId,
-                    Content = message,
-                    SentAt = DateTime.UtcNow
-                });
-            }
-        }
+   
+    public async Task SendMessageToListing(int listingId, string content)
+    {
+        var senderId = Context.UserIdentifier;
+        if (string.IsNullOrEmpty(senderId)) return; 
 
-        public override async Task OnConnectedAsync()
-        {
-            // test üçün hər kəsi qruplara əlavə et
-            await Groups.AddToGroupAsync(Context.ConnectionId, "Users");
-            await Groups.AddToGroupAsync(Context.ConnectionId, "Admins");
-            await base.OnConnectedAsync();
-        }
+   
+        await _messageService.SendMessageToListingOwnerAsync(senderId, listingId, content);
+    }
+
+ 
+    public async Task SendDirectMessage(string receiverId, string content)
+    {
+        var senderId = Context.UserIdentifier;
+        if (string.IsNullOrEmpty(senderId)) return;
+
+     
+        await _messageService.SendDirectMessageAsync(senderId, receiverId, content);
     }
 
 
+   
+    public async Task JoinConversation(string otherUserId, int? listingId)
+    {
+        var currentUserId = Context.UserIdentifier;
+        var groupName = GetConversationGroupName(currentUserId, otherUserId, listingId);
+
+        await Groups.AddToGroupAsync(Context.ConnectionId, groupName);
+
+        await Clients.Caller.SendAsync("JoinedGroup", groupName);
+    }
+
+ 
+    public async Task LeaveConversation(string otherUserId, int? listingId)
+    {
+        var currentUserId = Context.UserIdentifier;
+        var groupName = GetConversationGroupName(currentUserId, otherUserId, listingId);
+
+        await Groups.RemoveFromGroupAsync(Context.ConnectionId, groupName);
+    }
+
+    private string GetConversationGroupName(string userId1, string userId2, int? listingId)
+    {
+        var users = new[] { userId1, userId2 }.OrderBy(id => id).ToArray();
+        var baseName = $"conversation_{users[0]}_{users[1]}";
+        return listingId.HasValue ? $"{baseName}_listing{listingId}" : baseName;
+    }
 }

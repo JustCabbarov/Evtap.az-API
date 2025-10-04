@@ -1,8 +1,13 @@
-﻿using EvTap.Contracts.DTOs;
+﻿// FAYL: MessageController.cs
+
+using EvTap.Contracts.DTOs;
 using EvTap.Contracts.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
+using System.Threading.Tasks;
+using System;
+using EvTap.Application.Exceptions;
 
 namespace EvTap.Presentation.Controllers
 {
@@ -19,34 +24,58 @@ namespace EvTap.Presentation.Controllers
         }
 
         [HttpPost("send")]
-        public async Task<IActionResult> SendMessage([FromBody] SendMessageRequest request)
+        public async Task<IActionResult> SendMessage([FromBody] SendMessageRequst request)
         {
             var senderId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            if (senderId == null)
+            if (string.IsNullOrEmpty(senderId))
                 return Unauthorized();
 
-            var message = await _messageService.SendMessageToListingOwnerAsync(
-                senderId,
-                request.ListingId,
-                request.Content
-            );
-
-            return Ok(message);
-        }
-
-        [HttpPost("send-to-admin")]
-        public async Task<IActionResult> SendMessageToAdmin([FromBody] AdminMessageRequest request)
-        {
             if (string.IsNullOrWhiteSpace(request.Content))
-                return BadRequest("Mesaj boş ola bilməz");
+                return BadRequest("Mesaj məzmunu boş ola bilməz.");
 
-            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            if (string.IsNullOrEmpty(userId))
-                return Unauthorized();
+            try
+            {
+               
+                if (request.IsAdminMessage)
+                {
+                    var message = await _messageService.SendMessageToAdminAsync(senderId, request.Content);
+                    return Ok(message);
+                }
 
-            var message = await _messageService.SendMessageToAdminAsync(userId, request.Content);
-            return Ok(message);
+                else if (!string.IsNullOrEmpty(request.ReceiverId))
+                {
+                    // Bu metod həm cavabları, həm də birbaşa mesajları idarə edir.
+                    var message = await _messageService.SendReplyAsync(
+                        senderId,
+                        request.ReceiverId,
+                        request.ListingId,
+                        request.Content
+                    );
+                    return Ok(message);
+                }
+
+                else if (request.ListingId.HasValue && request.ListingId.Value > 0)
+                {
+                    var message = await _messageService.SendMessageToListingOwnerAsync(
+                        senderId,
+                        request.ListingId.Value,
+                        request.Content
+                    );
+                    return Ok(message);
+                }
+
+                else
+                {
+                    return BadRequest("Mesaj göndərmək üçün ListingId və ya ReceiverId təyin olunmalıdır.");
+                }
+            }
+            catch (Exception ex)
+            {
+                // NotFoundException da bura daxildir
+                return BadRequest(ex.Message);
+            }
         }
+
 
         [HttpGet("conversation/{otherUserId}")]
         public async Task<IActionResult> GetConversation(string otherUserId, [FromQuery] int? listingId)
@@ -70,7 +99,6 @@ namespace EvTap.Presentation.Controllers
             return Ok(messages);
         }
 
-        // YENİ: Oxunmamış mesajlar
         [HttpGet("unread")]
         public async Task<IActionResult> GetUnreadMessages()
         {
@@ -82,7 +110,6 @@ namespace EvTap.Presentation.Controllers
             return Ok(messages);
         }
 
-        // YENİ: Admin mesajlarını gətir (sadəcə adminlər üçün)
         [HttpGet("admin-messages")]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> GetAdminMessages()
@@ -98,7 +125,6 @@ namespace EvTap.Presentation.Controllers
             return Ok();
         }
 
-       
         [HttpPost("mark-conversation-read/{otherUserId}")]
         public async Task<IActionResult> MarkConversationAsRead(string otherUserId)
         {

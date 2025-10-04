@@ -4343,11 +4343,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Infrastructure\\EvTap.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Infrastructure\\EvTap.Infrastructure.csproj",
       "projectName": "EvTap.Infrastructure",
-      "projectPath": "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Infrastructure\\EvTap.Infrastructure.csproj",
+      "projectPath": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Infrastructure\\EvTap.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\Huawei\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4369,11 +4369,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Contracts\\EvTap.Contracts.csproj": {
-              "projectPath": "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Contracts\\EvTap.Contracts.csproj"
+            "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\EvTap.Contracts.csproj": {
+              "projectPath": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\EvTap.Contracts.csproj"
             },
-            "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Persistence\\EvTap.Persistence.csproj": {
-              "projectPath": "C:\\Users\\Huawei\\Desktop\\Final Project\\EvTap.az\\EvTap.Persistence\\EvTap.Persistence.csproj"
+            "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Persistence\\EvTap.Persistence.csproj": {
+              "projectPath": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Persistence\\EvTap.Persistence.csproj"
             }
           }
         }

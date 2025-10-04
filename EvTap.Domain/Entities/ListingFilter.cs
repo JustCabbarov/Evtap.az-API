@@ -12,6 +12,7 @@ namespace EvTap.Domain.Entities
      
         
             public List<int>? DistrictIds { get; set; }
+            public List<int>? MetroStationIds { get; set; }
 
             // Alqı-satqı növü
             public AdvertType? AdvertType { get; set; }

@@ -56,5 +56,20 @@ namespace EvTap.Presentation.Controllers
             return Ok(new { Message = "Listing updated successfully." });
         }
 
+        [HttpGet("GetListingDetailById/{id}")]
+        public async Task<IActionResult> GetListingDetailById(int id)
+        {
+            var listing = await _listingservice.GetListingDetailByIdAsync(id);
+            if (listing == null)
+                return NotFound("Listing not found.");
+            return Ok(listing);
+        }
+        [HttpGet("GetListingsDetail")]
+        public async Task<IActionResult> GetListingsDetail()
+        {
+            var listings = await _listingservice.GetListingsDetailAsync();
+            return Ok(listings);
+        }
+
     }
 }
