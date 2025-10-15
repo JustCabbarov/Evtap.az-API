@@ -148,6 +148,12 @@ namespace EvTap.Application.Services
             return listing;
         }
 
+        public async Task<List<Listing>> GetListingByUSerId(string userId)
+        {
+            var data= await _customListingRepository.GelListingByUserIdAsync(userId);
+            return data;
+        }
+
         public async Task<Listing> GetListingDetailByIdAsync(int listingId)
         {
             var listing = await _customListingRepository.GetListingtDetailByIdAsync(listingId);

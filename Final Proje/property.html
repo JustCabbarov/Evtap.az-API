@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="stylesheet" href="./assets/css/property.css">
+    
 </head>
 
 <body class="bg-light">
@@ -28,14 +29,50 @@
                 <a href="./Agency.html" class="hover:text-blue-600">Agentliklər</a>
                 <a href="./ask-ai.html  " class="hover:text-blue-600">AI Sorgu</a>
             </nav>
-
-            <!-- Sağ tərəf -->
+   <!-- Sağ tərəf -->
             <div class="flex items-center gap-4">
-                <a href="./Create.html" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg">Yeni
-                    elan</a>
-                <a href="./Login.html" class="border px-4 py-2 rounded-lg hover:bg-gray-100">Giriş</a>
-                <a href="./Chat.html" class="border px-4 py-2 rounded-lg hover:bg-gray-100">Mesajlar</a>
+                <!-- Yeni Elan Button -->
+                <a href="#" id="newListing"
+                    class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition">Yeni elan</a>
+
+                <!-- Giriş Button (shown when no token) -->
+                <a href="./Login.html" id="loginLink"
+                    class="border border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 transition">Giriş</a>
+
+                <!-- User Dropdown (shown when token exists) -->
+                <div id="userDropdown" class="relative hidden">
+                    <button id="userDropdownBtn"
+                        class="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Profil</span>
+                        <i class="fa-solid fa-chevron-down text-sm"></i>
+                    </button>
+                    <div id="userDropdownMenu"
+                        class="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 hidden z-50">
+                        <a href="./MyListings.html"
+                            class="dropdown-menu-item flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100 transition">
+                            <i class="fa-solid fa-list mr-3 text-blue-600"></i>
+                            Mənim elanlarım
+                        </a>
+                        <a href="./Chat.html"
+                            class="dropdown-menu-item flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100 transition">
+                            <i class="fa-solid fa-comments mr-3 text-green-600"></i>
+                            Mesajlar
+                        </a>
+                        <div class="border-t border-gray-200"></div>
+                        <button id="exitBtn"
+                            class="dropdown-menu-item flex items-center w-full px-4 py-3 text-red-600 hover:bg-red-50 transition">
+                            <i class="fa-solid fa-sign-out-alt mr-3"></i>
+                            Çıxış
+                        </button>
+                    </div>
+                </div>
+
+                <button class="md:hidden text-gray-600 text-2xl" id="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
             </div>
+      
         </div>
     </header>
 
@@ -51,10 +88,10 @@
                     <i class="fas fa-crown"></i> Premium Elan (<span id="premiumExpireDate"></span>-ə qədər)
                 </div>
 
-                <div class="image-placeholder">
-                    <i class="fas fa-home fa-3x"></i>
-                    <p>Şəkil yüklənməyib</p>
-                </div>
+               <div class="image-placeholder">
+    <img id="propertyImage" src="https://via.placeholder.com/600x400" alt="Mülk şəkli" class="rounded-lg shadow-lg w-full" />
+</div>
+
 
                 <div class="details-grid">
                     <div class="detail-item">
@@ -119,14 +156,16 @@
                             <span id="phoneBtnText">Nömrəni göstər</span>
                             <span id="phoneNumber" style="display: none;"></span>
                         </button>
+                       
 
                     </div>
-                    <div style="margin-top: 15px; font-size: 14px; color: var(--light-text); text-align: center;">
-                        <p>Telefonu vuraraq və ya mesaj göndərərək əlaqə saxlaya bilərsiniz</p>
-                    </div>
+                     <button type="button" id="premiumBtn" class="btn btn-yellow mt-3">
+                            <i class="fas fa-crown"></i> Premium et
+                        </button>
+                    
                 </div>
 
-                <div class="location-info">
+                <div style="margin-top: 30px;" class="location-info">
                     <h3><i class="fas fa-map-marker-alt"></i> Yerləşdiyi yer</h3>
                     <p id="locationDescription">Mülk Bakı şəhəri, Salamm qəsəbəsində yerləşir.</p>
                     <div id="miniMap" style="height: 250px; width: 100%; margin-top: 30px; "></div>
@@ -140,6 +179,7 @@
     </div>
 
     <script src="./assets/js/property.js"></script>
+    
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </body>

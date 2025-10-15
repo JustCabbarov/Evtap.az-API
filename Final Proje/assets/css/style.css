@@ -652,3 +652,37 @@ main {
         font-size: 14px;
     }
 }
+
+/* User Dropdown Styles */
+.dropdown-menu-item {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.dropdown-menu-item:first-child {
+    border-radius: 8px 8px 0 0;
+}
+
+.dropdown-menu-item:last-child {
+    border-radius: 0 0 8px 8px;
+}
+
+#userDropdownMenu {
+    animation: dropdownFadeIn 0.2s ease-out;
+    transform-origin: top right;
+}
+
+@keyframes dropdownFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}

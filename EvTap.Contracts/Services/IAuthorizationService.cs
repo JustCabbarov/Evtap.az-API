@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using EvTap.Contracts.DTOs;
+using EvTap.Domain.Entities;
 using Microsoft.AspNetCore.Identity;
 
 namespace EvTap.Contracts.Services
@@ -14,8 +15,10 @@ namespace EvTap.Contracts.Services
         Task<IdentityResult> RegisterAsync(RegisterDTO registerDTO);
         Task LogoutAsync();
         Task<IdentityResult> ConfirmEmailAsync(string userId, string token);
+        Task<List<ApplicationUser>> GetAllUsersAsync();
 
-      
+
+
 
     }
 }

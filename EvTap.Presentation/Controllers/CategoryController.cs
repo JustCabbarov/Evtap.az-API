@@ -3,6 +3,7 @@ using EvTap.Contracts.Services;
 using EvTap.Domain.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace EvTap.Presentation.Controllers
 {
@@ -20,15 +21,26 @@ namespace EvTap.Presentation.Controllers
         [HttpGet("GetAll")]
         public async Task<IActionResult> GetAllAsync()
         {
-            var categories = await _genericService.GetAllAsync();
+            var categories = await _genericService.GetAllAsync(q =>
+                q.Include(c => c.Listings) 
+            );
+
             var result = categories.Select(c => new
             {
                 id = c.Id,
-                name = c.Name
+                name = c.Name,
+                listings = c.Listings.Select(l => new
+                {
+                    id = l.Id,
+                    title = l.Title,
+                    price = l.Price
+                }).ToList()
+            })
+            .OrderBy(c => c.name);
 
-            }).OrderBy(c => c.name);
             return Ok(result);
         }
+
         [HttpGet]
         [Route("{id}")]
         public async Task<IActionResult> GetByIdAsync(int id)

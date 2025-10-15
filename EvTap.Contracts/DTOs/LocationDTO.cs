@@ -12,5 +12,6 @@ namespace EvTap.Contracts.DTOs
         public double? Latitude { get; set; }
         public double? Longitude { get; set; }
         public int? DistrictId { get; set; }
+        public List<ListingDTO>? Listings { get; set; }
     }
 }

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mənim Elanlarım - EvTap.az</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        .listing-card {
+            transition: all 0.3s ease;
+        }
+
+        .listing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .badge-premium {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+
+        .badge-active {
+            background: #10b981;
+            color: white;
+        }
+
+        .badge-inactive {
+            background: #6b7280;
+            color: white;
+        }
+
+        .spinner {
+            border: 3px solid #f3f4f6;
+            border-top: 3px solid #3b82f6;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .empty-state i {
+            font-size: 80px;
+            color: #d1d5db;
+            margin-bottom: 20px;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-900 font-inter">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white border-b shadow-sm">
+        <div class="container mx-auto flex justify-between items-center py-3 px-4 lg:px-8">
+            <!-- Logo -->
+            <a href="./index.html" class="flex items-center gap-2 text-blue-600 font-bold text-xl">
+                <i class="fa-solid fa-house"></i> EvTap.az
+            </a>
+
+            <nav class="hidden md:flex items-center gap-6 text-gray-700 font-medium">
+                <a href="./Sales.html" class="hover:text-blue-600">Alış-satış</a>
+                <a href="./Rent.html" class="hover:text-blue-600">Kirayə</a>
+                <a href="./Rent-Daily.html" class="hover:text-blue-600">Günlük</a>
+                <a href="./Agency.html" class="hover:text-blue-600">Agentliklər</a>
+                <a href="./ask-ai.html" class="hover:text-blue-600">AI Sorgu</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <!-- Yeni Elan Button -->
+                <a href="./Create.html" id="newListing"
+                    class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition">Yeni elan</a>
+
+                <!-- Messages Link -->
+                <a href="./Chat.html" id="messagesLink" class="text-gray-700 hover:text-blue-600 transition">
+                    <i class="fa-solid fa-comments text-xl"></i>
+                </a>
+
+                <!-- Login Button -->
+                <a href="./Login.html" id="loginLink"
+                    class="border border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 transition">Giriş</a>
+
+                <button class="md:hidden text-gray-600 text-2xl" id="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="hidden md:hidden flex-col gap-3 px-6 py-4 bg-gray-100 text-gray-700">
+            <a href="./index.html" class="hover:text-blue-600">Ana Səhifə</a>
+            <a href="./Sales.html" class="hover:text-blue-600">Alış-satış</a>
+            <a href="./Rent.html" class="hover:text-blue-600">Kirayə</a>
+            <a href="./Agency.html" class="hover:text-blue-600">Agentliklər</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="min-h-screen bg-gray-50 py-8">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <!-- Page Header -->
+            <div class="mb-8">
+                <h1 class="text-3xl font-bold text-gray-900 mb-2">Mənim Elanlarım</h1>
+                <p class="text-gray-600">Bütün elanlarınızı burada görə və idarə edə bilərsiniz</p>
+            </div>
+
+            <!-- Statistics Cards -->
+            <div id="statsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                <!-- Stats will be loaded here -->
+            </div>
+
+            <!-- Listings Grid -->
+            <div id="listingsContainer" class="min-h-[400px]">
+                <!-- Loading spinner -->
+                <div class="flex items-center justify-center py-20">
+                    <div class="text-center">
+                        <div class="spinner mx-auto mb-4"></div>
+                        <p class="text-gray-600">Elanlarınız yüklənir...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 EvTap.az - Bütün hüquqlar qorunur</p>
+        </div>
+    </footer>
+
+    <script src="./assets/js/MyListing.js"></script>
+</body>
+
+</html>

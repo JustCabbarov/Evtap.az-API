@@ -17,5 +17,6 @@ namespace EvTap.Contracts.Services
 
         Task<Listing> GetListingDetailByIdAsync(int listingId);
         Task<List<Listing>> GetListingsDetailAsync();
+        Task<List<Listing>> GetListingByUSerId(string userId);
     }
 }

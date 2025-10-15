@@ -1021,13 +1021,8 @@ const updateVipSliderButtons = () => {
 };
 
 
-// Initialize when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
-    initializeApp();
-    initializeModalEvents();
-});
-// API Configuration (Mövqeyə görə)
-const LOGOUT_API = 'https://localhost:7027/api/Authorization/LogOut'; 
+// API Configuration
+const LOGOUT_API = 'https://localhost:7027/api/Authorization/LogOut';
 
 // =================================================================
 // AUTHENTICATION & UI MANAGEMENT (Giriş/Çıxış İdarəetməsi)
@@ -1036,21 +1031,21 @@ const LOGOUT_API = 'https://localhost:7027/api/Authorization/LogOut';
 const handleLogout = async () => {
     try {
         const token = localStorage.getItem('jwt');
-        
+
         const response = await fetch(LOGOUT_API, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                ...(token && { 'Authorization': `Bearer ${token}` }) 
+                ...(token && { 'Authorization': `Bearer ${token}` })
             }
         });
 
-        // Cavabın statusundan asılı olmayaraq, Local Storage-i təmizlə
+        // Clear localStorage
         localStorage.removeItem('jwt');
-        
-        // UI-ı yeniləyir və əsas səhifəyə yönləndirir
+
+        // Update UI and redirect
         updateAuthUI();
-        window.location.href = '/'; 
+        window.location.href = './index.html';
 
     } catch (error) {
         localStorage.removeItem('jwt');
@@ -1060,55 +1055,81 @@ const handleLogout = async () => {
 };
 
 const updateAuthUI = () => {
-   
-    
-    const newListingLink = document.getElementById('newListing');
+    const newListingBtn = document.getElementById('newListing');
     const loginLink = document.getElementById('loginLink');
-    const messagesLink = document.getElementById('messagesLink');
-    
+    const userDropdown = document.getElementById('userDropdown');
+
     const token = localStorage.getItem('jwt');
 
-    if (!loginLink) return;
+    if (!newListingBtn) return;
 
     if (token) {
-        
-        loginLink.outerHTML = `
-            <button id="logoutBtn" class="border px-4 py-2 rounded-lg hover:bg-red-50 text-red-600 border-red-600 transition">
-                Çıxış
-            </button>
-        `;
-       
-        const logoutBtn = document.getElementById('logoutBtn');
-        if (logoutBtn) {
-            logoutBtn.addEventListener('click', handleLogout);
+        // User is logged in
+        // Hide login button
+        if (loginLink) {
+            loginLink.classList.add('hidden');
         }
 
-        if (newListingLink) {
-            newListingLink.classList.remove('opacity-50', 'pointer-events-none');
-            newListingLink.href = './Create.html'; 
+        // Show user dropdown
+        if (userDropdown) {
+            userDropdown.classList.remove('hidden');
         }
-        if (messagesLink) {
-            messagesLink.classList.remove('opacity-50', 'pointer-events-none');
-            messagesLink.href = './Chat.html'; 
-        }
-        
+
+        // Enable "Yeni elan" button
+        newListingBtn.classList.remove('opacity-50', 'pointer-events-none', 'cursor-not-allowed');
+        newListingBtn.classList.add('cursor-pointer');
+        newListingBtn.href = './Create.html';
+
     } else {
-      
-        if (newListingLink) {
-            newListingLink.classList.add('opacity-50', 'pointer-events-none');
-          
-            newListingLink.href = './Login.html';
+        // User is NOT logged in
+        // Show login button
+        if (loginLink) {
+            loginLink.classList.remove('hidden');
         }
-        if (messagesLink) {
-            messagesLink.classList.add('opacity-50', 'pointer-events-none');
-            messagesLink.href = './Login.html';
+
+        // Hide user dropdown
+        if (userDropdown) {
+            userDropdown.classList.add('hidden');
         }
+
+        // Disable "Yeni elan" button (make it look inactive)
+        newListingBtn.classList.add('opacity-50', 'pointer-events-none', 'cursor-not-allowed');
+        newListingBtn.classList.remove('cursor-pointer');
+        newListingBtn.href = '#';
     }
 };
 
+// Initialize dropdown toggle functionality
+const initializeDropdown = () => {
+    const userDropdownBtn = document.getElementById('userDropdownBtn');
+    const userDropdownMenu = document.getElementById('userDropdownMenu');
+    const exitBtn = document.getElementById('exitBtn');
 
+    // Toggle dropdown on button click
+    if (userDropdownBtn && userDropdownMenu) {
+        userDropdownBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            userDropdownMenu.classList.toggle('hidden');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!userDropdownBtn.contains(e.target) && !userDropdownMenu.contains(e.target)) {
+                userDropdownMenu.classList.add('hidden');
+            }
+        });
+    }
+
+    // Handle exit button
+    if (exitBtn) {
+        exitBtn.addEventListener('click', handleLogout);
+    }
+};
+
+// Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
-     
-    
-    updateAuthUI(); 
+    initializeApp();
+    initializeModalEvents();
+    updateAuthUI();
+    initializeDropdown();
 });

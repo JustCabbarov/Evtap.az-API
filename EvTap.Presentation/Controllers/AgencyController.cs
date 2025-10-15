@@ -1,9 +1,11 @@
 ﻿using EvTap.Application.Exceptions;
+using EvTap.Application.Services;
 using EvTap.Contracts.DTOs;
 using EvTap.Contracts.Services;
 using EvTap.Domain.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace EvTap.Presentation.Controllers
 {
@@ -25,12 +27,28 @@ namespace EvTap.Presentation.Controllers
            
             return Ok(agency);
         }
-        [HttpGet]
-        public async Task<IActionResult> GetAll()
+        [HttpGet("GetAll")]
+        public async Task<IActionResult> GetAllAsync()
         {
-            var agencies = await _agencyService.GetAllAsync();
-            
-            return Ok(agencies);
+            var agency = await _agencyService.GetAllAsync(q =>
+               q.Include(c=>c.Listings)
+           );
+            var result = agency.Select(c => new
+            {
+                id=c.Id,
+               name=c.Name,
+                description=c.Description,
+                phoneNumber=c.PhoneNumber,
+                email=c.Email,
+                address=c.Address,
+                listings = c.Listings.Select(l => new
+                {
+                    l.Id,
+                    l.Title
+                })
+            }).OrderBy(c => c.name);
+
+            return Ok(result);
         }
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] AgencyDTO agencyDto)

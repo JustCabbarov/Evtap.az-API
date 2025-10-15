@@ -2,29 +2,30 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EvTap.az</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="./assets/css/filter.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EvTap.az</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/css/filter.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/agency.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body class="bg-gray-50 text-gray-900 font-inter" data-page="home">
-  <!-- Header -->
-  <header class="sticky top-0 z-50 bg-white border-b shadow-sm">
-    <div class="container mx-auto flex justify-between items-center py-3 px-4 lg:px-8">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white border-b shadow-sm">
+        <div class="container mx-auto flex justify-between items-center py-3 px-4 lg:px-8">
 
-      <!-- Logo -->
-      <a href="./index.html" class="flex items-center gap-2 text-blue-600 font-bold text-xl">
-        <i class="fa-solid fa-house"></i> EvTap.az
-      </a>
+            <!-- Logo -->
+            <a href="./index.html" class="flex items-center gap-2 text-blue-600 font-bold text-xl">
+                <i class="fa-solid fa-house"></i> EvTap.az
+            </a>
 
-       <nav class="hidden md:flex items-center gap-6 text-gray-700 font-medium">
+            <nav class="hidden md:flex items-center gap-6 text-gray-700 font-medium">
                 <a href="./Sales.html" class="hover:text-blue-600">Alış-satış</a>
                 <a href="./Rent.html" class="hover:text-blue-600">Kirayə</a>
                 <a href="./Rent-Daily.html" class="hover:text-blue-600">Günlük</a>
@@ -32,62 +33,94 @@
                 <a href="./ask-ai.html  " class="hover:text-blue-600">AI Sorgu</a>
             </nav>
 
-      <!-- Sağ tərəf -->
-      <div class="flex items-center gap-4">
-        <a href="./Create.html" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg">Yeni elan</a>
-        <a href="./Login.htm" class="border px-4 py-2 rounded-lg hover:bg-gray-100">Giriş</a>
-        <a href="./Chat.html" class="border px-4 py-2 rounded-lg hover:bg-gray-100">Mesajlar</a>
-        <button class="md:hidden text-gray-600 text-2xl" id="hamburger">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-      </div>
-    </div>
+            <div class="flex items-center gap-4">
+                <!-- Yeni Elan Button -->
+                <a href="#" id="newListing"
+                    class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition">Yeni elan</a>
 
-    <!-- Mobil menyu -->
-    <div id="mobileMenu" class="hidden md:hidden flex-col gap-3 px-6 py-4 bg-gray-100 text-gray-700">
-      <a href="./index.html" class="hover:text-blue-600">Home</a>
-      <a href="./listings.html" class="hover:text-blue-600">Listings</a>
-      <a href="./contact.html" class="hover:text-blue-600">Contact</a>
-    </div>
-  </header>
+                <!-- Giriş Button (shown when no token) -->
+                <a href="./Login.html" id="loginLink"
+                    class="border border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 transition">Giriş</a>
 
-  
-    <!-- Main -->
-    <main class="container mx-auto px-4 py-8">
-      <section class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                <!-- User Dropdown (shown when token exists) -->
+                <div id="userDropdown" class="relative hidden">
+                    <button id="userDropdownBtn"
+                        class="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Profil</span>
+                        <i class="fa-solid fa-chevron-down text-sm"></i>
+                    </button>
+                    <div id="userDropdownMenu"
+                        class="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 hidden z-50">
+                        <a href="./MyListings.html"
+                            class="dropdown-menu-item flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100 transition">
+                            <i class="fa-solid fa-list mr-3 text-blue-600"></i>
+                            Mənim elanlarım
+                        </a>
+                        <a href="./Chat.html"
+                            class="dropdown-menu-item flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100 transition">
+                            <i class="fa-solid fa-comments mr-3 text-green-600"></i>
+                            Mesajlar
+                        </a>
+                        <div class="border-t border-gray-200"></div>
+                        <button id="exitBtn"
+                            class="dropdown-menu-item flex items-center w-full px-4 py-3 text-red-600 hover:bg-red-50 transition">
+                            <i class="fa-solid fa-sign-out-alt mr-3"></i>
+                            Çıxış
+                        </button>
+                    </div>
+                </div>
 
-        <!-- Sol reklam -->
-        <aside class="hidden lg:block lg:col-span-2 sticky top-24">
-          <div class="bg-gray-200 h-[600px] rounded-xl flex items-center justify-center shadow text-gray-500">
-            Qarabağda iş imkanları
-          </div>
-        </aside>
-
-        <!-- Kartlar -->
-        <div class="lg:col-span-8">
-          <!-- Featured Listings -->
-          <section class="mb-6">
-            <h2 class="text-xl font-semibold mb-4">Agency</h2>
-            <div id="AgencyGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-
+                <button class="md:hidden text-gray-600 text-2xl" id="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
             </div>
-          </section>
         </div>
 
-        <!-- Sağ reklam -->
-        <aside class="hidden lg:block lg:col-span-2 sticky top-24">
-          <div class="bg-gray-200 h-[600px] rounded-xl flex items-center justify-center shadow text-gray-500">
-            Qarabağda iş imkanları
-          </div>
-        </aside>
+        <!-- Mobil menyu -->
+        <div id="mobileMenu" class="hidden md:hidden flex-col gap-3 px-6 py-4 bg-gray-100 text-gray-700">
+            <a href="./index.html" class="hover:text-blue-600">Home</a>
+            <a href="./listings.html" class="hover:text-blue-600">Listings</a>
+            <a href="./contact.html" class="hover:text-blue-600">Contact</a>
+        </div>
+    </header>
 
-      </section>
+
+    <!-- Main -->
+    <main class="container mx-auto px-4 py-8">
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+            <!-- Sol reklam -->
+            <aside class="hidden lg:block lg:col-span-2 sticky top-24">
+                <div class="bg-gray-200 h-[600px] rounded-xl flex items-center justify-center shadow text-gray-500">
+                    Qarabağda iş imkanları
+                </div>
+            </aside>
+
+            <!-- Kartlar -->
+            <div class="lg:col-span-8">
+                <!-- Featured Listings -->
+                <section class="mb-6">
+                    <h2 class="text-xl font-semibold mb-4">Agency</h2>
+                    <div id="AgencyGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sağ reklam -->
+            <aside class="hidden lg:block lg:col-span-2 sticky top-24">
+                <div class="bg-gray-200 h-[600px] rounded-xl flex items-center justify-center shadow text-gray-500">
+                    Qarabağda iş imkanları
+                </div>
+            </aside>
+
+        </section>
     </main>
 
- 
-    <script src="./assets/js/app.js"></script>
-    <script src="./assets/js/filter.js"></script>
+
+<script src="./assets/js/Agency.js"></script>
     <script src="https://kit.fontawesome.com/a2e0ad1234.js" crossorigin="anonymous"></script>
 </body>
 

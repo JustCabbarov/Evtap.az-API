@@ -11,6 +11,142 @@
       "RelativeMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|solutionrelative:evtap.presentation\\controllers\\authorizationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|solutionrelative:evtap.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.presentation\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|solutionrelative:evtap.presentation\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|solutionrelative:evtap.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5E24C98-F325-4E25-9CE1-237F1801DB82}|EvTap.Persistence\\EvTap.Persistence.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.persistence\\repositories\\listingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5E24C98-F325-4E25-9CE1-237F1801DB82}|EvTap.Persistence\\EvTap.Persistence.csproj|solutionrelative:evtap.persistence\\repositories\\listingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3E1E44B-7866-439E-8C96-0AC6883ACDE1}|EvTap.Application\\EvTap.Application.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.application\\services\\listingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3E1E44B-7866-439E-8C96-0AC6883ACDE1}|EvTap.Application\\EvTap.Application.csproj|solutionrelative:evtap.application\\services\\listingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.presentation\\controllers\\listingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|solutionrelative:evtap.presentation\\controllers\\listingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.presentation\\controllers\\agencycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|solutionrelative:evtap.presentation\\controllers\\agencycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3E1E44B-7866-439E-8C96-0AC6883ACDE1}|EvTap.Application\\EvTap.Application.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.application\\services\\genericservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3E1E44B-7866-439E-8C96-0AC6883ACDE1}|EvTap.Application\\EvTap.Application.csproj|solutionrelative:evtap.application\\services\\genericservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{206E0A21-20DE-4F46-ADDD-F4E77AEB8A58}|EvTap.Infrastructure\\EvTap.Infrastructure.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.infrastructure\\jobs\\scraperjob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{206E0A21-20DE-4F46-ADDD-F4E77AEB8A58}|EvTap.Infrastructure\\EvTap.Infrastructure.csproj|solutionrelative:evtap.infrastructure\\jobs\\scraperjob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA3DF3C6-25F9-4612-9A7C-B7037C7EF59C}|EvTap.Contracts\\EvTap.Contracts.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.contracts\\dtos\\agencydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA3DF3C6-25F9-4612-9A7C-B7037C7EF59C}|EvTap.Contracts\\EvTap.Contracts.csproj|solutionrelative:evtap.contracts\\dtos\\agencydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.presentation\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|solutionrelative:evtap.presentation\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3E1E44B-7866-439E-8C96-0AC6883ACDE1}|EvTap.Application\\EvTap.Application.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.application\\services\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3E1E44B-7866-439E-8C96-0AC6883ACDE1}|EvTap.Application\\EvTap.Application.csproj|solutionrelative:evtap.application\\services\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.presentation\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|solutionrelative:evtap.presentation\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5E24C98-F325-4E25-9CE1-237F1801DB82}|EvTap.Persistence\\EvTap.Persistence.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.persistence\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5E24C98-F325-4E25-9CE1-237F1801DB82}|EvTap.Persistence\\EvTap.Persistence.csproj|solutionrelative:evtap.persistence\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5E24C98-F325-4E25-9CE1-237F1801DB82}|EvTap.Persistence\\EvTap.Persistence.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.persistence\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5E24C98-F325-4E25-9CE1-237F1801DB82}|EvTap.Persistence\\EvTap.Persistence.csproj|solutionrelative:evtap.persistence\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA3DF3C6-25F9-4612-9A7C-B7037C7EF59C}|EvTap.Contracts\\EvTap.Contracts.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.contracts\\services\\igenericservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA3DF3C6-25F9-4612-9A7C-B7037C7EF59C}|EvTap.Contracts\\EvTap.Contracts.csproj|solutionrelative:evtap.contracts\\services\\igenericservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5E24C98-F325-4E25-9CE1-237F1801DB82}|EvTap.Persistence\\EvTap.Persistence.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.persistence\\repositories\\filterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5E24C98-F325-4E25-9CE1-237F1801DB82}|EvTap.Persistence\\EvTap.Persistence.csproj|solutionrelative:evtap.persistence\\repositories\\filterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56526ECE-126F-49ED-A420-EDF90233401B}|EvTap.Domain\\EvTap.Domain.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.domain\\entities\\listing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56526ECE-126F-49ED-A420-EDF90233401B}|EvTap.Domain\\EvTap.Domain.csproj|solutionrelative:evtap.domain\\entities\\listing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.presentation\\controllers\\citycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|solutionrelative:evtap.presentation\\controllers\\citycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.presentation\\controllers\\dictrictcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|solutionrelative:evtap.presentation\\controllers\\dictrictcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA3DF3C6-25F9-4612-9A7C-B7037C7EF59C}|EvTap.Contracts\\EvTap.Contracts.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.contracts\\dtos\\listingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA3DF3C6-25F9-4612-9A7C-B7037C7EF59C}|EvTap.Contracts\\EvTap.Contracts.csproj|solutionrelative:evtap.contracts\\dtos\\listingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA3DF3C6-25F9-4612-9A7C-B7037C7EF59C}|EvTap.Contracts\\EvTap.Contracts.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.contracts\\dtos\\districtdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA3DF3C6-25F9-4612-9A7C-B7037C7EF59C}|EvTap.Contracts\\EvTap.Contracts.csproj|solutionrelative:evtap.contracts\\dtos\\districtdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.presentation\\controllers\\metrostationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|solutionrelative:evtap.presentation\\controllers\\metrostationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA3DF3C6-25F9-4612-9A7C-B7037C7EF59C}|EvTap.Contracts\\EvTap.Contracts.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.contracts\\dtos\\locationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA3DF3C6-25F9-4612-9A7C-B7037C7EF59C}|EvTap.Contracts\\EvTap.Contracts.csproj|solutionrelative:evtap.contracts\\dtos\\locationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA3DF3C6-25F9-4612-9A7C-B7037C7EF59C}|EvTap.Contracts\\EvTap.Contracts.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.contracts\\dtos\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA3DF3C6-25F9-4612-9A7C-B7037C7EF59C}|EvTap.Contracts\\EvTap.Contracts.csproj|solutionrelative:evtap.contracts\\dtos\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA3DF3C6-25F9-4612-9A7C-B7037C7EF59C}|EvTap.Contracts\\EvTap.Contracts.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.contracts\\dtos\\metrostationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA3DF3C6-25F9-4612-9A7C-B7037C7EF59C}|EvTap.Contracts\\EvTap.Contracts.csproj|solutionrelative:evtap.contracts\\dtos\\metrostationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56526ECE-126F-49ED-A420-EDF90233401B}|EvTap.Domain\\EvTap.Domain.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.domain\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56526ECE-126F-49ED-A420-EDF90233401B}|EvTap.Domain\\EvTap.Domain.csproj|solutionrelative:evtap.domain\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA3DF3C6-25F9-4612-9A7C-B7037C7EF59C}|EvTap.Contracts\\EvTap.Contracts.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.contracts\\dtos\\showuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA3DF3C6-25F9-4612-9A7C-B7037C7EF59C}|EvTap.Contracts\\EvTap.Contracts.csproj|solutionrelative:evtap.contracts\\dtos\\showuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5E24C98-F325-4E25-9CE1-237F1801DB82}|EvTap.Persistence\\EvTap.Persistence.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.persistence\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5E24C98-F325-4E25-9CE1-237F1801DB82}|EvTap.Persistence\\EvTap.Persistence.csproj|solutionrelative:evtap.persistence\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56526ECE-126F-49ED-A420-EDF90233401B}|EvTap.Domain\\EvTap.Domain.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.domain\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56526ECE-126F-49ED-A420-EDF90233401B}|EvTap.Domain\\EvTap.Domain.csproj|solutionrelative:evtap.domain\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56526ECE-126F-49ED-A420-EDF90233401B}|EvTap.Domain\\EvTap.Domain.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.domain\\repositories\\ilistingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56526ECE-126F-49ED-A420-EDF90233401B}|EvTap.Domain\\EvTap.Domain.csproj|solutionrelative:evtap.domain\\repositories\\ilistingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA3DF3C6-25F9-4612-9A7C-B7037C7EF59C}|EvTap.Contracts\\EvTap.Contracts.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.contracts\\services\\ilistingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA3DF3C6-25F9-4612-9A7C-B7037C7EF59C}|EvTap.Contracts\\EvTap.Contracts.csproj|solutionrelative:evtap.contracts\\services\\ilistingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5E24C98-F325-4E25-9CE1-237F1801DB82}|EvTap.Persistence\\EvTap.Persistence.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.persistence\\repositories\\scrapingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5E24C98-F325-4E25-9CE1-237F1801DB82}|EvTap.Persistence\\EvTap.Persistence.csproj|solutionrelative:evtap.persistence\\repositories\\scrapingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA3DF3C6-25F9-4612-9A7C-B7037C7EF59C}|EvTap.Contracts\\EvTap.Contracts.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.contracts\\services\\ipaymetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA3DF3C6-25F9-4612-9A7C-B7037C7EF59C}|EvTap.Contracts\\EvTap.Contracts.csproj|solutionrelative:evtap.contracts\\services\\ipaymetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DA3DF3C6-25F9-4612-9A7C-B7037C7EF59C}|EvTap.Contracts\\EvTap.Contracts.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.contracts\\dtos\\sendmessagerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DA3DF3C6-25F9-4612-9A7C-B7037C7EF59C}|EvTap.Contracts\\EvTap.Contracts.csproj|solutionrelative:evtap.contracts\\dtos\\sendmessagerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -35,10 +171,6 @@
       "RelativeMoniker": "D:0:0:{A5E24C98-F325-4E25-9CE1-237F1801DB82}|EvTap.Persistence\\EvTap.Persistence.csproj|solutionrelative:evtap.persistence\\repositories\\messagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3E1E44B-7866-439E-8C96-0AC6883ACDE1}|EvTap.Application\\EvTap.Application.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.application\\services\\listingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3E1E44B-7866-439E-8C96-0AC6883ACDE1}|EvTap.Application\\EvTap.Application.csproj|solutionrelative:evtap.application\\services\\listingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.presentation\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|solutionrelative:evtap.presentation\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -47,48 +179,8 @@
       "RelativeMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|solutionrelative:evtap.presentation\\notifier\\signalrmessagenotifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|solutionrelative:evtap.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56526ECE-126F-49ED-A420-EDF90233401B}|EvTap.Domain\\EvTap.Domain.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.domain\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56526ECE-126F-49ED-A420-EDF90233401B}|EvTap.Domain\\EvTap.Domain.csproj|solutionrelative:evtap.domain\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA3DF3C6-25F9-4612-9A7C-B7037C7EF59C}|EvTap.Contracts\\EvTap.Contracts.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.contracts\\dtos\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA3DF3C6-25F9-4612-9A7C-B7037C7EF59C}|EvTap.Contracts\\EvTap.Contracts.csproj|solutionrelative:evtap.contracts\\dtos\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA3DF3C6-25F9-4612-9A7C-B7037C7EF59C}|EvTap.Contracts\\EvTap.Contracts.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.contracts\\dtos\\listingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA3DF3C6-25F9-4612-9A7C-B7037C7EF59C}|EvTap.Contracts\\EvTap.Contracts.csproj|solutionrelative:evtap.contracts\\dtos\\listingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DA3DF3C6-25F9-4612-9A7C-B7037C7EF59C}|EvTap.Contracts\\EvTap.Contracts.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.contracts\\dtos\\filterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DA3DF3C6-25F9-4612-9A7C-B7037C7EF59C}|EvTap.Contracts\\EvTap.Contracts.csproj|solutionrelative:evtap.contracts\\dtos\\filterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.presentation\\controllers\\listingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|solutionrelative:evtap.presentation\\controllers\\listingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA3DF3C6-25F9-4612-9A7C-B7037C7EF59C}|EvTap.Contracts\\EvTap.Contracts.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.contracts\\dtos\\locationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA3DF3C6-25F9-4612-9A7C-B7037C7EF59C}|EvTap.Contracts\\EvTap.Contracts.csproj|solutionrelative:evtap.contracts\\dtos\\locationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA3DF3C6-25F9-4612-9A7C-B7037C7EF59C}|EvTap.Contracts\\EvTap.Contracts.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.contracts\\services\\ilistingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA3DF3C6-25F9-4612-9A7C-B7037C7EF59C}|EvTap.Contracts\\EvTap.Contracts.csproj|solutionrelative:evtap.contracts\\services\\ilistingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A5E24C98-F325-4E25-9CE1-237F1801DB82}|EvTap.Persistence\\EvTap.Persistence.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.persistence\\repositories\\listingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5E24C98-F325-4E25-9CE1-237F1801DB82}|EvTap.Persistence\\EvTap.Persistence.csproj|solutionrelative:evtap.persistence\\repositories\\listingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56526ECE-126F-49ED-A420-EDF90233401B}|EvTap.Domain\\EvTap.Domain.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.domain\\repositories\\ilistingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56526ECE-126F-49ED-A420-EDF90233401B}|EvTap.Domain\\EvTap.Domain.csproj|solutionrelative:evtap.domain\\repositories\\ilistingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{206E0A21-20DE-4F46-ADDD-F4E77AEB8A58}|EvTap.Infrastructure\\EvTap.Infrastructure.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.infrastructure\\jobs\\scraperjob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{206E0A21-20DE-4F46-ADDD-F4E77AEB8A58}|EvTap.Infrastructure\\EvTap.Infrastructure.csproj|solutionrelative:evtap.infrastructure\\jobs\\scraperjob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{206E0A21-20DE-4F46-ADDD-F4E77AEB8A58}|EvTap.Infrastructure\\EvTap.Infrastructure.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.infrastructure\\configurations\\quartzjobconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -97,10 +189,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.presentation\\controllers\\filtercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|solutionrelative:evtap.presentation\\controllers\\filtercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A5E24C98-F325-4E25-9CE1-237F1801DB82}|EvTap.Persistence\\EvTap.Persistence.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.persistence\\repositories\\scrapingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5E24C98-F325-4E25-9CE1-237F1801DB82}|EvTap.Persistence\\EvTap.Persistence.csproj|solutionrelative:evtap.persistence\\repositories\\scrapingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Huawei\\AppData\\Local\\SourceServer\\b6adc90c3de8ece7df693f5e4e307c6b85ff3c6b6dd29fd181246e6dd28c335f\\EvTap.Presentation\\Controllers\\AuthorizationController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -118,24 +206,12 @@
       "RelativeMoniker": "D:0:0:{206E0A21-20DE-4F46-ADDD-F4E77AEB8A58}|EvTap.Infrastructure\\EvTap.Infrastructure.csproj|solutionrelative:evtap.infrastructure\\services\\emailservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A5E24C98-F325-4E25-9CE1-237F1801DB82}|EvTap.Persistence\\EvTap.Persistence.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.persistence\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5E24C98-F325-4E25-9CE1-237F1801DB82}|EvTap.Persistence\\EvTap.Persistence.csproj|solutionrelative:evtap.persistence\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A5E24C98-F325-4E25-9CE1-237F1801DB82}|EvTap.Persistence\\EvTap.Persistence.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.persistence\\repositories\\filterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5E24C98-F325-4E25-9CE1-237F1801DB82}|EvTap.Persistence\\EvTap.Persistence.csproj|solutionrelative:evtap.persistence\\repositories\\filterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{56526ECE-126F-49ED-A420-EDF90233401B}|EvTap.Domain\\EvTap.Domain.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.domain\\entities\\listingfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{56526ECE-126F-49ED-A420-EDF90233401B}|EvTap.Domain\\EvTap.Domain.csproj|solutionrelative:evtap.domain\\entities\\listingfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{56526ECE-126F-49ED-A420-EDF90233401B}|EvTap.Domain\\EvTap.Domain.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.domain\\enums\\renovationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{56526ECE-126F-49ED-A420-EDF90233401B}|EvTap.Domain\\EvTap.Domain.csproj|solutionrelative:evtap.domain\\enums\\renovationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56526ECE-126F-49ED-A420-EDF90233401B}|EvTap.Domain\\EvTap.Domain.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.domain\\entities\\listing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56526ECE-126F-49ED-A420-EDF90233401B}|EvTap.Domain\\EvTap.Domain.csproj|solutionrelative:evtap.domain\\entities\\listing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{56526ECE-126F-49ED-A420-EDF90233401B}|EvTap.Domain\\EvTap.Domain.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.domain\\entities\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -149,32 +225,8 @@
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Huawei\\AppData\\Local\\SourceServer\\89dbe6014197f787d035743c2ca574b384c15af342f012df61c59a122e1d6dfe\\EvTap.Application\\Services\\ListingService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.presentation\\controllers\\dictrictcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|solutionrelative:evtap.presentation\\controllers\\dictrictcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3E1E44B-7866-439E-8C96-0AC6883ACDE1}|EvTap.Application\\EvTap.Application.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.application\\services\\genericservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3E1E44B-7866-439E-8C96-0AC6883ACDE1}|EvTap.Application\\EvTap.Application.csproj|solutionrelative:evtap.application\\services\\genericservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A5E24C98-F325-4E25-9CE1-237F1801DB82}|EvTap.Persistence\\EvTap.Persistence.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.persistence\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5E24C98-F325-4E25-9CE1-237F1801DB82}|EvTap.Persistence\\EvTap.Persistence.csproj|solutionrelative:evtap.persistence\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A5E24C98-F325-4E25-9CE1-237F1801DB82}|EvTap.Persistence\\EvTap.Persistence.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.persistence\\repositories\\unityofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A5E24C98-F325-4E25-9CE1-237F1801DB82}|EvTap.Persistence\\EvTap.Persistence.csproj|solutionrelative:evtap.persistence\\repositories\\unityofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA3DF3C6-25F9-4612-9A7C-B7037C7EF59C}|EvTap.Contracts\\EvTap.Contracts.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.contracts\\dtos\\metrostationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA3DF3C6-25F9-4612-9A7C-B7037C7EF59C}|EvTap.Contracts\\EvTap.Contracts.csproj|solutionrelative:evtap.contracts\\dtos\\metrostationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.presentation\\controllers\\metrostationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|solutionrelative:evtap.presentation\\controllers\\metrostationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA3DF3C6-25F9-4612-9A7C-B7037C7EF59C}|EvTap.Contracts\\EvTap.Contracts.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.contracts\\services\\igenericservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA3DF3C6-25F9-4612-9A7C-B7037C7EF59C}|EvTap.Contracts\\EvTap.Contracts.csproj|solutionrelative:evtap.contracts\\services\\igenericservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D3E1E44B-7866-439E-8C96-0AC6883ACDE1}|EvTap.Application\\EvTap.Application.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.application\\docker\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -213,14 +265,6 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:EvTap.Persistence\\Migrations\\ScrapingDb\\20250926221209_SupabaseConnecting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.presentation\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|solutionrelative:evtap.presentation\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|solutionrelative:evtap.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D3E1E44B-7866-439E-8C96-0AC6883ACDE1}|EvTap.Application\\EvTap.Application.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.application\\services\\placesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D3E1E44B-7866-439E-8C96-0AC6883ACDE1}|EvTap.Application\\EvTap.Application.csproj|solutionrelative:evtap.application\\services\\placesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -257,10 +301,6 @@
       "RelativeMoniker": "D:0:0:{56526ECE-126F-49ED-A420-EDF90233401B}|EvTap.Domain\\EvTap.Domain.csproj|solutionrelative:evtap.domain\\repositories\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.presentation\\controllers\\citycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|solutionrelative:evtap.presentation\\controllers\\citycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{56526ECE-126F-49ED-A420-EDF90233401B}|EvTap.Domain\\EvTap.Domain.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.domain\\entities\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{56526ECE-126F-49ED-A420-EDF90233401B}|EvTap.Domain\\EvTap.Domain.csproj|solutionrelative:evtap.domain\\entities\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -283,18 +323,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{DA3DF3C6-25F9-4612-9A7C-B7037C7EF59C}|EvTap.Contracts\\EvTap.Contracts.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.contracts\\services\\igoogleauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DA3DF3C6-25F9-4612-9A7C-B7037C7EF59C}|EvTap.Contracts\\EvTap.Contracts.csproj|solutionrelative:evtap.contracts\\services\\igoogleauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.presentation\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|solutionrelative:evtap.presentation\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.presentation\\controllers\\agencycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{360A1973-7F5E-4EDE-A99A-DB28462B5A7E}|EvTap.Presentation\\EvTap.Presentation.csproj|solutionrelative:evtap.presentation\\controllers\\agencycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA3DF3C6-25F9-4612-9A7C-B7037C7EF59C}|EvTap.Contracts\\EvTap.Contracts.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.contracts\\dtos\\districtdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA3DF3C6-25F9-4612-9A7C-B7037C7EF59C}|EvTap.Contracts\\EvTap.Contracts.csproj|solutionrelative:evtap.contracts\\dtos\\districtdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{56526ECE-126F-49ED-A420-EDF90233401B}|EvTap.Domain\\EvTap.Domain.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.domain\\entities\\district.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -331,10 +359,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{56526ECE-126F-49ED-A420-EDF90233401B}|EvTap.Domain\\EvTap.Domain.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.domain\\entities\\metrostation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{56526ECE-126F-49ED-A420-EDF90233401B}|EvTap.Domain\\EvTap.Domain.csproj|solutionrelative:evtap.domain\\entities\\metrostation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA3DF3C6-25F9-4612-9A7C-B7037C7EF59C}|EvTap.Contracts\\EvTap.Contracts.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.contracts\\dtos\\agencydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA3DF3C6-25F9-4612-9A7C-B7037C7EF59C}|EvTap.Contracts\\EvTap.Contracts.csproj|solutionrelative:evtap.contracts\\dtos\\agencydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A5E24C98-F325-4E25-9CE1-237F1801DB82}|EvTap.Persistence\\EvTap.Persistence.csproj|c:\\users\\huawei\\desktop\\evtap.az\\evtap.persistence\\data\\scrapingdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -436,7 +460,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 267,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -448,15 +472,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MessageController.cs",
-              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Controllers\\MessageController.cs",
-              "RelativeDocumentMoniker": "EvTap.Presentation\\Controllers\\MessageController.cs",
-              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Controllers\\MessageController.cs",
-              "RelativeToolTip": "EvTap.Presentation\\Controllers\\MessageController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAABRAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "ListingService.cs",
+              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Application\\Services\\ListingService.cs",
+              "RelativeDocumentMoniker": "EvTap.Application\\Services\\ListingService.cs",
+              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Application\\Services\\ListingService.cs",
+              "RelativeToolTip": "EvTap.Application\\Services\\ListingService.cs",
+              "ViewState": "AgIAAH8AAAAAAAAAAAAswJgAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T20:59:37.944Z",
+              "WhenOpened": "2025-09-18T21:16:19.107Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ListingRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Persistence\\Repositories\\ListingRepository.cs",
+              "RelativeDocumentMoniker": "EvTap.Persistence\\Repositories\\ListingRepository.cs",
+              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Persistence\\Repositories\\ListingRepository.cs",
+              "RelativeToolTip": "EvTap.Persistence\\Repositories\\ListingRepository.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAA3wBYAAACyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T12:16:30.819Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\appsettings.json",
+              "RelativeDocumentMoniker": "EvTap.Presentation\\appsettings.json",
+              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\appsettings.json",
+              "RelativeToolTip": "EvTap.Presentation\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAACBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-11T10:50:16.284Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "EvTap.Presentation\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\appsettings.Development.json",
+              "RelativeToolTip": "EvTap.Presentation\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAACXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-11T10:50:18.188Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Program.cs",
+              "RelativeDocumentMoniker": "EvTap.Presentation\\Program.cs",
+              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Program.cs",
+              "RelativeToolTip": "EvTap.Presentation\\Program.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACwAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T10:42:28.13Z",
               "EditorCaption": ""
             },
             {
@@ -467,48 +543,9 @@
               "RelativeDocumentMoniker": "EvTap.Presentation\\Controllers\\AuthorizationController.cs",
               "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Controllers\\AuthorizationController.cs",
               "RelativeToolTip": "EvTap.Presentation\\Controllers\\AuthorizationController.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAIA9wCwAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAowFoAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-11T10:11:41.927Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IMessageService.cs",
-              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\Services\\IMessageService.cs",
-              "RelativeDocumentMoniker": "EvTap.Contracts\\Services\\IMessageService.cs",
-              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\Services\\IMessageService.cs",
-              "RelativeToolTip": "EvTap.Contracts\\Services\\IMessageService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T19:24:21.121Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IMessageNotifier.cs",
-              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\Services\\IMessageNotifier.cs",
-              "RelativeDocumentMoniker": "EvTap.Contracts\\Services\\IMessageNotifier.cs",
-              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\Services\\IMessageNotifier.cs",
-              "RelativeToolTip": "EvTap.Contracts\\Services\\IMessageNotifier.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T20:51:26.315Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SendMessageRequest.cs",
-              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\DTOs\\SendMessageRequest.cs",
-              "RelativeDocumentMoniker": "EvTap.Contracts\\DTOs\\SendMessageRequest.cs",
-              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\DTOs\\SendMessageRequest.cs",
-              "RelativeToolTip": "EvTap.Contracts\\DTOs\\SendMessageRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T21:00:58.033Z",
               "EditorCaption": ""
             },
             {
@@ -519,92 +556,268 @@
               "RelativeDocumentMoniker": "EvTap.Application\\Services\\AuthorizationService.cs",
               "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Application\\Services\\AuthorizationService.cs",
               "RelativeToolTip": "EvTap.Application\\Services\\AuthorizationService.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAIAwwHQAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAACwAAAAAAAAAAAAgwJkAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-11T10:15:45.925Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ListingService.cs",
-              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Application\\Services\\ListingService.cs",
-              "RelativeDocumentMoniker": "EvTap.Application\\Services\\ListingService.cs",
-              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Application\\Services\\ListingService.cs",
-              "RelativeToolTip": "EvTap.Application\\Services\\ListingService.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAD4vyYAAAAIAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "ListingController.cs",
+              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Controllers\\ListingController.cs",
+              "RelativeDocumentMoniker": "EvTap.Presentation\\Controllers\\ListingController.cs",
+              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Controllers\\ListingController.cs",
+              "RelativeToolTip": "EvTap.Presentation\\Controllers\\ListingController.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAADwv2kAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T21:16:19.107Z",
+              "WhenOpened": "2025-09-18T21:28:07.032Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MessageService.cs",
-              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Application\\Services\\MessageService.cs",
-              "RelativeDocumentMoniker": "EvTap.Application\\Services\\MessageService.cs",
-              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Application\\Services\\MessageService.cs",
-              "RelativeToolTip": "EvTap.Application\\Services\\MessageService.cs",
-              "ViewState": "AgIAAIsAAAAAAAAAAAAwwKcAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "AgencyController.cs",
+              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Controllers\\AgencyController.cs",
+              "RelativeDocumentMoniker": "EvTap.Presentation\\Controllers\\AgencyController.cs",
+              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Controllers\\AgencyController.cs",
+              "RelativeToolTip": "EvTap.Presentation\\Controllers\\AgencyController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACEAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T19:24:47.117Z",
+              "WhenOpened": "2025-09-15T06:59:21.123Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PaymentService.cs",
+              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Application\\Services\\PaymentService.cs",
+              "RelativeDocumentMoniker": "EvTap.Application\\Services\\PaymentService.cs",
+              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Application\\Services\\PaymentService.cs",
+              "RelativeToolTip": "EvTap.Application\\Services\\PaymentService.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAcwEEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-05T12:08:00.2Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "ChatHub.cs",
-              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Hubs\\ChatHub.cs",
-              "RelativeDocumentMoniker": "EvTap.Presentation\\Hubs\\ChatHub.cs",
-              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Hubs\\ChatHub.cs",
-              "RelativeToolTip": "EvTap.Presentation\\Hubs\\ChatHub.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAYwAoAAAABAAAAAAAAAA==",
+              "Title": "GenericService.cs",
+              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Application\\Services\\GenericService.cs",
+              "RelativeDocumentMoniker": "EvTap.Application\\Services\\GenericService.cs",
+              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Application\\Services\\GenericService.cs",
+              "RelativeToolTip": "EvTap.Application\\Services\\GenericService.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAiwD8AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T20:35:23.619Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MessageRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Persistence\\Repositories\\MessageRepository.cs",
-              "RelativeDocumentMoniker": "EvTap.Persistence\\Repositories\\MessageRepository.cs",
-              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Persistence\\Repositories\\MessageRepository.cs",
-              "RelativeToolTip": "EvTap.Persistence\\Repositories\\MessageRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T19:52:37.703Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-11T09:54:33.44Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "SignalRMessageNotifier.cs",
-              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Notifier\\SignalRMessageNotifier.cs",
-              "RelativeDocumentMoniker": "EvTap.Presentation\\Notifier\\SignalRMessageNotifier.cs",
-              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Notifier\\SignalRMessageNotifier.cs",
-              "RelativeToolTip": "EvTap.Presentation\\Notifier\\SignalRMessageNotifier.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAgwBQAAAA5AAAAAAAAAA==",
+              "Title": "ScraperJob.cs",
+              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Infrastructure\\Jobs\\ScraperJob.cs",
+              "RelativeDocumentMoniker": "EvTap.Infrastructure\\Jobs\\ScraperJob.cs",
+              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Infrastructure\\Jobs\\ScraperJob.cs",
+              "RelativeToolTip": "EvTap.Infrastructure\\Jobs\\ScraperJob.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAiwFgAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T20:56:12.408Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-11T19:35:36.685Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Program.cs",
-              "RelativeDocumentMoniker": "EvTap.Presentation\\Program.cs",
-              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Program.cs",
-              "RelativeToolTip": "EvTap.Presentation\\Program.cs",
-              "ViewState": "AgIAAMgAAAAAAAAAAAAswNoAAAAAAAAAAAAAAA==",
+              "Title": "AgencyDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\DTOs\\AgencyDTO.cs",
+              "RelativeDocumentMoniker": "EvTap.Contracts\\DTOs\\AgencyDTO.cs",
+              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\DTOs\\AgencyDTO.cs",
+              "RelativeToolTip": "EvTap.Contracts\\DTOs\\AgencyDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T10:42:28.13Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-15T06:59:32.604Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "EvTap.Presentation\\Controllers\\CategoryController.cs",
+              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "EvTap.Presentation\\Controllers\\CategoryController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAYwDIAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T20:13:47.549Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PaymentController.cs",
+              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Controllers\\PaymentController.cs",
+              "RelativeDocumentMoniker": "EvTap.Presentation\\Controllers\\PaymentController.cs",
+              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Controllers\\PaymentController.cs",
+              "RelativeToolTip": "EvTap.Presentation\\Controllers\\PaymentController.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAQwCcAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-05T12:14:42.445Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Persistence\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "EvTap.Persistence\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Persistence\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "EvTap.Persistence\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T09:54:21.625Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Persistence\\Repositories\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "EvTap.Persistence\\Repositories\\GenericRepository.cs",
+              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Persistence\\Repositories\\GenericRepository.cs",
+              "RelativeToolTip": "EvTap.Persistence\\Repositories\\GenericRepository.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAswC4AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T09:54:29.475Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "IGenericService.cs",
+              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\Services\\IGenericService.cs",
+              "RelativeDocumentMoniker": "EvTap.Contracts\\Services\\IGenericService.cs",
+              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\Services\\IGenericService.cs",
+              "RelativeToolTip": "EvTap.Contracts\\Services\\IGenericService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T20:04:44.291Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "FilterRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Persistence\\Repositories\\FilterRepository.cs",
+              "RelativeDocumentMoniker": "EvTap.Persistence\\Repositories\\FilterRepository.cs",
+              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Persistence\\Repositories\\FilterRepository.cs",
+              "RelativeToolTip": "EvTap.Persistence\\Repositories\\FilterRepository.cs",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAIwK0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T10:28:13.542Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Listing.cs",
+              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Domain\\Entities\\Listing.cs",
+              "RelativeDocumentMoniker": "EvTap.Domain\\Entities\\Listing.cs",
+              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Domain\\Entities\\Listing.cs",
+              "RelativeToolTip": "EvTap.Domain\\Entities\\Listing.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAQwAoAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T09:57:21.092Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "CityController.cs",
+              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Controllers\\CityController.cs",
+              "RelativeDocumentMoniker": "EvTap.Presentation\\Controllers\\CityController.cs",
+              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Controllers\\CityController.cs",
+              "RelativeToolTip": "EvTap.Presentation\\Controllers\\CityController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwDAAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T19:26:12.534Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "DictrictController.cs",
+              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Controllers\\DictrictController.cs",
+              "RelativeDocumentMoniker": "EvTap.Presentation\\Controllers\\DictrictController.cs",
+              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Controllers\\DictrictController.cs",
+              "RelativeToolTip": "EvTap.Presentation\\Controllers\\DictrictController.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAQwD8AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-13T14:21:46.634Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ListingDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\DTOs\\ListingDTO.cs",
+              "RelativeDocumentMoniker": "EvTap.Contracts\\DTOs\\ListingDTO.cs",
+              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\DTOs\\ListingDTO.cs",
+              "RelativeToolTip": "EvTap.Contracts\\DTOs\\ListingDTO.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAwwB0AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T19:22:11.294Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "DistrictDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\DTOs\\DistrictDTO.cs",
+              "RelativeDocumentMoniker": "EvTap.Contracts\\DTOs\\DistrictDTO.cs",
+              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\DTOs\\DistrictDTO.cs",
+              "RelativeToolTip": "EvTap.Contracts\\DTOs\\DistrictDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-13T14:16:29.908Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "MetroStationController.cs",
+              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Controllers\\MetroStationController.cs",
+              "RelativeDocumentMoniker": "EvTap.Presentation\\Controllers\\MetroStationController.cs",
+              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Controllers\\MetroStationController.cs",
+              "RelativeToolTip": "EvTap.Presentation\\Controllers\\MetroStationController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAC8AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T13:44:36.232Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "CategoryDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\DTOs\\CategoryDTO.cs",
+              "RelativeDocumentMoniker": "EvTap.Contracts\\DTOs\\CategoryDTO.cs",
+              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\DTOs\\CategoryDTO.cs",
+              "RelativeToolTip": "EvTap.Contracts\\DTOs\\CategoryDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T20:14:13.459Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "MetroStationDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\DTOs\\MetroStationDTO.cs",
+              "RelativeDocumentMoniker": "EvTap.Contracts\\DTOs\\MetroStationDTO.cs",
+              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\DTOs\\MetroStationDTO.cs",
+              "RelativeToolTip": "EvTap.Contracts\\DTOs\\MetroStationDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T13:45:24.399Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "LocationDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\DTOs\\LocationDTO.cs",
+              "RelativeDocumentMoniker": "EvTap.Contracts\\DTOs\\LocationDTO.cs",
+              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\DTOs\\LocationDTO.cs",
+              "RelativeToolTip": "EvTap.Contracts\\DTOs\\LocationDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-20T14:04:55.027Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
               "Title": "Category.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Domain\\Entities\\Category.cs",
               "RelativeDocumentMoniker": "EvTap.Domain\\Entities\\Category.cs",
@@ -612,38 +825,191 @@
               "RelativeToolTip": "EvTap.Domain\\Entities\\Category.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-14T08:48:35.338Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-14T08:48:35.338Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "CategoryDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\DTOs\\CategoryDTO.cs",
-              "RelativeDocumentMoniker": "EvTap.Contracts\\DTOs\\CategoryDTO.cs",
-              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\DTOs\\CategoryDTO.cs",
-              "RelativeToolTip": "EvTap.Contracts\\DTOs\\CategoryDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 29,
+              "Title": "ShowUserDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\DTOs\\ShowUserDTO.cs",
+              "RelativeDocumentMoniker": "EvTap.Contracts\\DTOs\\ShowUserDTO.cs",
+              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\DTOs\\ShowUserDTO.cs",
+              "RelativeToolTip": "EvTap.Contracts\\DTOs\\ShowUserDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T20:14:13.459Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-08T21:24:26.817Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ListingDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\DTOs\\ListingDTO.cs",
-              "RelativeDocumentMoniker": "EvTap.Contracts\\DTOs\\ListingDTO.cs",
-              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\DTOs\\ListingDTO.cs",
-              "RelativeToolTip": "EvTap.Contracts\\DTOs\\ListingDTO.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAswCcAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 31,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Domain\\Repositories\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "EvTap.Domain\\Repositories\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Domain\\Repositories\\IUserRepository.cs",
+              "RelativeToolTip": "EvTap.Domain\\Repositories\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T19:22:11.294Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-08T21:08:20.678Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 33,
+              "Title": "IListingService.cs",
+              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\Services\\IListingService.cs",
+              "RelativeDocumentMoniker": "EvTap.Contracts\\Services\\IListingService.cs",
+              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\Services\\IListingService.cs",
+              "RelativeToolTip": "EvTap.Contracts\\Services\\IListingService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAuwBEAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T21:14:15.81Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Persistence\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "EvTap.Persistence\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Persistence\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "EvTap.Persistence\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T21:09:29.968Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "IListingRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Domain\\Repositories\\IListingRepository.cs",
+              "RelativeDocumentMoniker": "EvTap.Domain\\Repositories\\IListingRepository.cs",
+              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Domain\\Repositories\\IListingRepository.cs",
+              "RelativeToolTip": "EvTap.Domain\\Repositories\\IListingRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA0AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T12:14:56.795Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ScrapingRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Persistence\\Repositories\\ScrapingRepository.cs",
+              "RelativeDocumentMoniker": "EvTap.Persistence\\Repositories\\ScrapingRepository.cs",
+              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Persistence\\Repositories\\ScrapingRepository.cs",
+              "RelativeToolTip": "EvTap.Persistence\\Repositories\\ScrapingRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T14:27:22.632Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "IPaymetService.cs",
+              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\Services\\IPaymetService.cs",
+              "RelativeDocumentMoniker": "EvTap.Contracts\\Services\\IPaymetService.cs",
+              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\Services\\IPaymetService.cs",
+              "RelativeToolTip": "EvTap.Contracts\\Services\\IPaymetService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-05T12:08:45.633Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "SendMessageRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\DTOs\\SendMessageRequest.cs",
+              "RelativeDocumentMoniker": "EvTap.Contracts\\DTOs\\SendMessageRequest.cs",
+              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\DTOs\\SendMessageRequest.cs",
+              "RelativeToolTip": "EvTap.Contracts\\DTOs\\SendMessageRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T21:00:58.033Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "IMessageNotifier.cs",
+              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\Services\\IMessageNotifier.cs",
+              "RelativeDocumentMoniker": "EvTap.Contracts\\Services\\IMessageNotifier.cs",
+              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\Services\\IMessageNotifier.cs",
+              "RelativeToolTip": "EvTap.Contracts\\Services\\IMessageNotifier.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T20:51:26.315Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "IMessageService.cs",
+              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\Services\\IMessageService.cs",
+              "RelativeDocumentMoniker": "EvTap.Contracts\\Services\\IMessageService.cs",
+              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\Services\\IMessageService.cs",
+              "RelativeToolTip": "EvTap.Contracts\\Services\\IMessageService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T19:24:21.121Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "MessageController.cs",
+              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Controllers\\MessageController.cs",
+              "RelativeDocumentMoniker": "EvTap.Presentation\\Controllers\\MessageController.cs",
+              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Controllers\\MessageController.cs",
+              "RelativeToolTip": "EvTap.Presentation\\Controllers\\MessageController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T20:59:37.944Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "MessageService.cs",
+              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Application\\Services\\MessageService.cs",
+              "RelativeDocumentMoniker": "EvTap.Application\\Services\\MessageService.cs",
+              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Application\\Services\\MessageService.cs",
+              "RelativeToolTip": "EvTap.Application\\Services\\MessageService.cs",
+              "ViewState": "AgIAAIsAAAAAAAAAAAAwwKcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T19:24:47.117Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "ChatHub.cs",
+              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Hubs\\ChatHub.cs",
+              "RelativeDocumentMoniker": "EvTap.Presentation\\Hubs\\ChatHub.cs",
+              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Hubs\\ChatHub.cs",
+              "RelativeToolTip": "EvTap.Presentation\\Hubs\\ChatHub.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T20:35:23.619Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "MessageRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Persistence\\Repositories\\MessageRepository.cs",
+              "RelativeDocumentMoniker": "EvTap.Persistence\\Repositories\\MessageRepository.cs",
+              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Persistence\\Repositories\\MessageRepository.cs",
+              "RelativeToolTip": "EvTap.Persistence\\Repositories\\MessageRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T19:52:37.703Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "SignalRMessageNotifier.cs",
+              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Notifier\\SignalRMessageNotifier.cs",
+              "RelativeDocumentMoniker": "EvTap.Presentation\\Notifier\\SignalRMessageNotifier.cs",
+              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Notifier\\SignalRMessageNotifier.cs",
+              "RelativeToolTip": "EvTap.Presentation\\Notifier\\SignalRMessageNotifier.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAgwBQAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T20:56:12.408Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
               "Title": "FilterDTO.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\DTOs\\FilterDTO.cs",
               "RelativeDocumentMoniker": "EvTap.Contracts\\DTOs\\FilterDTO.cs",
@@ -655,79 +1021,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ListingController.cs",
-              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Controllers\\ListingController.cs",
-              "RelativeDocumentMoniker": "EvTap.Presentation\\Controllers\\ListingController.cs",
-              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Controllers\\ListingController.cs",
-              "RelativeToolTip": "EvTap.Presentation\\Controllers\\ListingController.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAADwv0cAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T21:28:07.032Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "LocationDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\DTOs\\LocationDTO.cs",
-              "RelativeDocumentMoniker": "EvTap.Contracts\\DTOs\\LocationDTO.cs",
-              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\DTOs\\LocationDTO.cs",
-              "RelativeToolTip": "EvTap.Contracts\\DTOs\\LocationDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-20T14:04:55.027Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "IListingService.cs",
-              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\Services\\IListingService.cs",
-              "RelativeDocumentMoniker": "EvTap.Contracts\\Services\\IListingService.cs",
-              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\Services\\IListingService.cs",
-              "RelativeToolTip": "EvTap.Contracts\\Services\\IListingService.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABIAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T21:14:15.81Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "IListingRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Domain\\Repositories\\IListingRepository.cs",
-              "RelativeDocumentMoniker": "EvTap.Domain\\Repositories\\IListingRepository.cs",
-              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Domain\\Repositories\\IListingRepository.cs",
-              "RelativeToolTip": "EvTap.Domain\\Repositories\\IListingRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-03T12:14:56.795Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "ListingRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Persistence\\Repositories\\ListingRepository.cs",
-              "RelativeDocumentMoniker": "EvTap.Persistence\\Repositories\\ListingRepository.cs",
-              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Persistence\\Repositories\\ListingRepository.cs",
-              "RelativeToolTip": "EvTap.Persistence\\Repositories\\ListingRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwB4AAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-03T12:16:30.819Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "ScraperJob.cs",
-              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Infrastructure\\Jobs\\ScraperJob.cs",
-              "RelativeDocumentMoniker": "EvTap.Infrastructure\\Jobs\\ScraperJob.cs",
-              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Infrastructure\\Jobs\\ScraperJob.cs",
-              "RelativeToolTip": "EvTap.Infrastructure\\Jobs\\ScraperJob.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAAAEcAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T19:35:36.685Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 49,
               "Title": "TokenHandler.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Application\\Services\\TokenHandler.cs",
               "RelativeDocumentMoniker": "EvTap.Application\\Services\\TokenHandler.cs",
@@ -739,7 +1033,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 46,
               "Title": "FilterController.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Controllers\\FilterController.cs",
               "RelativeDocumentMoniker": "EvTap.Presentation\\Controllers\\FilterController.cs",
@@ -747,24 +1041,11 @@
               "RelativeToolTip": "EvTap.Presentation\\Controllers\\FilterController.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAD4vzgAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-24T11:58:46.841Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-24T11:58:46.841Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "ScrapingRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Persistence\\Repositories\\ScrapingRepository.cs",
-              "RelativeDocumentMoniker": "EvTap.Persistence\\Repositories\\ScrapingRepository.cs",
-              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Persistence\\Repositories\\ScrapingRepository.cs",
-              "RelativeToolTip": "EvTap.Persistence\\Repositories\\ScrapingRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T14:27:22.632Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 45,
               "Title": "QuartzJobConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Infrastructure\\Configurations\\QuartzJobConfiguration.cs",
               "RelativeDocumentMoniker": "EvTap.Infrastructure\\Configurations\\QuartzJobConfiguration.cs",
@@ -776,7 +1057,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 48,
               "Title": "GoogleAuthService.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Application\\Services\\GoogleAuthService.cs",
               "RelativeDocumentMoniker": "EvTap.Application\\Services\\GoogleAuthService.cs",
@@ -788,7 +1069,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 47,
               "Title": "AuthorizationController.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\AppData\\Local\\SourceServer\\b6adc90c3de8ece7df693f5e4e307c6b85ff3c6b6dd29fd181246e6dd28c335f\\EvTap.Presentation\\Controllers\\AuthorizationController.cs",
               "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\SourceServer\\b6adc90c3de8ece7df693f5e4e307c6b85ff3c6b6dd29fd181246e6dd28c335f\\EvTap.Presentation\\Controllers\\AuthorizationController.cs",
@@ -801,7 +1082,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 50,
               "Title": "EmailServices.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Infrastructure\\Services\\EmailServices.cs",
               "RelativeDocumentMoniker": "EvTap.Infrastructure\\Services\\EmailServices.cs",
@@ -813,19 +1094,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Persistence\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "EvTap.Persistence\\Data\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Persistence\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "EvTap.Persistence\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T09:54:21.625Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 51,
               "Title": "ListingFilter.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Domain\\Entities\\ListingFilter.cs",
               "RelativeDocumentMoniker": "EvTap.Domain\\Entities\\ListingFilter.cs",
@@ -837,7 +1106,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 52,
               "Title": "RenovationType.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Domain\\Enums\\RenovationType.cs",
               "RelativeDocumentMoniker": "EvTap.Domain\\Enums\\RenovationType.cs",
@@ -849,31 +1118,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "FilterRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Persistence\\Repositories\\FilterRepository.cs",
-              "RelativeDocumentMoniker": "EvTap.Persistence\\Repositories\\FilterRepository.cs",
-              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Persistence\\Repositories\\FilterRepository.cs",
-              "RelativeToolTip": "EvTap.Persistence\\Repositories\\FilterRepository.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAADwv60AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-24T10:28:13.542Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "Listing.cs",
-              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Domain\\Entities\\Listing.cs",
-              "RelativeDocumentMoniker": "EvTap.Domain\\Entities\\Listing.cs",
-              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Domain\\Entities\\Listing.cs",
-              "RelativeToolTip": "EvTap.Domain\\Entities\\Listing.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T09:57:21.092Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 53,
               "Title": "Message.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Domain\\Entities\\Message.cs",
               "RelativeDocumentMoniker": "EvTap.Domain\\Entities\\Message.cs",
@@ -885,7 +1130,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 54,
               "Title": "FilterService.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Application\\Services\\FilterService.cs",
               "RelativeDocumentMoniker": "EvTap.Application\\Services\\FilterService.cs",
@@ -897,7 +1142,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 55,
               "Title": "ListingService.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\AppData\\Local\\SourceServer\\89dbe6014197f787d035743c2ca574b384c15af342f012df61c59a122e1d6dfe\\EvTap.Application\\Services\\ListingService.cs",
               "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\SourceServer\\89dbe6014197f787d035743c2ca574b384c15af342f012df61c59a122e1d6dfe\\EvTap.Application\\Services\\ListingService.cs",
@@ -910,32 +1155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "GenericService.cs",
-              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Application\\Services\\GenericService.cs",
-              "RelativeDocumentMoniker": "EvTap.Application\\Services\\GenericService.cs",
-              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Application\\Services\\GenericService.cs",
-              "RelativeToolTip": "EvTap.Application\\Services\\GenericService.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAtwEcAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T09:54:33.44Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "GenericRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Persistence\\Repositories\\GenericRepository.cs",
-              "RelativeDocumentMoniker": "EvTap.Persistence\\Repositories\\GenericRepository.cs",
-              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Persistence\\Repositories\\GenericRepository.cs",
-              "RelativeToolTip": "EvTap.Persistence\\Repositories\\GenericRepository.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAtwDIAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T09:54:29.475Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 56,
               "Title": "UnityOfWork.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Persistence\\Repositories\\UnityOfWork.cs",
               "RelativeDocumentMoniker": "EvTap.Persistence\\Repositories\\UnityOfWork.cs",
@@ -947,56 +1167,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "DictrictController.cs",
-              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Controllers\\DictrictController.cs",
-              "RelativeDocumentMoniker": "EvTap.Presentation\\Controllers\\DictrictController.cs",
-              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Controllers\\DictrictController.cs",
-              "RelativeToolTip": "EvTap.Presentation\\Controllers\\DictrictController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-13T14:21:46.634Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "IGenericService.cs",
-              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\Services\\IGenericService.cs",
-              "RelativeDocumentMoniker": "EvTap.Contracts\\Services\\IGenericService.cs",
-              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\Services\\IGenericService.cs",
-              "RelativeToolTip": "EvTap.Contracts\\Services\\IGenericService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA4AAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T20:04:44.291Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "MetroStationDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\DTOs\\MetroStationDTO.cs",
-              "RelativeDocumentMoniker": "EvTap.Contracts\\DTOs\\MetroStationDTO.cs",
-              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\DTOs\\MetroStationDTO.cs",
-              "RelativeToolTip": "EvTap.Contracts\\DTOs\\MetroStationDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-14T13:45:24.399Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "MetroStationController.cs",
-              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Controllers\\MetroStationController.cs",
-              "RelativeDocumentMoniker": "EvTap.Presentation\\Controllers\\MetroStationController.cs",
-              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Controllers\\MetroStationController.cs",
-              "RelativeToolTip": "EvTap.Presentation\\Controllers\\MetroStationController.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACsAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-14T13:44:36.232Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 57,
               "Title": "docker-compose.yml",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Application\\Docker\\docker-compose.yml",
               "RelativeDocumentMoniker": "EvTap.Application\\Docker\\docker-compose.yml",
@@ -1008,7 +1179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 61,
               "Title": "UserType.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Domain\\Enums\\UserType.cs",
               "RelativeDocumentMoniker": "EvTap.Domain\\Enums\\UserType.cs",
@@ -1020,7 +1191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 60,
               "Title": "ListingType.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Domain\\Enums\\ListingType.cs",
               "RelativeDocumentMoniker": "EvTap.Domain\\Enums\\ListingType.cs",
@@ -1032,7 +1203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 58,
               "Title": "PlacesController.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Controllers\\PlacesController.cs",
               "RelativeDocumentMoniker": "EvTap.Presentation\\Controllers\\PlacesController.cs",
@@ -1044,7 +1215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 59,
               "Title": "AdvertType.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Domain\\Enums\\AdvertType.cs",
               "RelativeDocumentMoniker": "EvTap.Domain\\Enums\\AdvertType.cs",
@@ -1056,7 +1227,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 62,
               "Title": "Agency.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Domain\\Entities\\Agency.cs",
               "RelativeDocumentMoniker": "EvTap.Domain\\Entities\\Agency.cs",
@@ -1068,7 +1239,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 63,
               "Title": "ScrapingData.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Domain\\Entities\\ScrapingData.cs",
               "RelativeDocumentMoniker": "EvTap.Domain\\Entities\\ScrapingData.cs",
@@ -1080,7 +1251,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 64,
               "Title": "IScrapingRepository.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Domain\\Repositories\\IScrapingRepository.cs",
               "RelativeDocumentMoniker": "EvTap.Domain\\Repositories\\IScrapingRepository.cs",
@@ -1092,7 +1263,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 65,
               "Title": "20250926221209_SupabaseConnecting.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Persistence\\Migrations\\ScrapingDb\\20250926221209_SupabaseConnecting.cs",
               "RelativeDocumentMoniker": "EvTap.Persistence\\Migrations\\ScrapingDb\\20250926221209_SupabaseConnecting.cs",
@@ -1103,7 +1274,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 106,
+              "DocumentIndex": 112,
               "Title": "20250927154621_ScrapingDataUpdated.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Persistence\\Migrations\\ScrapingDb\\20250927154621_ScrapingDataUpdated.cs",
               "RelativeDocumentMoniker": "EvTap.Persistence\\Migrations\\ScrapingDb\\20250927154621_ScrapingDataUpdated.cs",
@@ -1115,31 +1286,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\appsettings.json",
-              "RelativeDocumentMoniker": "EvTap.Presentation\\appsettings.json",
-              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\appsettings.json",
-              "RelativeToolTip": "EvTap.Presentation\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-09-11T10:50:16.284Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "EvTap.Presentation\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\appsettings.Development.json",
-              "RelativeToolTip": "EvTap.Presentation\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAACXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-09-11T10:50:18.188Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 68,
               "Title": "LoginDTO.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\DTOs\\LoginDTO.cs",
               "RelativeDocumentMoniker": "EvTap.Contracts\\DTOs\\LoginDTO.cs",
@@ -1151,7 +1298,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 67,
               "Title": "PlaceDTO.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\DTOs\\PlaceDTO.cs",
               "RelativeDocumentMoniker": "EvTap.Contracts\\DTOs\\PlaceDTO.cs",
@@ -1163,7 +1310,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 69,
               "Title": "IPlaceService.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\Services\\IPlaceService.cs",
               "RelativeDocumentMoniker": "EvTap.Contracts\\Services\\IPlaceService.cs",
@@ -1175,7 +1322,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 66,
               "Title": "PlacesService.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Application\\Services\\PlacesService.cs",
               "RelativeDocumentMoniker": "EvTap.Application\\Services\\PlacesService.cs",
@@ -1187,7 +1334,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 70,
               "Title": "CustomProfiles.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Application\\Profiles\\CustomProfiles.cs",
               "RelativeDocumentMoniker": "EvTap.Application\\Profiles\\CustomProfiles.cs",
@@ -1199,7 +1346,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 71,
               "Title": "IFilterService.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\Services\\IFilterService.cs",
               "RelativeDocumentMoniker": "EvTap.Contracts\\Services\\IFilterService.cs",
@@ -1211,7 +1358,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 72,
               "Title": "IFilterRepository.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Domain\\Repositories\\IFilterRepository.cs",
               "RelativeDocumentMoniker": "EvTap.Domain\\Repositories\\IFilterRepository.cs",
@@ -1223,7 +1370,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 105,
+              "DocumentIndex": 111,
               "Title": "20250924114456_FilterCreated.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Persistence\\Migrations\\20250924114456_FilterCreated.cs",
               "RelativeDocumentMoniker": "EvTap.Persistence\\Migrations\\20250924114456_FilterCreated.cs",
@@ -1235,7 +1382,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 74,
               "Title": "IGenericRepository.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Domain\\Repositories\\IGenericRepository.cs",
               "RelativeDocumentMoniker": "EvTap.Domain\\Repositories\\IGenericRepository.cs",
@@ -1247,7 +1394,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 73,
               "Title": "IUnityOfWork.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Domain\\Repositories\\IUnityOfWork.cs",
               "RelativeDocumentMoniker": "EvTap.Domain\\Repositories\\IUnityOfWork.cs",
@@ -1259,19 +1406,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
-              "Title": "CityController.cs",
-              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Controllers\\CityController.cs",
-              "RelativeDocumentMoniker": "EvTap.Presentation\\Controllers\\CityController.cs",
-              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Controllers\\CityController.cs",
-              "RelativeToolTip": "EvTap.Presentation\\Controllers\\CityController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAIBJwCwAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T19:26:12.534Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 75,
               "Title": "Location.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Domain\\Entities\\Location.cs",
               "RelativeDocumentMoniker": "EvTap.Domain\\Entities\\Location.cs",
@@ -1283,7 +1418,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 76,
               "Title": "ListingMetro.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Domain\\Entities\\ListingMetro.cs",
               "RelativeDocumentMoniker": "EvTap.Domain\\Entities\\ListingMetro.cs",
@@ -1295,7 +1430,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 104,
+              "DocumentIndex": 110,
               "Title": "20250920145635_SomeEntitiesChanged.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Persistence\\Migrations\\20250920145635_SomeEntitiesChanged.cs",
               "RelativeDocumentMoniker": "EvTap.Persistence\\Migrations\\20250920145635_SomeEntitiesChanged.cs",
@@ -1307,7 +1442,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 77,
               "Title": "ListingImage.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Domain\\Entities\\ListingImage.cs",
               "RelativeDocumentMoniker": "EvTap.Domain\\Entities\\ListingImage.cs",
@@ -1319,7 +1454,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 79,
               "Title": "RoleService.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Application\\Services\\RoleService.cs",
               "RelativeDocumentMoniker": "EvTap.Application\\Services\\RoleService.cs",
@@ -1327,12 +1462,11 @@
               "RelativeToolTip": "EvTap.Application\\Services\\RoleService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwCgAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-13T12:25:18.494Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-13T12:25:18.494Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 78,
               "Title": "RoleController.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Controllers\\RoleController.cs",
               "RelativeDocumentMoniker": "EvTap.Presentation\\Controllers\\RoleController.cs",
@@ -1340,12 +1474,11 @@
               "RelativeToolTip": "EvTap.Presentation\\Controllers\\RoleController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAEBVwBoAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-13T13:20:51.796Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-13T13:20:51.796Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 80,
               "Title": "IGoogleAuthService.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\Services\\IGoogleAuthService.cs",
               "RelativeDocumentMoniker": "EvTap.Contracts\\Services\\IGoogleAuthService.cs",
@@ -1357,43 +1490,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
-              "Title": "CategoryController.cs",
-              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Controllers\\CategoryController.cs",
-              "RelativeDocumentMoniker": "EvTap.Presentation\\Controllers\\CategoryController.cs",
-              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Controllers\\CategoryController.cs",
-              "RelativeToolTip": "EvTap.Presentation\\Controllers\\CategoryController.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAApwBwAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T20:13:47.549Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 72,
-              "Title": "AgencyController.cs",
-              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Controllers\\AgencyController.cs",
-              "RelativeDocumentMoniker": "EvTap.Presentation\\Controllers\\AgencyController.cs",
-              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\Controllers\\AgencyController.cs",
-              "RelativeToolTip": "EvTap.Presentation\\Controllers\\AgencyController.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAhwB8AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T06:59:21.123Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 73,
-              "Title": "DistrictDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\DTOs\\DistrictDTO.cs",
-              "RelativeDocumentMoniker": "EvTap.Contracts\\DTOs\\DistrictDTO.cs",
-              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\DTOs\\DistrictDTO.cs",
-              "RelativeToolTip": "EvTap.Contracts\\DTOs\\DistrictDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-13T14:16:29.908Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 82,
               "Title": "IMessageRepository.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Domain\\Repositories\\IMessageRepository.cs",
               "RelativeDocumentMoniker": "EvTap.Domain\\Repositories\\IMessageRepository.cs",
@@ -1405,7 +1502,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 81,
               "Title": "District.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Domain\\Entities\\District.cs",
               "RelativeDocumentMoniker": "EvTap.Domain\\Entities\\District.cs",
@@ -1417,7 +1514,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 83,
               "Title": "AdminMessageRequest.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\DTOs\\AdminMessageRequest.cs",
               "RelativeDocumentMoniker": "EvTap.Contracts\\DTOs\\AdminMessageRequest.cs",
@@ -1429,7 +1526,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 84,
               "Title": "JwtOption.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\Options\\JwtOption.cs",
               "RelativeDocumentMoniker": "EvTap.Contracts\\Options\\JwtOption.cs",
@@ -1441,7 +1538,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 85,
               "Title": "ITokenHandler.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\Services\\ITokenHandler.cs",
               "RelativeDocumentMoniker": "EvTap.Contracts\\Services\\ITokenHandler.cs",
@@ -1453,7 +1550,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 87,
               "Title": "EvTap.Presentation.csproj",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\EvTap.Presentation.csproj",
               "RelativeDocumentMoniker": "EvTap.Presentation\\EvTap.Presentation.csproj",
@@ -1465,7 +1562,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 86,
               "Title": "IRoleService.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\Services\\IRoleService.cs",
               "RelativeDocumentMoniker": "EvTap.Contracts\\Services\\IRoleService.cs",
@@ -1477,7 +1574,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 88,
               "Title": "ListingFutures.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Domain\\Entities\\ListingFutures.cs",
               "RelativeDocumentMoniker": "EvTap.Domain\\Entities\\ListingFutures.cs",
@@ -1489,7 +1586,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 89,
               "Title": "MetroStation.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Domain\\Entities\\MetroStation.cs",
               "RelativeDocumentMoniker": "EvTap.Domain\\Entities\\MetroStation.cs",
@@ -1501,7 +1598,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
+              "DocumentIndex": 90,
               "Title": "ScrapingDbContext.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Persistence\\Data\\ScrapingDbContext.cs",
               "RelativeDocumentMoniker": "EvTap.Persistence\\Data\\ScrapingDbContext.cs",
@@ -1513,7 +1610,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 85,
+              "DocumentIndex": 91,
               "Title": "AIAnalysisRequest.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Domain\\Entities\\AIAnalysisRequest.cs",
               "RelativeDocumentMoniker": "EvTap.Domain\\Entities\\AIAnalysisRequest.cs",
@@ -1525,7 +1622,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 86,
+              "DocumentIndex": 92,
               "Title": "ApplicationUser.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Domain\\Entities\\ApplicationUser.cs",
               "RelativeDocumentMoniker": "EvTap.Domain\\Entities\\ApplicationUser.cs",
@@ -1537,19 +1634,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
-              "Title": "AgencyDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\DTOs\\AgencyDTO.cs",
-              "RelativeDocumentMoniker": "EvTap.Contracts\\DTOs\\AgencyDTO.cs",
-              "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\DTOs\\AgencyDTO.cs",
-              "RelativeToolTip": "EvTap.Contracts\\DTOs\\AgencyDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA4AAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T06:59:32.604Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 87,
+              "DocumentIndex": 93,
               "Title": "City.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Domain\\Entities\\City.cs",
               "RelativeDocumentMoniker": "EvTap.Domain\\Entities\\City.cs",
@@ -1561,7 +1646,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 90,
+              "DocumentIndex": 96,
               "Title": "CityDTO.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\DTOs\\CityDTO.cs",
               "RelativeDocumentMoniker": "EvTap.Contracts\\DTOs\\CityDTO.cs",
@@ -1573,7 +1658,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 89,
+              "DocumentIndex": 95,
               "Title": "RegisterDTO.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\DTOs\\RegisterDTO.cs",
               "RelativeDocumentMoniker": "EvTap.Contracts\\DTOs\\RegisterDTO.cs",
@@ -1585,7 +1670,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 88,
+              "DocumentIndex": 94,
               "Title": "AssignRoleDTO.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\DTOs\\AssignRoleDTO.cs",
               "RelativeDocumentMoniker": "EvTap.Contracts\\DTOs\\AssignRoleDTO.cs",
@@ -1597,19 +1682,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 91,
+              "DocumentIndex": 97,
               "Title": "IAuthorizationService.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\Services\\IAuthorizationService.cs",
               "RelativeDocumentMoniker": "EvTap.Contracts\\Services\\IAuthorizationService.cs",
               "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\Services\\IAuthorizationService.cs",
               "RelativeToolTip": "EvTap.Contracts\\Services\\IAuthorizationService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-11T10:26:03.181Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 92,
+              "DocumentIndex": 98,
               "Title": "ScraperJob.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Domain\\Jobs\\ScraperJob.cs",
               "RelativeDocumentMoniker": "EvTap.Domain\\Jobs\\ScraperJob.cs",
@@ -1621,7 +1706,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 93,
+              "DocumentIndex": 99,
               "Title": "IEmailServices.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Contracts\\Services\\IEmailServices.cs",
               "RelativeDocumentMoniker": "EvTap.Contracts\\Services\\IEmailServices.cs",
@@ -1633,7 +1718,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 96,
+              "DocumentIndex": 102,
               "Title": "GlobalExceptionHandler.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\ExceptionHandler\\GlobalExceptionHandler.cs",
               "RelativeDocumentMoniker": "EvTap.Presentation\\ExceptionHandler\\GlobalExceptionHandler.cs",
@@ -1645,7 +1730,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 94,
+              "DocumentIndex": 100,
               "Title": "EvTap.Application.csproj",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Application\\EvTap.Application.csproj",
               "RelativeDocumentMoniker": "EvTap.Application\\EvTap.Application.csproj",
@@ -1657,7 +1742,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 95,
+              "DocumentIndex": 101,
               "Title": "NotFoundExceptionHandler.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\ExceptionHandler\\NotFoundExceptionHandler.cs",
               "RelativeDocumentMoniker": "EvTap.Presentation\\ExceptionHandler\\NotFoundExceptionHandler.cs",
@@ -1669,7 +1754,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 97,
+              "DocumentIndex": 103,
               "Title": "NullExceptionHandler.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\ExceptionHandler\\NullExceptionHandler.cs",
               "RelativeDocumentMoniker": "EvTap.Presentation\\ExceptionHandler\\NullExceptionHandler.cs",
@@ -1681,7 +1766,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 98,
+              "DocumentIndex": 104,
               "Title": "UnauthorizedExceptionHandler.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\ExceptionHandler\\UnauthorizedExceptionHandler.cs",
               "RelativeDocumentMoniker": "EvTap.Presentation\\ExceptionHandler\\UnauthorizedExceptionHandler.cs",
@@ -1693,7 +1778,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 99,
+              "DocumentIndex": 105,
               "Title": "NotNullExceptions.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Application\\Exceptions\\NotNullExceptions.cs",
               "RelativeDocumentMoniker": "EvTap.Application\\Exceptions\\NotNullExceptions.cs",
@@ -1705,7 +1790,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 101,
+              "DocumentIndex": 107,
               "Title": "UnauthorizedException.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Application\\Exceptions\\UnauthorizedException.cs",
               "RelativeDocumentMoniker": "EvTap.Application\\Exceptions\\UnauthorizedException.cs",
@@ -1717,7 +1802,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 100,
+              "DocumentIndex": 106,
               "Title": "NotFoundException.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Application\\Exceptions\\NotFoundException.cs",
               "RelativeDocumentMoniker": "EvTap.Application\\Exceptions\\NotFoundException.cs",
@@ -1729,7 +1814,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 102,
+              "DocumentIndex": 108,
               "Title": "EvTap.Presentation.http",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Presentation\\EvTap.Presentation.http",
               "RelativeDocumentMoniker": "EvTap.Presentation\\EvTap.Presentation.http",
@@ -1741,7 +1826,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 103,
+              "DocumentIndex": 109,
               "Title": "20250911105657_\u0130nitial.cs",
               "DocumentMoniker": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Persistence\\Migrations\\20250911105657_\u0130nitial.cs",
               "RelativeDocumentMoniker": "EvTap.Persistence\\Migrations\\20250911105657_\u0130nitial.cs",

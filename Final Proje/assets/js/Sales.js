@@ -1,12 +1,14 @@
-// API Configuration
 const API_URL = 'https://localhost:7027/api/Filter/GetListingsByAdvertType?type=1';
 const FILTER_API = 'https://localhost:7027/api/Filter/GetListingsByFilter';
 const CATEGORY_API = 'https://localhost:7027/api/Filter/GetListingsByCategory';
 const PROPERTY_API = 'https://localhost:7027/api/Category/GetAll';
 const DISTRICT_API = 'https://localhost:7027/api/Dictrict/GetAll';
 const METRO_API = 'https://localhost:7027/api/MetroStation/GetAll';
-const LOGOUT_API = 'https://localhost:7027/api/Authorization/LogOut'; 
 
+let selectedCategories = []; // Unused in current filter logic, kept for reference
+let selectedRooms = []; // Unused in current filter logic, kept for reference
+let selectedRenovations = []; // Unused in current filter logic, kept for reference
+let selectedCreatorTypes = []; // Unused in current filter logic, kept for reference
 let selectedLocations = [];
 
 // DOM Elementləri
@@ -36,11 +38,12 @@ const formatPrice = (amount) => {
 
 const createPropertyCard = (property, isVip = false) => {
     const card = document.createElement('a');
-    card.href = ` property.html?id=${property.id}`;
+    card.href = `property.html?id=${property.id}`;
     card.className = 'property-card block bg-white rounded-xl shadow-md overflow-hidden cursor-pointer no-underline relative';
 
     const imageUrl = property.images?.[0]?.url || 'https://via.placeholder.com/400x250?text=Emlak';
 
+    // Add VIP badge if it's a VIP property
     const vipBadge = isVip ? `
         <div class="absolute top-3 right-3 bg-yellow-400 text-yellow-900 px-2 py-1 rounded-full text-xs font-bold flex items-center gap-1">
             <i class="fa-solid fa-crown"></i>
@@ -144,6 +147,7 @@ const renderGrid = (properties) => {
         return;
     }
 
+    // Use properties directly from API (no client-side filtering)
     let filteredProperties = properties;
 
     // Separate VIP and regular properties
@@ -210,14 +214,12 @@ const fetchListings = async (filters = {}) => {
 
         let response;
         if (Object.keys(filters).length > 0) {
-            // Filter API istifadə olunur
             response = await fetch(FILTER_API, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(filters)
             });
         } else {
-            // Yalnız bir API-dən datanı çəkirik
             response = await fetch(API_URL);
         }
 
@@ -234,13 +236,62 @@ const fetchListings = async (filters = {}) => {
     }
 };
 
-// fetchAllListings funksiyası ləğv edilir.
-const fetchAllListings = fetchListings;
+// Fetch all listings (no filters)
+const fetchAllListings = async () => {
+    try {
+        showLoading('both');
 
+        // Try multiple endpoints to get all listings
+        const endpoints = [
+            'https://localhost:7027/api/Filter/GetListingsByAdvertType?type=1'
+        ];
+
+        let allProperties = [];
+
+        for (const endpoint of endpoints) {
+            try {
+                const response = await fetch(endpoint, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    if (Array.isArray(data)) {
+                        allProperties = [...allProperties, ...data];
+                    }
+                }
+            } catch (e) {
+                // Continue with next endpoint
+            }
+        }
+
+        if (allProperties.length > 0) {
+            // Remove duplicates based on ID
+            const uniqueProperties = allProperties.filter((property, index, self) =>
+                index === self.findIndex(p => p.id === property.id)
+            );
+            renderGrid(uniqueProperties);
+        } else {
+            // Fallback to original API
+            await fetchListings();
+        }
+
+    } catch (error) {
+        // Final fallback
+        try {
+            await fetchListings();
+        } catch (fallbackError) {
+            showError('Elanları yükləməkdə xəta baş verdi.');
+        }
+    }
+};
 
 // Fetch listings by category
 const fetchListingsByCategory = async (categoryId) => {
-    // Bu funksiya Category API-ni çağırır. Filter API-dən fərqlidir.
     try {
         showLoading('both');
         const response = await fetch(`${CATEGORY_API}?categoryId=${categoryId}`);
@@ -270,11 +321,6 @@ const initializeDOMElements = () => {
     vipSlider.prevBtn = document.getElementById('vipPrevBtn');
     vipSlider.nextBtn = document.getElementById('vipNextBtn');
     vipSlider.info = document.getElementById('vipSliderInfo');
-
-    // Horizontal scroll bar problemi üçün əlavə edilmiş düzəliş
-    if (vipSlider.container) {
-        vipSlider.container.style.overflow = 'hidden'; 
-    }
 
     if (!vipGrid || !regularGrid || !vipCount || !regularCount) {
         return false;
@@ -316,12 +362,10 @@ const initializeApp = async () => {
             showError('Tətbiq başlatılmadı.');
             return;
         }
-        
-        updateAuthUI();
 
         await Promise.all([
             loadPropertyTypes(),
-            fetchListings() // Yalnız əsas API_URL-i çağırır
+            fetchAllListings()
         ]);
     } catch (error) {
         showError('Tətbiq başlatılmadı.');
@@ -398,7 +442,7 @@ const initializeModalEvents = () => {
 
             if (categoryId === '' || categoryId === null) {
                 // Show all listings using GetAllListings API
-                fetchListings();
+                fetchAllListings();
             } else {
                 // Fetch listings by category
                 fetchListingsByCategory(categoryId);
@@ -799,7 +843,7 @@ const renderLocationList = (data, type) => {
         container.appendChild(div);
     });
 
-    
+    // Update selected count
     updateSelectedCount();
 };
 
@@ -816,12 +860,14 @@ const toggleLocationSelection = (item, type, element) => {
     );
 
     if (isSelected) {
+        // Remove from selection
         selectedLocations = selectedLocations.filter(loc =>
             !(loc.id === item.id && loc.type === type.toLowerCase())
         );
         element.querySelector('i').className = 'fa-solid fa-plus text-blue-600';
         element.classList.remove('selected');
     } else {
+        // Add to selection
         selectedLocations.push({
             id: item.id,
             name: item.name,
@@ -873,7 +919,7 @@ const filterLocationList = async (type, searchTerm) => {
 };
 
 const applyLocationSelection = () => {
- 
+    // Close location modal
     const locationModal = document.getElementById('locationModalWindow');
     const locationOverlay = document.getElementById('locationModalOverlay');
 
@@ -883,14 +929,13 @@ const applyLocationSelection = () => {
         document.body.style.overflow = 'auto';
     }
 
- 
+    // Clear search input
     const searchInput = document.getElementById('locationSearchInput');
     if (searchInput) searchInput.value = '';
 
 };
 
-
-
+// VIP Slider Functions
 const initializeVipSlider = (totalItems) => {
     if (totalItems <= 3) {
         // Hide slider controls if 3 or fewer items
@@ -970,24 +1015,32 @@ const updateVipSliderButtons = () => {
     }
 };
 
-// AUTHENTICATION LOGIC START
+
+// API Configuration
+const LOGOUT_API = 'https://localhost:7027/api/Authorization/LogOut';
+
+// =================================================================
+// AUTHENTICATION & UI MANAGEMENT (Giriş/Çıxış İdarəetməsi)
+// =================================================================
+
 const handleLogout = async () => {
     try {
         const token = localStorage.getItem('jwt');
-        
+
         const response = await fetch(LOGOUT_API, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                ...(token && { 'Authorization': `Bearer ${token}` }) 
+                ...(token && { 'Authorization': `Bearer ${token}` })
             }
         });
 
-        
+        // Clear localStorage
         localStorage.removeItem('jwt');
-        
+
+        // Update UI and redirect
         updateAuthUI();
-        window.location.href = '/'; 
+        window.location.href = './index.html';
 
     } catch (error) {
         localStorage.removeItem('jwt');
@@ -997,67 +1050,81 @@ const handleLogout = async () => {
 };
 
 const updateAuthUI = () => {
-    
-    const newListingLink = document.getElementById('newListing');
+    const newListingBtn = document.getElementById('newListing');
     const loginLink = document.getElementById('loginLink');
-    const messagesLink = document.getElementById('messagesLink');
-    
+    const userDropdown = document.getElementById('userDropdown');
+
     const token = localStorage.getItem('jwt');
 
-    if (!loginLink) return;
+    if (!newListingBtn) return;
 
     if (token) {
-        // --- İSTİFADƏÇİ DAXİL OLUB ---
-        
-        // 1. "Giriş" linkini "Çıxış" düyməsinə çevir
-        loginLink.outerHTML = `
-            <button id="logoutBtn" class="border px-4 py-2 rounded-lg hover:bg-red-50 text-red-600 border-red-600 transition">
-                Çıxış
-            </button>
-        `;
-        
-        // Yeni düyməni tap və listener əlavə et
-        const logoutBtn = document.getElementById('logoutBtn');
-        if (logoutBtn) {
-            logoutBtn.addEventListener('click', handleLogout);
+        // User is logged in
+        // Hide login button
+        if (loginLink) {
+            loginLink.classList.add('hidden');
         }
 
-        // 2. Yeni elan və Mesajlar görünür və aktivdir
-        if (newListingLink) {
-            newListingLink.style.display = ''; // Gizlədilmişdirsə göstər
-            newListingLink.classList.remove('opacity-50', 'pointer-events-none');
-            newListingLink.href = './Create.html'; 
+        // Show user dropdown
+        if (userDropdown) {
+            userDropdown.classList.remove('hidden');
         }
-        if (messagesLink) {
-            messagesLink.style.display = ''; // Gizlədilmişdirsə göstər
-            messagesLink.classList.remove('opacity-50', 'pointer-events-none');
-            messagesLink.href = './Chat.html'; 
-        }
-        
+
+        // Enable "Yeni elan" button
+        newListingBtn.classList.remove('opacity-50', 'pointer-events-none', 'cursor-not-allowed');
+        newListingBtn.classList.add('cursor-pointer');
+        newListingBtn.href = './Create.html';
+
     } else {
-        // --- İSTİFADƏÇİ DAXİL OLMAYIB ---
-        
-        // 1. Giriş linki yerində qalır
-        
-        // 2. Yeni elan və Mesajlar gizlədilməlidir
-        if (newListingLink) {
-            newListingLink.style.display = 'none';
-            newListingLink.href = './Login.html'; // Yönləndirməni saxla
+        // User is NOT logged in
+        // Show login button
+        if (loginLink) {
+            loginLink.classList.remove('hidden');
         }
-        if (messagesLink) {
-            messagesLink.style.display = 'none';
-            messagesLink.href = './Login.html';
+
+        // Hide user dropdown
+        if (userDropdown) {
+            userDropdown.classList.add('hidden');
         }
+
+        // Disable "Yeni elan" button (make it look inactive)
+        newListingBtn.classList.add('opacity-50', 'pointer-events-none', 'cursor-not-allowed');
+        newListingBtn.classList.remove('cursor-pointer');
+        newListingBtn.href = '#';
     }
 };
-// AUTHENTICATION LOGIC END
 
+// Initialize dropdown toggle functionality
+const initializeDropdown = () => {
+    const userDropdownBtn = document.getElementById('userDropdownBtn');
+    const userDropdownMenu = document.getElementById('userDropdownMenu');
+    const exitBtn = document.getElementById('exitBtn');
+
+    // Toggle dropdown on button click
+    if (userDropdownBtn && userDropdownMenu) {
+        userDropdownBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            userDropdownMenu.classList.toggle('hidden');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!userDropdownBtn.contains(e.target) && !userDropdownMenu.contains(e.target)) {
+                userDropdownMenu.classList.add('hidden');
+            }
+        });
+    }
+
+    // Handle exit button
+    if (exitBtn) {
+        exitBtn.addEventListener('click', handleLogout);
+    }
+};
 
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
     initializeApp();
     initializeModalEvents();
-    
-    // Auth UI-nı başlatmağa zəmanət verin
-    updateAuthUI(); 
+    updateAuthUI();
+    initializeDropdown();
 });

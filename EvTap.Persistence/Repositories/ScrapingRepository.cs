@@ -27,6 +27,7 @@ namespace EvTap.Persistence.Repositories
         public async Task<bool> ExistsAsync(string externalId)
         {
             return await _db.ScrapingDatas.AnyAsync(x => x.ExternalId == externalId);
+        
         }
 
     }

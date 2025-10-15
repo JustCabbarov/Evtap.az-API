@@ -5,6 +5,7 @@ using EvTap.Application.Exceptions;
 using EvTap.Contracts.DTOs;
 using EvTap.Contracts.Services;
 using EvTap.Domain.Entities;
+using EvTap.Domain.Repositories;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
@@ -19,6 +20,7 @@ namespace EvTap.Application.Services
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly ILogger<AuthorizationService> _logger;
         private readonly ITokenHandler _tokenHandler;
+        private readonly IUserRepository _userRepository;
 
 
 
@@ -28,7 +30,8 @@ namespace EvTap.Application.Services
             IEmailService emailService,
             RoleManager<IdentityRole> roleManager,
             ILogger<AuthorizationService> logger,
-            ITokenHandler tokenHandler)
+            ITokenHandler tokenHandler,
+            IUserRepository userRepository)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -36,6 +39,7 @@ namespace EvTap.Application.Services
             _roleManager = roleManager;
             _logger = logger;
             _tokenHandler = tokenHandler;
+            _userRepository = userRepository;
         }
 
         public async Task<IdentityResult> RegisterAsync(RegisterDTO registerDTO)
@@ -144,7 +148,12 @@ namespace EvTap.Application.Services
            
             await _signInManager.SignOutAsync();
         }
+    
+        public async Task <List<ApplicationUser>>GetAllUsersAsync()
+        {
+            var users = await _userRepository.GetAllUsersAsync();
+            return users;
+        }
 
-      
     }
 }

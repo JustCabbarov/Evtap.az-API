@@ -10,5 +10,7 @@ namespace EvTap.Domain.Repositories
     {
       Task <Listing> GetListingtDetailByIdAsync(int id);
       Task <List<Listing>> GetListingtDetailAsync();
+      
+        Task<List<Listing>> GelListingByUserIdAsync(string userId);
     }
 }

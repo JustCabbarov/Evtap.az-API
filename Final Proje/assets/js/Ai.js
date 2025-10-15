@@ -9,6 +9,91 @@
         let currentPage = 1;
         const itemsPerPage = 8; // 4x2 grid
 
+
+        
+const LOGOUT_API = 'https://localhost:7027/api/Authorization/LogOut'; 
+
+
+
+const handleLogout = async () => {
+    try {
+        const token = localStorage.getItem('jwt');
+        
+        const response = await fetch(LOGOUT_API, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                ...(token && { 'Authorization': `Bearer ${token}` }) 
+            }
+        });
+
+        // Cavabın statusundan asılı olmayaraq, Local Storage-i təmizlə
+        localStorage.removeItem('jwt');
+        
+        // UI-ı yeniləyir və əsas səhifəyə yönləndirir
+        updateAuthUI();
+        window.location.href = '/'; 
+
+    } catch (error) {
+        localStorage.removeItem('jwt');
+        updateAuthUI();
+        console.error('Çıxış zamanı xəta:', error);
+    }
+};
+
+const updateAuthUI = () => {
+   
+    
+    const newListingLink = document.getElementById('newListing');
+    const loginLink = document.getElementById('loginLink');
+    const messagesLink = document.getElementById('messagesLink');
+    
+    const token = localStorage.getItem('jwt');
+
+    if (!loginLink) return;
+
+    if (token) {
+        
+        loginLink.outerHTML = `
+            <button id="logoutBtn" class="border px-4 py-2 rounded-lg hover:bg-red-50 text-red-600 border-red-600 transition">
+                Çıxış
+            </button>
+        `;
+       
+        const logoutBtn = document.getElementById('logoutBtn');
+        if (logoutBtn) {
+            logoutBtn.addEventListener('click', handleLogout);
+        }
+
+        if (newListingLink) {
+            newListingLink.classList.remove('opacity-50', 'pointer-events-none');
+            newListingLink.href = './Create.html'; 
+        }
+        if (messagesLink) {
+            messagesLink.classList.remove('opacity-50', 'pointer-events-none');
+            messagesLink.href = './Chat.html'; 
+        }
+        
+    } else {
+      
+        if (newListingLink) {
+            newListingLink.classList.add('opacity-50', 'pointer-events-none');
+          
+            newListingLink.href = './Login.html';
+        }
+        if (messagesLink) {
+            messagesLink.classList.add('opacity-50', 'pointer-events-none');
+            messagesLink.href = './Login.html';
+        }
+    }
+};
+
+
+document.addEventListener('DOMContentLoaded', () => {
+     
+    
+    updateAuthUI(); 
+});
         // Initialize map
         function initializeMap() {
             // Remove existing map if it exists
@@ -178,7 +263,7 @@
         // AI Analysis Function
         async function fetchAIAnalysis() {
             const userInput = encodeURIComponent(document.getElementById('aiAnalysisInput').value);
-            const url = `https://evtap.app.n8n.cloud/webhook-test/Analiz?input=${userInput}`;
+            const url = `https://myworkflow123.app.n8n.cloud/webhook-test/Analiz?input=${userInput}`;
             const resultsContainer = document.getElementById('aiAnalysisResults');
 
             // Show loading spinner
@@ -243,7 +328,7 @@
         // EvTap Statistics Function
         async function fetchStats() {
             const userInput = encodeURIComponent(document.getElementById('statisticsInput').value);
-            const url = `https://evtap.app.n8n.cloud/webhook-test/get-sql?input=${userInput}`;
+            const url = `https://myworkflow123.app.n8n.cloud/webhook-test/get-sql?input=${userInput}`;
             const resultsContainer = document.getElementById('statisticsResults');
 
             // Show loading spinner
@@ -258,7 +343,6 @@
                 const response = await fetch(url);
                 const data = await response.json();
 
-                // JSON format: [{ "result": { sold_stats: {...}, rented_stats: {...} } }]
                 const result = data.result;
 
                 resultsContainer.innerHTML = `
@@ -586,4 +670,5 @@
         document.addEventListener('DOMContentLoaded', function () {
             // Initialize when page loads
         });
+
     

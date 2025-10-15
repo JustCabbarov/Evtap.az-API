@@ -27,6 +27,13 @@ namespace EvTap.Presentation.Controllers
 
         }
 
+        [HttpGet("AllUsers")]
+       
+        public async Task<IActionResult> GetAllUsers()
+        {
+            var users = await _authorizationService.GetAllUsersAsync();
+            return Ok(users);
+        }
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterDTO registerDTO)
         {
@@ -104,5 +111,8 @@ namespace EvTap.Presentation.Controllers
     </script>";
             return Content(script, "text/html");
         }
+
+
+       
     }
 }

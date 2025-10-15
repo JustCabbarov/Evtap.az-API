@@ -195,12 +195,11 @@
           </select>
         </div>
 
-        <div class="form-group">
-          <label for="isPremium">Premium elan</label>
-          <div style="display: flex; align-items: center; gap: 10px;">
-            <input type="checkbox" name="isPremium" id="isPremium" />
-            <label for="isPremium" style="margin: 0; font-weight: normal;">Premium elan et</label>
-          </div>
+        <div class="form-group" id="agencySelectGroup" style="display: none;">
+          <label for="agencyId">Agentlik seçin *</label>
+          <select name="agencyId" id="agencyId">
+            <option value="">Agentliklər yüklənir...</option>
+          </select>
         </div>
 
         <div class="buttons">
@@ -214,8 +213,16 @@
         <h2>Şəkillər</h2>
         <div class="form-group">
           <label for="image">Əmlak şəkilləri</label>
-          <input type="file" name="image" id="image" accept="image/*" multiple />
-          <small style="color: #718096; font-size: 0.9rem;">İstəyə bağlı - şəkil yükləyə bilərsiniz</small>
+          <div class="image-upload-container">
+            <input type="file" name="image" id="image" accept="image/*" multiple style="display: none;" />
+            <div class="image-upload-area" id="imageUploadArea">
+              <div class="upload-icon">📸</div>
+              <p>Şəkilləri seçmək üçün klikləyin və ya buraya sürüşdürün</p>
+              <button type="button" class="select-images-btn">Şəkil seçin</button>
+            </div>
+            <div class="image-preview-container" id="imagePreviewContainer"></div>
+          </div>
+          <small style="color: #718096; font-size: 0.9rem;">İstəyə bağlı - bir və ya bir neçə şəkil yükləyə bilərsiniz</small>
         </div>
 
         <div class="buttons">

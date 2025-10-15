@@ -1,16 +1,6 @@
 [
   {
     "ContainingType": "EvTap.Presentation.Controllers.AgencyController",
-    "Method": "GetAll",
-    "RelativePath": "api/Agency",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "EvTap.Presentation.Controllers.AgencyController",
     "Method": "Create",
     "RelativePath": "api/Agency",
     "HttpMethod": "POST",
@@ -76,6 +66,26 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EvTap.Presentation.Controllers.AgencyController",
+    "Method": "GetAllAsync",
+    "RelativePath": "api/Agency/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EvTap.Presentation.Controllers.AuthorizationController",
+    "Method": "GetAllUsers",
+    "RelativePath": "api/Authorization/AllUsers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -239,7 +249,7 @@
     "ContainingType": "EvTap.Presentation.Controllers.CityController",
     "Method": "UpdateAsync",
     "RelativePath": "api/City",
-    "HttpMethod": "POST",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -345,7 +355,7 @@
     "ContainingType": "EvTap.Presentation.Controllers.DictrictController",
     "Method": "DeleteAsync",
     "RelativePath": "api/Dictrict/{id}",
-    "HttpMethod": "POST",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -617,6 +627,11 @@
         "Name": "Location.DistrictId",
         "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
+      },
+      {
+        "Name": "Location.Listings",
+        "Type": "System.Collections.Generic.List\u00601[[EvTap.Contracts.DTOs.ListingDTO, EvTap.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -659,6 +674,22 @@
         "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EvTap.Presentation.Controllers.ListingController",
+    "Method": "GetListingByUserId",
+    "RelativePath": "api/Listing/GetListingByUserId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -805,6 +836,11 @@
       {
         "Name": "Location.DistrictId",
         "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Location.Listings",
+        "Type": "System.Collections.Generic.List\u00601[[EvTap.Contracts.DTOs.ListingDTO, EvTap.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "IsRequired": false
       }
     ],
@@ -981,6 +1017,48 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EvTap.API.Controllers.PaymentController",
+    "Method": "Cancel",
+    "RelativePath": "api/Payment/cancel",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EvTap.API.Controllers.PaymentController",
+    "Method": "CreatePayment",
+    "RelativePath": "api/Payment/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "listingId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EvTap.API.Controllers.PaymentController",
+    "Method": "Success",
+    "RelativePath": "api/Payment/success",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sessionId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {

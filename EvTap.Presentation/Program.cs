@@ -19,10 +19,12 @@ using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Serilog;
 using Serilog.Events;
+using Stripe;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -79,6 +81,12 @@ builder.Services.AddScoped<IFilterRepository, FilterRepository>();
 builder.Services.AddScoped<IPlacesService, PlacesService>();
 builder.Services.AddScoped<IFilterService, FilterService>();
 builder.Services.AddScoped<IListingRepository, ListingRepository>();
+builder.Services.AddScoped<IPaymentService, PaymentService>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+StripeConfiguration.ApiKey = builder.Configuration["Stripe:SecretKey"];
+
+
+
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddSignalR(); // Bu tekrar değil, SignalR servis kaydıdır.
 
@@ -86,6 +94,8 @@ builder.Services.AddAutoMapper(m =>
 {
     m.AddProfile(new CustomProfiles());
 });
+
+
 
 builder.Services.AddProblemDetails();
 
@@ -221,6 +231,19 @@ builder.Services.AddControllers()
 var app = builder.Build();
 
 app.UseCors("AllowLocalhost");
+
+app.UseStaticFiles(); 
+
+
+
+
+
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(
+        Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads/listings")),
+    RequestPath = "/listing-images"
+});
 
 if (app.Environment.IsDevelopment())
 {

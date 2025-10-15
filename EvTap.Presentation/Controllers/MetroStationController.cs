@@ -3,6 +3,7 @@ using EvTap.Contracts.Services;
 using EvTap.Domain.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace EvTap.Presentation.Controllers
 {
@@ -20,14 +21,21 @@ namespace EvTap.Presentation.Controllers
         [HttpGet("GetAll")]
         public async Task<IActionResult> GetAllAsync()
         {
-            var metroStations = await _genericService.GetAllAsync();
-            var resutl = metroStations.Select(c => new
+            var metroStations = await _genericService.GetAllAsync(q =>
+               q.Include(c => c.ListingMetros).ThenInclude(c=>c.Listing)
+           );
+            var result = metroStations.Select(c => new
             {
                 id = c.Id,
-                name = c.Name
-
+                name = c.Name,
+                listings = c.ListingMetros.Select(lm => new
+                {
+                    lm.Listing.Id,
+                    lm.Listing.Title
+                })
             }).OrderBy(c => c.name);
-            return Ok(resutl);
+
+            return Ok(result);
         }
         [HttpGet]
         [Route("{id}")]

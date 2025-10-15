@@ -46,7 +46,7 @@ namespace EvTap.Presentation.Controllers
             return Ok(createdCity);
         }
 
-        [HttpPost]
+        [HttpPut]
         
        public async Task<IActionResult> UpdateAsync( CityDTO cityDTO)
         {

@@ -44,10 +44,17 @@ namespace EvTap.Persistence.Repositories
             return entity;
         }
 
-        public async Task<List<T>> GetAllAsync()
+        public async Task<List<T>> GetAllAsync(
+      Func<IQueryable<T>, IQueryable<T>> include = null)
         {
-            var entities = await _dbSet.AsNoTracking().Where(e => !e.IsDeleted).ToListAsync();
-            return entities;
+            IQueryable<T> query = _dbSet
+                .AsNoTracking()
+                .Where(e => !e.IsDeleted);
+
+            if (include != null)
+                query = include(query);
+
+            return await query.ToListAsync();
         }
 
         public async Task<T> GetByIdAsync(int id)

@@ -4,6 +4,7 @@ using EvTap.Domain.Entities;
 using EvTap.Domain.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace EvTap.Presentation.Controllers
 {
@@ -20,11 +21,21 @@ namespace EvTap.Presentation.Controllers
         [HttpGet("GetAll")]
         public async Task<IActionResult> GetAllAsync()
         {
-            var districts = await _genericService.GetAllAsync(); 
+            var districts = await _genericService.GetAllAsync(c=>c.Include(c=>c.Locations).ThenInclude(c=>c.Listings)); 
             var result = districts.Select(d => new
             {
                 id = d.Id,
-                name = d.Name
+                name = d.Name,
+                location= d.Locations.Select(l=>new 
+                {
+                    
+                    l.Address,
+                    listings = l.Listings.Select(li=> new 
+                    {
+                        li.Id,
+                        li.Title
+                    })
+                })
             })
             .OrderBy(d => d.name); 
             return Ok(result);
@@ -50,7 +61,7 @@ namespace EvTap.Presentation.Controllers
             return Ok(updatedDistrict);
         }
        
-        [HttpPost]
+        [HttpDelete]
         [Route("{id}")]
         public async Task<IActionResult> DeleteAsync(int id)
         {

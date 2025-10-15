@@ -12,5 +12,7 @@ namespace EvTap.Contracts.DTOs
         public string Name { get; set; }
 
         public int CityId { get; set; }
+        public ICollection<LocationDTO>? Locations { get; set; }
+        public List<ListingDTO>? Listings { get; set; }
     }
 }

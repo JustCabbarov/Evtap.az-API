@@ -1,415 +1,322 @@
-// --- KRİTİK GLOBAL DƏYİŞƏNLƏR ---
-let conversations = [];
-let selectedConversationData = null; // Seçilmiş konversasiyanın bütün məlumatlarını saxlayır
-let currentMessages = []; // Cari konversasiyanın mesajları
-let currentUserId = null; // Hazırkı istifadəçinin ID-si
-let signalRConnection = null;
-
-// API Configuration (ZƏHMƏT OLMASA BUNLARI DÜZƏLDİN)
-const API_BASE_URL = 'https://localhost:7027/api';
-const HUB_URL = 'https://localhost:7027/chathub';
 
 
-// --- JWT VƏ USER ID YARDIMÇI FUNKSİYALARI ---
-
-function getAuthToken() {
-    return localStorage.getItem('jwt') || localStorage.getItem('authToken') || localStorage.getItem('token');
-}
-
-window.getUserIdFromToken = function () {
-    const token = getAuthToken();
-    if (!token) return null;
-    try {
-        const base64Url = token.split('.')[1];
-        const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-        const payload = JSON.parse(atob(base64));
-        // Payload-dan NameID (User ID) çıxarılır
-        return payload.nameid; 
-    } catch (e) {
-        console.error("JWT çözümleme hatası:", e);
-        return null;
-    }
-}
+(function () {
+    'use strict';
 
 
-// --- REAL-TIME SIGNALR ENTEGRASYONU ---
+    const API_BASE_URL = 'https://localhost:7027/api';
+    const HUB_URL = 'https://localhost:7027/chathub';
+    const MESSAGE_PAGE_SIZE = 200;
 
-window.setupSignalR = async function () {
-    const token = getAuthToken();
-    if (!token) return console.warn("Token yox, SignalR başladılmadı.");
 
-    signalRConnection = new signalR.HubConnectionBuilder()
-        .withUrl(HUB_URL, {
-            accessTokenFactory: () => token
-        })
-        .withAutomaticReconnect()
-        .build();
+    let conversations = [];
+    let selectedConversationData = null;
+    let currentMessages = [];
+    let currentUserId = null;
+    let signalRConnection = null;
 
-    // Serverdən gələn mesajları qəbul edir (Real-Time yenilənmə)
-    signalRConnection.on("NewMessage", (message) => {
 
-        // Mesajın cari seçilmiş konversasiyaya aid olub olmadığını yoxla
-        const isSelectedConversation = (
-            (message.senderId === selectedConversationData?.otherUserId && message.receiverId === currentUserId) ||
-            (message.receiverId === selectedConversationData?.otherUserId && message.senderId === currentUserId)
-        ) && (
-            message.listingId === selectedConversationData?.listingId // Elan ID-si də eyni olmalıdır
-        );
-
-        if (isSelectedConversation) {
-            currentMessages.push(mapMessageToUI(message));
-            document.getElementById('messagesContainer').innerHTML = renderMessages();
-            scrollToBottom();
-            // Mesaj gələn kimi oxundu kimi işarələ (təcrübəni yaxşılaşdırır)
-            markConversationAsRead(selectedConversationData.otherUserId); 
-        }
-
-        // Sidebar'ı və okunmamış sayılarını yenilə
-        loadConversations();
-    });
-
-    try {
-        await signalRConnection.start();
-        console.log("SignalR Bağlantısı Başarılı.");
-    } catch (err) {
-        console.error("SignalR Başlatma Hatası:", err);
-    }
-}
-
-// Hub Method: Sohbete Katıl (Yeni mesajları real-time almaq üçün)
-window.joinConversationHub = async function () {
-    if (!signalRConnection || signalRConnection.state !== signalR.HubConnectionState.Connected || !selectedConversationData) {
-        return;
+    function getAuthToken() {
+        return localStorage.getItem('jwt') || localStorage.getItem('authToken') || localStorage.getItem('token') || null;
     }
 
-    const otherUserId = selectedConversationData.otherUserId;
-    const listingId = selectedConversationData.listingId;
-
-    if (otherUserId) {
+    function parseJwt(token) {
         try {
-            await signalRConnection.invoke("JoinConversation", otherUserId, listingId);
-        } catch (err) {
-            console.error("Hub JoinConversation hatası:", err);
+            const base64Url = token.split('.')[1];
+            const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+            const jsonPayload = decodeURIComponent(atob(base64).split('').map(function (c) {
+                return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+            }).join(''));
+            return JSON.parse(jsonPayload);
+        } catch (e) {
+            return null;
         }
     }
-}
 
-// Hub Method: Gruptan Ayrıl (Yaddaş optimizasiyası üçün)
-window.leaveConversationHub = async function (conv) {
-    if (signalRConnection && signalRConnection.state === signalR.HubConnectionState.Connected && conv) {
-        try {
-            await signalRConnection.invoke("LeaveConversation", conv.otherUserId, conv.listingId);
-        } catch (err) {
-            console.error("Hub LeaveConversation hatası:", err);
-        }
+    function getUserIdFromToken() {
+        const token = getAuthToken();
+        if (!token) return null;
+        const payload = parseJwt(token);
+        if (!payload) return null;
+        // Müxtəlif backend-lərdə fərqli sahə adı ola bilər
+        return payload.nameid || payload.nameId || payload.sub || payload.NameIdentifier || payload.nameidentifier || null;
     }
-}
 
 
-// --- API VƏ VERİ İŞLƏMƏ ---
+    async function apiRequest(endpoint, options = {}) {
+        const url = `${API_BASE_URL}${endpoint}`;
+        const token = getAuthToken();
 
-window.apiRequest = async function (endpoint, options = {}) {
-    const url = `${API_BASE_URL}${endpoint}`;
-    const token = getAuthToken();
-
-    const defaultOptions = {
-        headers: {
+        const defaultHeaders = {
             'Content-Type': 'application/json',
-            ...(token && { 'Authorization': `Bearer ${token}` })
-        }
-    };
+            ...(token ? { 'Authorization': `Bearer ${token}` } : {})
+        };
 
-    const requestOptions = { ...defaultOptions, ...options };
+        const mergedOptions = {
+            headers: defaultHeaders,
+            ...options
+        };
 
-    try {
-        const response = await fetch(url, requestOptions);
+        try {
+            const resp = await fetch(url, mergedOptions);
 
-        if (!response.ok) {
-            if (response.status === 401) {
+            if (resp.status === 401) {
+                // unauthorized — istifadəçini çıxar
                 localStorage.removeItem('jwt');
+                localStorage.removeItem('authToken');
+                localStorage.removeItem('token');
                 window.location.href = './Login.html';
                 return null;
             }
-            // Hata detayını oxumağa çalışırıq
-            const errorBody = await response.text();
-            throw new Error(`HTTP error! Status: ${response.status}. Detay: ${errorBody.substring(0, 100)}`);
+
+            if (!resp.ok) {
+                const bodyText = await resp.text().catch(() => '');
+                throw new Error(`API error: ${resp.status} ${resp.statusText} ${bodyText.substring(0, 200)}`);
+            }
+
+            // No content
+            if (resp.status === 204) return null;
+
+            const text = await resp.text();
+            if (!text) return null;
+            return JSON.parse(text);
+        } catch (err) {
+            console.error('apiRequest hata:', err);
+            throw err;
         }
-        
-        if (response.status === 204 || response.headers.get('Content-Length') === '0') {
-            return {};
-        }
-        return await response.json();
-    } catch (error) {
-        console.error('API request failed:', error);
-        throw error;
     }
-}
 
-// Mesaj objesini UI'ın beklediği formata çevirir
-function mapMessageToUI(message) {
-    const isSent = message.senderId === currentUserId;
+    // ======= SIGNALR SETUP =======
+    async function setupSignalR() {
+        const token = getAuthToken();
+        if (!token) {
+            console.warn('Token yoxdur — SignalR quraşdırılmadı.');
+            return;
+        }
 
-    return {
-        id: message.id,
-        content: message.content,
-        sender: isSent ? 'sent' : 'received',
-        time: new Date(message.sentAt).toLocaleTimeString('az-AZ', { hour: '2-digit', minute: '2-digit' }),
-        isRead: message.isRead,
-        sentAt: new Date(message.sentAt)
-    };
-}
+        // Əgər artıq bir bağlantı varsa əvvəl onu dayandır
+        if (signalRConnection) {
+            try {
+                await signalRConnection.stop();
+            } catch (e) {
+                // ignore
+            }
+            signalRConnection = null;
+        }
 
-// Load conversations from API (Inbox listinin əsas data çəkmə funksiyası)
-window.loadConversations = async function () {
-    try {
-        const rawMessages = await apiRequest('/Message/my-messages');
-        const uniqueConversations = {};
+        // qlobal signalR olmalıdır
+        signalRConnection = new signalR.HubConnectionBuilder()
+            .withUrl(HUB_URL, {
+                accessTokenFactory: () => token
+            })
+            .withAutomaticReconnect()
+            .build();
 
-        if (rawMessages && Array.isArray(rawMessages)) {
-            // Server tərəfdə unikal söhbətlər qruplaşdırılmadığı üçün biz client tərəfdə qruplaşdırırıq.
-            rawMessages.forEach(msg => {
-                const otherId = msg.senderId === currentUserId ? msg.receiverId : msg.senderId;
-                // Unikal açar: digər_istifadəçi_ID + elan_ID
-                const convKey = `${otherId}_${msg.listingId || 'direct'}`;
 
-                // Söhbətin ən son mesajını tapırıq
-                if (!uniqueConversations[convKey] || new Date(msg.sentAt) > new Date(uniqueConversations[convKey].sentAt)) {
-                    uniqueConversations[convKey] = {
-                        otherUserId: otherId,
-                        name: msg.otherUserName || `User ${otherId?.substring(0, 8) || 'ADMIN'}`,
-                        preview: msg.content,
-                        time: new Date(msg.sentAt).toLocaleTimeString('az-AZ', { hour: '2-digit', minute: '2-digit' }),
-                        sentAt: new Date(msg.sentAt),
-                        listingId: msg.listingId,
-                        isOnline: false, // Online statusunu API-dan almalısınız.
-                        unreadCount: 0,
-                        property: msg.listingId ? { title: `Elan ID: ${msg.listingId}`, price: 'N/A' } : null,
-                        isAdmin: otherId === null
-                    };
+        signalRConnection.on('NewMessage', async (message) => {
+            try {
+
+                if (isMessageForSelectedConversation(message)) {
+                    const uiMsg = mapMessageToUI(message);
+                    currentMessages.push(uiMsg);
+                    currentMessages.sort((a, b) => a.sentAt - b.sentAt);
+                    renderMessagesToContainer();
+                    scrollToBottom();
+
+                    await markConversationAsRead(selectedConversationData.otherUserId);
                 }
 
-                // Oxunmamış sayıları hesablayırıq
-                if (!msg.isRead && msg.receiverId === currentUserId) {
-                    uniqueConversations[convKey].unreadCount += 1;
-                }
-            });
-        }
-
-        // Ən son mesajın vaxtına görə sort edirik (ən yeni yuxarıda)
-        conversations = Object.values(uniqueConversations).sort((a, b) => new Date(b.sentAt) - new Date(a.sentAt));
-        renderConversations();
-
-    } catch (error) {
-        console.error('Error loading conversations:', error);
-        showError('Mesajları yükləyə bilmədik.');
-        renderConversations();
-    }
-}
-
-
-// Load messages for conversation (KÖHNƏ MESAJ TARİXÇƏSİNİ çəkir)
-window.loadMessages = async function (otherUserId, listingId) {
-    try {
-        showLoading(true);
-        const data = await apiRequest(`/Message/conversation/${otherUserId}?listingId=${listingId || ''}`);
-
-        // Köhnə mesajların hamısını çəkir
-        currentMessages = data.map(mapMessageToUI);
-        currentMessages.sort((a, b) => a.sentAt - b.sentAt); // Vaxta görə sort et
-
-        showLoading(false);
-    } catch (error) {
-        console.error('Error loading messages:', error);
-        currentMessages = [];
-        showLoading(false);
-    }
-}
-
-// Select conversation and load messages (Klikləmə hadisəsi)
-window.selectConversation = async function (conv) {
-    // 1. Öncəki qrupdan çıx
-    if (selectedConversationData) {
-        leaveConversationHub(selectedConversationData);
-    }
-    
-    // selectedConversationData-nı conversation array-də tapıb yeniləyirik
-    const fullConvData = conversations.find(c => c.otherUserId === conv.otherUserId && c.listingId === conv.listingId);
-    selectedConversationData = fullConvData || conv;
-
-    // 2. Listi yenilə (seçilmişi aktiv etmək üçün)
-    renderConversations();
-
-    // 3. Chat sahəsini yüklə
-    loadChatArea();
-
-    // 4. Mesajları API'dan çək (BÜTÜN KÖHNƏ MESAJLAR)
-    await loadMessages(selectedConversationData.otherUserId, selectedConversationData.listingId);
-
-    // 5. Mesajları ekrana bas və scroll'u aşağı sal
-    document.getElementById('messagesContainer').innerHTML = renderMessages();
-    scrollToBottom();
-
-    // 6. Hub'a qoşul (Real-time yenilənməni almağa başla)
-    joinConversationHub();
-
-    // 7. Konversasyonu oxundu olarak işaretle
-    await markConversationAsRead(selectedConversationData.otherUserId);
-
-    // 8. Sidebar'ı yenilə (unread badge sıfırlanması üçün)
-    loadConversations();
-}
-
-// Mark conversation as read
-window.markConversationAsRead = async function (otherUserId) {
-    try {
-        await apiRequest(`/Message/mark-conversation-read/${otherUserId}`, {
-            method: 'POST'
+                // Yenidən conversations yüklə ki unread/sıra düzəlsin
+                await loadConversations();
+            } catch (e) {
+                console.error('NewMessage handler error', e);
+            }
         });
-    } catch (error) {
-        console.error('Error marking conversation as read:', error);
+
+        signalRConnection.on('UserOnline', (userId) => {
+
+            const conv = conversations.find(c => c.otherUserId === userId);
+            if (conv) {
+                conv.isOnline = true;
+                renderConversations();
+            }
+        });
+
+        signalRConnection.on('UserOffline', (userId) => {
+            const conv = conversations.find(c => c.otherUserId === userId);
+            if (conv) {
+                conv.isOnline = false;
+                renderConversations();
+            }
+        });
+
+        try {
+            await signalRConnection.start();
+            console.log('SignalR connected:', signalRConnection.connectionId);
+        } catch (err) {
+            console.error('SignalR start error:', err);
+        }
     }
-}
 
-// Send message (Mesaj göndərmə funksiyası)
-window.sendMessage = async function () {
-    const input = document.getElementById('messageInput');
-    const content = input.value.trim();
+    function isMessageForSelectedConversation(message) {
+        if (!selectedConversationData) return false;
+        const sameListing = (message.listingId == selectedConversationData.listingId) || (message.listingId == null && selectedConversationData.listingId == null);
+        const isBetween = (message.senderId === selectedConversationData.otherUserId && message.receiverId === currentUserId) ||
+            (message.receiverId === selectedConversationData.otherUserId && message.senderId === currentUserId);
+        return isBetween && sameListing;
+    }
 
-    if (!content || !selectedConversationData) return;
+    async function joinConversationHub() {
+        if (!signalRConnection || signalRConnection.state !== signalR.HubConnectionState.Connected || !selectedConversationData) return;
+        try {
+            await signalRConnection.invoke('JoinConversation', selectedConversationData.otherUserId, selectedConversationData.listingId);
+        } catch (err) {
+            console.error('JoinConversation error:', err);
+        }
+    }
 
-    const sendButton = document.getElementById('sendButton');
-    sendButton.disabled = true;
+    async function leaveConversationHub(conv) {
+        if (!signalRConnection || signalRConnection.state !== signalR.HubConnectionState.Connected || !conv) return;
+        try {
+            await signalRConnection.invoke('LeaveConversation', conv.otherUserId, conv.listingId);
+        } catch (err) {
+            console.error('LeaveConversation error:', err);
+        }
+    }
 
-    try {
-        const conv = selectedConversationData;
-
-        const requestBody = {
-            content: content,
-            // Admin mesajı üçün receiverId null olacaq.
-            receiverId: conv.isAdmin ? null : conv.otherUserId, 
-            listingId: conv.listingId || null,
+    function mapMessageToUI(message) {
+        const isSent = message.senderId === currentUserId;
+        const sentAt = message.sentAt ? new Date(message.sentAt) : new Date();
+        return {
+            id: message.id || (`local-${Math.random().toString(36).substr(2, 9)}`),
+            content: message.content || message.text || '',
+            sender: isSent ? 'sent' : 'received',
+            time: sentAt.toLocaleTimeString('az-AZ', { hour: '2-digit', minute: '2-digit' }),
+            isRead: !!message.isRead,
+            sentAt
         };
+    }
 
-        const sentMessage = await apiRequest('/Message/send', {
-            method: 'POST',
-            body: JSON.stringify(requestBody)
+    function renderConversations() {
+        const container = document.getElementById('conversationsList');
+        if (!container) return;
+
+        // Filter out conversations with yourself
+        const validConversations = conversations.filter(conv => {
+            return !conv.otherUserId || conv.otherUserId !== currentUserId;
         });
 
-        // Anlık görüntü güncellemesi (öz göndərdiyimiz mesajı görmək üçün)
-        const localMessage = mapMessageToUI(sentMessage);
-        currentMessages.push(localMessage);
-
-        document.getElementById('messagesContainer').innerHTML = renderMessages();
-        input.value = '';
-        input.style.height = '45px'; // Hündürlüyü sıfırla
-        scrollToBottom();
-
-    } catch (error) {
-        console.error('Error sending message:', error);
-        showError('Mesaj göndərilmədi');
-    } finally {
-        sendButton.disabled = false;
-    }
-}
-
-
-// --- YARDIMÇI VƏ UI FUNKSİYALARI ---
-
-/**
- * Mesaj konteynerini aşağı çəkir.
- * Scroll hərəkətinin səhifə deyil, yalnız mesaj konteynerində qalmasını təmin edir.
- */
-function scrollToBottom() {
-    const container = document.getElementById('messagesContainer'); // messagesContainer ID-ni istifadə etdiyinə əmin ol
-    if (container) {
-        setTimeout(() => {
-            container.scrollTop = container.scrollHeight;
-        }, 50); 
-    }
-}
-
-function showLoading(show) {
-    const container = document.getElementById('messagesContainer');
-    if (!container) return; 
-
-    if (show) {
-        container.innerHTML = `
-            <div class="loading-messages">
-                <div class="spinner"></div>
-                Mesajlar yüklənir...
-            </div>
-        `;
-    } 
-}
-
-// Render messages
-function renderMessages() {
-    if (currentMessages.length === 0) {
-        return '<div class="empty-state"><p>Hələ mesaj yoxdur</p></div>';
-    }
-
-    return currentMessages.map(message => `
-            <div class="message ${message.sender}">
-                <div class="message-content">
-                    ${message.content}
-                </div>
-                <div class="message-time">${message.time}</div>
-            </div>
-        `).join('');
-}
-
-// Render conversations list
-window.renderConversations = function () {
-    const container = document.getElementById('conversationsList');
-
-    if (conversations.length === 0) {
-        container.innerHTML = `
+        if (!validConversations || validConversations.length === 0) {
+            container.innerHTML = `
                 <div class="no-conversations">
                     <i class="fas fa-comment-slash noConversations-icon"></i>
                     <h3>Hələ mesajınız yoxdur</h3>
                     <p>Əlaqə saxladığınız əmlak sahibləri burada görünəcək</p>
                 </div>
             `;
-        return;
+            return;
+        }
+
+        container.innerHTML = validConversations.map(conv => {
+            const isActive = conv.otherUserId === selectedConversationData?.otherUserId && conv.listingId == selectedConversationData?.listingId;
+            const preview = conv.preview ? escapeHtml(conv.preview).slice(0, 60) : '';
+            const unreadBadge = conv.unreadCount > 0 ? `<span class="unread-badge">${conv.unreadCount}</span>` : '';
+            const onlineClass = conv.isOnline ? 'status-online' : 'status-offline';
+            const title = conv.name || (conv.property?.title || `User ${conv.otherUserId?.substring(0, 8) || 'ADMIN'}`);
+
+            // data attributes ilə məlumat saxlayırıq
+            const dataAttrs = `data-otherid="${conv.otherUserId}" data-listingid="${conv.listingId || ''}"`;
+
+            return `
+                <div class="conversation-item ${isActive ? 'active' : ''}" ${dataAttrs}>
+                    <div class="avatar">${(title && title[0]) ? title[0].toUpperCase() : '?'}</div>
+                    <div class="conversation-info">
+                        <div class="conversation-name">${escapeHtml(title)}</div>
+                        <div class="conversation-preview">${preview}</div>
+                        <div class="conversation-meta">
+                            <span class="status-badge ${onlineClass}">${conv.isOnline ? 'Onlayn' : 'Offlayn'}</span>
+                            <span class="conversation-time">${conv.time || ''}</span>
+                            ${unreadBadge}
+                    </div>
+                    </div>
+        </div>
+    `;
+        }).join('');
+
+        // event listener əlavə et
+        container.querySelectorAll('.conversation-item').forEach(item => {
+            item.addEventListener('click', async () => {
+                const otherUserId = item.getAttribute('data-otherid');
+                const listingId = item.getAttribute('data-listingid') || null;
+                const conv = conversations.find(c => c.otherUserId === otherUserId && String(c.listingId) === String(listingId));
+                // əgər conversation array-dən tapılmadısa, minimal obyekt hazırla
+                const convToOpen = conv || {
+                    otherUserId,
+                    listingId: listingId ? parseInt(listingId) : null,
+                    name: item.querySelector('.conversation-name')?.textContent || `User ${otherUserId?.substring(0, 8)}`
+                };
+                await selectConversation(convToOpen);
+            });
+        });
     }
 
-    container.innerHTML = conversations.map(conv => {
-        const isActive = conv.otherUserId === selectedConversationData?.otherUserId && conv.listingId === selectedConversationData?.listingId;
-        const convArg = JSON.stringify({ otherUserId: conv.otherUserId, listingId: conv.listingId, isAdmin: conv.isAdmin }); // selectConversation-a ötürüləcək data
+    function escapeHtml(text) {
+        if (!text) return '';
+        return text
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+    }
 
-        return `
-            <div class="conversation-item ${isActive ? 'active' : ''}" 
-                onclick='selectConversation(${convArg})'>
-                <div class="avatar">${conv.name.charAt(0).toUpperCase()}</div>
-                <div class="conversation-info">
-                    <div class="conversation-name">${conv.name}</div>
-                    <div class="conversation-preview">${conv.preview}</div>
-                    <div class="conversation-meta">
-                        <span class="status-badge ${conv.isOnline ? 'status-online' : 'status-offline'}">
-                            ${conv.isOnline ? 'Onlayn' : 'Offlayn'}
-                        </span>
-                        <span class="conversation-time">${conv.time}</span>
-                        ${conv.unreadCount > 0 ? `<span class="unread-badge">${conv.unreadCount}</span>` : ''}
+    function renderMessagesToContainer() {
+        const container = document.getElementById('messagesContainer');
+        if (!container) return;
+
+        if (!currentMessages || currentMessages.length === 0) {
+            container.innerHTML = '<div class="empty-state"><p>Hələ mesaj yoxdur</p></div>';
+            return;
+        }
+
+        container.innerHTML = currentMessages.map(m => {
+            return `
+                <div class="message ${m.sender}">
+                    <div class="message-content">${escapeHtml(m.content)}</div>
+                    <div class="message-time">${m.time}</div>
                     </div>
-                </div>
+            `;
+        }).join('');
+    }
+
+    function loadChatArea() {
+        const chatArea = document.getElementById('chatArea');
+        if (!chatArea) return;
+        const conv = selectedConversationData;
+
+        // Properly display listing title
+        let propertyTitle = "Fərdi Mesaj";
+        if (conv.property && conv.property.title) {
+            propertyTitle = conv.property.title;
+        } else if (conv.listingId) {
+            propertyTitle = `Elan ${conv.listingId}`;
+        }
+
+        const propertyPrice = (conv.property && conv.property.price) ? conv.property.price : "Məlumat yoxdur";
+
+        // Show property info only if there's a listing
+        const propertyInfoHtml = conv.listingId ? `
+            <div class="property-info">
+                <div class="property-title">${escapeHtml(propertyTitle)}</div>
+                <div class="property-price">${escapeHtml(propertyPrice)}</div>
             </div>
-        `;
-    }).join('');
-}
+        ` : '';
 
-// Load and render chat area
-window.loadChatArea = function () {
-    const chatArea = document.getElementById('chatArea');
-    const conv = selectedConversationData;
-
-    const propertyTitle = conv.property?.title || (conv.listingId ? `Elan ID: ${conv.listingId}` : "Fərdi Mesaj");
-    const propertyPrice = conv.property?.price || "Məlumat yoxdur";
-
-    chatArea.innerHTML = `
+        chatArea.innerHTML = `
             <div class="chat-header">
-                <div class="avatar">${conv.name.charAt(0).toUpperCase()}</div>
+                <div class="avatar">${(conv.name && conv.name[0]) ? conv.name[0].toUpperCase() : '?'}</div>
                 <div class="chat-header-info">
-                    <h3>${conv.name}</h3>
+                    <h3>${escapeHtml(conv.name || 'User')}</h3>
                     <p class="status-text">
                         <span class="status-badge ${conv.isOnline ? 'status-online' : 'status-offline'}">
                             ${conv.isOnline ? 'Onlayn' : 'Offlayn'}
@@ -418,153 +325,362 @@ window.loadChatArea = function () {
                 </div>
             </div>
             
-            <div class="property-info">
-                <div class="property-title">${propertyTitle}</div>
-                <div class="property-price">${propertyPrice}</div>
-            </div>
+            ${propertyInfoHtml}
             
-            <div class="chat-messages" id="messagesContainer">
-                </div>
+            <div class="chat-messages" id="messagesContainer"></div>
             
             <div class="chat-input">
                 <div class="input-group">
-                    <textarea class="message-input" id="messageInput" placeholder="Mesajınızı yazın..." 
-                                 rows="1" onkeypress="handleMessageKeyPress(event)"></textarea>
-                    <button class="send-button" onclick="sendMessage()" id="sendButton">
+                    <textarea class="message-input" id="messageInput" placeholder="Mesajınızı yazın..." rows="1"></textarea>
+                    <button class="send-button" id="sendButton">
                         <i class="fas fa-paper-plane"></i>
                     </button>
-                </div>
-            </div>
-        `;
-}
-
-// Show no conversation selected state
-window.showNoConversationSelected = function () {
-    document.getElementById('chatArea').innerHTML = `
-        <div class="no-conversation-selected">
-            <div class="empty-state">
-                <h3>Konversasiya seçin</h3>
-                <p>Soldakı siyahıdan konversasiya seçin vəya yeni mesajlaşma başladın</p>
             </div>
         </div>
     `;
-}
 
-// Handle Enter key press (Hündürlüyü məhdudlaşdıran düzəliş burada tətbiq olunur)
-window.handleMessageKeyPress = function (event) {
-    const input = event.target;
-    
-    // Yalnız Enter basılarsa (Shift+Enter yox), mesajı göndər
-    if (event.key === 'Enter' && !event.shiftKey) {
-        event.preventDefault();
-        sendMessage();
-        return;
+        // input və düymə event-lərini əlavə et
+        const input = document.getElementById('messageInput');
+        const sendBtn = document.getElementById('sendButton');
+
+        if (input) {
+            input.addEventListener('keypress', (event) => {
+                // Enter (Shift+Enter üçün yeni sətir)
+                if (event.key === 'Enter' && !event.shiftKey) {
+                    event.preventDefault();
+                    sendMessage();
+                } else {
+                    // auto height
+                    input.style.height = 'auto';
+                    const maxHeight = 120;
+                    const newH = Math.min(input.scrollHeight, maxHeight);
+                    input.style.height = newH + 'px';
+                }
+            });
+        }
+
+        if (sendBtn) {
+            sendBtn.addEventListener('click', sendMessage);
+        }
     }
 
-    // Auto-hündürlük məntiqi:
-    input.style.height = 'auto'; 
-    const maxHeight = 120; 
-    
-    // Scroll hündürlüyünə əsasən hündürlüyü təyin edirik
-    const newHeight = Math.min(input.scrollHeight, maxHeight);
-
-    if (newHeight <= maxHeight) {
-        input.style.height = newHeight + 'px';
-    } else {
-        // Maksimum hündürlüyə çatanda scroll yaranacaq (CSS-ə görə)
-        input.style.height = maxHeight + 'px';
+    // ======= LOAD DATA =======
+    // Fetch listing details from API
+    async function fetchListingTitle(listingId) {
+        if (!listingId) return null;
+        try {
+            const listing = await apiRequest(`/Listing/GetListingDetailById/${listingId}`);
+            if (listing) {
+                return {
+                    title: listing.title || `Elan ${listingId}`,
+                    price: listing.price ? `${listing.price.toLocaleString('az-AZ')} ₼` : 'Qiymət yoxdur'
+                };
+            }
+        } catch (err) {
+            console.error('Error fetching listing title:', err);
+        }
+        return { title: `Elan ${listingId}`, price: 'N/A' };
     }
-}
 
+    async function loadConversations() {
+        try {
+            const rawMessages = await apiRequest('/Message/my-messages');
+            const uniqueConversations = {};
 
-// Orijinal logout funksiyası
-window.logout = function () {
-    localStorage.removeItem('jwt');
-    localStorage.removeItem('authToken');
-    localStorage.removeItem('token');
-    window.location.href = './Login.html';
-}
+            if (rawMessages && Array.isArray(rawMessages)) {
+                rawMessages.forEach(msg => {
+                    const otherId = msg.senderId === currentUserId ? msg.receiverId : msg.senderId;
+                    const convKey = `${otherId}_${msg.listingId || 'direct'}`;
 
-// Orijinal showError funksiyası
-window.showError = function (message) {
-    const chatArea = document.getElementById('chatArea');
-    chatArea.innerHTML = `
+                    if (!uniqueConversations[convKey] || new Date(msg.sentAt) > new Date(uniqueConversations[convKey].sentAt)) {
+                        uniqueConversations[convKey] = {
+                            otherUserId: otherId,
+                            name: msg.otherUserName || `User ${otherId ? otherId.substring(0, 8) : 'ADMIN'}`,
+                            preview: msg.content || msg.text || '',
+                            time: new Date(msg.sentAt).toLocaleTimeString('az-AZ', { hour: '2-digit', minute: '2-digit' }),
+                            sentAt: new Date(msg.sentAt),
+                            listingId: msg.listingId,
+                            isOnline: false,
+                            unreadCount: 0,
+                            property: msg.listingId ? { title: `Elan ${msg.listingId}`, price: msg.listingPrice || 'N/A' } : null,
+                            isAdmin: otherId === null
+                        };
+                    }
+
+                    if (!msg.isRead && msg.receiverId === currentUserId) {
+                        uniqueConversations[convKey].unreadCount += 1;
+                    }
+                });
+            }
+
+            conversations = Object.values(uniqueConversations).sort((a, b) => new Date(b.sentAt) - new Date(a.sentAt));
+
+            // Fetch listing titles for all conversations with listingId
+            const listingFetchPromises = conversations.map(async (conv) => {
+                if (conv.listingId) {
+                    const listingDetails = await fetchListingTitle(conv.listingId);
+                    if (listingDetails) {
+                        conv.property = listingDetails;
+                    }
+                }
+            });
+
+            await Promise.all(listingFetchPromises);
+
+            renderConversations();
+        } catch (err) {
+            console.error('Error loading conversations:', err);
+            showError('Mesajları yükləyə bilmədik.');
+            renderConversations();
+        }
+    }
+
+    async function loadMessages(otherUserId, listingId) {
+        try {
+            showLoading(true);
+            const listingQuery = listingId ? `?listingId=${listingId}` : '';
+            const data = await apiRequest(`/Message/conversation/${otherUserId}${listingQuery}`);
+
+            currentMessages = Array.isArray(data) ? data.map(mapMessageToUI) : [];
+            currentMessages.sort((a, b) => a.sentAt - b.sentAt);
+            renderMessagesToContainer();
+            showLoading(false);
+        } catch (err) {
+            console.error('Error loading messages:', err);
+            currentMessages = [];
+            renderMessagesToContainer();
+            showLoading(false);
+        }
+    }
+
+    async function selectConversation(conv) {
+        // Yoxlama: İstifadəçi özü ilə konversasiya aça bilməz
+        if (conv.otherUserId && conv.otherUserId === currentUserId) {
+            showError('Siz özünüzlə söhbət edə bilməzsiniz!');
+            return;
+        }
+
+        // 1) Əvvəlki qrupdan çıx
+        if (selectedConversationData) {
+            await leaveConversationHub(selectedConversationData);
+        }
+
+        // selectedConversationData-ni update et
+        const fullConvData = conversations.find(c => c.otherUserId === conv.otherUserId && String(c.listingId) === String(conv.listingId));
+        selectedConversationData = fullConvData || conv;
+
+        renderConversations();
+        loadChatArea();
+
+        // Əgər listingId varsa və property məlumatı yoxdursa, onu yüklə
+        if (selectedConversationData.listingId && (!selectedConversationData.property || !selectedConversationData.property.title || selectedConversationData.property.title.includes('Elan ID') || selectedConversationData.property.title.includes('Elan Adı'))) {
+            const listingDetails = await fetchListingTitle(selectedConversationData.listingId);
+            if (listingDetails) {
+                selectedConversationData.property = listingDetails;
+                // Reload chat area to show updated listing info
+                loadChatArea();
+            }
+        }
+
+        // mesajları yüklə
+        await loadMessages(selectedConversationData.otherUserId, selectedConversationData.listingId);
+
+        // hub-ə qoşul
+        await joinConversationHub();
+
+        // oxundu kimi işarələ
+        await markConversationAsRead(selectedConversationData.otherUserId);
+
+        // conversations yenilə
+        await loadConversations();
+    }
+
+    async function markConversationAsRead(otherUserId) {
+        try {
+            await apiRequest(`/Message/mark-conversation-read/${otherUserId}`, {
+                method: 'POST'
+            });
+        } catch (err) {
+            console.error('markConversationAsRead error', err);
+        }
+    }
+
+    async function sendMessage() {
+        const input = document.getElementById('messageInput');
+        if (!input || !selectedConversationData) return;
+        const content = input.value.trim();
+        if (!content) return;
+
+        const conv = selectedConversationData;
+
+        // Yoxlama: İstifadəçi özünə mesaj göndərə bilməz
+        if (conv.otherUserId && conv.otherUserId === currentUserId) {
+            showError('Siz özünüzə mesaj göndərə bilməzsiniz!');
+            return;
+        }
+
+        const sendButton = document.getElementById('sendButton');
+        if (sendButton) sendButton.disabled = true;
+
+        try {
+            const requestBody = {
+                content,
+                receiverId: conv.isAdmin ? null : conv.otherUserId,
+                listingId: conv.listingId || null
+            };
+
+            const sentMessage = await apiRequest('/Message/send', {
+                method: 'POST',
+                body: JSON.stringify(requestBody)
+            });
+
+            // serverdən gələn obyekt yoxdursa local görünüş əlavə et
+            const localMsg = mapMessageToUI(sentMessage || {
+                id: null,
+                content,
+                senderId: currentUserId,
+                sentAt: new Date().toISOString(),
+                isRead: false
+            });
+
+            currentMessages.push(localMsg);
+            currentMessages.sort((a, b) => a.sentAt - b.sentAt);
+            renderMessagesToContainer();
+            input.value = '';
+            input.style.height = '45px';
+            scrollToBottom();
+        } catch (err) {
+            console.error('Error sending message:', err);
+            showError('Mesaj göndərilmədi');
+        } finally {
+            if (sendButton) sendButton.disabled = false;
+        }
+    }
+
+    // ======= UI HELPERS =======
+    function scrollToBottom() {
+        const container = document.getElementById('messagesContainer');
+        if (!container) return;
+        setTimeout(() => {
+            container.scrollTop = container.scrollHeight;
+        }, 50);
+    }
+
+    function showLoading(show) {
+        const container = document.getElementById('messagesContainer');
+        if (!container) return;
+        if (show) {
+            container.innerHTML = `
+                <div class="loading-messages">
+                    <div class="spinner"></div>
+                    Mesajlar yüklənir...
+                </div>
+            `;
+        }
+    }
+
+    function showError(message) {
+        const chatArea = document.getElementById('chatArea');
+        if (!chatArea) return;
+        chatArea.innerHTML = `
             <div class="no-conversation-selected">
                 <div class="empty-state">
                     <h3>Xəta</h3>
-                    <p>${message}</p>
+                    <p>${escapeHtml(message)}</p>
                 </div>
-            </div>
-        `;
-}
-
-// Orijinal searchConversations funksiyası
-window.searchConversations = function (query) {
-    const items = document.querySelectorAll('.conversation-item');
-    items.forEach(item => {
-        const name = item.querySelector('.conversation-name').textContent.toLowerCase();
-        const preview = item.querySelector('.conversation-preview').textContent.toLowerCase();
-        
-        if (name.includes(query.toLowerCase()) || preview.includes(query.toLowerCase())) {
-            item.style.display = 'flex';
-        } else {
-            item.style.display = 'none';
-        }
-    });
-}
-// FAYL: Chat.js
-
-window.initializeChat = async function () {
-    const token = getAuthToken();
-    currentUserId = getUserIdFromToken();
-
-    if (!token || !currentUserId) {
-        alert('Sistəmə giriş etməlisiniz');
-        window.location.href = './Login.html';
-        return;
+        </div>
+    `;
     }
 
-    // 1. SignalR'ı qur
-    setupSignalR();
+    // ======= INITIALIZE =======
+    async function initializeChat() {
+        const token = getAuthToken();
+        currentUserId = getUserIdFromToken();
 
-    // 2. Bütün söhbətləri arxa fonda yüklə
-    await loadConversations();
+        if (!token || !currentUserId) {
+            alert('Sistəmə giriş etməlisiniz');
+            window.location.href = './Login.html';
+            return;
+        }
 
-    // 3. Yönləndirmə ilə gələn yeni söhbət məlumatlarını yoxla
-    const targetUserId = sessionStorage.getItem('chat_otherUserId');
-    const targetListingId = sessionStorage.getItem('chat_listingId');
-    const targetListingTitle = sessionStorage.getItem('chat_listingTitle');
+        // 1) SignalR start
+        await setupSignalR();
 
-    if (targetUserId && targetListingId) {
-        // Məlumatları istifadə etdikdən sonra sessionStorage-dan silirik ki,
-        // səhifəni yeniləyəndə təkrar açılmasın.
+        // 2) Load conversations
+        await loadConversations();
+
+        // 3) URL və sessionStorage parametrlərini yoxla
+        const urlParams = new URLSearchParams(window.location.search);
+        const receiverIdFromUrl = urlParams.get('receiverId');
+        const listingIdFromUrl = urlParams.get('listingId');
+
+        const targetUserId = receiverIdFromUrl || sessionStorage.getItem('chat_otherUserId');
+        const targetListingId = listingIdFromUrl || sessionStorage.getItem('chat_listingId');
+        const targetListingTitle = sessionStorage.getItem('chat_listingTitle');
+
+        // 4) sessionStorage-dakı köhnə məlumatları təmizlə
         sessionStorage.removeItem('chat_otherUserId');
         sessionStorage.removeItem('chat_listingId');
         sessionStorage.removeItem('chat_listingTitle');
 
-        // Yüklənmiş söhbətlər arasında həmin söhbəti axtarırıq
-        let conversationToOpen = conversations.find(c => 
-            c.otherUserId === targetUserId && c.listingId == targetListingId
-        );
+        // 5) Əgər target mövcuddursa, avtomatik seç və qoşul
+        if (targetUserId && targetListingId) {
+            let conversationToOpen = conversations.find(c =>
+                c.otherUserId === targetUserId && String(c.listingId) === String(targetListingId)
+            );
 
-        // Əgər bu yeni bir söhbətdirsə və siyahıda yoxdursa, müvəqqəti obyekt yaradırıq
-        if (!conversationToOpen) {
-            conversationToOpen = {
-                otherUserId: targetUserId,
-                listingId: parseInt(targetListingId),
-                name: `User ${targetUserId.substring(0, 8)}`, // Adı daha sonra API-dan gələcək
-                property: { title: targetListingTitle || `Elan ID: ${targetListingId}` }
-            };
+            if (!conversationToOpen) {
+                // Fetch listing details from API
+                const listingDetails = await fetchListingTitle(parseInt(targetListingId));
+
+                conversationToOpen = {
+                    otherUserId: targetUserId,
+                    listingId: targetListingId ? parseInt(targetListingId) : null,
+                    name: `User ${String(targetUserId).substring(0, 8)}`,
+                    property: listingDetails || { title: targetListingTitle || `Elan ${targetListingId}`, price: 'N/A' }
+                };
+            }
+
+            await selectConversation(conversationToOpen);
+            return;
         }
-        
-        // Həmin söhbəti avtomatik olaraq seçirik
-        selectConversation(conversationToOpen);
 
-    } else {
-        // Əgər yönləndirmə ilə gələn məlumat yoxdursa, standart boş ekranı göstər
+        // Əks halda boş ekran göstər
         showNoConversationSelected();
     }
-}
 
-// Səhifə yüklənəndə initializeChat funksiyasını çağırırıq
-document.addEventListener('DOMContentLoaded', initializeChat);
+    function showNoConversationSelected() {
+        const chatArea = document.getElementById('chatArea');
+        if (!chatArea) return;
+        chatArea.innerHTML = `
+            <div class="no-conversation-selected">
+                <div class="empty-state">
+                    <h3>Konversasiya seçin</h3>
+                    <p>Soldakı siyahıdan konversasiya seçin vəya yeni mesajlaşma başladın</p>
+                </div>
+            </div>
+        `;
+    }
+
+    // Logout funksiyası (istəyirsənsə istifadə et)
+    function logout() {
+        localStorage.removeItem('jwt');
+        localStorage.removeItem('authToken');
+        localStorage.removeItem('token');
+        window.location.href = './Login.html';
+    }
+
+    // Public API (debug/istifadə üçün)
+    window.chatApp = {
+        initializeChat,
+        logout,
+        getUserIdFromToken,
+        getAuthToken
+    };
+
+    // Auto-run
+    document.addEventListener('DOMContentLoaded', () => {
+        initializeChat().catch(err => console.error('initializeChat error', err));
+    });
+
+})();

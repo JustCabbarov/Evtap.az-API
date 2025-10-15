@@ -18,16 +18,22 @@ namespace EvTap.Persistence.Repositories
             _db = db;
         }
 
+        public async Task<List<Listing>> GelListingByUserIdAsync(string userId)
+        {
+          var data= await _db.Listings.Include(l => l.Category).Include(l => l.Images).Include(l => l.Location).Include(l => l.ListingMetros).ThenInclude(_db => _db.MetroStation).Where(l=>l.UserId==userId).ToListAsync();
+            return data;
+        }
+
         public async Task<List<Listing>> GetListingtDetailAsync()
         {
-          var data= await _db.Listings.Include(l=>l.Category).Include(l=>l.Location).Include(l=>l.ListingMetros).ThenInclude(_db=>_db.MetroStation).ToListAsync();
+          var data= await _db.Listings.Include(l=>l.Category).Include(l=>l.Images).Include(l=>l.Location).Include(l=>l.ListingMetros).ThenInclude(_db=>_db.MetroStation).ToListAsync();
             return data;
 
         }
 
         public Task<Listing> GetListingtDetailByIdAsync(int id)
         {
-          var data=  _db.Listings.Include(l => l.Category).Include(l => l.Location).Include(l => l.ListingMetros).ThenInclude(_db => _db.MetroStation).FirstOrDefaultAsync(l=>l.Id==id);
+          var data=  _db.Listings.Include(l => l.Category).Include(l => l.Images).Include(l => l.Location).Include(l => l.ListingMetros).ThenInclude(_db => _db.MetroStation).FirstOrDefaultAsync(l=>l.Id==id);
             return data;
         }
     }

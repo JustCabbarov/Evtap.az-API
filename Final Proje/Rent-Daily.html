@@ -28,19 +28,48 @@
                 <a href="./ask-ai.html  " class="hover:text-blue-600">AI Sorgu</a>
             </nav>
 
-            <!-- Sağ tərəf -->
-           <div class="flex items-center gap-4">
-    <a href="./Create.html" id="newListing"
-        class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg">Yeni elan</a>
-    
-    <a href="./Login.html" id="loginLink" class="border px-4 py-2 rounded-lg hover:bg-gray-100">Giriş</a>
-    
-    <a href="./Chat.html" id="messagesLink" class="border px-4 py-2 rounded-lg hover:bg-gray-100">Mesajlar</a>
-    
-    <button class="md:hidden text-gray-600 text-2xl" id="hamburger">
-        <i class="fa-solid fa-bars"></i>
-    </button>
-</div>
+            <div class="flex items-center gap-4">
+                <!-- Yeni Elan Button -->
+                <a href="#" id="newListing"
+                    class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition">Yeni elan</a>
+
+                <!-- Giriş Button (shown when no token) -->
+                <a href="./Login.html" id="loginLink"
+                    class="border border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 transition">Giriş</a>
+
+                <!-- User Dropdown (shown when token exists) -->
+                <div id="userDropdown" class="relative hidden">
+                    <button id="userDropdownBtn"
+                        class="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Profil</span>
+                        <i class="fa-solid fa-chevron-down text-sm"></i>
+                    </button>
+                    <div id="userDropdownMenu"
+                        class="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 hidden z-50">
+                        <a href="./MyListings.html"
+                            class="dropdown-menu-item flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100 transition">
+                            <i class="fa-solid fa-list mr-3 text-blue-600"></i>
+                            Mənim elanlarım
+                        </a>
+                        <a href="./Chat.html"
+                            class="dropdown-menu-item flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100 transition">
+                            <i class="fa-solid fa-comments mr-3 text-green-600"></i>
+                            Mesajlar
+                        </a>
+                        <div class="border-t border-gray-200"></div>
+                        <button id="exitBtn"
+                            class="dropdown-menu-item flex items-center w-full px-4 py-3 text-red-600 hover:bg-red-50 transition">
+                            <i class="fa-solid fa-sign-out-alt mr-3"></i>
+                            Çıxış
+                        </button>
+                    </div>
+                </div>
+
+                <button class="md:hidden text-gray-600 text-2xl" id="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
         </div>
 
         <!-- Mobil menyu -->

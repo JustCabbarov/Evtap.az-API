@@ -10,5 +10,6 @@ namespace EvTap.Contracts.DTOs
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public ICollection<ListingDTO>? Listings { get; set; }
     }
 }

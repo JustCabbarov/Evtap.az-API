@@ -42,7 +42,7 @@ namespace EvTap.Application.Services
 
             _logger.LogInformation("Added {EntityType} with ID: {EntityId}", typeof(TEntity).Name, result.Id);
 
-            // MongoDB üçün test log
+           
             _logger.LogInformation("MongoDB Test Log: Added entity at {Time}", DateTime.UtcNow);
 
             return _mapper.Map<TVM>(result);
@@ -61,15 +61,18 @@ namespace EvTap.Application.Services
             return true;
         }
 
-        public async Task<IEnumerable<TVM>> GetAllAsync()
+        public async Task<IEnumerable<TVM>> GetAllAsync(
+      Func<IQueryable<TEntity>, IQueryable<TEntity>> include = null)
         {
-            var data = await _repository.GetAllAsync();
-            if (data == null)
+            var data = await _repository.GetAllAsync(include);
+
+            if (data == null || !data.Any())
                 throw new NotNullExceptions();
 
             _logger.LogInformation("Retrieved all {EntityType} entities", typeof(TEntity).Name);
             return _mapper.Map<IEnumerable<TVM>>(data);
         }
+
 
         public async Task<TVM> GetByIdAsync(int id)
         {
