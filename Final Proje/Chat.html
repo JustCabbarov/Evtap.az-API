@@ -2,27 +2,29 @@
 <html lang="az">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mesajlar - EvTap.az</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="./assets/css/Chat.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesajlar - EvTap.az</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/css/Chat.css">
+    <script>window.CHAT_TIME_ZONE = 'Asia/Baku';</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
+  
 </head>
 
 
 <body>
-  <!-- Header -->
-  <header class="sticky top-0 z-50 bg-white border-b shadow-sm">
-    <div class="container mx-auto flex justify-between items-center py-3 px-4 lg:px-8">
-      <!-- Logo -->
-      <a href="./index.html" class="flex items-center gap-2 text-blue-600 font-bold text-xl">
-        <i class="fa-solid fa-house"></i> EvTap.az
-      </a>
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white border-b shadow-sm">
+        <div class="container mx-auto flex justify-between items-center py-3 px-4 lg:px-8">
+            <!-- Logo -->
+            <a href="./index.html" class="flex items-center gap-2 text-blue-600 font-bold text-xl">
+                <i class="fa-solid fa-house"></i> EvTap.az
+            </a>
 
-      <!-- Navigation -->
-       <nav class="hidden md:flex items-center gap-6 text-gray-700 font-medium">
+            <!-- Navigation -->
+            <nav class="hidden md:flex items-center gap-6 text-gray-700 font-medium">
                 <a href="./Sales.html" class="hover:text-blue-600">Alış-satış</a>
                 <a href="./Rent.html" class="hover:text-blue-600">Kirayə</a>
                 <a href="./Rent-Daily.html" class="hover:text-blue-600">Günlük</a>
@@ -30,42 +32,42 @@
                 <a href="./ask-ai.html  " class="hover:text-blue-600">AI Sorgu</a>
             </nav>
 
-      <!-- Sağ tərəf -->
-  
+            <!-- Sağ tərəf -->
+
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="chat-layout">
+            <!-- Conversations sidebar -->
+            <div class="conversations-list">
+                <div class="conversations-header">
+                    <h2><i class="fas fa-comments"></i> Mesajlarım</h2>
+                    <div class="search-box">
+                        <input type="text" class="search-input" placeholder="Konversasiya axtarın..."
+                            onkeyup="searchConversations(this.value)">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+                </div>
+
+                <div id="conversationsList" class="flex-1 overflow-y-auto">
+                    <!-- Conversations will be loaded here -->
+                </div>
+            </div>
+
+            <!-- Chat area -->
+            <div class="chat-area">
+                <div id="chatArea">
+                    <!-- Chat will be loaded here -->
+                </div>
+            </div>
+        </div>
     </div>
-  </header>
 
-  <div class="container">
-    <div class="chat-layout">
-      <!-- Conversations sidebar -->
-      <div class="conversations-list">
-        <div class="conversations-header">
-          <h2><i class="fas fa-comments"></i> Mesajlarım</h2>
-          <div class="search-box">
-            <input type="text" class="search-input" placeholder="Konversasiya axtarın..."
-              onkeyup="searchConversations(this.value)">
-            <i class="fas fa-search search-icon"></i>
-          </div>
-        </div>
 
-        <div id="conversationsList" class="flex-1 overflow-y-auto">
-          <!-- Conversations will be loaded here -->
-        </div>
-      </div>
 
-      <!-- Chat area -->
-      <div class="chat-area">
-        <div id="chatArea">
-          <!-- Chat will be loaded here -->
-        </div>
-      </div>
-    </div>
-  </div>
-
- 
-
-  <script src="https://cdn.jsdelivr.net/npm/@microsoft/signalr@latest/dist/browser/signalr.min.js"></script>
-  <script src="./assets/js/Chat.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@microsoft/signalr@latest/dist/browser/signalr.min.js"></script>
+    <script src="./assets/js/Chat.js"></script>
 
 </body>
 

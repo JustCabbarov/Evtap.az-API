@@ -29,16 +29,22 @@ using Stripe;
 var builder = WebApplication.CreateBuilder(args);
 
 
-builder.Host.UseSerilog((context, services, configuration) => configuration
-    .ReadFrom.Configuration(context.Configuration)
-    .ReadFrom.Services(services)
+//builder.Host.UseSerilog((context, services, configuration) => configuration
+//    .ReadFrom.Configuration(context.Configuration)
+//    .ReadFrom.Services(services)
+//    .Enrich.FromLogContext()
+//    .MinimumLevel.Information()
+//    .WriteTo.Console()
+//    .WriteTo.MongoDB(
+//        "mongodb://admin:password@127.0.0.1:27018/LoggingDB?authSource=admin",
+//        collectionName: "NewLogs"
+//    ));
+
+
+Log.Logger = new LoggerConfiguration()
+    .ReadFrom.Configuration(builder.Configuration)
     .Enrich.FromLogContext()
-    .MinimumLevel.Information()
-    .WriteTo.Console()
-    .WriteTo.MongoDB(
-        "mongodb://admin:password@127.0.0.1:27018/LoggingDB?authSource=admin",
-        collectionName: "NewLogs"
-    ));
+    .CreateLogger();
 
 
 // builder-də Serilog istifadə et

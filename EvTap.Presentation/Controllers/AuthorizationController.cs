@@ -113,6 +113,37 @@ namespace EvTap.Presentation.Controllers
         }
 
 
-       
+
+        [HttpPost("LoginAdmin")]
+        public async Task<IActionResult> LoginAdmin([FromBody] LoginDTO loginDTO)
+        {
+            if (loginDTO == null)
+            {
+                throw new NotNullExceptions("Login data cannot be null");
+            }
+            var result = await _authorizationService.LoginAdmin(loginDTO);
+            if (result == null)
+            {
+                throw new UnauthorizedException("Invalid credentials or email not confirmed");
+            }
+            return Ok(new { Token = result });
+        }
+
+        [HttpPost("send-otp")]
+        public async Task<IActionResult> SendOtp([FromBody] SendOtpRequest request)
+        {
+            var result = await _authorizationService.SendOtpAsync(request.PhoneNumber, request.Name, request.Surname);
+            return Ok(new { message = result });
+        }
+
+        // 2️⃣ OTP-ni təsdiqləmək və login
+        [HttpPost("verify-otp")]
+        public async Task<IActionResult> VerifyOtp([FromBody] string phonnumber ,string code)
+        {
+            var token = await _authorizationService.VerifyOtpAsync(phonnumber,code);
+            return Ok(new { token });
+        }
     }
+
+
 }

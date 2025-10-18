@@ -137,7 +137,6 @@ namespace EvTap.Infrastructure.Jobs
                     await _scrapingRepository.AddAsync(scrapingData);
                 }
 
-                _logger.LogInformation($"Scraped and saved {items.Count()} items for category {categoryId}");
             }
             catch (Exception ex)
             {

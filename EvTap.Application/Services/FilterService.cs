@@ -20,23 +20,23 @@ namespace EvTap.Application.Services
             _mapper = mapper;
         }
 
-        public async Task<List<ListingDTO>> GetListingsByAdvertTypeAsync(int type)
+        public async Task<List<Listing>> GetListingsByAdvertTypeAsync(int type)
         {
             var listings = await _filterRepo.GetListingsByAdvertTypeAsync(type);
-            return _mapper.Map<List<ListingDTO>>(listings);
+            return listings;
         }
 
-        public async Task<List<ListingDTO>> GetListingsByCategoryAsync(int categoryId)
+        public async Task<List<Listing>> GetListingsByCategoryAsync(int categoryId)
         {
             var listings = await _filterRepo.GetListingsByCategoryAsync(categoryId);
-            return _mapper.Map<List<ListingDTO>>(listings);
+            return listings;
         }
 
-        public async Task<List<ListingDTO>> GetListingsByFilterAsync(FilterDTO filter)
+        public async Task<List<Listing>> GetListingsByFilterAsync(FilterDTO filter)
         {
             var filterEntity = _mapper.Map<ListingFilter>(filter);
             var listings = await _filterRepo.GetListingsByFilterAsync(filterEntity);
-            return _mapper.Map<List<ListingDTO>>(listings);
+            return listings;
         }
 
         public async Task<List<ListingDTO>> GetListingsByLocationsAsync(List<int> districtIds)

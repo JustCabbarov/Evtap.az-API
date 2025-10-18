@@ -5,10 +5,10 @@ const PROPERTY_API = 'https://localhost:7027/api/Category/GetAll';
 const DISTRICT_API = 'https://localhost:7027/api/Dictrict/GetAll';
 const METRO_API = 'https://localhost:7027/api/MetroStation/GetAll';
 
-let selectedCategories = []; // Unused in current filter logic, kept for reference
-let selectedRooms = []; // Unused in current filter logic, kept for reference
-let selectedRenovations = []; // Unused in current filter logic, kept for reference
-let selectedCreatorTypes = []; // Unused in current filter logic, kept for reference
+let selectedCategories = [];
+let selectedRooms = []; 
+let selectedRenovations = []; 
+let selectedCreatorTypes = []; 
 let selectedLocations = [];
 
 // DOM Elementləri
@@ -39,48 +39,68 @@ const formatPrice = (amount) => {
 const createPropertyCard = (property, isVip = false) => {
     const card = document.createElement('a');
     card.href = `property.html?id=${property.id}`;
-    card.className = 'property-card block bg-white rounded-xl shadow-md overflow-hidden cursor-pointer no-underline relative';
+    card.className = 'property-card block bg-white rounded-xl shadow-md overflow-hidden cursor-pointer no-underline relative transition hover:shadow-lg';
 
-    const imageUrl = property.images?.[0]?.url || 'https://via.placeholder.com/400x250?text=Emlak';
+    const baseUrl = 'https://localhost:7027';
+    const imageUrl = property.images?.[0]?.imageUrl
+        ? baseUrl + property.images[0].imageUrl
+        : 'https://via.placeholder.com/400x250?text=Emlak';
 
-    // Add VIP badge if it's a VIP property
-    const vipBadge = isVip ? `
-        <div class="absolute top-3 right-3 bg-yellow-400 text-yellow-900 px-2 py-1 rounded-full text-xs font-bold flex items-center gap-1">
-            <i class="fa-solid fa-crown"></i>
-            VIP
-        </div>
-    ` : '';
+    // Metro adını alma
+    const metroName = property.listingMetros?.[0]?.metroStation?.name || '-';
+    const categoryName = property.category?.name || '-';
+
+    const vipBadge = isVip || property.isPremium
+        ? `
+            <div class="absolute top-3 right-3 bg-yellow-400 text-yellow-900 px-2 py-1 rounded-full text-xs font-bold flex items-center gap-1">
+                <i class="fa-solid fa-crown"></i>
+                VIP
+            </div>
+          `
+        : '';
+
+    const formattedPrice = typeof formatPrice === 'function'
+        ? formatPrice(property.price)
+        : `${property.price ?? '-'} AZN`;
+
+    const roomHtml = property.rooms != null
+        ? `
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-door-open"></i>
+                <span>${property.rooms} otaq</span>
+            </div>
+          `
+        : '';
 
     card.innerHTML = `
-        <div class="relative">
-            <img src="${imageUrl}" alt="${property.title || 'Əmlak'}" class="w-full h-48 object-cover">
+        <div class="relative w-full h-48 md:h-56 lg:h-64 overflow-hidden rounded-t-xl">
+            <img src="${imageUrl}" alt="${property.title || 'Əmlak'}" class="w-full h-full object-cover">
             ${vipBadge}
         </div>
         <div class="p-4">
-            <div class="text-lg font-bold text-blue-600 mb-2">${formatPrice(property.price)}</div>
-            <div class="font-medium mb-2 text-gray-800">${property.title || 'Başlıq yoxdur'}</div>
+            <div class="text-lg font-bold text-blue-600 mb-2">${formattedPrice}</div>
+            <div class="font-medium mb-2 text-gray-800 truncate">${property.title || 'Başlıq yoxdur'}</div>
             <div class="text-gray-500 text-sm mb-2 space-y-1">
-                <div class="flex items-center gap-2">
-                    <i class="fa-solid fa-door-open"></i>
-                    <span>${property.rooms || '-'} otaq</span>
-                </div>
+                ${roomHtml}
                 <div class="flex items-center gap-2">
                     <i class="fa-solid fa-vector-square"></i>
-                    <span>${property.area || '-'} m²</span>
+                    <span>${property.area ?? '-'} m²</span>
                 </div>
                 <div class="flex items-center gap-2">
                     <i class="fa-solid fa-location-dot"></i>
-                    <span>${property.location?.district || '-'}, ${property.location?.city || '-'}</span>
+                    <span>${metroName}</span>
                 </div>
-            </div>
-            <div class="text-xs text-gray-400 mt-3">
-                ${property.createdAt ? new Date(property.createdAt).toLocaleDateString('az-AZ') : ''}
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span>${categoryName}</span>
+                </div>
             </div>
         </div>
     `;
 
     return card;
 };
+
 
 // Loading and error states
 const showLoading = (gridId = 'both') => {
@@ -241,7 +261,7 @@ const fetchAllListings = async () => {
     try {
         showLoading('both');
 
-        // Try multiple endpoints to get all listings
+
         const endpoints = [
             'https://localhost:7027/api/Filter/GetListingsByAdvertType?type=1'
         ];
@@ -351,7 +371,7 @@ const loadPropertyTypes = async () => {
             });
         }
     } catch (error) {
-        // Silently handle error
+       
     }
 };
 
@@ -1016,12 +1036,10 @@ const updateVipSliderButtons = () => {
 };
 
 
-// API Configuration
+
 const LOGOUT_API = 'https://localhost:7027/api/Authorization/LogOut';
 
-// =================================================================
-// AUTHENTICATION & UI MANAGEMENT (Giriş/Çıxış İdarəetməsi)
-// =================================================================
+
 
 const handleLogout = async () => {
     try {

@@ -115,13 +115,21 @@
 
         signalRConnection.on('NewMessage', async (message) => {
             try {
-
                 if (isMessageForSelectedConversation(message)) {
+                    const container = document.getElementById('messagesContainer');
+                    const prevScroll = getScrollState(container);
+
                     const uiMsg = mapMessageToUI(message);
                     currentMessages.push(uiMsg);
                     currentMessages.sort((a, b) => a.sentAt - b.sentAt);
                     renderMessagesToContainer();
-                    scrollToBottom();
+
+                    // Only auto-scroll if user was already near the bottom or this user is the sender
+                    if (prevScroll.atBottom || message.senderId === currentUserId) {
+                        scrollToBottom();
+                    } else {
+                        restoreScrollState(container, prevScroll);
+                    }
 
                     await markConversationAsRead(selectedConversationData.otherUserId);
                 }
@@ -184,18 +192,31 @@
         }
     }
 
-    function mapMessageToUI(message) {
-        const isSent = message.senderId === currentUserId;
-        const sentAt = message.sentAt ? new Date(message.sentAt) : new Date();
-        return {
-            id: message.id || (`local-${Math.random().toString(36).substr(2, 9)}`),
-            content: message.content || message.text || '',
-            sender: isSent ? 'sent' : 'received',
-            time: sentAt.toLocaleTimeString('az-AZ', { hour: '2-digit', minute: '2-digit' }),
-            isRead: !!message.isRead,
-            sentAt
-        };
+ function mapMessageToUI(message) {
+    const isSent = message.senderId === currentUserId;
+
+    // Server timestamp normalization
+    let sentAt;
+
+    if (message.sentAt) {
+        // Ensure we treat server time as UTC even if no timezone info is present
+        const dateStr = message.sentAt.endsWith('Z') ? message.sentAt : message.sentAt + 'Z';
+        sentAt = new Date(dateStr);
+    } else {
+        sentAt = new Date();
     }
+
+    if (isNaN(sentAt.getTime())) sentAt = new Date();
+
+    return {
+        id: message.id || (`local-${Math.random().toString(36).substr(2, 9)}`),
+        content: message.content || message.text || '',
+        sender: isSent ? 'sent' : 'received',
+        time: sentAt.toLocaleTimeString('az-AZ', { hour: '2-digit', minute: '2-digit' }),
+        isRead: !!message.isRead,
+        sentAt
+    };
+}
 
     function renderConversations() {
         const container = document.getElementById('conversationsList');
@@ -397,7 +418,7 @@
                             otherUserId: otherId,
                             name: msg.otherUserName || `User ${otherId ? otherId.substring(0, 8) : 'ADMIN'}`,
                             preview: msg.content || msg.text || '',
-                            time: new Date(msg.sentAt).toLocaleTimeString('az-AZ', { hour: '2-digit', minute: '2-digit' }),
+                            time: formatAzTime(parseServerDate(msg.sentAt)),
                             sentAt: new Date(msg.sentAt),
                             listingId: msg.listingId,
                             isOnline: false,
@@ -442,7 +463,7 @@
             const data = await apiRequest(`/Message/conversation/${otherUserId}${listingQuery}`);
 
             currentMessages = Array.isArray(data) ? data.map(mapMessageToUI) : [];
-            currentMessages.sort((a, b) => a.sentAt - b.sentAt);
+            currentMessages.sort((a, b) => a.sentAt.getTime() - b.sentAt.getTime());
             renderMessagesToContainer();
             showLoading(false);
         } catch (err) {
@@ -544,7 +565,7 @@
             });
 
             currentMessages.push(localMsg);
-            currentMessages.sort((a, b) => a.sentAt - b.sentAt);
+            currentMessages.sort((a, b) => a.sentAt.getTime() - b.sentAt.getTime());
             renderMessagesToContainer();
             input.value = '';
             input.style.height = '45px';
@@ -563,7 +584,66 @@
         if (!container) return;
         setTimeout(() => {
             container.scrollTop = container.scrollHeight;
-        }, 50);
+        }, 0);
+    }
+
+    // Robust time helpers
+    function parseServerDate(value) {
+        if (!value) return null;
+        if (value instanceof Date) return value;
+        const str = String(value);
+        // If timezone specified (Z or +hh:mm), trust native Date
+        if (/Z|[\+\-]\d{2}:?\d{2}$/.test(str)) {
+            const d = new Date(str);
+            if (!isNaN(d.getTime())) return d;
+        }
+        // If no timezone, interpret as LOCAL time (server may send naive local times)
+        const m = str.match(/^(\d{4})-(\d{2})-(\d{2})[T ](\d{2}):(\d{2})(?::(\d{2})(?:\.(\d{1,3}))?)?$/);
+        if (m) {
+            const year = parseInt(m[1], 10);
+            const month = parseInt(m[2], 10) - 1;
+            const day = parseInt(m[3], 10);
+            const hour = parseInt(m[4], 10);
+            const minute = parseInt(m[5], 10);
+            const second = m[6] ? parseInt(m[6], 10) : 0;
+            const ms = m[7] ? parseInt(m[7].padEnd(3, '0'), 10) : 0;
+            const d = new Date(year, month, day, hour, minute, second, ms); // local time
+            if (!isNaN(d.getTime())) return d;
+        }
+        // '/Date(…)/' style
+        const msMatch = /Date\((\d+)\)/.exec(str);
+        if (msMatch) {
+            const ms = parseInt(msMatch[1], 10);
+            const d = new Date(ms);
+            if (!isNaN(d.getTime())) return d;
+        }
+        // Fallback native
+        const d = new Date(str);
+        return isNaN(d.getTime()) ? null : d;
+    }
+
+    function formatAzTime(date) {
+        if (!(date instanceof Date) || isNaN(date.getTime())) return '';
+        const tz = window.CHAT_TIME_ZONE || undefined; // e.g., 'Asia/Baku'
+        // 24-hour HH:mm
+        return date.toLocaleTimeString('az-AZ', { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: tz });
+    }
+
+    function getScrollState(container) {
+        if (!container) return { atBottom: true, fromBottom: 0 };
+        const fromBottom = container.scrollHeight - (container.scrollTop + container.clientHeight);
+        return {
+            atBottom: fromBottom <= 40,
+            fromBottom
+        };
+    }
+
+    function restoreScrollState(container, prev) {
+        if (!container || !prev) return;
+        setTimeout(() => {
+            const newTop = container.scrollHeight - prev.fromBottom - container.clientHeight;
+            container.scrollTop = Math.max(0, newTop);
+        }, 0);
     }
 
     function showLoading(show) {

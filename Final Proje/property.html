@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="stylesheet" href="./assets/css/property.css">
-    
+
 </head>
 
 <body class="bg-light">
@@ -29,7 +29,7 @@
                 <a href="./Agency.html" class="hover:text-blue-600">Agentliklər</a>
                 <a href="./ask-ai.html  " class="hover:text-blue-600">AI Sorgu</a>
             </nav>
-   <!-- Sağ tərəf -->
+            <!-- Sağ tərəf -->
             <div class="flex items-center gap-4">
                 <!-- Yeni Elan Button -->
                 <a href="#" id="newListing"
@@ -72,7 +72,7 @@
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
-      
+
         </div>
     </header>
 
@@ -88,9 +88,10 @@
                     <i class="fas fa-crown"></i> Premium Elan (<span id="premiumExpireDate"></span>-ə qədər)
                 </div>
 
-               <div class="image-placeholder">
-    <img id="propertyImage" src="https://via.placeholder.com/600x400" alt="Mülk şəkli" class="rounded-lg shadow-lg w-full" />
-</div>
+                <div class="image-placeholder">
+                    <img id="propertyImage" src="https://via.placeholder.com/600x400" alt="Mülk şəkli"
+                        class="rounded-lg shadow-lg w-full" />
+                </div>
 
 
                 <div class="details-grid">
@@ -151,23 +152,19 @@
                             <span>Elan sahibinə mesaj yaz</span>
                         </button>
 
-                        <button type="button" id="phoneBtn" onclick="togglePhoneNumber()" class="btn btn-secondary">
-                            <i class="fas fa-phone"></i>
-                            <span id="phoneBtnText">Nömrəni göstər</span>
-                            <span id="phoneNumber" style="display: none;"></span>
-                        </button>
-                       
+
+
 
                     </div>
-                     <button type="button" id="premiumBtn" class="btn btn-yellow mt-3">
-                            <i class="fas fa-crown"></i> Premium et
-                        </button>
-                    
+                    <button type="button" id="premiumBtn" class="btn btn-yellow mt-3">
+                        <i class="fas fa-crown"></i> Premium et
+                    </button>
+
                 </div>
 
                 <div style="margin-top: 30px;" class="location-info">
                     <h3><i class="fas fa-map-marker-alt"></i> Yerləşdiyi yer</h3>
-                    <p id="locationDescription">Mülk Bakı şəhəri, Salamm qəsəbəsində yerləşir.</p>
+
                     <div id="miniMap" style="height: 250px; width: 100%; margin-top: 30px; "></div>
                 </div>
             </div>
@@ -179,7 +176,7 @@
     </div>
 
     <script src="./assets/js/property.js"></script>
-    
+
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </body>

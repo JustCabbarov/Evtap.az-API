@@ -20,21 +20,45 @@ namespace EvTap.Persistence.Repositories
 
         public async Task<List<Listing>> GelListingByUserIdAsync(string userId)
         {
-          var data= await _db.Listings.Include(l => l.Category).Include(l => l.Images).Include(l => l.Location).Include(l => l.ListingMetros).ThenInclude(_db => _db.MetroStation).Where(l=>l.UserId==userId).ToListAsync();
-            return data;
-        }
+            var data = await _db.Listings
+      .Include(l => l.Category)
+      .Include(l => l.Images)
+      .Include(l => l.Location)
+      .Include(l => l.ListingMetros)
+          .ThenInclude(lm => lm.MetroStation)
+      .Where(l => l.UserId == userId && l.IsDeleted == false)
+      .ToListAsync();
 
+            return data;
+
+        }
         public async Task<List<Listing>> GetListingtDetailAsync()
         {
-          var data= await _db.Listings.Include(l=>l.Category).Include(l=>l.Images).Include(l=>l.Location).Include(l=>l.ListingMetros).ThenInclude(_db=>_db.MetroStation).ToListAsync();
-            return data;
+            var data = await _db.Listings
+                .Include(l => l.Category)
+                .Include(l => l.Images)
+                .Include(l => l.Location)
+                .Include(l => l.ListingMetros)
+                    .ThenInclude(lm => lm.MetroStation)
+                .Where(l => l.IsDeleted == false)
+                .ToListAsync();
 
+            return data;
         }
+
 
         public Task<Listing> GetListingtDetailByIdAsync(int id)
         {
-          var data=  _db.Listings.Include(l => l.Category).Include(l => l.Images).Include(l => l.Location).Include(l => l.ListingMetros).ThenInclude(_db => _db.MetroStation).FirstOrDefaultAsync(l=>l.Id==id);
+            var data = _db.Listings
+                .Include(l => l.Category)
+                .Include(l => l.Images)
+                .Include(l => l.Location)
+                .Include(l => l.ListingMetros)
+                    .ThenInclude(lm => lm.MetroStation)
+                .FirstOrDefaultAsync(l => l.Id == id && l.IsDeleted == false);
+
             return data;
         }
+
     }
 }

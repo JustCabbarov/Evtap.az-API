@@ -10,12 +10,12 @@ namespace EvTap.Contracts.Services
 {
     public interface IFilterService
     {
-        Task<List<ListingDTO>> GetListingsByAdvertTypeAsync(int type);
-        Task<List<ListingDTO>> GetListingsByCategoryAsync(int categoryId);
+        Task<List<Listing>> GetListingsByAdvertTypeAsync(int type);
+        Task<List<Listing>> GetListingsByCategoryAsync(int categoryId);
         Task<List<ListingDTO>> GetListingsByPriceRangeAsync(decimal minPrice, decimal maxPrice);
         Task<List<ListingDTO>> GetListingsByRoomsAsync(int rooms);
         Task<List<ListingDTO>> GetListingsByLocationsAsync(List<int> districtIds);
         Task<List<ListingDTO>> GetListingsByMetroStations(List<int> metroIds);
-        Task<List<ListingDTO>> GetListingsByFilterAsync(FilterDTO filter);
+        Task<List<Listing>> GetListingsByFilterAsync(FilterDTO filter);
     }
 }

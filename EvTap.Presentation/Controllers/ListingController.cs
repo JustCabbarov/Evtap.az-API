@@ -70,31 +70,8 @@ namespace EvTap.Presentation.Controllers
         {
             var listings = await _listingservice.GetListingsDetailAsync();
 
-            var result = listings.Select(listing => new
-            {
-                id = listing.Id,
-                title = listing.Title,
-                price = listing.Price,
-                room = listing.Rooms,
-                area = listing.Area,
-                Date= listing.CreatedAt,
-                premium= listing.IsPremium,
-                metro = listing.ListingMetros.Select(lm => new
-                {
-                    id = lm.MetroStation.Id,
-                    name = lm.MetroStation.Name
-                }).ToList(),
-                category = new
-                {
-                    id = listing.Category.Id,
-                    name = listing.Category.Name
-                },
-                images = listing.Images.Select(img =>
-                    $"{Request.Scheme}://{Request.Host}/listing-images/{Path.GetFileName(img.ImageUrl)}"
-                ).ToList()
-            }).ToList(); // Select sonrası ToList() əlavə et
 
-            return Ok(result);
+            return Ok(listings);
         }
 
 

@@ -116,14 +116,6 @@ namespace EvTap.Application.Services
             if (listing == null)
                 throw new Exception("Listing not found.");
 
-            foreach (var img in listing.Images)
-            {
-                var filePath = Path.Combine(_env.WebRootPath, img.ImageUrl.TrimStart('/').Replace("/", Path.DirectorySeparatorChar.ToString()));
-                if (File.Exists(filePath))
-                {
-                    File.Delete(filePath);
-                }
-            }
 
 
             await _listingRepository.DeleteAsync(listingId);

@@ -147,6 +147,22 @@
   },
   {
     "ContainingType": "EvTap.Presentation.Controllers.AuthorizationController",
+    "Method": "LoginAdmin",
+    "RelativePath": "api/Authorization/LoginAdmin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginDTO",
+        "Type": "EvTap.Contracts.DTOs.LoginDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EvTap.Presentation.Controllers.AuthorizationController",
     "Method": "LogOut",
     "RelativePath": "api/Authorization/LogOut",
     "HttpMethod": "POST",
@@ -167,6 +183,43 @@
         "Name": "registerDTO",
         "Type": "EvTap.Contracts.DTOs.RegisterDTO",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EvTap.Presentation.Controllers.AuthorizationController",
+    "Method": "SendOtp",
+    "RelativePath": "api/Authorization/send-otp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "EvTap.Contracts.DTOs.SendOtpRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EvTap.Presentation.Controllers.AuthorizationController",
+    "Method": "VerifyOtp",
+    "RelativePath": "api/Authorization/verify-otp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "phonnumber",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

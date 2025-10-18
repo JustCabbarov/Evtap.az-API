@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="./assets/css/admin.css" />
     <script src="https://unpkg.com/@microsoft/signalr@latest/dist/browser/signalr.js"></script>
-  
+
 </head>
 
 <body class="bg-gray-100">
@@ -23,9 +23,64 @@
         </div>
     </div>
 
+    <!-- Login Screen -->
+    <div id="loginScreen"
+        class="fixed inset-0 bg-gradient-to-br from-blue-600 to-purple-700 z-40 flex items-center justify-center"
+        style="display: none;">
+        <div class="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md">
+            <div class="text-center mb-8">
+                <div class="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fa-solid fa-house text-white text-3xl"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-800">EvTap Admin</h2>
+                <p class="text-gray-600 mt-2">Admin panelinə daxil olun</p>
+            </div>
+
+            <form id="loginForm" class="space-y-6">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                        <i class="fa-solid fa-envelope mr-2"></i>Email
+                    </label>
+                    <input type="email" id="loginUsername"
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        placeholder="Email daxil edin (məsələn: admin@example.com)" required>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                        <i class="fa-solid fa-lock mr-2"></i>Şifrə
+                    </label>
+                    <div class="relative">
+                        <input type="password" id="loginPassword"
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            placeholder="Şifrənizi daxil edin" required>
+                        <button type="button" id="togglePassword"
+                            class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700">
+                            <i class="fa-solid fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-between">
+                    <label class="flex items-center">
+                        <input type="checkbox" id="rememberMe"
+                            class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                        <span class="ml-2 text-sm text-gray-600">Məni xatırla</span>
+                    </label>
+                    <a href="#" class="text-sm text-blue-600 hover:text-blue-700">Şifrəni unutmusan?</a>
+                </div>
+
+                <button type="submit" id="loginBtn"
+                    class="w-full bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 transition duration-200 flex items-center justify-center">
+                    <i class="fa-solid fa-sign-in-alt mr-2"></i>
+                    <span>Daxil ol</span>
+                </button>
+            </form>
+        </div>
+    </div>
 
     <!-- Main Dashboard -->
-    <div id="dashboard">
+    <div id="dashboard" style="display: none;">
         <!-- Sidebar -->
         <div id="sidebar" class="sidebar fixed left-0 top-0 h-full w-64 bg-white shadow-lg z-30">
             <div class="p-6">
@@ -70,7 +125,7 @@
                         <i class="fa-solid fa-tags mr-3"></i>
                         <span class="sidebar-text">Kateqoriyalar</span>
                     </a>
-                      <a href="#"
+                    <a href="#"
                         class="nav-item flex items-center p-3 text-gray-700 rounded-lg hover:bg-gray-100 transition duration-200"
                         data-section="cities">
                         <i class="fa-solid fa-city mr-3"></i>
@@ -90,20 +145,6 @@
                     </a>
                     <a href="#"
                         class="nav-item flex items-center p-3 text-gray-700 rounded-lg hover:bg-gray-100 transition duration-200"
-                        data-section="messages">
-                        <i class="fa-solid fa-comments mr-3"></i>
-                        <span class="sidebar-text">Mesajlar</span>
-                        <span id="unreadCount"
-                            class="ml-auto bg-red-500 text-white text-xs rounded-full px-2 py-1 hidden">0</span>
-                    </a>
-                    <a href="#"
-                        class="nav-item flex items-center p-3 text-gray-700 rounded-lg hover:bg-gray-100 transition duration-200"
-                        data-section="payments">
-                        <i class="fa-solid fa-credit-card mr-3"></i>
-                        <span class="sidebar-text">Ödənişlər</span>
-                    </a>
-                    <a href="#"
-                        class="nav-item flex items-center p-3 text-gray-700 rounded-lg hover:bg-gray-100 transition duration-200"
                         data-section="settings">
                         <i class="fa-solid fa-cog mr-3"></i>
                         <span class="sidebar-text">Tənzimləmələr</span>
@@ -112,8 +153,30 @@
             </div>
 
             <div class="absolute bottom-0 left-0 right-0 p-6 border-t">
-                <button id="logoutBtn"
-                    class="w-full flex items-center justify-center p-3 text-red-600 rounded-lg hover:bg-red-50 transition duration-200">
+                <button type="button"
+                    class="w-full flex items-center justify-center p-3 text-red-600 rounded-lg hover:bg-red-50 transition duration-200"
+                    onclick="
+                        console.log('═══════════════════════════════');
+                        console.log('🔴 LOGOUT CLICKED!');
+                        console.log('Token BEFORE:', localStorage.getItem('adminToken'));
+                        localStorage.removeItem('adminToken');
+                        localStorage.removeItem('adminUser');
+                        sessionStorage.removeItem('adminToken');
+                        sessionStorage.removeItem('adminUser');
+                        console.log('Token AFTER:', localStorage.getItem('adminToken'));
+                        console.log('✅ TOKENS REMOVED!');
+                        console.log('═══════════════════════════════');
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Çıxış Edildi!',
+                            html: 'Token localStorage-dən silindi.<br>Login ekranına yönləndirilirsiniz...',
+                            timer: 1500,
+                            showConfirmButton: false
+                        }).then(() => {
+                            console.log('🔄 RELOADING PAGE...');
+                            window.location.reload();
+                        });
+                    ">
                     <i class="fa-solid fa-sign-out-alt mr-3"></i>
                     <span class="sidebar-text">Çıxış</span>
                 </button>
@@ -272,12 +335,8 @@
                 <!-- Users Section -->
                 <div id="usersSection" class="content-section hidden">
                     <div class="bg-white rounded-xl shadow">
-                        <div class="p-6 border-b flex justify-between items-center">
+                        <div class="p-6 border-b">
                             <h3 class="text-lg font-semibold">İstifadəçilər</h3>
-                            <button id="addUserBtn"
-                                class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700">
-                                <i class="fa-solid fa-plus mr-2"></i>Yeni İstifadəçi
-                            </button>
                         </div>
                         <div class="overflow-x-auto">
                             <table class="w-full">
@@ -373,7 +432,7 @@
                         </div>
                     </div>
                 </div>
-                  <!-- Cities Section -->
+                <!-- Cities Section -->
                 <div id="citiesSection" class="content-section hidden">
                     <div class="bg-white rounded-xl shadow">
                         <div class="p-6 border-b flex justify-between items-center">
@@ -465,141 +524,6 @@
                                     </tr>
                                 </thead>
                                 <tbody id="metroTable" class="divide-y divide-gray-200">
-                                    <!-- Dynamic content -->
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Messages Section -->
-                <div id="messagesSection" class="content-section hidden">
-                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                        <!-- Messages List -->
-                        <div class="lg:col-span-1">
-                            <div class="bg-white rounded-xl shadow">
-                                <div class="p-6 border-b flex justify-between items-center">
-                                    <h3 class="text-lg font-semibold">Mesajlar</h3>
-                                    <div class="flex space-x-2">
-                                        <select id="messageFilter"
-                                            class="px-3 py-2 border border-gray-300 rounded-lg text-sm">
-                                            <option value="">Hamısı</option>
-                                            <option value="unread">Oxunmamış</option>
-                                            <option value="read">Oxunmuş</option>
-                                            <option value="important">Vacib</option>
-                                        </select>
-                                        <button id="refreshMessages"
-                                            class="px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 text-sm">
-                                            <i class="fa-solid fa-refresh"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="max-h-96 overflow-y-auto">
-                                    <div id="messagesList" class="divide-y divide-gray-200">
-                                        <!-- Dynamic content -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Message Detail -->
-                        <div class="lg:col-span-2">
-                            <div class="bg-white rounded-xl shadow">
-                                <div class="p-6 border-b">
-                                    <div class="flex justify-between items-center">
-                                        <h3 id="messageSubject" class="text-lg font-semibold">Mesaj seçin</h3>
-                                        <div class="flex space-x-2">
-                                            <button id="markAsRead"
-                                                class="px-3 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 text-sm hidden">
-                                                <i class="fa-solid fa-check mr-1"></i>Oxundu kimi işarələ
-                                            </button>
-                                            <button id="markAsImportant"
-                                                class="px-3 py-2 bg-yellow-600 text-white rounded-lg hover:bg-yellow-700 text-sm hidden">
-                                                <i class="fa-solid fa-star mr-1"></i>Vacib
-                                            </button>
-                                            <button id="deleteMessage"
-                                                class="px-3 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 text-sm hidden">
-                                                <i class="fa-solid fa-trash mr-1"></i>Sil
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="p-6">
-                                    <div id="messageContent" class="text-gray-600">
-                                        <div class="text-center py-8">
-                                            <i class="fa-solid fa-comments text-4xl text-gray-300 mb-4"></i>
-                                            <p>Mesaj seçmək üçün soldakı siyahıdan birini klikləyin</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Quick Reply -->
-                    <div class="mt-6 bg-white rounded-xl shadow p-6 hidden" id="quickReplySection">
-                        <h3 class="text-lg font-semibold mb-4">Tez Cavab</h3>
-                        <form id="quickReplyForm">
-                            <div class="mb-4">
-                                <label class="block text-sm font-medium text-gray-700 mb-2">Cavab</label>
-                                <textarea id="replyText" rows="4"
-                                    class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                    placeholder="Cavabınızı yazın..."></textarea>
-                            </div>
-                            <div class="flex justify-end space-x-2">
-                                <button type="button" id="cancelReply"
-                                    class="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50">
-                                    Ləğv et
-                                </button>
-                                <button type="submit"
-                                    class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
-                                    <i class="fa-solid fa-paper-plane mr-2"></i>Cavab göndər
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
-                <!-- Payments Section -->
-                <div id="paymentsSection" class="content-section hidden">
-                    <div class="bg-white rounded-xl shadow">
-                        <div class="p-6 border-b flex justify-between items-center">
-                            <h3 class="text-lg font-semibold">Ödənişlər</h3>
-                            <div class="flex space-x-2">
-                                <select id="paymentFilter" class="px-3 py-2 border border-gray-300 rounded-lg">
-                                    <option value="">Hamısı</option>
-                                    <option value="success">Uğurlu</option>
-                                    <option value="pending">Gözləyən</option>
-                                    <option value="failed">Uğursuz</option>
-                                    <option value="cancelled">Ləğv edilmiş</option>
-                                </select>
-                                <button id="refreshPayments"
-                                    class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
-                                    <i class="fa-solid fa-refresh"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="overflow-x-auto">
-                            <table class="w-full">
-                                <thead class="bg-gray-50">
-                                    <tr>
-                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">ID
-                                        </th>
-                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">
-                                            İstifadəçi</th>
-                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">
-                                            Məbləğ</th>
-                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Tip
-                                        </th>
-                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">
-                                            Status</th>
-                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">
-                                            Tarix</th>
-                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">
-                                            Əməliyyatlar</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="paymentsTable" class="divide-y divide-gray-200">
                                     <!-- Dynamic content -->
                                 </tbody>
                             </table>

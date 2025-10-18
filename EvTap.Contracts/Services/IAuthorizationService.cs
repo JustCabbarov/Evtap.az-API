@@ -16,6 +16,9 @@ namespace EvTap.Contracts.Services
         Task LogoutAsync();
         Task<IdentityResult> ConfirmEmailAsync(string userId, string token);
         Task<List<ApplicationUser>> GetAllUsersAsync();
+        Task<string> LoginAdmin(LoginDTO loginDTO);
+        Task<string> VerifyOtpAsync(string phoneNumber, string code);
+        Task<string> SendOtpAsync(string phoneNumber, string name, string surname);
 
 
 

@@ -6,27 +6,283 @@ class AdminDashboard {
         this.chatApiBaseUrl = 'https://localhost:7027/api'; // Chat API (if different)
         this.chatHubUrl = 'https://localhost:7027/chathub'; // SignalR Hub URL
 
-        this.token = localStorage.getItem('adminToken') || 'mock-admin-token';
-        this.currentUser = JSON.parse(localStorage.getItem('adminUser')) || { id: 'admin-id-1', name: 'Admin User', email: 'admin@evtap.az', roles: ['Admin'] };
+        this.token = localStorage.getItem('adminToken');
+        this.currentUser = localStorage.getItem('adminUser') ? JSON.parse(localStorage.getItem('adminUser')) : null;
 
         this.charts = {};
         this.currentMessage = null;
         this.signalRConnection = null;
+        this.eventsBound = false; // Flag to prevent duplicate event binding
 
         this.init();
     }
 
     async init() {
-        // Always show dashboard directly
-        this.showDashboard();
-        this.bindEvents();
+        // Check if user is authenticated
+        if (this.isAuthenticated()) {
+            this.showDashboard();
+            this.bindEvents();
 
-        // Dashboard/Mesajlar sekmesindeyken dataları yükle
+            // Dashboard/Mesajlar sekmesindeyken dataları yükle
+            setTimeout(() => {
+                this.loadDashboardData();
+                // SignalR bağlantısını kur ve Admin grubuna katıl
+                this.setupAdminSignalR();
+            }, 500);
+        } else {
+            // Show login screen
+            this.showLoginScreen();
+            this.bindLoginEvents();
+        }
+    }
+
+    // Check if user is authenticated
+    isAuthenticated() {
+        const token = localStorage.getItem('adminToken');
+        const user = localStorage.getItem('adminUser');
+        return token && user;
+    }
+
+    // Show login screen
+    showLoginScreen() {
+        document.getElementById('loadingScreen').style.display = 'none';
+        document.getElementById('loginScreen').style.display = 'flex';
+        document.getElementById('dashboard').style.display = 'none';
+    }
+
+    // Bind login events
+    bindLoginEvents() {
+        const loginForm = document.getElementById('loginForm');
+        const togglePassword = document.getElementById('togglePassword');
+        const passwordInput = document.getElementById('loginPassword');
+
+        // Login form submission
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            this.handleLogin();
+        });
+
+        // Toggle password visibility
+        togglePassword.addEventListener('click', () => {
+            const type = passwordInput.type === 'password' ? 'text' : 'password';
+            passwordInput.type = type;
+            const icon = togglePassword.querySelector('i');
+            icon.classList.toggle('fa-eye');
+            icon.classList.toggle('fa-eye-slash');
+        });
+    }
+
+    // Handle login
+    async handleLogin() {
+        const username = document.getElementById('loginUsername').value;
+        const password = document.getElementById('loginPassword').value;
+        const rememberMe = document.getElementById('rememberMe').checked;
+        const loginBtn = document.getElementById('loginBtn');
+
+        // Show loading state
+        loginBtn.disabled = true;
+        loginBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i>Yüklənir...';
+
+        try {
+            // Authenticate with API
+            const loginData = {
+                email: username,  // API expects email field
+                password: password
+            };
+
+            console.log('Sending login request with data:', { email: username, password: '***' });
+            console.log('Full request body:', JSON.stringify(loginData));
+
+            const response = await this.apiRequest('/Authorization/LoginAdmin', {
+                method: 'POST',
+                body: JSON.stringify(loginData)
+            });
+
+            console.log('Login response:', response);
+
+            // Check various possible response formats
+            if (response) {
+                // Handle different response formats
+                let token = response.token || response.Token || response.accessToken || response.access_token;
+                let user = response.user || response.User || response.data;
+
+                if (token) {
+                    // If user object doesn't exist, create a basic one
+                    if (!user) {
+                        user = {
+                            id: response.userId || response.id || 'admin-1',
+                            name: response.userName || response.username || username,
+                            email: response.email || username,
+                            username: username,
+                            roles: response.roles || ['Admin']
+                        };
+                    }
+
+                    // Ensure user object has necessary fields
+                    if (!user.name && user.userName) user.name = user.userName;
+                    if (!user.name && user.username) user.name = user.username;
+                    if (!user.name) user.name = username;
+
+                    console.log('Login successful! Token:', token);
+                    console.log('User:', user);
+
+                    // Successful login
+                    this.handleSuccessfulLogin({ token, user }, rememberMe);
+                } else {
+                    // Login failed - no token in response
+                    console.error('No token in response:', response);
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Xəta',
+                        text: 'İstifadəçi adı və ya şifrə yanlışdır!',
+                        confirmButtonColor: '#3b82f6'
+                    });
+                }
+            } else {
+                // Login failed - empty response
+                console.error('Empty response from API');
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Xəta',
+                    text: 'Serverdən cavab alınmadı!',
+                    confirmButtonColor: '#3b82f6'
+                });
+            }
+        } catch (error) {
+            console.error('Login error:', error);
+
+            // Check if it's an invalid credentials error
+            let errorMessage = 'Giriş zamanı xəta baş verdi.';
+
+            if (error.message.includes('500')) {
+                errorMessage = '❌ Email və ya şifrə yanlışdır!\n\nVə ya bu istifadəçi Admin deyil.\n\nZəhmət olmasa düzgün Admin credentials-larını daxil edin.';
+            } else if (error.message.includes('401')) {
+                errorMessage = '❌ Email və ya şifrə yanlışdır!';
+            } else if (error.message.includes('400')) {
+                errorMessage = '❌ Email və ya şifrə formatı düzgün deyil!';
+            } else if (error.message.includes('Failed to fetch')) {
+                errorMessage = '❌ API server-ə qoşulmaq mümkün deyil!\n\nZəhmət olmasa API server-in işlədiyindən əmin olun:\nhttps://localhost:7027';
+            } else {
+                errorMessage = error.message;
+            }
+
+            Swal.fire({
+                icon: 'error',
+                title: 'Giriş Uğursuz',
+                html: errorMessage.replace(/\n/g, '<br>'),
+                confirmButtonColor: '#3b82f6',
+                confirmButtonText: 'Yenidən cəhd et'
+            });
+        } finally {
+            // Reset button state
+            loginBtn.disabled = false;
+            loginBtn.innerHTML = '<i class="fa-solid fa-sign-in-alt mr-2"></i><span>Daxil ol</span>';
+        }
+    }
+
+    // Handle successful login
+    handleSuccessfulLogin(response, rememberMe) {
+        console.log('handleSuccessfulLogin called with:', response);
+
+        // Store token and user info
+        if (rememberMe) {
+            localStorage.setItem('adminToken', response.token);
+            localStorage.setItem('adminUser', JSON.stringify(response.user));
+        } else {
+            sessionStorage.setItem('adminToken', response.token);
+            sessionStorage.setItem('adminUser', JSON.stringify(response.user));
+        }
+
+        // Also set in class properties
+        this.token = response.token;
+        this.currentUser = response.user;
+
+        // Always update localStorage for compatibility
+        localStorage.setItem('adminToken', response.token);
+        localStorage.setItem('adminUser', JSON.stringify(response.user));
+
+        console.log('Token saved to localStorage:', localStorage.getItem('adminToken'));
+        console.log('User saved to localStorage:', localStorage.getItem('adminUser'));
+
+        // Show success message
+        const userName = response.user?.name || response.user?.username || response.user?.userName || 'Admin';
+        Swal.fire({
+            icon: 'success',
+            title: 'Uğurlu!',
+            text: 'Xoş gəldiniz, ' + userName,
+            timer: 1500,
+            showConfirmButton: false
+        });
+
+        // Hide login screen and show dashboard
         setTimeout(() => {
+            console.log('Switching to dashboard...');
+            document.getElementById('loginScreen').style.display = 'none';
+            this.showDashboard();
+            this.bindEvents();
             this.loadDashboardData();
-            // SignalR bağlantısını kur ve Admin grubuna katıl
             this.setupAdminSignalR();
-        }, 500); // Loading screen-i bir az daha uzun göstərək
+        }, 1500);
+    }
+
+    // Logout function
+    async logout() {
+        console.log('🔓 Starting logout process...');
+
+        try {
+            // Call API logout endpoint (optional - if API requires logout)
+            try {
+                console.log('📡 Calling API logout...');
+                await this.apiRequest('/Authorization/LogOut', {
+                    method: 'POST'
+                });
+                console.log('✅ API logout successful');
+            } catch (error) {
+                // Continue with logout even if API call fails
+                console.log('⚠️ API logout call failed, continuing with local logout:', error);
+            }
+        } finally {
+            console.log('🗑️ Clearing all storage...');
+
+            // Always clear all tokens and user data from storage
+            localStorage.removeItem('adminToken');
+            localStorage.removeItem('adminUser');
+            sessionStorage.removeItem('adminToken');
+            sessionStorage.removeItem('adminUser');
+
+            console.log('✅ Storage cleared!');
+            console.log('Token after removal:', localStorage.getItem('adminToken')); // Should be null
+
+            // Clear class properties
+            this.token = null;
+            this.currentUser = null;
+
+            // Disconnect SignalR if connected
+            if (this.signalRConnection) {
+                try {
+                    console.log('📡 Disconnecting SignalR...');
+                    await this.signalRConnection.stop();
+                    console.log('✅ SignalR disconnected');
+                } catch (error) {
+                    console.log('⚠️ SignalR disconnect error:', error);
+                }
+            }
+
+            // Show success message
+            Swal.fire({
+                icon: 'success',
+                title: 'Çıxış edildi',
+                html: 'Uğurla çıxış etdiniz.<br>JWT token localStorage-dən silindi.',
+                timer: 2000,
+                showConfirmButton: false
+            });
+
+            // Reload page to show login screen
+            setTimeout(() => {
+                console.log('🔄 Reloading page...');
+                window.location.reload();
+            }, 2000);
+        }
     }
 
     // --- REAL-TIME SIGNALR ENTEGRASYONU ---
@@ -87,7 +343,7 @@ class AdminDashboard {
         const defaultOptions = {
             headers: {
                 'Content-Type': 'application/json',
-                ...(token && token !== 'mock-admin-token' ? { 'Authorization': `Bearer ${token}` } : {})
+                ...(token ? { 'Authorization': `Bearer ${token}` } : {})
             }
         };
 
@@ -105,7 +361,22 @@ class AdminDashboard {
 
             if (!response.ok) {
                 const errorBody = await response.text();
-                throw new Error(`HTTP Error: ${response.status}. ${errorBody.substring(0, 100)}`);
+                console.error('API Error Body:', errorBody);
+
+                // Try to parse as JSON for better error details
+                try {
+                    const errorJson = JSON.parse(errorBody);
+                    console.error('Parsed Error:', errorJson);
+
+                    // Extract validation errors if present
+                    if (errorJson.errors) {
+                        console.error('Validation Errors:', errorJson.errors);
+                    }
+                } catch (e) {
+                    // Not JSON, just log the text
+                }
+
+                throw new Error(`HTTP Error: ${response.status}. ${errorBody}`);
             }
 
             // Handle empty responses
@@ -206,11 +477,11 @@ class AdminDashboard {
         return await this.apiRequest('/Agency/GetAll', { method: 'GET' });
     }
 
-   
-      async createAgency(agencyData) {
+
+    async createAgency(agencyData) {
         console.log('Creating Agency with data:', agencyData);
         console.log('API URL:', this.apiBaseUrl + '/Agency');
-        
+
         return await this.apiRequest('/Agency', {
             method: 'POST',
             body: JSON.stringify(agencyData)
@@ -218,16 +489,13 @@ class AdminDashboard {
     }
 
     async updateAgency(id, agencyData) {
-        // PUT to /Agency with id in body
-        const dataWithId = {
-            id: parseInt(id),
-            ...agencyData
-        };
-        
+        // PUT to /Agency/{id} with id also in body for compatibility
+        const dataWithId = { id: parseInt(id), ...agencyData };
+
         console.log('Updating Agency with data:', dataWithId);
-        console.log('API URL:', this.apiBaseUrl + '/Agency');
-        
-        return await this.apiRequest('/Agency', {
+        console.log('API URL:', this.apiBaseUrl + `/Agency/${id}`);
+
+        return await this.apiRequest(`/Agency/${id}`, {
             method: 'PUT',
             body: JSON.stringify(dataWithId)
         });
@@ -236,7 +504,7 @@ class AdminDashboard {
     async deleteAgency(id) {
         console.log('Deleting Agency ID:', id);
         console.log('API URL:', this.apiBaseUrl + `/Agency/${id}`);
-        
+
         return await this.apiRequest(`/Agency/${id}`, { method: 'DELETE' });
     }
 
@@ -649,9 +917,27 @@ class AdminDashboard {
 
     // --- EVENT BINDING ---
     bindEvents() {
+        // Prevent duplicate event binding
+        if (this.eventsBound) {
+            console.log('Events already bound, skipping...');
+            return;
+        }
+
+        console.log('Binding events...');
+        this.eventsBound = true;
 
         // Logout button
-        document.getElementById('logoutBtn')?.addEventListener('click', () => this.handleLogout());
+        const logoutBtn = document.getElementById('logoutBtn');
+        if (logoutBtn) {
+            console.log('✅ Logout button found, binding event...');
+            logoutBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                console.log('🔴 Logout button CLICKED!');
+                this.handleLogout();
+            });
+        } else {
+            console.error('❌ Logout button NOT found!');
+        }
 
         // Sidebar toggle
         document.getElementById('sidebarToggle')?.addEventListener('click', () => this.toggleSidebar());
@@ -667,14 +953,11 @@ class AdminDashboard {
 
         // Refresh buttons
         document.getElementById('refreshListings')?.addEventListener('click', () => this.loadListings());
-        document.getElementById('refreshMessages')?.addEventListener('click', () => this.loadMessages());
-        document.getElementById('refreshPayments')?.addEventListener('click', () => this.loadPayments());
 
         // Add buttons
-        document.getElementById('addUserBtn')?.addEventListener('click', () => this.showAddUserModal());
         document.getElementById('addAgencyBtn')?.addEventListener('click', () => this.showAddAgencyModal());
         document.getElementById('addCategoryBtn')?.addEventListener('click', () => this.showAddCategoryModal());
-    document.getElementById('addAgencyBtn')?.addEventListener('click', () => {
+        document.getElementById('addAgencyBtn')?.addEventListener('click', () => {
             console.log('🔵 Add Agency button clicked!');
             this.showAddAgencyModal();
         });
@@ -685,41 +968,54 @@ class AdminDashboard {
         document.getElementById('saveSettings')?.addEventListener('click', () => this.saveSettings());
         document.getElementById('changePassword')?.addEventListener('click', () => this.changePassword());
 
-        // Message actions
-        document.getElementById('markAsRead')?.addEventListener('click', () => this.markCurrentMessageAsRead());
-        document.getElementById('markAsImportant')?.addEventListener('click', () => this.markCurrentMessageAsImportant());
-        document.getElementById('deleteMessage')?.addEventListener('click', () => this.deleteCurrentMessage());
-        document.getElementById('quickReplyForm')?.addEventListener('submit', (e) => this.sendReply(e));
-        document.getElementById('cancelReply')?.addEventListener('click', () => this.cancelReply());
-
         // Filters
         document.getElementById('listingsFilter')?.addEventListener('change', (e) => this.filterListings(e.target.value));
-        document.getElementById('messageFilter')?.addEventListener('change', (e) => this.filterMessages(e.target.value));
-        document.getElementById('paymentFilter')?.addEventListener('change', (e) => this.filterPayments(e.target.value));
     }
 
     // --- AUTHENTICATION ---
 
     async handleLogout() {
-        try {
-            await this.logout();
-        } catch (error) {
-            console.error('Logout error:', error);
-        } finally {
-            localStorage.removeItem('adminToken');
-            localStorage.removeItem('adminUser');
-            this.token = null;
-            this.currentUser = null;
-            // Just reload the page since we don't have a login screen anymore
+        console.log('════════════════════════════════');
+        console.log('🔴 LOGOUT STARTED');
+        console.log('════════════════════════════════');
+        console.log('🔑 Token BEFORE:', localStorage.getItem('adminToken'));
+
+        // Immediately clear storage
+        console.log('🗑️ REMOVING token from localStorage...');
+        localStorage.removeItem('adminToken');
+        localStorage.removeItem('adminUser');
+        sessionStorage.removeItem('adminToken');
+        sessionStorage.removeItem('adminUser');
+
+        console.log('🔑 Token AFTER:', localStorage.getItem('adminToken'));
+        console.log('════════════════════════════════');
+
+        // Clear class properties
+        this.token = null;
+        this.currentUser = null;
+
+        // Show message
+        Swal.fire({
+            icon: 'success',
+            title: 'Çıxış Edildi!',
+            html: 'Token localStorage-dən silindi.<br>Login ekranına yönləndirilirsiniz...',
+            timer: 1500,
+            showConfirmButton: false
+        });
+
+        // Reload after message
+        setTimeout(() => {
+            console.log('🔄 RELOADING PAGE...');
             window.location.reload();
-        }
+        }, 1500);
     }
 
     // --- UI NAVIGATION ---
 
     showDashboard() {
-        document.getElementById('dashboard').classList.remove('hidden');
-        document.getElementById('loadingScreen').classList.add('hidden');
+        document.getElementById('dashboard').style.display = 'block';
+        document.getElementById('loadingScreen').style.display = 'none';
+        document.getElementById('loginScreen').style.display = 'none';
     }
 
     toggleSidebar() {
@@ -760,8 +1056,6 @@ class AdminDashboard {
             cities: 'Şəhərlər',
             districts: 'Rayonlar',
             metro: 'Metro Stansiyaları',
-            messages: 'Mesajlar',
-            payments: 'Ödənişlər',
             settings: 'Tənzimləmələr'
         };
 
@@ -782,8 +1076,6 @@ class AdminDashboard {
             cities: 'Şəhərləri idarə edin',
             districts: 'Rayonları idarə edin',
             metro: 'Metro stansiyalarını idarə edin',
-            messages: 'İstifadəçi mesajlarını idarə edin',
-            payments: 'Ödənişləri idarə edin',
             settings: 'Sistem tənzimləmələri'
         };
         return subtitles[sectionName] || '';
@@ -814,12 +1106,6 @@ class AdminDashboard {
                 break;
             case 'metro':
                 await this.loadMetroStations();
-                break;
-            case 'messages':
-                await this.loadMessages();
-                break;
-            case 'payments':
-                await this.loadPayments();
                 break;
             case 'settings':
                 await this.loadSettings();
@@ -1385,15 +1671,56 @@ class AdminDashboard {
         }
     }
 
+    // Render agencies into the Agencies table
+    updateAgencies(agencies) {
+        const tbody = document.getElementById('agenciesTable');
+        if (!tbody) return;
+
+        tbody.innerHTML = '';
+
+        if (!Array.isArray(agencies) || agencies.length === 0) {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500" colspan="6">Məlumat yoxdur</td>
+            `;
+            tbody.appendChild(row);
+            return;
+        }
+
+        agencies.forEach((agency) => {
+            const id = agency.id ?? '';
+            const name = agency.name ?? '';
+            const email = agency.email ?? '';
+            const phone = agency.phone ?? agency.phoneNumber ?? '';
+            const listingCount = Array.isArray(agency.listings) ? agency.listings.length : (agency.listingCount ?? 0);
+
+            const row = document.createElement('tr');
+            row.className = 'table-row';
+            row.innerHTML = `
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">${id}</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">${name}</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">${email || 'Email yoxdur'}</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">${phone || 'Telefon yoxdur'}</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${listingCount > 0 ? 'bg-green-100 text-green-800' : 'bg-gray-100 text-gray-800'}">
+                        ${listingCount} elan
+                    </span>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                    <button onclick="adminDashboard.viewAgency('${id}')" class="text-blue-600 hover:text-blue-900 mr-3">Bax</button>
+                    <button onclick="adminDashboard.editAgency('${id}')" class="text-green-600 hover:text-green-900 mr-3">Redaktə</button>
+                    <button onclick="adminDashboard.deleteAgency('${id}')" class="text-red-600 hover:text-red-900">Sil</button>
+                </td>
+            `;
+            tbody.appendChild(row);
+        });
+    }
 
     async updateAgency(id, agencyData) {
-        // PUT to /Agency with id in body (if agencyData already has id, it will be kept)
-        const dataWithId = {
-            id: parseInt(id),
-            ...agencyData
-        };
-        
-        return await this.apiRequest('/Agency', {
+        // PUT to /Agency/{id} with id also in body for compatibility (if agencyData already has id, it will be kept)
+        const dataWithId = { id: parseInt(id), ...agencyData };
+
+        return await this.apiRequest(`/Agency/${id}`, {
             method: 'PUT',
             body: JSON.stringify(dataWithId)
         });
@@ -2037,7 +2364,7 @@ class AdminDashboard {
             Swal.fire('Xəta!', 'Agentlik məlumatları yüklənə bilmədi', 'error');
         }
     }
-  async editAgency(id) {
+    async editAgency(id) {
         try {
             const agency = await this.getAgency(id);
 
@@ -2398,21 +2725,85 @@ class AdminDashboard {
     }
 
     // Modal methods
-    showAddUserModal() {
-        Swal.fire({
-            title: 'Yeni İstifadəçi Əlavə Et',
-            text: 'Bu funksiya hazırda inkişaf etdirilir.',
-            icon: 'info',
-            confirmButtonText: 'Tamam'
-        });
-    }
-
     showAddAgencyModal() {
         Swal.fire({
             title: 'Yeni Agentlik Əlavə Et',
-            text: 'Bu funksiya hazırda inkişaf etdirilir.',
-            icon: 'info',
-            confirmButtonText: 'Tamam'
+            html: `
+                <div class="text-left space-y-3">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Agentlik Adı</label>
+                        <input type="text" id="newAgencyName" class="w-full px-3 py-2 border border-gray-300 rounded-lg" placeholder="Məsələn: ABC Real Estate">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Təsvir</label>
+                        <textarea id="newAgencyDescription" class="w-full px-3 py-2 border border-gray-300 rounded-lg" rows="3" placeholder="Agentlik haqqında məlumat"></textarea>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Telefon</label>
+                        <input type="tel" id="newAgencyPhone" class="w-full px-3 py-2 border border-gray-300 rounded-lg" placeholder="+994 XX XXX XX XX">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <input type="email" id="newAgencyEmail" class="w-full px-3 py-2 border border-gray-300 rounded-lg" placeholder="info@agency.az">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Ünvan</label>
+                        <input type="text" id="newAgencyAddress" class="w-full px-3 py-2 border border-gray-300 rounded-lg" placeholder="Bakı, Azərbaycan">
+                    </div>
+                </div>
+            `,
+            width: '600px',
+            showCancelButton: true,
+            confirmButtonText: 'Əlavə Et',
+            cancelButtonText: 'Ləğv Et',
+            preConfirm: () => {
+                const name = document.getElementById('newAgencyName').value;
+                const description = document.getElementById('newAgencyDescription').value;
+                const phoneNumber = document.getElementById('newAgencyPhone').value;
+                const email = document.getElementById('newAgencyEmail').value;
+                const address = document.getElementById('newAgencyAddress').value;
+
+                if (!name.trim()) {
+                    Swal.showValidationMessage('Agentlik adı boş ola bilməz');
+                    return false;
+                }
+                if (!description.trim()) {
+                    Swal.showValidationMessage('Təsvir boş ola bilməz');
+                    return false;
+                }
+                if (!phoneNumber.trim()) {
+                    Swal.showValidationMessage('Telefon nömrəsi boş ola bilməz');
+                    return false;
+                }
+                if (!email.trim()) {
+                    Swal.showValidationMessage('Email boş ola bilməz');
+                    return false;
+                }
+                if (!address.trim()) {
+                    Swal.showValidationMessage('Ünvan boş ola bilməz');
+                    return false;
+                }
+
+                return { name, description, phoneNumber, email, address };
+            }
+        }).then((result) => {
+            if (result.isConfirmed) {
+                const agencyData = {
+                    name: result.value.name,
+                    description: result.value.description,
+                    phoneNumber: result.value.phoneNumber,
+                    email: result.value.email,
+                    address: result.value.address
+                };
+
+                this.createAgency(agencyData).then(() => {
+                    Swal.fire('Uğurlu!', 'Agentlik əlavə edildi', 'success');
+                    this.loadAgencies();
+                }).catch(error => {
+                    console.error('Agency creation error:', error);
+                    Swal.fire('Xəta!', 'Agentlik əlavə edilə bilmədi: ' + error.message, 'error');
+                });
+            }
         });
     }
 
@@ -2556,6 +2947,7 @@ class AdminDashboard {
         }).then((result) => {
             if (result.isConfirmed) {
                 const cityData = {
+                    id: 0,
                     name: result.value.name
                 };
 

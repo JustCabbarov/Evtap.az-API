@@ -100,26 +100,110 @@ function loadPropertyImages() {
     const container = document.querySelector('.image-placeholder');
     if (!container) return;
 
-    // 1. API-dən gələn şəkil varsa, onu göstər
-    const img = propertyData?.images?.find(i => i.isCover) || propertyData?.images?.[0];
+    const toAbsoluteUrl = (maybeRelativeUrl) => {
+        if (!maybeRelativeUrl) return null;
+        return maybeRelativeUrl.startsWith('/')
+            ? `${API_BASE_URL.replace('/api', '')}${maybeRelativeUrl}`
+            : maybeRelativeUrl;
+    };
 
-    let imageUrl = null;
+    const incomingImages = Array.isArray(propertyData?.images) ? propertyData.images : [];
+    const imageUrls = incomingImages
+        .map(img => toAbsoluteUrl(img?.imageUrl))
+        .filter(Boolean);
 
-    if (img?.imageUrl) {
-        // Əgər imageUrl nisbi yoldursa (məs: /uploads/img.jpg), onu tam URL-ə çevir
-        if (img.imageUrl.startsWith('/')) {
-            imageUrl = `${API_BASE_URL.replace('/api', '')}${img.imageUrl}`;
-        } else {
-            imageUrl = img.imageUrl;
-        }
+    // Heç bir şəkil yoxdursa
+    if (imageUrls.length === 0) {
+        container.innerHTML = `
+			<img src="https://via.placeholder.com/1200x800?text=%C5%9E%C9%99kil+yoxdur" alt="${propertyData.title || 'Mülk şəkli'}" style="width:100%; height:500px; object-fit:cover; object-position:center; border-radius:8px; display:block;">
+		`;
+        return;
     }
 
-    // 2. Əgər şəkil yoxdursa, placeholder qoy
+    // Yalnız 1 şəkil varsa
+    if (imageUrls.length === 1) {
+        container.innerHTML = `
+			<img src="${imageUrls[0]}" alt="${propertyData.title || 'Mülk şəkli'}" style="width:100%; height:500px; object-fit:cover; object-position:center; border-radius:8px; display:block;">
+		`;
+        return;
+    }
+
+    // 2 və ya daha çox şəkil üçün sadə slider
+    const slidesHtml = imageUrls.map(url => `
+		<div class="prop-slide" style="flex:0 0 100%; height:100%; display:flex;">
+			<img src="${url}" alt="${propertyData.title || 'Mülk şəkli'}" style="width:100%; height:100%; object-fit:cover; object-position:center; display:block;">
+		</div>
+	`).join('');
+
+    const dotsHtml = imageUrls.map((_, idx) => `
+		<span data-index="${idx}" style="width:8px; height:8px; border-radius:50%; background:${idx === 0 ? '#ffffff' : 'rgba(255,255,255,0.6)'}; cursor:pointer;"></span>
+	`).join('');
+
     container.innerHTML = `
-        <img src="${imageUrl || 'https://via.placeholder.com/600x400?text=Şəkil+yoxdur'}"
-             alt="${propertyData.title || 'Mülk şəkli'}"
-             style="width:100%; max-height:300px; object-fit:cover; border-radius:8px;">
-    `;
+		<div class="prop-slider" style="position:relative; width:100%; height:500px; overflow:hidden; border-radius:8px;">
+			<div class="prop-slider-track" style="display:flex; width:100%; height:100%; transition:transform 300ms ease; will-change: transform;">
+				${slidesHtml}
+			</div>
+			<button class="prop-prev" aria-label="Əvvəlki" style="position:absolute; top:50%; left:8px; transform:translateY(-50%); background:rgba(0,0,0,0.5); color:#fff; border:none; width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center;">‹</button>
+			<button class="prop-next" aria-label="Növbəti" style="position:absolute; top:50%; right:8px; transform:translateY(-50%); background:rgba(0,0,0,0.5); color:#fff; border:none; width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center;">›</button>
+			<div class="prop-dots" style="position:absolute; bottom:8px; left:0; right:0; display:flex; justify-content:center; gap:6px;">
+				${dotsHtml}
+			</div>
+		</div>
+	`;
+
+    const track = container.querySelector('.prop-slider-track');
+    const prevBtn = container.querySelector('.prop-prev');
+    const nextBtn = container.querySelector('.prop-next');
+    const dots = Array.from(container.querySelectorAll('.prop-dots > span'));
+
+    let currentIndex = 0;
+
+    const updateDots = () => {
+        dots.forEach((dot, idx) => {
+            dot.style.background = idx === currentIndex ? '#ffffff' : 'rgba(255,255,255,0.6)';
+        });
+    };
+
+    const goTo = (index) => {
+        const total = imageUrls.length;
+        currentIndex = ((index % total) + total) % total;
+        track.style.transform = `translateX(${-currentIndex * 100}%)`;
+        updateDots();
+    };
+
+    prevBtn.addEventListener('click', () => goTo(currentIndex - 1));
+    nextBtn.addEventListener('click', () => goTo(currentIndex + 1));
+    dots.forEach(dot => dot.addEventListener('click', () => {
+        const idx = Number(dot.getAttribute('data-index'));
+        goTo(idx);
+    }));
+
+    // Sadə toxunuş dəstəyi (mobil sürüşdürmə)
+    let touchStartX = null;
+    let touchDeltaX = 0;
+    container.addEventListener('touchstart', (e) => {
+        touchStartX = e.touches[0].clientX;
+        touchDeltaX = 0;
+    }, { passive: true });
+    container.addEventListener('touchmove', (e) => {
+        if (touchStartX == null) return;
+        touchDeltaX = e.touches[0].clientX - touchStartX;
+    }, { passive: true });
+    container.addEventListener('touchend', () => {
+        if (touchStartX == null) return;
+        const threshold = 50; // px
+        if (touchDeltaX > threshold) {
+            goTo(currentIndex - 1);
+        } else if (touchDeltaX < -threshold) {
+            goTo(currentIndex + 1);
+        }
+        touchStartX = null;
+        touchDeltaX = 0;
+    });
+
+    // İlk şəkilə keçid
+    goTo(0);
 }
 
 // ===============================================

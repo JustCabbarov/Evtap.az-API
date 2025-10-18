@@ -1,0 +1,2194 @@
+[2025-10-16 14:05:09] [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+[2025-10-16 14:05:09] [INF] Quartz Scheduler created
+[2025-10-16 14:05:09] [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+[2025-10-16 14:05:09] [INF] RAMJobStore initialized.
+[2025-10-16 14:05:09] [INF] Quartz Scheduler 3.15.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+[2025-10-16 14:05:09] [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+[2025-10-16 14:05:09] [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+[2025-10-16 14:05:09] [INF] Adding 1 jobs, 1 triggers.
+[2025-10-16 14:05:09] [INF] Adding job: DEFAULT.ScraperJob
+[2025-10-16 14:05:10] [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+[2025-10-16 14:05:21] [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+[2025-10-16 14:05:24] [INF] Retrieved all Category entities
+[2025-10-16 14:05:26] [INF] Retrieved all Category entities
+[2025-10-16 14:05:27] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:05:43] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:05:52] [INF] Retrieved all Category entities
+[2025-10-16 14:06:13] [INF] Retrieved all District entities
+[2025-10-16 14:06:14] [INF] Retrieved all MetroStation entities
+[2025-10-16 14:06:24] [INF] Retrieved all District entities
+[2025-10-16 14:06:39] [INF] Retrieved all Category entities
+[2025-10-16 14:06:41] [INF] Retrieved all District entities
+[2025-10-16 14:06:42] [INF] Retrieved all MetroStation entities
+[2025-10-16 14:07:01] [INF] Retrieved all Category entities
+[2025-10-16 14:07:22] [INF] User Login in: elicabbarov88@gmail.com
+[2025-10-16 14:07:22] [INF] JWT token yaradıldı: elicabbarov88@gmail.com, eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI5MWZhN2YxZS1iMzViLTQ1YzItYmU3NC03MzU5ZDhiNjFkMDQiLCJ1bmlxdWVfbmFtZSI6IiIsImVtYWlsIjoiZWxpY2FiYmFyb3Y4OEBnbWFpbC5jb20iLCJyb2xlIjoiVXNlciIsIm5iZiI6MTc2MDY0ODg0MiwiZXhwIjoxNzYwNjUyNDQyLCJpYXQiOjE3NjA2NDg4NDIsImlzcyI6IkV2VGFwLmF6IiwiYXVkIjoiRXZUYXAuYXoifQ.k70g5NyS6_ZyCRmSh7w4uBu1GbiqtOIEuL4jPJqvOlM
+[2025-10-16 14:07:23] [INF] Retrieved all Category entities
+[2025-10-16 14:07:36] [INF] Listing with ID: 1032 retrieved.
+[2025-10-16 14:08:00] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:08:53] [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+[2025-10-16 14:08:53] [INF] Quartz Scheduler created
+[2025-10-16 14:08:53] [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+[2025-10-16 14:08:53] [INF] RAMJobStore initialized.
+[2025-10-16 14:08:53] [INF] Quartz Scheduler 3.15.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+[2025-10-16 14:08:53] [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+[2025-10-16 14:08:53] [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+[2025-10-16 14:08:53] [INF] Adding 1 jobs, 1 triggers.
+[2025-10-16 14:08:53] [INF] Adding job: DEFAULT.ScraperJob
+[2025-10-16 14:08:54] [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+[2025-10-16 14:09:03] [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+[2025-10-16 14:10:31] [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+[2025-10-16 14:10:31] [INF] Quartz Scheduler created
+[2025-10-16 14:10:31] [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+[2025-10-16 14:10:31] [INF] RAMJobStore initialized.
+[2025-10-16 14:10:31] [INF] Quartz Scheduler 3.15.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+[2025-10-16 14:10:31] [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+[2025-10-16 14:10:31] [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+[2025-10-16 14:10:31] [INF] Adding 1 jobs, 1 triggers.
+[2025-10-16 14:10:31] [INF] Adding job: DEFAULT.ScraperJob
+[2025-10-16 14:10:31] [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+[2025-10-16 14:10:37] [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+[2025-10-16 14:10:46] [INF] Listing with ID: 1032 has been deleted.
+[2025-10-16 14:11:09] [INF] Listing with ID: 1031 has been deleted.
+[2025-10-16 14:11:15] [INF] Listing with ID: 1030 has been deleted.
+[2025-10-16 14:11:22] [INF] Listing with ID: 1025 has been deleted.
+[2025-10-16 14:12:21] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 14:12:21] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:12:21] [INF] Listing with ID: 1026 retrieved.
+[2025-10-16 14:12:21] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:12:29] [INF] Listing with ID: 1026 retrieved.
+[2025-10-16 14:12:29] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:12:29] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:12:29] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 14:12:37] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:12:49] [INF] Retrieved all Category entities
+[2025-10-16 14:13:04] [INF] Listing with ID: 1026 has been deleted.
+[2025-10-16 14:14:19] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:14:30] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:14:59] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:15:18] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:18:34] [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+[2025-10-16 14:18:34] [INF] Quartz Scheduler created
+[2025-10-16 14:18:34] [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+[2025-10-16 14:18:34] [INF] RAMJobStore initialized.
+[2025-10-16 14:18:34] [INF] Quartz Scheduler 3.15.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+[2025-10-16 14:18:34] [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+[2025-10-16 14:18:34] [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+[2025-10-16 14:18:34] [INF] Adding 1 jobs, 1 triggers.
+[2025-10-16 14:18:34] [INF] Adding job: DEFAULT.ScraperJob
+[2025-10-16 14:18:35] [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+[2025-10-16 14:18:48] [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+[2025-10-16 14:19:28] [INF] Retrieved all Category entities
+[2025-10-16 14:19:56] [INF] Retrieved all Category entities
+[2025-10-16 14:35:47] [INF] Retrieved all District entities
+[2025-10-16 14:35:55] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:35:55] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:35:55] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 14:35:55] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:35:58] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 14:35:58] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:35:59] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:35:59] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:35:59] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 14:35:59] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:35:59] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:36:00] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:36:00] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:36:00] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:36:00] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 14:36:00] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:36:01] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 14:36:01] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:36:01] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:36:01] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:36:08] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:36:09] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:36:09] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:36:09] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 14:36:09] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:36:09] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:36:09] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 14:36:09] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:36:09] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:36:10] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:36:14] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 14:36:15] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:36:15] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 14:36:15] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:36:15] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:36:15] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:36:20] [INF] Retrieved all Category entities
+[2025-10-16 14:36:27] [INF] Retrieved all Category entities
+[2025-10-16 14:36:29] [INF] Retrieved all Category entities
+[2025-10-16 14:36:37] [INF] Retrieved all Category entities
+[2025-10-16 14:36:53] [WRN] Invalid login attempt for user: licabbarov1@gmail.com
+[2025-10-16 14:36:53] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:37:00] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:37:00] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 14:37:00] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:37:00] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:37:00] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:37:01] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:37:01] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:37:01] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 14:37:01] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:37:01] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:37:41] [INF] Retrieved all Category entities
+[2025-10-16 14:37:48] [INF] Retrieved all Category entities
+[2025-10-16 14:38:01] [INF] User Login in: elicabbarov88@gmail.com
+[2025-10-16 14:38:01] [INF] JWT token yaradıldı: elicabbarov88@gmail.com, eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI5MWZhN2YxZS1iMzViLTQ1YzItYmU3NC03MzU5ZDhiNjFkMDQiLCJ1bmlxdWVfbmFtZSI6IiIsImVtYWlsIjoiZWxpY2FiYmFyb3Y4OEBnbWFpbC5jb20iLCJyb2xlIjoiVXNlciIsIm5iZiI6MTc2MDY1MDY4MSwiZXhwIjoxNzYwNjU0MjgxLCJpYXQiOjE3NjA2NTA2ODEsImlzcyI6IkV2VGFwLmF6IiwiYXVkIjoiRXZUYXAuYXoifQ.fBmeuFpf2DZXjIHn1pYGjnv0kYhdNpYtRZb4XbUQDrk
+[2025-10-16 14:38:04] [INF] Retrieved all Category entities
+[2025-10-16 14:38:12] [INF] Google ilə login oldu: licabbarov1@gmail.com
+[2025-10-16 14:38:12] [INF] JWT token yaradıldı: licabbarov1@gmail.com, eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI3NzE5MzFhNS1lYjg1LTQ0ZDMtYjY5Ni1jMjkzYzIyMDFhYzIiLCJ1bmlxdWVfbmFtZSI6ImxpY2FiYmFyb3YxIiwiZW1haWwiOiJsaWNhYmJhcm92MUBnbWFpbC5jb20iLCJyb2xlIjpbIkFkbWluIiwiVXNlciJdLCJuYmYiOjE3NjA2NTA2OTIsImV4cCI6MTc2MDY1NDI5MiwiaWF0IjoxNzYwNjUwNjkyLCJpc3MiOiJFdlRhcC5heiIsImF1ZCI6IkV2VGFwLmF6In0.4XbyHPW-DgjFTQA_m0cTc-IZilMjemGLxb2fv0nxyis
+[2025-10-16 14:38:12] [WRN] Unable to configure Browser Link script injection on the response. 
+[2025-10-16 14:38:12] [WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+[2025-10-16 14:38:12] [INF] Retrieved all Category entities
+[2025-10-16 14:38:16] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 14:38:16] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:38:16] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 14:38:16] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:38:16] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:38:20] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:38:20] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:38:20] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 14:38:20] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:38:20] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:38:24] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 14:38:24] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:38:24] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:38:24] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:38:24] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 14:38:29] [INF] Attempting to notify message received: SenderId=771931a5-eb85-44d3-b696-c293c2201ac2, ReceiverId=91fa7f1e-b35b-45c2-be74-7359d8b61d04
+[2025-10-16 14:38:29] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:38:29] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 14:38:29] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 14:38:29] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:38:29] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:38:32] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:38:32] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:38:32] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:38:32] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 14:38:32] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:38:34] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:38:34] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 14:38:34] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:38:34] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:38:34] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:38:39] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 14:38:39] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:38:39] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:38:39] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:38:40] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:38:40] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 14:38:40] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:38:40] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 14:38:40] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:38:40] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 14:38:40] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:38:55] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 14:38:55] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:38:55] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 14:38:55] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:38:55] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:38:55] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:38:55] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 14:38:55] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:38:55] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 14:38:56] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:38:56] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:39:02] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 14:39:03] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:39:03] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:39:03] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 14:39:03] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:39:03] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:39:03] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 14:39:03] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:39:03] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:39:03] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 14:39:03] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:39:08] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 14:39:08] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:39:08] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:39:08] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:39:08] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:39:09] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:39:09] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 14:39:09] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:39:09] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:39:09] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:39:11] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 14:39:11] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:39:11] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 14:39:11] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:39:11] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:39:11] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 14:39:11] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:39:11] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:39:11] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 14:39:11] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:39:11] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:39:16] [INF] Attempting to notify message received: SenderId=771931a5-eb85-44d3-b696-c293c2201ac2, ReceiverId=91fa7f1e-b35b-45c2-be74-7359d8b61d04
+[2025-10-16 14:39:16] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:39:16] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:39:16] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:39:16] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 14:39:16] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:39:16] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 14:39:16] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:39:16] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:39:16] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 14:39:16] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:39:25] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:39:25] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:39:25] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 14:39:25] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:39:25] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:39:26] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:39:26] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:39:26] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:39:26] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 14:39:26] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:39:48] [INF] Attempting to notify message received: SenderId=771931a5-eb85-44d3-b696-c293c2201ac2, ReceiverId=91fa7f1e-b35b-45c2-be74-7359d8b61d04
+[2025-10-16 14:39:48] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 14:39:48] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:39:48] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:39:48] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 14:39:48] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 14:39:48] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:39:48] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:39:48] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:39:48] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:39:48] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:39:52] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:39:52] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:39:52] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:39:52] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 14:39:52] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:39:54] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 14:39:54] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:39:54] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:39:54] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:39:54] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:39:58] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:39:58] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 14:39:58] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:39:58] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 14:39:58] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:40:00] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:40:00] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 14:40:00] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 14:40:00] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:40:00] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:42:03] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 14:42:03] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:42:03] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 14:42:03] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:42:03] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:42:03] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:42:03] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:42:03] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 14:42:03] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:42:03] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 14:42:03] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:42:07] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 14:42:07] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:42:07] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 14:42:07] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 14:42:07] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:42:08] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:42:08] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:42:08] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:42:08] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:42:08] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 14:42:08] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:42:11] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 14:42:11] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:42:11] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:42:11] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:42:11] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:42:13] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:42:13] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 14:42:13] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:42:13] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:42:13] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:42:15] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 14:42:15] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:42:15] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 14:42:15] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:42:15] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:42:16] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:42:16] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:42:16] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 14:42:16] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 14:42:16] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:48:39] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:48:39] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:48:39] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 14:48:39] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:48:40] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:48:40] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:48:40] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:48:40] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:48:40] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 14:48:40] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 14:49:01] [INF] Attempting to notify message received: SenderId=771931a5-eb85-44d3-b696-c293c2201ac2, ReceiverId=91fa7f1e-b35b-45c2-be74-7359d8b61d04
+[2025-10-16 14:49:05] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 14:49:05] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:49:05] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 14:49:05] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:49:05] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:49:10] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:49:10] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:49:10] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:49:10] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 14:49:10] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:49:15] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 14:49:24] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 14:49:24] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:49:24] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:49:24] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:49:24] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 14:49:25] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:49:25] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:49:25] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:49:25] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 14:49:25] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:53:35] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:53:35] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:53:35] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 14:53:35] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 14:53:35] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 14:53:35] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:53:35] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:53:35] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:53:35] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:53:35] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:53:40] [INF] Attempting to notify message received: SenderId=771931a5-eb85-44d3-b696-c293c2201ac2, ReceiverId=91fa7f1e-b35b-45c2-be74-7359d8b61d04
+[2025-10-16 14:53:48] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:53:48] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 14:53:48] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:53:48] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:53:48] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:53:53] [INF] Attempting to notify message received: SenderId=771931a5-eb85-44d3-b696-c293c2201ac2, ReceiverId=91fa7f1e-b35b-45c2-be74-7359d8b61d04
+[2025-10-16 14:54:01] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:54:01] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 14:54:01] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:54:01] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:54:01] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 14:54:06] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:54:06] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:54:06] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 14:54:06] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:54:06] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:59:15] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:59:15] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:59:15] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:59:15] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:59:15] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 14:59:15] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:59:15] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 14:59:15] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:59:15] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 14:59:15] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:59:17] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:59:18] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 14:59:18] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 14:59:18] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:59:18] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:59:22] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 14:59:29] [INF] Attempting to notify message received: SenderId=771931a5-eb85-44d3-b696-c293c2201ac2, ReceiverId=91fa7f1e-b35b-45c2-be74-7359d8b61d04
+[2025-10-16 14:59:40] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 14:59:40] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:59:40] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:59:40] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:59:40] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 14:59:42] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 14:59:42] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 14:59:42] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 14:59:42] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 14:59:42] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 14:59:49] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 15:00:37] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 15:00:40] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:00:40] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:00:40] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:00:40] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:00:40] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:00:44] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 15:00:49] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 15:00:59] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:00:59] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:00:59] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:00:59] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:00:59] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:01:03] [INF] Attempting to notify message received: SenderId=771931a5-eb85-44d3-b696-c293c2201ac2, ReceiverId=91fa7f1e-b35b-45c2-be74-7359d8b61d04
+[2025-10-16 15:04:10] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:04:10] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:04:10] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:04:10] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:04:10] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:04:10] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:04:10] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:04:10] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:04:10] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:04:11] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:04:15] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:04:15] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:04:15] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:04:15] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:04:15] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:04:16] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:04:16] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:04:16] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:04:16] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:04:16] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:04:22] [INF] Attempting to notify message received: SenderId=771931a5-eb85-44d3-b696-c293c2201ac2, ReceiverId=91fa7f1e-b35b-45c2-be74-7359d8b61d04
+[2025-10-16 15:04:28] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 15:04:37] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:04:37] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:04:37] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:04:37] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:04:37] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:04:40] [INF] Attempting to notify message received: SenderId=771931a5-eb85-44d3-b696-c293c2201ac2, ReceiverId=91fa7f1e-b35b-45c2-be74-7359d8b61d04
+[2025-10-16 15:04:47] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:04:47] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:04:47] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:04:47] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:04:47] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:09:26] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:09:26] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:09:26] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:09:26] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:09:26] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:09:26] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:09:26] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:09:27] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:09:27] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:09:27] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:09:35] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 15:09:38] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:09:38] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:09:38] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:09:38] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:09:38] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:09:43] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 15:11:24] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:11:24] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:11:24] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:11:24] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:11:24] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:11:33] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:11:33] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:11:33] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:11:33] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:11:33] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:11:38] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:11:38] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:11:38] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:11:38] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:11:38] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:12:07] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 15:12:17] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:12:17] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:12:17] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:12:17] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:12:17] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:13:59] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:13:59] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:13:59] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:13:59] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:13:59] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:13:59] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:13:59] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:13:59] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:13:59] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:13:59] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:14:28] [INF] Attempting to notify message received: SenderId=771931a5-eb85-44d3-b696-c293c2201ac2, ReceiverId=91fa7f1e-b35b-45c2-be74-7359d8b61d04
+[2025-10-16 15:18:07] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:18:08] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:18:08] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:18:08] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:18:08] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:18:08] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:18:08] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:18:08] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:18:08] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:18:08] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:18:22] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:18:22] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:18:22] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:18:22] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:18:22] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:18:22] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:18:22] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:18:22] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:18:22] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:18:22] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:18:37] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:18:37] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:18:37] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:18:37] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:18:37] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:18:40] [INF] Attempting to notify message received: SenderId=771931a5-eb85-44d3-b696-c293c2201ac2, ReceiverId=91fa7f1e-b35b-45c2-be74-7359d8b61d04
+[2025-10-16 15:18:41] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:18:41] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:18:41] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:18:41] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:18:41] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:18:47] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:18:47] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:18:47] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:18:47] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:18:47] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:18:50] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 15:18:50] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:18:50] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:18:50] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:18:50] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:18:50] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:18:50] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:18:50] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:18:50] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:18:50] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:18:50] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:18:53] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:18:53] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:18:53] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:18:53] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:18:53] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:20:48] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:20:48] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:20:48] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:20:48] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:20:48] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:20:48] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:20:48] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:20:48] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:20:48] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:20:48] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:21:17] [INF] Retrieved all Category entities
+[2025-10-16 15:21:31] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:21:31] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:21:31] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:21:31] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:21:31] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:21:31] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:21:31] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:21:31] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:21:31] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:21:31] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:22:09] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:22:09] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:22:09] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:22:09] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:22:09] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:22:10] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:22:10] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:22:10] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:22:10] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:22:10] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:22:13] [INF] Attempting to notify message received: SenderId=771931a5-eb85-44d3-b696-c293c2201ac2, ReceiverId=91fa7f1e-b35b-45c2-be74-7359d8b61d04
+[2025-10-16 15:22:13] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:22:13] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:22:13] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:22:13] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:22:13] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:22:18] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:22:18] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:22:18] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:22:18] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:22:18] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:22:21] [INF] Attempting to notify message received: SenderId=771931a5-eb85-44d3-b696-c293c2201ac2, ReceiverId=91fa7f1e-b35b-45c2-be74-7359d8b61d04
+[2025-10-16 15:22:21] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:22:21] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:22:21] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:22:21] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:22:21] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:22:23] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:22:23] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:22:23] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:22:23] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:22:23] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:22:25] [INF] Attempting to notify message received: SenderId=771931a5-eb85-44d3-b696-c293c2201ac2, ReceiverId=91fa7f1e-b35b-45c2-be74-7359d8b61d04
+[2025-10-16 15:22:25] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:22:25] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:22:25] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:22:25] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:22:25] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:22:43] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:22:43] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:22:43] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:22:43] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:22:43] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:22:50] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:22:50] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:22:50] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:22:50] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:22:50] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:22:51] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 15:22:51] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:22:51] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:22:51] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:22:52] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:22:52] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:22:52] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:22:52] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:22:52] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:22:52] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:22:52] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:23:04] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 15:23:04] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:23:04] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:23:04] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:23:04] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:23:04] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:23:04] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:23:04] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:23:04] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:23:04] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:23:04] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:23:09] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 15:23:09] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:23:09] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:23:09] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:23:09] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:23:09] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:23:09] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:23:09] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:23:09] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:23:09] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:23:09] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:23:16] [INF] Attempting to notify message received: SenderId=771931a5-eb85-44d3-b696-c293c2201ac2, ReceiverId=91fa7f1e-b35b-45c2-be74-7359d8b61d04
+[2025-10-16 15:23:16] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:23:16] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:23:16] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:23:16] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:23:16] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:23:16] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:23:16] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:23:16] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:23:16] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:23:16] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:23:25] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 15:23:25] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:23:25] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:23:25] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:23:25] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:23:25] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:23:25] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:23:25] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:23:25] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:23:25] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:23:25] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:25:47] [INF] Attempting to notify message received: SenderId=771931a5-eb85-44d3-b696-c293c2201ac2, ReceiverId=91fa7f1e-b35b-45c2-be74-7359d8b61d04
+[2025-10-16 15:26:10] [INF] Attempting to notify message received: SenderId=771931a5-eb85-44d3-b696-c293c2201ac2, ReceiverId=91fa7f1e-b35b-45c2-be74-7359d8b61d04
+[2025-10-16 15:26:17] [INF] Attempting to notify message received: SenderId=771931a5-eb85-44d3-b696-c293c2201ac2, ReceiverId=91fa7f1e-b35b-45c2-be74-7359d8b61d04
+[2025-10-16 15:26:27] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 15:26:33] [INF] Retrieved all Category entities
+[2025-10-16 15:26:35] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:26:50] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:26:50] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:26:50] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:26:50] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:26:50] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:26:50] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:26:50] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:26:50] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:26:50] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:26:50] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:26:50] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:27:01] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:27:01] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:27:02] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:27:02] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:27:02] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:27:05] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 15:27:05] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:27:05] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:27:05] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:27:05] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:27:05] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:27:10] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:27:10] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:27:10] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:27:10] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:27:10] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:27:12] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=8488a769-373a-4a63-8c2a-22faab0796e4
+[2025-10-16 15:27:12] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:27:12] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:27:12] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:27:12] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:27:12] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:27:20] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:27:20] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:27:20] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:27:20] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:27:20] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:27:24] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 15:27:24] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:27:24] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:27:24] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:27:24] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:27:24] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:27:30] [INF] Retrieved all Category entities
+[2025-10-16 15:27:32] [INF] Retrieved all Category entities
+[2025-10-16 15:27:33] [INF] Retrieved all Category entities
+[2025-10-16 15:27:41] [INF] Retrieved all District entities
+[2025-10-16 15:27:46] [INF] Retrieved all MetroStation entities
+[2025-10-16 15:27:54] [INF] Retrieved all Agency entities
+[2025-10-16 15:28:11] [INF] New listing created with ID: 1036
+[2025-10-16 15:28:12] [INF] Retrieved all Category entities
+[2025-10-16 15:28:22] [INF] Retrieved all Category entities
+[2025-10-16 15:28:24] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:28:27] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:28:27] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:28:27] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:28:27] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:28:27] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:28:27] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:28:27] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:28:27] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:28:27] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:28:27] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:28:27] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:28:31] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 15:28:31] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:28:31] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:28:31] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:28:31] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:28:31] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:28:31] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:28:35] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:28:35] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:28:35] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:28:35] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:28:35] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:28:35] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:28:36] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:28:36] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:28:36] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:28:36] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:28:36] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:28:36] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:28:39] [INF] Attempting to notify message received: SenderId=771931a5-eb85-44d3-b696-c293c2201ac2, ReceiverId=91fa7f1e-b35b-45c2-be74-7359d8b61d04
+[2025-10-16 15:28:39] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:28:39] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:28:39] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:28:39] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:28:39] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:28:39] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:28:39] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:28:39] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:28:39] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:28:39] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:28:39] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:28:39] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:28:42] [INF] Attempting to notify message received: SenderId=771931a5-eb85-44d3-b696-c293c2201ac2, ReceiverId=91fa7f1e-b35b-45c2-be74-7359d8b61d04
+[2025-10-16 15:28:42] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:28:42] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:28:42] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:28:43] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:28:43] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:28:43] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:28:43] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:28:43] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:28:43] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:28:43] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:28:43] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:28:43] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:28:50] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 15:28:50] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:28:50] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:28:50] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:28:50] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:28:50] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:28:50] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:28:50] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:28:50] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:28:50] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:28:50] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:28:50] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:28:50] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:29:06] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 15:29:06] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:29:06] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:29:06] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:29:06] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:29:06] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:29:06] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:29:06] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:29:06] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:29:06] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:29:06] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:29:06] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:29:06] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:29:59] [INF] Attempting to notify message received: SenderId=771931a5-eb85-44d3-b696-c293c2201ac2, ReceiverId=91fa7f1e-b35b-45c2-be74-7359d8b61d04
+[2025-10-16 15:29:59] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:30:00] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:30:00] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:30:00] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:30:00] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:30:00] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:30:00] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:30:00] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:30:00] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:30:00] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:30:00] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:30:00] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:31:13] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 15:31:14] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:31:14] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:31:14] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:31:14] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:31:14] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:31:14] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:31:14] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:31:14] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:31:14] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:31:14] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:31:14] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:31:14] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:31:22] [INF] Attempting to notify message received: SenderId=771931a5-eb85-44d3-b696-c293c2201ac2, ReceiverId=91fa7f1e-b35b-45c2-be74-7359d8b61d04
+[2025-10-16 15:31:22] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:31:22] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:31:22] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:31:22] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:31:22] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:31:22] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:31:22] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:31:22] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:31:22] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:31:22] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:31:22] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:31:22] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:31:43] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:31:43] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:31:43] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:31:43] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:31:43] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:31:43] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:31:50] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 15:31:50] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:31:50] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:31:50] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:31:50] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:31:50] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:31:50] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:31:53] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:31:53] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:31:53] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:31:53] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:31:53] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:31:53] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:32:14] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:32:14] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:32:14] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:32:14] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:32:14] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:32:14] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:32:17] [INF] Retrieved all Category entities
+[2025-10-16 15:32:20] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 15:32:20] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:32:20] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:32:20] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:32:20] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:32:20] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:32:20] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:32:23] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:32:23] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:32:23] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:32:23] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:32:23] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:32:23] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:32:24] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:32:24] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:32:24] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:32:24] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:32:24] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:32:24] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:32:30] [INF] Attempting to notify message received: SenderId=771931a5-eb85-44d3-b696-c293c2201ac2, ReceiverId=91fa7f1e-b35b-45c2-be74-7359d8b61d04
+[2025-10-16 15:32:30] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:32:30] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:32:30] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:32:30] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:32:30] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:32:30] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:32:30] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:32:30] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:32:30] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:32:30] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:32:30] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:32:30] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:32:43] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 15:32:43] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:32:43] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:32:43] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:32:43] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:32:43] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:32:43] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:32:43] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:32:43] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:32:43] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:32:43] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:32:43] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:32:43] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:32:50] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 15:32:50] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:32:50] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:32:50] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:32:50] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:32:50] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:32:50] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:32:50] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:32:50] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:32:50] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:32:50] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:32:50] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:32:50] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:32:52] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 15:32:52] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:32:52] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:32:52] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:32:52] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:32:52] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:32:53] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:32:53] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:32:53] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:32:53] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:32:53] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:32:53] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:32:53] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:32:55] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:32:55] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:32:55] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:32:55] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:32:55] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:32:55] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:32:57] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:32:57] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:32:57] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:32:57] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:32:57] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:32:57] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:33:01] [INF] Retrieved all Category entities
+[2025-10-16 15:33:02] [INF] Retrieved all Category entities
+[2025-10-16 15:33:19] [INF] Retrieved all Category entities
+[2025-10-16 15:33:19] [INF] Retrieved all Category entities
+[2025-10-16 15:33:21] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:33:21] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:33:21] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:33:21] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:33:21] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:33:21] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:33:23] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:33:23] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:33:23] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:33:23] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:33:23] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:33:23] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:33:25] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:33:25] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:33:25] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:33:25] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:33:25] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:33:25] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:33:30] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 15:33:30] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:33:30] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:33:30] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:33:30] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:33:30] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:33:30] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:33:32] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:33:32] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:33:32] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:33:32] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:33:32] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:33:32] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:33:34] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:33:34] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:33:34] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:33:34] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:33:34] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:33:34] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:33:36] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:33:36] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:33:36] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:33:36] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:33:36] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:33:36] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:33:43] [INF] Retrieved all Category entities
+[2025-10-16 15:33:44] [INF] Retrieved all Category entities
+[2025-10-16 15:33:50] [INF] Listing with ID: 1033 retrieved.
+[2025-10-16 15:33:53] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:33:53] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:33:53] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:33:53] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:33:53] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:33:53] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:33:53] [INF] Listing with ID: 1033 retrieved.
+[2025-10-16 15:33:58] [INF] Retrieved all Category entities
+[2025-10-16 15:34:12] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:34:14] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:34:14] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:34:14] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:34:14] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:34:14] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:34:14] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:34:14] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:34:15] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:34:15] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:34:15] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:34:15] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:34:15] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:34:15] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:34:22] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 15:34:22] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:34:22] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:34:22] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:34:22] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:34:22] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:34:22] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:34:22] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:34:24] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:34:24] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:34:24] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:34:24] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:34:24] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:34:24] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:34:24] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:34:26] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:34:26] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:34:26] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:34:26] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:34:26] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:34:26] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:34:26] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:34:29] [INF] Attempting to notify message received: SenderId=771931a5-eb85-44d3-b696-c293c2201ac2, ReceiverId=91fa7f1e-b35b-45c2-be74-7359d8b61d04
+[2025-10-16 15:34:29] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:34:29] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:34:29] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:34:29] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:34:29] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:34:29] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:34:29] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:34:29] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:34:29] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:34:29] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:34:29] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:34:29] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:34:29] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:34:29] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:37:36] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:37:36] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:37:36] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:37:36] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:37:36] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:37:36] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:37:36] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:37:36] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:37:36] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:37:36] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:37:36] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:37:36] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:37:36] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:37:36] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:37:36] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:37:36] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:37:36] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:37:37] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:37:37] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:37:37] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:37:37] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:38:58] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:38:58] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:38:58] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:38:58] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:38:58] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:38:58] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:38:58] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:38:58] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:38:58] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:38:58] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:38:58] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:38:58] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:38:58] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:38:58] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:38:58] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:38:58] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:38:58] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:38:58] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:38:58] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:38:58] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:38:58] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:41:12] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 15:41:12] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:41:12] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:41:12] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:41:12] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:41:12] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:41:12] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:41:12] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:41:16] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:41:16] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:41:16] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:41:16] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:41:16] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:41:16] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:41:16] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:41:29] [INF] Attempting to notify message received: SenderId=771931a5-eb85-44d3-b696-c293c2201ac2, ReceiverId=91fa7f1e-b35b-45c2-be74-7359d8b61d04
+[2025-10-16 15:41:29] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:41:30] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:41:30] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:41:30] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:41:30] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:41:30] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:41:30] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:41:30] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:41:30] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:41:30] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:41:30] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:41:30] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:41:30] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:41:30] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:41:40] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:41:40] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:41:40] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:41:40] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:41:40] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:41:40] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:41:40] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:41:40] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:41:40] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:41:40] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:41:40] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:41:40] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:41:40] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:41:40] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:41:50] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:41:50] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:41:50] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:41:50] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:41:50] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:41:50] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:41:50] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:42:34] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 15:42:34] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:42:34] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:42:34] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:42:34] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:42:34] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:42:34] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:42:35] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:42:42] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 15:42:42] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:42:42] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:42:42] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:42:42] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:42:42] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:42:42] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:42:42] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:42:52] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:42:52] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:42:52] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:42:52] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:42:52] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:42:52] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:42:52] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:42:57] [INF] Attempting to notify message received: SenderId=771931a5-eb85-44d3-b696-c293c2201ac2, ReceiverId=91fa7f1e-b35b-45c2-be74-7359d8b61d04
+[2025-10-16 15:42:57] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:42:57] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:42:57] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:42:57] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:42:57] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:42:57] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:42:57] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:42:57] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:42:57] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:42:57] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:42:57] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:42:57] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:42:57] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:42:57] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:43:02] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:43:11] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:43:31] [INF] User Login in: elicabbarov88@gmail.com
+[2025-10-16 15:43:31] [INF] JWT token yaradıldı: elicabbarov88@gmail.com, eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI5MWZhN2YxZS1iMzViLTQ1YzItYmU3NC03MzU5ZDhiNjFkMDQiLCJ1bmlxdWVfbmFtZSI6IiIsImVtYWlsIjoiZWxpY2FiYmFyb3Y4OEBnbWFpbC5jb20iLCJyb2xlIjoiVXNlciIsIm5iZiI6MTc2MDY1NDYxMSwiZXhwIjoxNzYwNjU4MjExLCJpYXQiOjE3NjA2NTQ2MTEsImlzcyI6IkV2VGFwLmF6IiwiYXVkIjoiRXZUYXAuYXoifQ.KvmQySsgjBm4qf9zGIiAUkVegv3SF6RlkKanf3rBWjw
+[2025-10-16 15:43:33] [INF] Retrieved all Category entities
+[2025-10-16 15:43:36] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:43:36] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:43:36] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:43:36] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:43:36] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:43:36] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:43:36] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:43:52] [INF] Google ilə login oldu: licabbarov1@gmail.com
+[2025-10-16 15:43:52] [INF] JWT token yaradıldı: licabbarov1@gmail.com, eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI3NzE5MzFhNS1lYjg1LTQ0ZDMtYjY5Ni1jMjkzYzIyMDFhYzIiLCJ1bmlxdWVfbmFtZSI6ImxpY2FiYmFyb3YxIiwiZW1haWwiOiJsaWNhYmJhcm92MUBnbWFpbC5jb20iLCJyb2xlIjpbIkFkbWluIiwiVXNlciJdLCJuYmYiOjE3NjA2NTQ2MzIsImV4cCI6MTc2MDY1ODIzMiwiaWF0IjoxNzYwNjU0NjMyLCJpc3MiOiJFdlRhcC5heiIsImF1ZCI6IkV2VGFwLmF6In0.pSKBknGWKEQkJuIJGy8TVMrekC38hrQbZxL0QjXhXIY
+[2025-10-16 15:43:52] [WRN] Unable to configure Browser Link script injection on the response. 
+[2025-10-16 15:43:52] [WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+[2025-10-16 15:43:53] [INF] Retrieved all Category entities
+[2025-10-16 15:43:55] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:43:55] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:43:55] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:43:55] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:43:55] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:43:55] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:43:55] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:43:56] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:43:56] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:43:56] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:43:56] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:43:56] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:43:56] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:43:56] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:43:59] [INF] Attempting to notify message received: SenderId=771931a5-eb85-44d3-b696-c293c2201ac2, ReceiverId=91fa7f1e-b35b-45c2-be74-7359d8b61d04
+[2025-10-16 15:43:59] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:43:59] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:43:59] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:43:59] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:43:59] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:43:59] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:43:59] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:44:02] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:44:02] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:44:02] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:44:02] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:44:02] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:44:02] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:44:02] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:44:05] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 15:44:05] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:44:05] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:44:05] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:44:05] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:44:05] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:44:05] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:44:05] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:44:05] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:44:05] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:44:05] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:44:05] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:44:05] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:44:05] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:44:05] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:47:22] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:47:22] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:47:22] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:47:22] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:47:22] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:47:22] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:47:22] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:47:22] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:47:22] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:47:22] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:47:22] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:47:22] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:47:22] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:47:22] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:47:24] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:47:24] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:47:24] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:47:24] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:47:24] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:47:24] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:47:24] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:47:40] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:47:40] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:47:40] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:47:40] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:47:40] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:47:40] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:47:40] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:47:45] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 15:47:45] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:47:45] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:47:45] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:47:45] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:47:45] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:47:45] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:47:45] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:47:45] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:47:45] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:47:45] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:47:45] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:47:45] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:47:45] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:47:45] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:48:04] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 15:48:05] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:48:05] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:48:05] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:48:05] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:48:05] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:48:05] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:48:05] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:48:05] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:48:05] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:48:05] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:48:05] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:48:05] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:48:05] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:48:05] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:48:23] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:48:23] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:48:23] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:48:23] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:48:23] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:48:23] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:48:23] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:48:23] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:48:23] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:48:23] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:48:23] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:48:23] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:48:23] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:48:23] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:48:27] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:48:27] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:48:27] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:48:27] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:48:27] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:48:27] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:48:27] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:48:29] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:48:29] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:48:29] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:48:29] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:48:29] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:48:29] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:48:29] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:48:31] [INF] Attempting to notify message received: SenderId=771931a5-eb85-44d3-b696-c293c2201ac2, ReceiverId=91fa7f1e-b35b-45c2-be74-7359d8b61d04
+[2025-10-16 15:48:31] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:48:31] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:48:31] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:48:31] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:48:31] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:48:31] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:48:31] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:48:31] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:48:31] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:48:31] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:48:31] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:48:31] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:48:31] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:48:31] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:48:39] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 15:48:40] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:48:40] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:48:40] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:48:40] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:48:40] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:48:40] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:48:40] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:48:40] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:48:40] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:48:40] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:48:40] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:48:40] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:48:40] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:48:40] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:48:54] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 15:48:54] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:48:54] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:48:54] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:48:54] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:48:54] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:48:54] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:48:54] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:48:54] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:48:54] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:48:54] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:48:54] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:48:54] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:48:54] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:48:54] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:51:03] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:51:03] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:51:03] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:51:03] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:51:03] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:51:03] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:51:03] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:51:03] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:51:03] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:51:03] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:51:03] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:51:03] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:51:03] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:51:03] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:51:04] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:51:04] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:51:04] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:51:04] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:51:04] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:51:04] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:51:04] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:51:05] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:51:05] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:51:05] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:51:05] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:51:05] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:51:05] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:51:05] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:51:10] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 15:51:10] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:51:10] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:51:10] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:51:10] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:51:10] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:51:10] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:51:10] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:51:10] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:51:10] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:51:10] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:51:10] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:51:10] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:51:10] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:51:10] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:51:21] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 15:51:21] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:51:21] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:51:21] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:51:21] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:51:21] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:51:21] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:51:21] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:51:21] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:51:21] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:51:21] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:51:21] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:51:21] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:51:21] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:51:21] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:51:31] [INF] Attempting to notify message received: SenderId=771931a5-eb85-44d3-b696-c293c2201ac2, ReceiverId=91fa7f1e-b35b-45c2-be74-7359d8b61d04
+[2025-10-16 15:51:31] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:51:31] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:51:31] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:51:31] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:51:31] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:51:31] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:51:31] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:51:31] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:51:31] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:51:31] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:51:31] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:51:31] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:51:31] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:51:31] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:53:06] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:53:06] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:53:06] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:53:06] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:53:06] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:53:06] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:53:06] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:53:06] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:53:06] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:53:06] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:53:06] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:53:06] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:53:06] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:53:06] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:53:27] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:53:27] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:53:27] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:53:27] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:53:27] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:53:27] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:53:27] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:53:27] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:53:27] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:53:27] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:53:27] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:53:27] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:53:27] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:53:27] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:53:35] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:53:35] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:53:35] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:53:35] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:53:35] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:53:35] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:53:35] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:53:38] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:53:38] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:53:38] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:53:38] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:53:38] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:53:38] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:53:38] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:53:44] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 15:53:44] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:53:44] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:53:44] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:53:44] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:53:44] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:53:44] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:53:44] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:53:44] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:53:44] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:53:44] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:53:44] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:53:44] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:53:44] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:53:44] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:54:39] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:54:39] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:54:39] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:54:39] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:54:39] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:54:39] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:54:39] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:54:39] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:54:39] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:54:39] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:54:39] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:54:39] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:54:39] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:54:39] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:54:46] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:54:46] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:54:46] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:54:46] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:54:46] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:54:46] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:54:46] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:54:49] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 15:54:49] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:54:49] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:54:49] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:54:49] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:54:49] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:54:49] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:54:49] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:54:54] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:54:54] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:54:54] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:54:54] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:54:54] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:54:54] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:54:54] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:54:59] [INF] Attempting to notify message received: SenderId=771931a5-eb85-44d3-b696-c293c2201ac2, ReceiverId=91fa7f1e-b35b-45c2-be74-7359d8b61d04
+[2025-10-16 15:54:59] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:54:59] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:54:59] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:54:59] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:54:59] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:54:59] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:54:59] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:54:59] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:54:59] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:54:59] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:54:59] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:54:59] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:54:59] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:54:59] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:55:04] [INF] Attempting to notify message received: SenderId=771931a5-eb85-44d3-b696-c293c2201ac2, ReceiverId=91fa7f1e-b35b-45c2-be74-7359d8b61d04
+[2025-10-16 15:55:04] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:55:04] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:55:04] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:55:04] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:55:04] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:55:04] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:55:04] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:55:04] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:55:04] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:55:04] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:55:04] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:55:04] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:55:04] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:55:04] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:55:08] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 15:55:08] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:55:08] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:55:08] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:55:08] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:55:08] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:55:08] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:55:08] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:55:08] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:55:08] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:55:08] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:55:08] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:55:08] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:55:08] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:55:08] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:55:16] [INF] Retrieved all Category entities
+[2025-10-16 15:55:19] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:55:20] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:55:20] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:55:20] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:55:20] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:55:20] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:55:20] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:55:21] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:55:21] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:55:21] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:55:21] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:55:21] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:55:21] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:55:21] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:55:21] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:55:27] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 15:55:27] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:55:27] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:55:27] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:55:27] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:55:27] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:55:27] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:55:27] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:55:33] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:55:33] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:55:33] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:55:33] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:55:33] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:55:33] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:55:33] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:55:35] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:55:35] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:55:35] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:55:35] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:55:35] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:55:35] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:55:35] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:55:41] [INF] Attempting to notify message received: SenderId=771931a5-eb85-44d3-b696-c293c2201ac2, ReceiverId=91fa7f1e-b35b-45c2-be74-7359d8b61d04
+[2025-10-16 15:55:41] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:55:41] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:55:41] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 15:55:41] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 15:55:41] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:55:41] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 15:55:41] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:55:41] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 15:55:41] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:55:41] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 15:55:41] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 15:55:41] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:55:41] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 15:55:41] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 15:56:59] [INF] Retrieved all Category entities
+[2025-10-16 15:57:02] [INF] Retrieved all Category entities
+[2025-10-16 16:01:16] [INF] Retrieved all Category entities
+[2025-10-16 16:01:16] [INF] Retrieved all Category entities
+[2025-10-16 16:01:20] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 16:01:20] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 16:01:20] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 16:01:20] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 16:01:20] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 16:01:20] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 16:01:20] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 16:01:24] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 16:01:24] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 16:01:24] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 16:01:24] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 16:01:24] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 16:01:24] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 16:01:24] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 16:01:34] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 16:01:34] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 16:01:34] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 16:01:34] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 16:01:34] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 16:01:34] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 16:01:34] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 16:01:39] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 16:01:39] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 16:01:39] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 16:01:39] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 16:01:39] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 16:01:39] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 16:01:39] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 16:01:39] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 16:01:42] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 16:01:42] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 16:01:42] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 16:01:42] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 16:01:42] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 16:01:42] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 16:01:42] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 16:01:46] [INF] Attempting to notify message received: SenderId=771931a5-eb85-44d3-b696-c293c2201ac2, ReceiverId=91fa7f1e-b35b-45c2-be74-7359d8b61d04
+[2025-10-16 16:01:46] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 16:01:46] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 16:01:46] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 16:01:46] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 16:01:46] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 16:01:46] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 16:01:46] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 16:01:46] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 16:01:46] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 16:01:46] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 16:01:46] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 16:01:46] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 16:01:46] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 16:01:46] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 16:01:56] [INF] Attempting to notify message received: SenderId=771931a5-eb85-44d3-b696-c293c2201ac2, ReceiverId=91fa7f1e-b35b-45c2-be74-7359d8b61d04
+[2025-10-16 16:01:56] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 16:01:56] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 16:01:56] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 16:01:56] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 16:01:56] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 16:01:56] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 16:01:56] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 16:01:58] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 16:01:58] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 16:01:58] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 16:01:58] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 16:01:58] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 16:01:58] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 16:01:58] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 16:02:04] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 16:02:04] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 16:02:04] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 16:02:04] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 16:02:04] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 16:02:04] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 16:02:05] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 16:02:07] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 16:02:07] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 16:02:07] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 16:02:07] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 16:02:07] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 16:02:07] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 16:02:07] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 16:02:11] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 16:02:11] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 16:02:11] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 16:02:11] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 16:02:11] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 16:02:11] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 16:02:11] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 16:02:11] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 16:02:13] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 16:02:13] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 16:02:14] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 16:02:14] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 16:02:14] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 16:02:14] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 16:02:14] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 16:02:19] [INF] Retrieved all Category entities
+[2025-10-16 16:02:22] [INF] Retrieved all Category entities
+[2025-10-16 16:02:26] [INF] Retrieved all Category entities
+[2025-10-16 16:02:26] [INF] Retrieved all Category entities
+[2025-10-16 16:02:29] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 16:02:29] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 16:02:29] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 16:02:29] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 16:02:29] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 16:02:29] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 16:02:29] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 16:02:30] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 16:02:30] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 16:02:30] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 16:02:30] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 16:02:30] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 16:02:30] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 16:02:30] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 16:02:32] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 16:02:32] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 16:02:32] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 16:02:32] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 16:02:32] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 16:02:32] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 16:02:32] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 16:02:35] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 16:02:35] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 16:02:35] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 16:02:35] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 16:02:35] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 16:02:35] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 16:02:35] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 16:02:35] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 16:02:37] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 16:02:37] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 16:02:37] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 16:02:37] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 16:02:37] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 16:02:37] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 16:02:37] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 16:02:41] [INF] Attempting to notify message received: SenderId=771931a5-eb85-44d3-b696-c293c2201ac2, ReceiverId=91fa7f1e-b35b-45c2-be74-7359d8b61d04
+[2025-10-16 16:02:42] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 16:02:42] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 16:02:42] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 16:02:42] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 16:02:42] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 16:02:42] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 16:02:42] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 16:02:42] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 16:02:42] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 16:02:42] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 16:02:42] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 16:02:42] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 16:02:42] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 16:02:42] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 16:02:49] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 16:02:49] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 16:02:49] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 16:02:49] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 16:02:49] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 16:02:49] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 16:02:49] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 16:02:50] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 16:02:50] [INF] Listing with ID: 21 retrieved.
+[2025-10-16 16:02:50] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 16:02:50] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 16:02:50] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 16:02:50] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 16:02:50] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 16:03:03] [INF] Retrieved all Category entities
+[2025-10-16 16:03:06] [INF] Retrieved all Category entities
+[2025-10-16 16:03:19] [INF] Listing with ID: 21 has been deleted.
+[2025-10-16 16:03:28] [INF] Listing with ID: 22 has been deleted.
+[2025-10-16 16:03:35] [INF] Retrieved all Category entities
+[2025-10-16 16:03:45] [INF] Retrieved all Category entities
+[2025-10-16 16:04:43] [INF] Retrieved all Category entities
+[2025-10-16 16:04:43] [INF] Retrieved all Category entities
+[2025-10-16 16:04:45] [INF] Listing with ID: 1035 retrieved.
+[2025-10-16 16:07:41] [INF] Retrieved all Category entities
+[2025-10-16 16:10:47] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 16:10:51] [INF] Listing with ID: 1034 retrieved.
+[2025-10-16 16:10:56] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 16:11:04] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 16:11:59] [INF] Retrieved all Category entities
+[2025-10-16 16:11:59] [INF] Retrieved all Category entities
+[2025-10-16 16:12:02] [INF] Listing with ID: 23 retrieved.
+[2025-10-16 16:12:22] [INF] Retrieved all Category entities
+[2025-10-16 16:12:29] [INF] Retrieved all Category entities
+[2025-10-16 16:12:35] [INF] Retrieved all Category entities
+[2025-10-16 16:12:35] [INF] Retrieved all Category entities
+[2025-10-16 16:12:37] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 16:12:43] [INF] Listing with ID: 23 retrieved.
+[2025-10-16 16:12:45] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 16:12:49] [INF] Listing with ID: 1034 retrieved.
+[2025-10-16 16:13:13] [INF] Retrieved all District entities
+[2025-10-16 16:13:26] [INF] Retrieved all District entities
+[2025-10-16 16:13:34] [INF] Retrieved all MetroStation entities
+[2025-10-16 16:13:51] [INF] New listing created with ID: 1037
+[2025-10-16 16:13:52] [INF] Retrieved all Category entities
+[2025-10-16 16:13:56] [INF] Listing with ID: 1037 retrieved.
+[2025-10-16 16:16:02] [INF] Listing with ID: 1037 retrieved.
+[2025-10-16 16:17:57] [INF] Listing with ID: 1037 retrieved.
+[2025-10-16 16:18:13] [INF] Listing with ID: 1037 retrieved.
+[2025-10-16 16:21:38] [INF] Retrieved all Category entities
+[2025-10-16 16:21:54] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 16:21:59] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 16:22:01] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 16:22:02] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 16:22:04] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 16:22:05] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 16:22:27] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 16:22:46] [INF] Listing with ID: 1037 retrieved.
+[2025-10-16 16:22:57] [INF] Listing with ID: 1037 retrieved.
+[2025-10-16 16:23:06] [INF] Listing with ID: 1037 retrieved.
+[2025-10-16 16:23:15] [INF] Listing with ID: 1037 retrieved.
+[2025-10-16 16:23:25] [INF] Listing with ID: 1037 retrieved.
+[2025-10-16 16:25:49] [INF] Listing with ID: 1037 retrieved.
+[2025-10-16 16:28:46] [INF] Listing with ID: 1037 retrieved.
+[2025-10-16 16:29:22] [INF] Listing with ID: 1037 retrieved.
+[2025-10-16 16:29:53] [INF] Listing with ID: 1037 retrieved.
+[2025-10-16 16:30:14] [INF] Listing with ID: 1037 retrieved.
+[2025-10-16 16:30:24] [INF] Listing with ID: 1037 retrieved.
+[2025-10-16 16:30:26] [INF] Listing with ID: 1037 retrieved.
+[2025-10-16 16:30:31] [INF] Listing with ID: 1037 retrieved.
+[2025-10-16 16:30:41] [INF] Listing with ID: 1037 retrieved.
+[2025-10-16 16:31:10] [INF] Listing with ID: 1037 retrieved.
+[2025-10-16 16:33:34] [INF] Listing with ID: 1037 retrieved.
+[2025-10-16 16:33:45] [INF] Listing with ID: 1037 retrieved.
+[2025-10-16 16:34:17] [INF] Listing with ID: 1037 retrieved.
+[2025-10-16 16:34:39] [INF] Listing with ID: 1037 retrieved.
+[2025-10-16 16:34:55] [INF] Listing with ID: 1037 retrieved.
+[2025-10-16 16:34:57] [INF] Listing with ID: 1037 retrieved.
+[2025-10-16 16:35:02] [INF] Listing with ID: 1037 retrieved.
+[2025-10-16 16:39:40] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 16:41:40] [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+[2025-10-16 16:41:40] [INF] Quartz Scheduler created
+[2025-10-16 16:41:40] [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+[2025-10-16 16:41:40] [INF] RAMJobStore initialized.
+[2025-10-16 16:41:40] [INF] Quartz Scheduler 3.15.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+[2025-10-16 16:41:40] [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+[2025-10-16 16:41:40] [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+[2025-10-16 16:41:40] [INF] Adding 1 jobs, 1 triggers.
+[2025-10-16 16:41:40] [INF] Adding job: DEFAULT.ScraperJob
+[2025-10-16 16:41:40] [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+[2025-10-16 16:41:52] [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+[2025-10-16 16:43:09] [INF] Listing with ID: 1037 retrieved.
+[2025-10-16 16:45:08] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 16:45:14] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 16:45:49] [INF] Listing with ID: 23 retrieved.
+[2025-10-16 16:46:00] [INF] Listing with ID: 1033 retrieved.
+[2025-10-16 16:49:17] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 16:49:57] [INF] Retrieved all Category entities
+[2025-10-16 16:50:21] [INF] Retrieved all Category entities
+[2025-10-16 16:50:22] [INF] Retrieved all Category entities
+[2025-10-16 16:50:29] [INF] Retrieved all Category entities
+[2025-10-16 16:50:34] [INF] Retrieved all Category entities
+[2025-10-16 16:50:35] [INF] Retrieved all Category entities
+[2025-10-16 16:50:37] [INF] Retrieved all Category entities
+[2025-10-16 16:50:39] [INF] Retrieved all Category entities
+[2025-10-16 16:50:41] [INF] Retrieved all Category entities
+[2025-10-16 16:50:45] [INF] Retrieved all Category entities
+[2025-10-16 16:50:49] [INF] Retrieved all Category entities
+[2025-10-16 16:50:53] [INF] Retrieved all Category entities
+[2025-10-16 16:50:57] [INF] Retrieved all Category entities
+[2025-10-16 16:50:59] [INF] Retrieved all Category entities
+[2025-10-16 16:51:10] [INF] Retrieved all Category entities
+[2025-10-16 16:51:12] [INF] Retrieved all Category entities
+[2025-10-16 16:51:14] [INF] Retrieved all Category entities
+[2025-10-16 16:51:17] [INF] Retrieved all Category entities
+[2025-10-16 16:51:19] [INF] Retrieved all Category entities
+[2025-10-16 16:51:20] [INF] Retrieved all Category entities
+[2025-10-16 16:51:25] [INF] Retrieved all Category entities
+[2025-10-16 16:51:26] [INF] Retrieved all Category entities
+[2025-10-16 16:51:27] [INF] Retrieved all Category entities
+[2025-10-16 16:51:42] [INF] Retrieved all Category entities
+[2025-10-16 16:51:45] [INF] Retrieved all Category entities
+[2025-10-16 16:51:47] [INF] Retrieved all Category entities
+[2025-10-16 16:51:51] [INF] Retrieved all Category entities
+[2025-10-16 16:51:52] [INF] Retrieved all Category entities
+[2025-10-16 16:51:55] [INF] Retrieved all Category entities
+[2025-10-16 16:52:00] [INF] Retrieved all Category entities
+[2025-10-16 16:52:18] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 16:52:42] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 16:52:50] [INF] Retrieved all Category entities
+[2025-10-16 16:52:52] [INF] Retrieved all Category entities
+[2025-10-16 16:52:56] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 16:54:40] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 16:55:46] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 16:56:04] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 16:56:12] [INF] Listing with ID: 1037 retrieved.
+[2025-10-16 16:56:16] [INF] Retrieved all Category entities
+[2025-10-16 16:57:08] [INF] Retrieved all Category entities
+[2025-10-16 16:57:12] [INF] Retrieved all Category entities
+[2025-10-16 17:01:05] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 17:01:11] [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+[2025-10-16 17:01:11] [INF] Quartz Scheduler created
+[2025-10-16 17:01:11] [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+[2025-10-16 17:01:11] [INF] RAMJobStore initialized.
+[2025-10-16 17:01:11] [INF] Quartz Scheduler 3.15.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+[2025-10-16 17:01:11] [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+[2025-10-16 17:01:11] [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+[2025-10-16 17:01:11] [INF] Adding 1 jobs, 1 triggers.
+[2025-10-16 17:01:11] [INF] Adding job: DEFAULT.ScraperJob
+[2025-10-16 17:01:11] [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+[2025-10-16 17:01:16] [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+[2025-10-16 17:01:18] [INF] Retrieved all Category entities
+[2025-10-16 17:01:42] [INF] Retrieved all Category entities
+[2025-10-16 17:01:48] [INF] Retrieved all Category entities
+[2025-10-16 17:01:48] [INF] Retrieved all MetroStation entities
+[2025-10-16 17:01:48] [INF] Retrieved all District entities
+[2025-10-16 17:02:03] [INF] Listing with ID: 1037 has been deleted.
+[2025-10-16 17:02:03] [INF] Retrieved all Category entities
+[2025-10-16 17:02:03] [INF] Retrieved all District entities
+[2025-10-16 17:02:03] [INF] Retrieved all MetroStation entities
+[2025-10-16 17:02:08] [INF] Retrieved all Category entities
+[2025-10-16 17:02:08] [INF] Retrieved all MetroStation entities
+[2025-10-16 17:02:08] [INF] Retrieved all District entities
+[2025-10-16 17:02:13] [INF] Retrieved all Category entities
+[2025-10-16 17:02:23] [INF] Retrieved all Category entities
+[2025-10-16 17:02:30] [INF] Listing with ID: 1034 retrieved.
+[2025-10-16 17:02:38] [INF] Listing with ID: 1034 has been deleted.
+[2025-10-16 17:02:38] [INF] Retrieved all Category entities
+[2025-10-16 17:02:38] [INF] Retrieved all District entities
+[2025-10-16 17:02:38] [INF] Retrieved all MetroStation entities
+[2025-10-16 17:02:44] [INF] Retrieved all Category entities
+[2025-10-16 17:02:48] [INF] Listing with ID: 1033 retrieved.
+[2025-10-16 17:02:51] [INF] Listing with ID: 1029 retrieved.
+[2025-10-16 17:02:53] [INF] Listing with ID: 1035 retrieved.
+[2025-10-16 17:02:56] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 17:02:59] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 17:03:01] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 17:03:04] [INF] Listing with ID: 20 retrieved.
+[2025-10-16 17:03:17] [INF] Listing with ID: 20 has been deleted.
+[2025-10-16 17:03:17] [INF] Retrieved all Category entities
+[2025-10-16 17:03:17] [INF] Retrieved all District entities
+[2025-10-16 17:03:17] [INF] Retrieved all MetroStation entities
+[2025-10-16 17:03:25] [INF] Retrieved all Category entities
+[2025-10-16 17:03:32] [INF] Retrieved all Category entities
+[2025-10-16 17:03:32] [INF] Retrieved all MetroStation entities
+[2025-10-16 17:03:32] [INF] Retrieved all District entities
+[2025-10-16 17:03:39] [INF] Retrieved all Category entities
+[2025-10-16 17:03:39] [INF] Retrieved all District entities
+[2025-10-16 17:03:39] [INF] Retrieved all MetroStation entities
+[2025-10-16 17:03:42] [INF] Retrieved all Agency entities
+[2025-10-16 17:03:43] [INF] Retrieved all Category entities
+[2025-10-16 17:03:43] [INF] Retrieved all City entities
+[2025-10-16 17:03:44] [INF] Retrieved all City entities
+[2025-10-16 17:03:44] [INF] Retrieved all Category entities
+[2025-10-16 17:03:45] [INF] Retrieved all City entities
+[2025-10-16 17:03:46] [INF] Retrieved all District entities
+[2025-10-16 17:03:46] [INF] Retrieved all City entities
+[2025-10-16 17:03:47] [INF] Retrieved all MetroStation entities
+[2025-10-16 17:03:49] [INF] Retrieved all Category entities
+[2025-10-16 17:03:49] [INF] Retrieved all MetroStation entities
+[2025-10-16 17:03:49] [INF] Retrieved all District entities
+[2025-10-16 17:04:02] [INF] Retrieved all Agency entities
+[2025-10-16 17:04:05] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 17:04:07] [INF] Retrieved all Category entities
+[2025-10-16 17:04:10] [INF] Retrieved all Agency entities
+[2025-10-16 17:04:14] [INF] Retrieved all Category entities
+[2025-10-16 17:29:22] [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+[2025-10-16 17:29:22] [INF] Quartz Scheduler created
+[2025-10-16 17:29:22] [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+[2025-10-16 17:29:22] [INF] RAMJobStore initialized.
+[2025-10-16 17:29:22] [INF] Quartz Scheduler 3.15.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+[2025-10-16 17:29:22] [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+[2025-10-16 17:29:22] [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+[2025-10-16 17:29:22] [INF] Adding 1 jobs, 1 triggers.
+[2025-10-16 17:29:22] [INF] Adding job: DEFAULT.ScraperJob
+[2025-10-16 17:29:22] [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+[2025-10-16 17:29:39] [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+[2025-10-16 17:29:43] [INF] Retrieved all Category entities
+[2025-10-16 17:29:58] [INF] Retrieved all Category entities
+[2025-10-16 17:30:03] [INF] Retrieved all Category entities
+[2025-10-16 17:30:08] [INF] Retrieved all Category entities
+[2025-10-16 17:30:11] [INF] Retrieved all Category entities
+[2025-10-16 17:30:15] [INF] Retrieved all Agency entities
+[2025-10-16 17:30:16] [INF] Retrieved all Category entities
+[2025-10-16 17:30:32] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 17:30:38] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 17:30:45] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 17:33:09] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 17:33:12] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 17:33:17] [INF] Retrieved all Category entities
+[2025-10-16 17:33:20] [INF] Listing with ID: 1029 retrieved.
+[2025-10-16 17:33:22] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 17:33:25] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 17:33:36] [INF] Google ilə login oldu: licabbarov1@gmail.com
+[2025-10-16 17:33:36] [INF] JWT token yaradıldı: licabbarov1@gmail.com, eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI3NzE5MzFhNS1lYjg1LTQ0ZDMtYjY5Ni1jMjkzYzIyMDFhYzIiLCJ1bmlxdWVfbmFtZSI6ImxpY2FiYmFyb3YxIiwiZW1haWwiOiJsaWNhYmJhcm92MUBnbWFpbC5jb20iLCJyb2xlIjpbIkFkbWluIiwiVXNlciJdLCJuYmYiOjE3NjA2NjEyMTYsImV4cCI6MTc2MDY2NDgxNiwiaWF0IjoxNzYwNjYxMjE2LCJpc3MiOiJFdlRhcC5heiIsImF1ZCI6IkV2VGFwLmF6In0.X-dRBKt1Y06mXj8WJAux-i6hchiworf58Lah3tbJHeY
+[2025-10-16 17:33:36] [WRN] Unable to configure Browser Link script injection on the response. 
+[2025-10-16 17:33:36] [WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+[2025-10-16 17:33:36] [INF] Retrieved all Category entities
+[2025-10-16 17:33:45] [INF] Retrieved all District entities
+[2025-10-16 17:33:52] [INF] Retrieved all MetroStation entities
+[2025-10-16 17:34:19] [INF] New listing created with ID: 1038
+[2025-10-16 17:34:19] [INF] Retrieved all Category entities
+[2025-10-16 17:34:21] [INF] Listing with ID: 1038 retrieved.
+[2025-10-16 17:35:45] [INF] Listing with ID: 1038 retrieved.
+[2025-10-16 17:35:46] [INF] Retrieved all Category entities
+[2025-10-16 17:35:46] [INF] Retrieved all District entities
+[2025-10-16 17:35:46] [INF] Retrieved all MetroStation entities
+[2025-10-16 17:36:28] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 17:36:28] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 17:36:28] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 17:36:28] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 17:36:28] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 17:36:28] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 17:36:28] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 17:36:44] [INF] Retrieved all Category entities
+[2025-10-16 17:36:55] [INF] User Login in: elicabbarov88@gmail.com
+[2025-10-16 17:36:55] [INF] JWT token yaradıldı: elicabbarov88@gmail.com, eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI5MWZhN2YxZS1iMzViLTQ1YzItYmU3NC03MzU5ZDhiNjFkMDQiLCJ1bmlxdWVfbmFtZSI6IiIsImVtYWlsIjoiZWxpY2FiYmFyb3Y4OEBnbWFpbC5jb20iLCJyb2xlIjoiVXNlciIsIm5iZiI6MTc2MDY2MTQxNSwiZXhwIjoxNzYwNjY1MDE1LCJpYXQiOjE3NjA2NjE0MTUsImlzcyI6IkV2VGFwLmF6IiwiYXVkIjoiRXZUYXAuYXoifQ.TGQ-1ZymKbsI8G4WD77PT2bSs6waY90u-2w3XqvQHHQ
+[2025-10-16 17:36:57] [INF] Retrieved all Category entities
+[2025-10-16 17:37:01] [INF] Retrieved all Category entities
+[2025-10-16 17:37:05] [INF] Listing with ID: 1038 retrieved.
+[2025-10-16 17:37:08] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 17:37:08] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 17:37:08] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 17:37:08] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 17:37:08] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 17:37:08] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 17:37:08] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 17:37:08] [INF] Listing with ID: 1038 retrieved.
+[2025-10-16 17:37:08] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 17:37:08] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 17:37:08] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 17:37:08] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 17:37:08] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 17:37:08] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 17:37:08] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 17:37:13] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 17:37:13] [INF] Listing with ID: 1038 retrieved.
+[2025-10-16 17:37:13] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 17:37:13] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 17:37:13] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 17:37:13] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 17:37:13] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 17:37:13] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 17:37:13] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 17:37:15] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 17:37:15] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 17:37:15] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 17:37:15] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 17:37:15] [INF] Listing with ID: 1038 retrieved.
+[2025-10-16 17:37:15] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 17:37:15] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 17:37:15] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 17:37:17] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 17:37:17] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 17:37:17] [INF] Listing with ID: 1038 retrieved.
+[2025-10-16 17:37:17] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 17:37:17] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 17:37:17] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 17:37:17] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 17:37:17] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 17:37:22] [INF] Attempting to notify message received: SenderId=771931a5-eb85-44d3-b696-c293c2201ac2, ReceiverId=91fa7f1e-b35b-45c2-be74-7359d8b61d04
+[2025-10-16 17:37:22] [INF] Listing with ID: 1038 retrieved.
+[2025-10-16 17:37:22] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 17:37:22] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 17:37:22] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 17:37:22] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 17:37:22] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 17:37:22] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 17:37:22] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 17:37:22] [INF] Listing with ID: 1038 retrieved.
+[2025-10-16 17:37:22] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 17:37:22] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 17:37:22] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 17:37:22] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 17:37:22] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 17:37:22] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 17:37:22] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 17:37:30] [INF] Attempting to notify message received: SenderId=91fa7f1e-b35b-45c2-be74-7359d8b61d04, ReceiverId=771931a5-eb85-44d3-b696-c293c2201ac2
+[2025-10-16 17:37:30] [INF] Listing with ID: 1038 retrieved.
+[2025-10-16 17:37:30] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 17:37:30] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 17:37:30] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 17:37:30] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 17:37:30] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 17:37:30] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 17:37:30] [INF] Listing with ID: 1038 retrieved.
+[2025-10-16 17:37:30] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 17:37:30] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 17:37:30] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 17:37:30] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 17:37:30] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 17:37:30] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 17:37:30] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 17:37:30] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 17:37:35] [INF] Attempting to notify message received: SenderId=771931a5-eb85-44d3-b696-c293c2201ac2, ReceiverId=91fa7f1e-b35b-45c2-be74-7359d8b61d04
+[2025-10-16 17:37:35] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 17:37:35] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 17:37:35] [INF] Listing with ID: 1038 retrieved.
+[2025-10-16 17:37:35] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 17:37:35] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 17:37:35] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 17:37:35] [INF] Listing with ID: 1027 retrieved.
+[2025-10-16 17:37:35] [INF] Listing with ID: 1028 retrieved.
+[2025-10-16 17:37:35] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 17:37:35] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 17:37:35] [INF] Listing with ID: 24 retrieved.
+[2025-10-16 17:37:35] [INF] Listing with ID: 27 retrieved.
+[2025-10-16 17:37:35] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 17:37:35] [INF] Listing with ID: 1036 retrieved.
+[2025-10-16 17:37:35] [INF] Listing with ID: 1038 retrieved.
+[2025-10-16 17:37:35] [ERR] An unhandled exception has occurred while executing the request.
+[2025-10-16 17:37:39] [INF] Retrieved all Category entities
+[2025-10-16 17:37:40] [INF] Retrieved all Category entities
+[2025-10-16 17:38:14] [INF] Retrieved all Category entities
+[2025-10-16 17:38:18] [INF] Retrieved all Category entities
+[2025-10-16 17:38:42] [INF] User Login in: elicabbarov88@gmail.com
+[2025-10-16 17:38:42] [INF] JWT token yaradıldı: elicabbarov88@gmail.com, eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI5MWZhN2YxZS1iMzViLTQ1YzItYmU3NC03MzU5ZDhiNjFkMDQiLCJ1bmlxdWVfbmFtZSI6IiIsImVtYWlsIjoiZWxpY2FiYmFyb3Y4OEBnbWFpbC5jb20iLCJyb2xlIjoiVXNlciIsIm5iZiI6MTc2MDY2MTUyMiwiZXhwIjoxNzYwNjY1MTIyLCJpYXQiOjE3NjA2NjE1MjIsImlzcyI6IkV2VGFwLmF6IiwiYXVkIjoiRXZUYXAuYXoifQ.7XYUMCo5Fj78l8LD31NeIVXprFOD0V1S9LghqQMloQc
+[2025-10-16 17:39:32] [INF] Retrieved all Category entities
+[2025-10-16 17:39:43] [INF] Retrieved all Category entities
+[2025-10-16 17:39:44] [INF] Retrieved all Category entities
+[2025-10-16 17:39:45] [INF] Retrieved all Category entities
+[2025-10-16 17:39:46] [INF] Retrieved all Category entities
+[2025-10-16 17:39:48] [INF] Retrieved all Agency entities
+[2025-10-16 17:39:50] [INF] Retrieved all Category entities
+[2025-10-16 17:39:51] [INF] Retrieved all Agency entities
+[2025-10-16 17:39:52] [INF] Retrieved all Category entities
+[2025-10-16 17:39:54] [INF] Retrieved all Category entities
+[2025-10-16 17:39:55] [INF] Retrieved all Category entities
+[2025-10-16 17:41:26] [INF] Retrieved all Category entities
+[2025-10-16 17:41:29] [INF] Retrieved all Category entities
+[2025-10-16 17:41:42] [INF] Retrieved all District entities
+[2025-10-16 17:41:43] [INF] Retrieved all MetroStation entities

@@ -1094,3 +1094,7 @@ C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Presentation\obj\Debug\net8
 C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Presentation\obj\Debug\net8.0\EvTap.Presentation.genruntimeconfig.cache
 C:\Users\Huawei\Desktop\Final Project\EvTap.az\EvTap.Presentation\obj\Debug\net8.0\ref\EvTap.Presentation.dll
 C:\Users\Huawei\Desktop\EvTap.az\EvTap.Presentation\bin\Debug\net8.0\Stripe.net.dll
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Presentation\bin\Debug\net8.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Presentation\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Presentation\bin\Debug\net8.0\Microsoft.Bcl.Memory.dll
+C:\Users\Huawei\Desktop\EvTap.az\EvTap.Presentation\bin\Debug\net8.0\Twilio.dll
