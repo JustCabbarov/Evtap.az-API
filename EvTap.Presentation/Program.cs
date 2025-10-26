@@ -163,14 +163,14 @@ builder.Services
         options.Cookie.SameSite = SameSiteMode.Lax;
         options.Cookie.SecurePolicy = CookieSecurePolicy.SameAsRequest;
     })
-    .AddGoogle(GoogleDefaults.AuthenticationScheme, options =>
-    {
-        options.ClientId = "694161090996-d2ubm0g97o1g9po9a46lf9f7v5bp7otg.apps.googleusercontent.com";
-        options.ClientSecret = "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";
-        options.CallbackPath = "/api/Authorization/signin-google";
-        options.SaveTokens = true;
-    });
+   .AddGoogle(GoogleDefaults.AuthenticationScheme, options =>
+   {
+       options.ClientId = "694161090996-d2ubm0g97o1g9po9a46lf9f7v5bp7otg.apps.googleusercontent.com";
+       options.ClientSecret = "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";
+       options.CallbackPath = "/api/Authorization/google-response";
 
+       options.SaveTokens = true;
+   });
 builder.Services.Configure<JwtOption>(builder.Configuration.GetSection("JwtOption"));
 
 builder.Services.AddSwaggerGen(c =>
@@ -258,8 +258,8 @@ if (app.Environment.IsDevelopment())
 }
 else
 {
-    app.UseExceptionHandler();
 }
+    app.UseExceptionHandler();
 
 app.UseHttpsRedirection();
 

@@ -169,6 +169,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 🔐 GOOGLE LOGIN
   googleBtn.addEventListener("click", () => {
-    window.location.href = "https://localhost:7027/api/Authorization/google-login";
+    window.location.href = "https://localhost:7027/api/Authorization/login-google";
   });
 });

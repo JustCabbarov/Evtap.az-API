@@ -1336,3 +1336,190 @@ System.InvalidOperationException: An exception has been raised that is likely du
 [2025-10-17 17:59:54] [INF] Retrieved all Category entities
 [2025-10-17 17:59:54] [INF] Retrieved all District entities
 [2025-10-17 17:59:54] [INF] Retrieved all MetroStation entities
+[2025-10-17 21:18:20] [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+[2025-10-17 21:18:20] [INF] Quartz Scheduler created
+[2025-10-17 21:18:20] [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+[2025-10-17 21:18:20] [INF] RAMJobStore initialized.
+[2025-10-17 21:18:20] [INF] Quartz Scheduler 3.15.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+[2025-10-17 21:18:20] [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+[2025-10-17 21:18:20] [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+[2025-10-17 21:18:20] [INF] Adding 1 jobs, 1 triggers.
+[2025-10-17 21:18:20] [INF] Adding job: DEFAULT.ScraperJob
+[2025-10-17 21:18:21] [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+[2025-10-17 21:19:34] [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+[2025-10-17 21:19:38] [INF] Retrieved all Category entities
+[2025-10-17 21:19:43] [INF] Listing with ID: 1038 retrieved.
+[2025-10-17 21:20:01] [INF] Retrieved all Category entities
+[2025-10-17 21:20:11] [INF] Listing with ID: 1035 has been deleted.
+[2025-10-17 21:20:13] [INF] Listing with ID: 1029 has been deleted.
+[2025-10-17 21:20:17] [INF] Listing with ID: 1028 has been deleted.
+[2025-10-17 21:20:20] [INF] Retrieved all Category entities
+[2025-10-17 21:20:22] [INF] Listing with ID: 1036 retrieved.
+[2025-10-17 21:20:29] [INF] Listing with ID: 1033 retrieved.
+[2025-10-17 21:20:38] [INF] Retrieved all Category entities
+[2025-10-17 21:20:49] [INF] User Login in: elicabbarov88@gmail.com
+[2025-10-17 21:20:49] [INF] JWT token yaradıldı: elicabbarov88@gmail.com, eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI5MWZhN2YxZS1iMzViLTQ1YzItYmU3NC03MzU5ZDhiNjFkMDQiLCJ1bmlxdWVfbmFtZSI6IkFsaWNhYmJhciIsImVtYWlsIjoiZWxpY2FiYmFyb3Y4OEBnbWFpbC5jb20iLCJyb2xlIjpbIkFkbWluIiwiVXNlciJdLCJuYmYiOjE3NjA3NjEyNDksImV4cCI6MTc2MDc2NDg0OSwiaWF0IjoxNzYwNzYxMjQ5LCJpc3MiOiJFdlRhcC5heiIsImF1ZCI6IkV2VGFwLmF6In0.6aPUnAaHLjGv69hfNCwsQCSqn2NM7HB97Ug8PFtjY0g
+[2025-10-17 21:20:51] [INF] Retrieved all Category entities
+[2025-10-17 21:20:56] [INF] Retrieved all Category entities
+[2025-10-17 21:21:55] [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+[2025-10-17 21:21:55] [INF] Quartz Scheduler created
+[2025-10-17 21:21:55] [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+[2025-10-17 21:21:55] [INF] RAMJobStore initialized.
+[2025-10-17 21:21:55] [INF] Quartz Scheduler 3.15.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+[2025-10-17 21:21:55] [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+[2025-10-17 21:21:55] [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+[2025-10-17 21:21:55] [INF] Adding 1 jobs, 1 triggers.
+[2025-10-17 21:21:55] [INF] Adding job: DEFAULT.ScraperJob
+[2025-10-17 21:21:55] [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+[2025-10-17 21:22:38] [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+[2025-10-17 21:22:39] [INF] Quartz Scheduler created
+[2025-10-17 21:22:39] [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+[2025-10-17 21:22:39] [INF] RAMJobStore initialized.
+[2025-10-17 21:22:39] [INF] Quartz Scheduler 3.15.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+[2025-10-17 21:22:39] [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+[2025-10-17 21:22:39] [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+[2025-10-17 21:22:39] [INF] Adding 1 jobs, 1 triggers.
+[2025-10-17 21:22:39] [INF] Adding job: DEFAULT.ScraperJob
+[2025-10-17 21:22:39] [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+[2025-10-17 21:37:49] [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+[2025-10-17 21:37:49] [INF] Quartz Scheduler created
+[2025-10-17 21:37:49] [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+[2025-10-17 21:37:49] [INF] RAMJobStore initialized.
+[2025-10-17 21:37:49] [INF] Quartz Scheduler 3.15.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+[2025-10-17 21:37:49] [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+[2025-10-17 21:37:49] [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+[2025-10-17 21:37:49] [INF] Adding 1 jobs, 1 triggers.
+[2025-10-17 21:37:49] [INF] Adding job: DEFAULT.ScraperJob
+[2025-10-17 21:37:50] [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+[2025-10-17 21:38:05] [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+[2025-10-17 21:38:13] [INF] Retrieved all Category entities
+[2025-10-17 21:39:14] [INF] Retrieved all Category entities
+[2025-10-17 21:39:20] [INF] Retrieved all Category entities
+[2025-10-17 21:40:52] [INF] Retrieved all Category entities
+[2025-10-17 21:41:01] [INF] Listing with ID: 27 retrieved.
+[2025-10-17 21:41:06] [INF] Listing with ID: 27 retrieved.
+[2025-10-17 21:46:31] [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+[2025-10-17 21:46:32] [INF] Quartz Scheduler created
+[2025-10-17 21:46:32] [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+[2025-10-17 21:46:32] [INF] RAMJobStore initialized.
+[2025-10-17 21:46:32] [INF] Quartz Scheduler 3.15.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+[2025-10-17 21:46:32] [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+[2025-10-17 21:46:32] [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+[2025-10-17 21:46:32] [INF] Adding 1 jobs, 1 triggers.
+[2025-10-17 21:46:32] [INF] Adding job: DEFAULT.ScraperJob
+[2025-10-17 21:46:33] [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+[2025-10-17 21:47:44] [INF] Google ilə login oldu: licabbarov1@gmail.com
+[2025-10-17 21:47:44] [INF] JWT token yaradıldı: licabbarov1@gmail.com, eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI3NzE5MzFhNS1lYjg1LTQ0ZDMtYjY5Ni1jMjkzYzIyMDFhYzIiLCJ1bmlxdWVfbmFtZSI6ImxpY2FiYmFyb3YxIiwiZW1haWwiOiJsaWNhYmJhcm92MUBnbWFpbC5jb20iLCJyb2xlIjpbIkFkbWluIiwiVXNlciJdLCJuYmYiOjE3NjA3NjI4NjQsImV4cCI6MTc2MDc2NjQ2NCwiaWF0IjoxNzYwNzYyODY0LCJpc3MiOiJFdlRhcC5heiIsImF1ZCI6IkV2VGFwLmF6In0.1BwpuTVs5ZOLTkS_1uT5cgdBeh-zwQ0mdwD5dQeyyOE
+[2025-10-17 21:47:44] [WRN] Unable to configure Browser Link script injection on the response. 
+[2025-10-17 21:47:44] [WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+[2025-10-17 21:48:01] [INF] Google ilə login oldu: licabbarov1@gmail.com
+[2025-10-17 21:48:01] [INF] JWT token yaradıldı: licabbarov1@gmail.com, eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI3NzE5MzFhNS1lYjg1LTQ0ZDMtYjY5Ni1jMjkzYzIyMDFhYzIiLCJ1bmlxdWVfbmFtZSI6ImxpY2FiYmFyb3YxIiwiZW1haWwiOiJsaWNhYmJhcm92MUBnbWFpbC5jb20iLCJyb2xlIjpbIkFkbWluIiwiVXNlciJdLCJuYmYiOjE3NjA3NjI4ODEsImV4cCI6MTc2MDc2NjQ4MSwiaWF0IjoxNzYwNzYyODgxLCJpc3MiOiJFdlRhcC5heiIsImF1ZCI6IkV2VGFwLmF6In0.JZD17T-eCLIkwFVuv1BOkREZfGTTrv6JxQihNdnXZlE
+[2025-10-17 21:48:01] [WRN] Unable to configure Browser Link script injection on the response. 
+[2025-10-17 21:48:01] [WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+[2025-10-17 21:48:18] [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+[2025-10-17 21:48:18] [INF] Quartz Scheduler created
+[2025-10-17 21:48:18] [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+[2025-10-17 21:48:18] [INF] RAMJobStore initialized.
+[2025-10-17 21:48:18] [INF] Quartz Scheduler 3.15.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+[2025-10-17 21:48:18] [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+[2025-10-17 21:48:18] [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+[2025-10-17 21:48:18] [INF] Adding 1 jobs, 1 triggers.
+[2025-10-17 21:48:18] [INF] Adding job: DEFAULT.ScraperJob
+[2025-10-17 21:48:19] [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+[2025-10-17 21:48:30] [INF] Google ilə login oldu: licabbarov1@gmail.com
+[2025-10-17 21:48:30] [INF] JWT token yaradıldı: licabbarov1@gmail.com, eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI3NzE5MzFhNS1lYjg1LTQ0ZDMtYjY5Ni1jMjkzYzIyMDFhYzIiLCJ1bmlxdWVfbmFtZSI6ImxpY2FiYmFyb3YxIiwiZW1haWwiOiJsaWNhYmJhcm92MUBnbWFpbC5jb20iLCJyb2xlIjpbIkFkbWluIiwiVXNlciJdLCJuYmYiOjE3NjA3NjI5MTAsImV4cCI6MTc2MDc2NjUxMCwiaWF0IjoxNzYwNzYyOTEwLCJpc3MiOiJFdlRhcC5heiIsImF1ZCI6IkV2VGFwLmF6In0.4lhijx49bd7id2PQ92ihtHbYS-VX5qfo2O3ViqjuFqk
+[2025-10-17 21:48:30] [WRN] Unable to configure Browser Link script injection on the response. 
+[2025-10-17 21:48:30] [WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+[2025-10-17 21:54:59] [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+[2025-10-17 21:54:59] [INF] Quartz Scheduler created
+[2025-10-17 21:54:59] [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+[2025-10-17 21:54:59] [INF] RAMJobStore initialized.
+[2025-10-17 21:54:59] [INF] Quartz Scheduler 3.15.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+[2025-10-17 21:54:59] [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+[2025-10-17 21:54:59] [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+[2025-10-17 21:54:59] [INF] Adding 1 jobs, 1 triggers.
+[2025-10-17 21:54:59] [INF] Adding job: DEFAULT.ScraperJob
+[2025-10-17 21:55:00] [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+[2025-10-17 21:59:05] [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+[2025-10-17 21:59:05] [INF] Quartz Scheduler created
+[2025-10-17 21:59:05] [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+[2025-10-17 21:59:05] [INF] RAMJobStore initialized.
+[2025-10-17 21:59:05] [INF] Quartz Scheduler 3.15.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+[2025-10-17 21:59:05] [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+[2025-10-17 21:59:05] [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+[2025-10-17 21:59:05] [INF] Adding 1 jobs, 1 triggers.
+[2025-10-17 21:59:05] [INF] Adding job: DEFAULT.ScraperJob
+[2025-10-17 21:59:06] [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+[2025-10-17 22:03:20] [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+[2025-10-17 22:03:20] [INF] Quartz Scheduler created
+[2025-10-17 22:03:20] [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+[2025-10-17 22:03:20] [INF] RAMJobStore initialized.
+[2025-10-17 22:03:20] [INF] Quartz Scheduler 3.15.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+[2025-10-17 22:03:20] [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+[2025-10-17 22:03:20] [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+[2025-10-17 22:03:20] [INF] Adding 1 jobs, 1 triggers.
+[2025-10-17 22:03:20] [INF] Adding job: DEFAULT.ScraperJob
+[2025-10-17 22:03:21] [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+[2025-10-17 22:06:42] [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+[2025-10-17 22:06:42] [INF] Quartz Scheduler created
+[2025-10-17 22:06:42] [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+[2025-10-17 22:06:42] [INF] RAMJobStore initialized.
+[2025-10-17 22:06:42] [INF] Quartz Scheduler 3.15.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+[2025-10-17 22:06:42] [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+[2025-10-17 22:06:42] [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+[2025-10-17 22:06:42] [INF] Adding 1 jobs, 1 triggers.
+[2025-10-17 22:06:42] [INF] Adding job: DEFAULT.ScraperJob
+[2025-10-17 22:06:42] [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+[2025-10-17 22:08:06] [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+[2025-10-17 22:08:06] [INF] Quartz Scheduler created
+[2025-10-17 22:08:06] [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+[2025-10-17 22:08:06] [INF] RAMJobStore initialized.
+[2025-10-17 22:08:06] [INF] Quartz Scheduler 3.15.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+[2025-10-17 22:08:06] [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+[2025-10-17 22:08:06] [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+[2025-10-17 22:08:06] [INF] Adding 1 jobs, 1 triggers.
+[2025-10-17 22:08:06] [INF] Adding job: DEFAULT.ScraperJob
+[2025-10-17 22:08:07] [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+[2025-10-17 22:13:09] [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+[2025-10-17 22:13:09] [INF] Quartz Scheduler created
+[2025-10-17 22:13:09] [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+[2025-10-17 22:13:09] [INF] RAMJobStore initialized.
+[2025-10-17 22:13:09] [INF] Quartz Scheduler 3.15.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+[2025-10-17 22:13:09] [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+[2025-10-17 22:13:09] [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+[2025-10-17 22:13:09] [INF] Adding 1 jobs, 1 triggers.
+[2025-10-17 22:13:09] [INF] Adding job: DEFAULT.ScraperJob
+[2025-10-17 22:13:09] [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+[2025-10-17 22:16:25] [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+[2025-10-17 22:16:25] [INF] Quartz Scheduler created
+[2025-10-17 22:16:25] [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+[2025-10-17 22:16:25] [INF] RAMJobStore initialized.
+[2025-10-17 22:16:25] [INF] Quartz Scheduler 3.15.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+[2025-10-17 22:16:25] [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+[2025-10-17 22:16:25] [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+[2025-10-17 22:16:25] [INF] Adding 1 jobs, 1 triggers.
+[2025-10-17 22:16:25] [INF] Adding job: DEFAULT.ScraperJob
+[2025-10-17 22:16:25] [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+[2025-10-17 22:23:39] [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+[2025-10-17 22:23:40] [INF] Quartz Scheduler created
+[2025-10-17 22:23:40] [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+[2025-10-17 22:23:40] [INF] RAMJobStore initialized.
+[2025-10-17 22:23:40] [INF] Quartz Scheduler 3.15.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+[2025-10-17 22:23:40] [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+[2025-10-17 22:23:40] [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+[2025-10-17 22:23:40] [INF] Adding 1 jobs, 1 triggers.
+[2025-10-17 22:23:40] [INF] Adding job: DEFAULT.ScraperJob
+[2025-10-17 22:23:40] [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+[2025-10-17 23:11:15] [ERR] Exception occurred while scraping category 1
+[2025-10-17 23:11:20] [ERR] Exception occurred while scraping category 2
+[2025-10-17 23:11:40] [ERR] Exception occurred while scraping category 5
+[2025-10-17 23:12:00] [ERR] Exception occurred while scraping category 7
+[2025-10-17 23:12:20] [ERR] Exception occurred while scraping category 10
+[2025-10-17 23:12:40] [ERR] Exception occurred while scraping category 1
+[2025-10-17 23:13:00] [ERR] Exception occurred while scraping category 2
+[2025-10-17 23:13:20] [ERR] Exception occurred while scraping category 5
+[2025-10-17 23:24:04] [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+[2025-10-17 23:24:05] [INF] Retrieved all Category entities
+[2025-10-17 23:24:12] [INF] Retrieved all Category entities
+[2025-10-17 23:24:39] [INF] Retrieved all Category entities
+[2025-10-17 23:52:14] [INF] Listing with ID: 1039 retrieved.

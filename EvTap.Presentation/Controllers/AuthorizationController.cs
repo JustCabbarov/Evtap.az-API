@@ -85,11 +85,10 @@ namespace EvTap.Presentation.Controllers
             return Redirect("https://localhost:7027/error?message=Email confirmation failed");
         }
 
-
         [HttpGet("login-google")]
         public IActionResult LoginGoogle()
         {
-            var redirectUrl = Url.Action(nameof(GoogleResponse), "Authorization");
+            var redirectUrl = Url.Action(nameof(GoogleResponse), "Authorization", null, Request.Scheme);
             var properties = new AuthenticationProperties
             {
                 RedirectUri = redirectUrl
@@ -101,14 +100,11 @@ namespace EvTap.Presentation.Controllers
         public async Task<IActionResult> GoogleResponse()
         {
             var jwt = await _googleAuthService.HandleGoogleLoginAsync();
-
-            // GoogleResponse metodunda bu hissəni dəyişin:
             var script = $@"
-    <script>
-       
-        window.opener.postMessage({{ token: '{jwt}' }}, '*');
-        window.close();
-    </script>";
+        <script>
+            window.opener.postMessage({{ token: '{jwt}' }}, '*');
+            window.close();
+        </script>";
             return Content(script, "text/html");
         }
 

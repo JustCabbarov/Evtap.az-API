@@ -1,6 +1,4 @@
-﻿
-
-namespace EvTap.Application.Services
+﻿namespace EvTap.Application.Services
 {
     using EvTap.Contracts.Services;
     using EvTap.Domain.Entities;
@@ -45,7 +43,7 @@ namespace EvTap.Application.Services
             if (string.IsNullOrEmpty(email))
                 throw new Exception("Google email tapılmadı.");
 
-            
+
             return await GoogleSignInAsync(email, name);
         }
 
@@ -60,7 +58,7 @@ namespace EvTap.Application.Services
                     UserName = email.Split("@")[0],
                     Email = email,
                     EmailConfirmed = true,
-                   
+
                 };
 
                 var result = await _userManager.CreateAsync(user);
