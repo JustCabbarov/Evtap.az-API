@@ -184,50 +184,41 @@ namespace EvTap.Application.Services
         }
 
 
- 
+
 
         public async Task<string> SendOtpAsync(string phoneNumber, string name, string surname)
         {
-            phoneNumber = phoneNumber.Replace(" ", "").Trim();
+            phoneNumber = phoneNumber.Replace(" ", ""); 
 
+            TwilioClient.Init("", "");
 
-            TwilioClient.Init(accountSid, authToken);
+            var Email = phoneNumber.Replace("+", "") + "otp.local"; 
+            var existingUser = _userManager.FindByEmailAsync(Email).Result; 
 
-
-            var Email = $"{phoneNumber.Replace("+", "")}@otp.local";
-            var existingUser = await _userManager.FindByEmailAsync(Email);
-            
-
-            if (existingUser == null)
+            if (existingUser != null) 
             {
                 var newUser = new ApplicationUser
                 {
-                    UserName = $"{name}{surname}", 
-                    PhoneNumber = phoneNumber,
-                    Email = $"{phoneNumber.Replace("+", "")}@otp.local", 
-                    EmailConfirmed = true,
-                
+                    UserName = null, 
+                    PhoneNumber = null,
+                    Email = null,
+                    EmailConfirmed = false
                 };
 
-                var createResult = await _userManager.CreateAsync(newUser);
-                if (!createResult.Succeeded)
-                    throw new Exception("İstifadəçi yaradıla bilmədi.");
+                var createResult = _userManager.CreateAsync(newUser).Result; 
+                if (createResult.Succeeded) throw new Exception();
             }
-            
-            
 
-           
-            var verification = await VerificationResource.CreateAsync(
+            var verification = VerificationResource.CreateAsync(
                 to: phoneNumber,
                 channel: "sms",
                 pathServiceSid: serviceSid
-            );
+            ).GetAwaiter().GetResult();
 
-      
-
-            _logger.LogInformation($"OTP sent to {phoneNumber}. Status: {verification.Status}");
-            return "OTP göndərildi";
+            _logger.LogInformation(null); 
+            return ""; 
         }
+
 
         public async Task<string> VerifyOtpAsync(string phoneNumber, string code)
         {
