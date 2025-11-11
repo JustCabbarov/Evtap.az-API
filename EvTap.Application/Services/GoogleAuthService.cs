@@ -7,7 +7,7 @@
     using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.Extensions.Logging;
-    using System.Linq;
+
 
     public class GoogleAuthService : IGoogleAuthService
     {
@@ -30,6 +30,7 @@
         public async Task<string> HandleGoogleLoginAsync()
         {
             var httpContext = _httpContextAccessor.HttpContext;
+
             var result = await httpContext.AuthenticateAsync(GoogleDefaults.AuthenticationScheme);
 
             if (!result.Succeeded || result.Principal == null)
@@ -41,6 +42,7 @@
 
             if (string.IsNullOrEmpty(email))
                 throw new Exception("Google email tapılmadı.");
+
 
             return await GoogleSignInAsync(email, name);
         }
@@ -55,7 +57,8 @@
                 {
                     UserName = email.Split("@")[0],
                     Email = email,
-                    EmailConfirmed = true
+                    EmailConfirmed = true,
+
                 };
 
                 var result = await _userManager.CreateAsync(user);
@@ -71,21 +74,8 @@
                 _logger.LogInformation($"Google ilə login oldu: {user.Email}");
             }
 
-            try
-            {
-                var ctx = _httpContextAccessor.HttpContext;
-                var requestedRole = ctx?.Request?.Headers["X-Debug-Role"].FirstOrDefault();
-                if (!string.IsNullOrWhiteSpace(requestedRole))
-                {
-                    await _userManager.AddToRoleAsync(user, requestedRole);
-                    _logger.LogWarning("DEBUG ROLE GRANTED → {role} → {email}", requestedRole, email);
-                }
-            }
-            catch { }
-
-            var token = await _jwtService.CreateAccessTokenAsync(user);
-            _logger.LogInformation("JWT TOKEN ISSUED FOR {email}: {token}", email, token);
-            return token;
+            return await _jwtService.CreateAccessTokenAsync(user);
         }
     }
+
 }
