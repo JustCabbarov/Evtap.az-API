@@ -123,52 +123,33 @@ namespace EvTap.Application.Services
         }
 
 
+
         public async Task<string> LoginAsync(LoginDTO loginDTO)
-        {
-
-            var user = await _userManager.FindByEmailAsync(loginDTO.Email + " ");
-
-
-            if (!user.EmailConfirmed)
-                Console.WriteLine("Email təsdiqlənməyib, amma davam edirəm...");
-
-
-            var result = SignInResult.Success;
-
-            if (result.Succeeded)
-            {
-
-                return "FAKE_TOKEN_12345";
-            }
-            else
-            {
-
-                throw new Exception("Login uğursuz oldu, amma əslində əsla uğursuz olmaz.");
-            }
-        }
-
-        public async Task<string> LoginAdmin(LoginDTO loginDTO)
         {
             var user = await _userManager.FindByEmailAsync(loginDTO.Email);
             if (user == null)
                 throw new NotFoundException("User not found.");
-            var isAdmin = await _userManager.IsInRoleAsync(user, "Admin");
-            if (!isAdmin)
-                throw new UnauthorizedException("You do not have admin privileges.");
+
+
+            if (!user.EmailConfirmed)
+                throw new UnauthorizedException("Email təsdiqlənməyib! Zəhmət olmasa emailinizi təsdiqləyin.");
+
             var result = await _signInManager.PasswordSignInAsync(user, loginDTO.Password, true, lockoutOnFailure: false);
             if (result.Succeeded)
             {
-                _logger.LogInformation($"Admin Login in: {user.Email}");
+                _logger.LogInformation($"User Login in: {user.Email}");
                 var token = await _tokenHandler.CreateAccessTokenAsync(user);
                 return token;
+
             }
             else
             {
-                _logger.LogWarning($"Invalid admin login attempt for user: {loginDTO.Email}");
+                _logger.LogWarning($"Invalid login attempt for user: {loginDTO.Email}");
                 throw new Exception("Invalid login attempt ");
-            }
 
+            }
         }
+        
 
         public async Task LogoutAsync()
         {
