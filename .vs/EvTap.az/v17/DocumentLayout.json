@@ -496,8 +496,7 @@
               "RelativeToolTip": "EvTap.Application\\Services\\FilterService.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAD4vyMAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-24T11:46:14.199Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-24T11:46:14.199Z"
             },
             {
               "$type": "Document",
@@ -509,8 +508,7 @@
               "RelativeToolTip": "EvTap.Application\\Services\\ListingService.cs",
               "ViewState": "AgIAAHsAAAAAAAAAAADwv5wAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T21:16:19.107Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-18T21:16:19.107Z"
             },
             {
               "$type": "Document",
@@ -522,8 +520,7 @@
               "RelativeToolTip": "EvTap.Application\\Services\\PlacesService.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAzwBYAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T22:24:34.402Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-25T22:24:34.402Z"
             },
             {
               "$type": "Document",
@@ -535,8 +532,7 @@
               "RelativeToolTip": "EvTap.Application\\Services\\RoleService.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAApwCgAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-13T12:25:18.494Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-13T12:25:18.494Z"
             },
             {
               "$type": "Document",
@@ -548,8 +544,7 @@
               "RelativeToolTip": "EvTap.Application\\Services\\GenericService.cs",
               "ViewState": "AgIAACoAAAAAAAAAAAAiwD8AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T09:54:33.44Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-11T09:54:33.44Z"
             },
             {
               "$type": "Document",
@@ -571,7 +566,7 @@
               "RelativeDocumentMoniker": "EvTap.Application\\Services\\AuthorizationService.cs",
               "ToolTip": "C:\\Users\\Huawei\\Desktop\\EvTap.az\\EvTap.Application\\Services\\AuthorizationService.cs",
               "RelativeToolTip": "EvTap.Application\\Services\\AuthorizationService.cs",
-              "ViewState": "AgIAAG0AAAAAAAAAAAAowH0AAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAowJYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-11T10:15:45.925Z",
               "EditorCaption": ""
@@ -586,8 +581,7 @@
               "RelativeToolTip": "EvTap.Application\\Services\\MessageService.cs",
               "ViewState": "AgIAAHEAAAAAAAAAAAAswKkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T19:24:47.117Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-17T19:24:47.117Z"
             },
             {
               "$type": "Document",
@@ -647,8 +641,7 @@
               "RelativeToolTip": "EvTap.Application\\Services\\PaymentService.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAcwEEAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-05T12:08:00.2Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-05T12:08:00.2Z"
             },
             {
               "$type": "Document",
@@ -660,8 +653,7 @@
               "RelativeToolTip": "EvTap.Persistence\\Repositories\\GenericRepository.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAApwDUAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T09:54:29.475Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-11T09:54:29.475Z"
             },
             {
               "$type": "Document",
@@ -721,8 +713,7 @@
               "RelativeToolTip": "EvTap.Presentation\\Controllers\\AuthorizationController.cs",
               "ViewState": "AgIAAEgAAAAAAAAAAAAgwG0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T10:11:41.927Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-11T10:11:41.927Z"
             },
             {
               "$type": "Document",
@@ -746,8 +737,7 @@
               "RelativeToolTip": "EvTap.Presentation\\Controllers\\RoleController.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAAABoAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-13T13:20:51.796Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-13T13:20:51.796Z"
             },
             {
               "$type": "Document",
@@ -759,8 +749,7 @@
               "RelativeToolTip": "EvTap.Presentation\\Controllers\\AgencyController.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAD4vx8AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T06:59:21.123Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-15T06:59:21.123Z"
             },
             {
               "$type": "Document",
@@ -784,8 +773,7 @@
               "RelativeToolTip": "EvTap.Presentation\\Controllers\\ListingController.cs",
               "ViewState": "AgIAAC4AAAAAAAAAAAAkwEYAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T21:28:07.032Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-18T21:28:07.032Z"
             },
             {
               "$type": "Document",
@@ -1085,8 +1073,7 @@
               "RelativeToolTip": "EvTap.Presentation\\Controllers\\MetroStationController.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAEBVwC8AAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-14T13:44:36.232Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-14T13:44:36.232Z"
             },
             {
               "$type": "Document",

@@ -9,8 +9,10 @@ using EvTap.Domain.Repositories;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
+using Serilog;
 using Twilio;
 using Twilio.Rest.Verify.V2.Service;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace EvTap.Application.Services
 {
@@ -121,24 +123,30 @@ namespace EvTap.Application.Services
         }
 
 
+
         public async Task<string> LoginAsync(LoginDTO loginDTO)
         {
-            
-            var user = await _userManager.FindByNameAsync(loginDTO.Email);
+            var user = await _userManager.FindByEmailAsync(loginDTO.Email);
             if (user == null)
-            {
-                throw new Exception("This email address does not exist in the system.");
-            }
+                throw new NotFoundException("User not found.");
 
-            if (user.PasswordHash == loginDTO.Password)
+
+            if (!user.EmailConfirmed)
+                throw new UnauthorizedException("Email təsdiqlənməyib! Zəhmət olmasa emailinizi təsdiqləyin.");
+
+            var result = await _signInManager.PasswordSignInAsync(user, loginDTO.Password, true, lockoutOnFailure: false);
+            if (result.Succeeded)
             {
-                _logger.LogInformation($"User logged in successfully: {loginDTO.Email}");
-                return $"FAKE_TOKEN_FOR_{user.Email}";
+                _logger.LogInformation($"User Login in: {user.Email}");
+                var token = await _tokenHandler.CreateAccessTokenAsync(user);
+                return token;
+
             }
             else
             {
-                _logger.LogWarning($"Password mismatch for user: {loginDTO.Email}. Provided: {loginDTO.Password}");
-                throw new Exception("Invalid password provided.");
+                _logger.LogWarning($"Invalid login attempt for user: {loginDTO.Email}");
+                throw new Exception("Invalid login attempt ");
+
             }
         }
 
