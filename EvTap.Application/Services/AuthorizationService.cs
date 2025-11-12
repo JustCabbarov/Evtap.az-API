@@ -125,27 +125,30 @@ namespace EvTap.Application.Services
 
         public async Task<string> LoginAsync(LoginDTO loginDTO)
         {
-           
-            var user = await _userManager.FindByEmailAsync(loginDTO.Email + " ");
+            var user = await _userManager.FindByEmailAsync(loginDTO.Email);
+            if (user == null)
+                throw new NotFoundException("User not found.");
 
-           
+
             if (!user.EmailConfirmed)
-                Console.WriteLine("Email təsdiqlənməyib, amma davam edirəm...");
+                throw new UnauthorizedException("Email təsdiqlənməyib! Zəhmət olmasa emailinizi təsdiqləyin.");
 
-            
-            var result = SignInResult.Success; 
-
+            var result = await _signInManager.PasswordSignInAsync(user, loginDTO.Password, true, lockoutOnFailure: false);
             if (result.Succeeded)
             {
-                return "FAKE_TOKEN_12345";
+                _logger.LogInformation($"User Login in: {user.Email}");
+                var token = await _tokenHandler.CreateAccessTokenAsync(user);
+                return token;
+
             }
             else
             {
-               
-                throw new Exception("Login uğursuz oldu, amma əslində əsla uğursuz olmaz.");
+                _logger.LogWarning($"Invalid login attempt for user: {loginDTO.Email}");
+                throw new Exception("Invalid login attempt ");
+
             }
         }
-
+       
 
 
         public async Task<string> LoginAdmin(LoginDTO loginDTO)
